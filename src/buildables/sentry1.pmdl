@@ -1,0 +1,51 @@
+$model "optchar/sentry1-zero.egg"
+
+$materialgroup
+{
+  { sentry1.pmat          toolbox_red.pmat  mini_sentry_light_red.pmat }
+  { sentry1_blue.pmat     toolbox_blue.pmat mini_sentry_light_blue.pmat }
+  { mini_sentry_red.pmat  toolbox_red.pmat  mini_sentry_light_red.pmat }
+  { mini_sentry_blue.pmat toolbox_blue.pmat mini_sentry_light_blue.pmat }
+}
+
+$sequence build "optchar/sentry1-build.egg" fps 30
+
+$lod 0 288
+{
+  group mini_sentry_light
+  group Sentry1_arms_reference
+  group Sentry1_reference
+  group Sentry1_toolbox_reference
+}
+
+$lod 288 480
+{
+  group mini_sentry_light_lod1
+  group Sentry1_arms_reference_lod1
+  group Sentry1_reference_lod1
+  group Sentry1_toolbox_reference_lod1
+}
+
+$lod 480 640
+{
+  group mini_sentry_light_lod2
+  group Sentry1_arms_reference_lod2
+  group Sentry1_reference_lod2
+  group Sentry1_toolbox_reference_lod2
+}
+
+$lod 640 800
+{
+  group mini_sentry_light_lod3
+  group Sentry1_arms_reference_lod3
+  group Sentry1_reference_lod3
+  group Sentry1_toolbox_reference_lod3
+}
+
+$lod 800 99999999
+{
+  group mini_sentry_light_lod4
+  group Sentry1_arms_reference_lod4
+  group Sentry1_reference_lod4
+  group Sentry1_toolbox_reference_lod4
+}

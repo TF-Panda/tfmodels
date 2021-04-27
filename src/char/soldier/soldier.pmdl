@@ -1,0 +1,47 @@
+$model "optchar/soldier-zero.egg"
+
+$sequence layer_taunt01 "optchar/soldier-layer_taunt01.egg" fps 30
+$sequence layer_taunt02 "optchar/soldier-layer_taunt02.egg" fps 30
+$sequence layer_taunt03 "optchar/soldier-layer_taunt03.egg" fps 30
+$sequence stand_PRIMARY "optchar/soldier-stand_PRIMARY.egg" fps 30
+$sequence stand_SECONDARY "optchar/soldier-stand_SECONDARY.egg" fps 30
+$sequence selectionMenu_Anim0l "optchar/soldier-selectionMenu_Anim0l.egg" fps 30
+$sequence gesture_primary_positive "optchar/soldier-gesture_primary_positive.egg" fps 30
+$sequence gesture_primary_go "optchar/soldier-gesture_primary_go.egg" fps 30
+$sequence gesture_primary_help "optchar/soldier-gesture_primary_help.egg" fps 30
+$sequence gesture_primary_cheer "optchar/soldier-gesture_primary_cheer.egg" fps 30
+
+$lod 0 11
+{
+  group soldier_morphs_low medal_bodygroup grenades_bodygroup hat_bodygroup soldier_rocket soldier_eye_l soldier_eye_r
+}
+
+$lod 11 22
+{
+  group soldier_morphs_low_lod1 medal_bodygroup_lod1 grenades_bodygroup_lod1 hat_bodygroup_lod1 soldier_rocket_lod1
+}
+
+$lod 22 33
+{
+  group soldier_morphs_low_lod2 medal_bodygroup_lod2 grenades_bodygroup_lod2 hat_bodygroup_lod2 soldier_rocket_lod2
+}
+
+$lod 33 44
+{
+  group soldier_morphs_low_lod3 medal_bodygroup_lod3 grenades_bodygroup_lod3 hat_bodygroup_lod3 soldier_rocket_lod3
+}
+
+$lod 44 55
+{
+  group soldier_morphs_low_lod4 medal_bodygroup_lod4 grenades_bodygroup_lod4 hat_bodygroup_lod4 soldier_rocket_lod4
+}
+
+$lod 55 99999999
+{
+  group soldier_morphs_low_lod5 medal_bodygroup_lod5 grenades_bodygroup_lod5 hat_bodygroup_lod5 soldier_rocket_lod5
+}
+
+$ikchain rhand bip_hand_R
+$ikchain lhand bip_hand_L
+$ikchain rfoot bip_foot_R
+$ikchain lfoot bip_foot_L

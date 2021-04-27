@@ -1,0 +1,13 @@
+StandardMaterial
+{
+  $basetexture "demoman_red.ptex"
+  $normaltexture "demoman_normal.ptex"
+  $lightwarptexture "../../../lightwarps/player_lightwarp.ptex"
+
+  $roughness 0.5
+
+  $rimlight 1
+  $rimlightboost 0.75
+
+  $halflambert 1
+}

@@ -1,0 +1,10 @@
+StandardMaterial
+{
+  $basetexture engineer_blue.ptex
+
+  $normaltexture engineer_normal.ptex
+
+  $lightwarptexture "../../lightwarps/player_lightwarp.ptex"
+
+  $roughness 0.5
+}

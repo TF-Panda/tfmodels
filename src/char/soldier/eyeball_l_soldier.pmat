@@ -1,0 +1,18 @@
+EyeRefractMaterial
+{
+  $iris "../../eyes/eye-iris-blue.ptex"
+  $ambientOcclTexture "../../eyes/eye-extra.ptex"
+  $envmap "../../eyes/eye-reflection-cubemap.ptex"
+  $corneaTexture "../../eyes/eye-cornea.ptex"
+  $lightwarpTexture "../../eyes/eye_lightwarp.ptex"
+
+  $eyeballRadius 0.7
+  $ambientOcclColor "1 1 1"
+  $dilation 1
+  $ParallaxStrength 0.25
+  $corneaBumpStrength 1.0
+
+  $halfLambert 1
+  $RaytraceSphere 0
+  $SphereTexkillCombo 0
+}

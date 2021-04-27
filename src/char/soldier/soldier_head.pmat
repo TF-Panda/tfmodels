@@ -1,0 +1,12 @@
+StandardMaterial
+{
+  $baseTexture "soldier_head.ptex"
+  $lightwarpTexture "../../lightwarps/player_lightwarp.ptex"
+
+  $roughness 0.5
+
+  $rimLight 1
+  $rimLightBoost 0.75
+
+  $halfLambert 1
+}

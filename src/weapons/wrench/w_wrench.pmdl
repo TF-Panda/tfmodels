@@ -1,0 +1,16 @@
+$model w_wrench.egg
+
+$lod 0 11
+{
+  group w_wrench_reference
+}
+
+$lod 11 22
+{
+  group w_wrench_reference_lod1
+}
+
+$lod 22 1000000
+{
+  group w_wrench_reference_lod2
+}

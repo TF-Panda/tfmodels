@@ -1,0 +1,4 @@
+image eye-reflection-cubemap-_00_0#_00.tga
+type cube_map
+format srgb
+wrap clamp

@@ -1,0 +1,107 @@
+$model "optchar/engineer-zero.egg"
+
+$materialgroup
+{
+  { materials/engineer_red.pmat }
+  { materials/engineer_blue.pmat }
+}
+
+$expose bip_spine_0 back_lower
+$expose bip_foot_L foot_L
+$expose bip_foot_R foot_R
+$expose effect_hand_L
+$expose effect_hand_R
+$expose prop_bone
+$expose taunt_effect
+
+$attachment "partyhat" "bip_head" pos 0 -9.26 -2.23 hpr 75 90 180
+$attachment "head" "bip_head" pos 0 -10.66 1.23 hpr 74.7 -90 0
+$attachment "eyeglow_R" "bip_head" pos -1.81 -4.01 -5.32 hpr 69.7 -152.97 -61.46
+$attachment "eyeglow_L" "bip_head" pos 1.81 -4.01 -5.32 hpr 69.7 -27.03 61.46
+$attachment "exhaust" "bip_hand_R" pos -2.86 -0.54 2.68 hpr -37.72 -175.85 -11.65
+$attachment "flag" "bip_spine_2" pos 0.12 1.92 9.64 hpr 0.95 -6.92 -1.52
+
+$sequence layer_taunt01 "optchar/engineer-layer_taunt01.egg" fps 24
+$sequence layer_taunt02 "optchar/engineer-layer_taunt02.egg" fps 30
+$sequence layer_taunt03 "optchar/engineer-layer_taunt03.egg" fps 30
+$sequence stand_PRIMARY "optchar/engineer-stand_PRIMARY.egg" fps 30
+$sequence stand_SECONDARY "optchar/engineer-stand_SECONDARY.egg" fps 30
+$sequence stand_BUILDING "optchar/engineer-stand_BUILDING.egg" fps 30
+$sequence layer_dieviolent "optchar/engineer-layer_dieviolent.egg" fps 30
+$sequence gesture_melee_cheer_armL "optchar/engineer-layer_gesture_melee_cheer_armL.egg" fps 24
+$sequence gesture_melee_cheer "optchar/engineer-gesture_melee_go.egg" fps 24
+$sequence ragdollspawn "optchar/engineer-ragdollspawn.egg" fps 30
+
+//
+// STAND MELEE ANIMATIONS
+//
+$sequence stand_MELEE "optchar/engineer-stand_MELEE.egg" fps 30
+$sequence a_MELEE_aimmatrix_idle_straight_up "optchar/engineer-a_MELEE_aimmatrix_idle_straight_up.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_up_right "optchar/engineer-a_MELEE_aimmatrix_idle_up_right.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_up_center "optchar/engineer-a_MELEE_aimmatrix_idle_up_center.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_up_left "optchar/engineer-a_MELEE_aimmatrix_idle_up_left.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_mid_right "optchar/engineer-a_MELEE_aimmatrix_idle_mid_right.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_mid_center "optchar/engineer-a_MELEE_aimmatrix_idle_mid_center.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_mid_left "optchar/engineer-a_MELEE_aimmatrix_idle_mid_left.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_down_right "optchar/engineer-a_MELEE_aimmatrix_idle_down_right.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_down_center "optchar/engineer-a_MELEE_aimmatrix_idle_down_center.egg" fps 24
+$sequence a_MELEE_aimmatrix_idle_down_left "optchar/engineer-a_MELEE_aimmatrix_idle_down_left.egg" fps 24
+
+//
+// RUN MELEE ANIMATIONS
+//
+$sequence a_runN_MELEE "optchar/engineer-a_runN_MELEE.egg" fps 30
+$sequence a_runS_MELEE "optchar/engineer-a_runS_MELEE.egg" fps 30
+$sequence a_runSW_MELEE "optchar/engineer-a_runSW_MELEE.egg" fps 30
+$sequence a_runSE_MELEE "optchar/engineer-a_runSE_MELEE.egg" fps 30
+$sequence a_runNE_MELEE "optchar/engineer-a_runNE_MELEE.egg" fps 30
+$sequence a_runNW_MELEE "optchar/engineer-a_runNW_MELEE.egg" fps 30
+$sequence a_runE_MELEE "optchar/engineer-a_runE_MELEE.egg" fps 30
+$sequence a_runW_MELEE "optchar/engineer-a_runW_MELEE.egg" fps 30
+$sequence a_runCenter_MELEE "optchar/engineer-a_runCenter_MELEE.egg" fps 30
+$sequence a_MELEE_aimmatrix_run_straight_up "optchar/engineer-a_MELEE_aimmatrix_run_straight_up.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_up_right "optchar/engineer-a_MELEE_aimmatrix_run_up_right.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_up_center "optchar/engineer-a_MELEE_aimmatrix_run_up_center.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_up_left "optchar/engineer-a_MELEE_aimmatrix_run_up_left.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_mid_right "optchar/engineer-a_MELEE_aimmatrix_run_mid_right.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_mid_center "optchar/engineer-a_MELEE_aimmatrix_run_mid_center.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_mid_left "optchar/engineer-a_MELEE_aimmatrix_run_mid_left.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_down_right "optchar/engineer-a_MELEE_aimmatrix_run_down_right.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_down_center "optchar/engineer-a_MELEE_aimmatrix_run_down_center.egg" fps 24
+$sequence a_MELEE_aimmatrix_run_down_left "optchar/engineer-a_MELEE_aimmatrix_run_down_left.egg" fps 24
+
+
+$lod 0 11
+{
+  group engineer_morphs_low engineer_glove_bodygroup engineer_hat_bodygroup
+}
+
+$lod 11 22
+{
+  group engineer_morphs_low_lod1 engineer_glove_bodygroup_lod1 engineer_hat_bodygroup_lod1
+}
+
+$lod 22 33
+{
+  group engineer_morphs_low_lod2 engineer_glove_bodygroup_lod2 engineer_hat_bodygroup_lod2
+}
+
+$lod 33 44
+{
+  group engineer_morphs_low_lod3 engineer_glove_bodygroup_lod3 engineer_hat_bodygroup_lod3
+}
+
+$lod 44 55
+{
+  group engineer_morphs_low_lod4 engineer_glove_bodygroup_lod4 engineer_hat_bodygroup_lod4
+}
+
+$lod 55 99999999
+{
+  group engineer_morphs_low_lod5 engineer_glove_bodygroup_lod5 engineer_hat_bodygroup_lod5
+}
+
+$ikchain rhand bip_hand_R
+$ikchain lhand bip_hand_L
+$ikchain rfoot bip_foot_R
+$ikchain lfoot bip_foot_L

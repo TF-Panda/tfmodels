@@ -1,0 +1,14 @@
+*.egg
+*.pt
+*.boo
+*.dat
+*.txo
+*.mto
+/built/
+Makefile
+/decompile/
+/built_src/
+bams/
+optchar/
+pal_egg/
+tfmodels_index

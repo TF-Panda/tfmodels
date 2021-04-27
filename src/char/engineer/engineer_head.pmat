@@ -1,0 +1,13 @@
+StandardMaterial
+{
+  $basetexture engineer_head.ptex
+
+  $lightwarptexture "../../lightwarps/player_lightwarp.ptex"
+
+  $halflambert 1
+
+  $rimlight 1
+  $rimlightboost 0.75
+
+  $roughness 0.5
+}

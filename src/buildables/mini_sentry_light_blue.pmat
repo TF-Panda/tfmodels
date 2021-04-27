@@ -1,0 +1,10 @@
+StandardMaterial
+{
+  $basetexture mini_sentry_light_blue.ptex
+
+  $lightwarptexture sentry1_lightwarp.ptex
+
+  $rimlight 0
+  $rimlightexponent 4
+  $rimlightboost 1.5
+}

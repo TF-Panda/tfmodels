@@ -1,0 +1,8 @@
+StandardMaterial
+{
+  $basetexture "demoman_blue.ptex"
+  $normaltexture "demoman_normal.ptex"
+  $lightwarptexture "../../../lightwarps/player_lightwarp.ptex"
+
+  $roughness 0.5
+}

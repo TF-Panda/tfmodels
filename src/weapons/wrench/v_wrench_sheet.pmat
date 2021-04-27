@@ -1,0 +1,11 @@
+StandardMaterial
+{
+  $baseTexture "v_wrench_sheet.ptex"
+  $lightwarpTexture "../../lightwarps/weapon_lightwarp.ptex"
+  $rimLight 1
+  $rimLightBoost 0.75
+  $halfLambert 1
+  //$envmap "/home/lachbr/ttsp/game/resources/materials/sky/sky.ptex"
+  $metalness 1.0
+  $roughness 0.65
+}

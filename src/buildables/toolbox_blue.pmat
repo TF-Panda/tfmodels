@@ -1,0 +1,7 @@
+StandardMaterial
+{
+  $basetexture toolbox_blue.ptex
+  $lightwarptexture "../lightwarps/weapon_lightwarp.ptex"
+
+  $rimlight 0
+}

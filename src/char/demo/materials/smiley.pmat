@@ -1,0 +1,8 @@
+StandardMaterial
+{
+  $basetexture smiley.ptex
+  $lightwarptexture "../../../lightwarps/player_lightwarp.ptex"
+  $halflambert 1
+  $rimlight 1
+  $rimlightboost 0.75
+}

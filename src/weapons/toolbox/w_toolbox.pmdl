@@ -1,0 +1,17 @@
+$model "w_toolbox.egg"
+
+$materialgroup
+{
+  { "../../buildables/toolbox_red.pmat" }
+  { "../../buildables/toolbox_blue.pmat" }
+}
+
+$lod 0 14
+{
+  group w_toolbox_reference
+}
+
+$lod 14 1000000
+{
+  group w_toolbox_reference_lod1
+}

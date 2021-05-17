@@ -4,6 +4,8 @@
 *.dat
 *.txo
 *.mto
+*.blend1
+*.pyc
 /built/
 Makefile
 /decompile/
@@ -11,4 +13,7 @@ Makefile
 bams/
 optchar/
 pal_egg/
+filter/
+filter_egg/
 tfmodels_index
+__pycache__/

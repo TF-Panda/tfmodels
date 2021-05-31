@@ -1,0 +1,10 @@
+StandardMaterial {
+  $baseTexture all_shells.ptex
+
+  $normalTexture all_shells_normal.ptex
+
+  $lightwarpTexture "../../lightwarps/weapon_lightwarp.ptex"
+
+  //$metalness 1.0
+  $roughness 0.6945
+}

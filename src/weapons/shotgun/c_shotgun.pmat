@@ -1,0 +1,11 @@
+StandardMaterial {
+  $baseTexture c_shotgun.ptex
+  $armeTexture c_shotgun_arme.ptex
+
+  $lightwarpTexture "../../lightwarps/weapon_lightwarp.ptex"
+
+  $rimlight 0
+  $rimlightBoost 0.75
+
+  $halfLambert 1
+}

@@ -6,5 +6,5 @@ StandardMaterial
 
   $lightwarptexture "../../lightwarps/player_lightwarp.ptex"
 
-  $roughness 0.5
+  $armeTexture engineer_arme.ptex
 }

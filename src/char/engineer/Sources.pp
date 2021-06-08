@@ -6,14 +6,20 @@
     engineer_blue.ptex \
     engineer_red.ptex \
     engineer_head.ptex \
-    engineer_normal.ptex
+    engineer_arme.ptex \
+    engineer_normal.ptex \
+    engineer_mech_hand.ptex \
+    engineer_mech_hand_blue.ptex \
+    engineer_mech_hand_arme.ptex
 #end install_tex
 
 #begin install_mat
   #define SOURCES \
     engineer_blue.pmat \
     engineer_red.pmat \
-    engineer_head.pmat
+    engineer_head.pmat \
+    engineer_mech_hand.pmat \
+    engineer_mech_hand_blue.pmat
 #end install_mat
 
 #define ENGINEER_ANIMS \
@@ -1185,7 +1191,13 @@
     -flag engineer_glove_bodygroup_lod2 \
     -flag engineer_glove_bodygroup_lod3 \
     -flag engineer_glove_bodygroup_lod4 \
-    -flag engineer_glove_bodygroup_lod5
+    -flag engineer_glove_bodygroup_lod5 \
+    -flag engineer_robotarm_bodygroup \
+    -flag engineer_robotarm_bodygroup_lod1 \
+    -flag engineer_robotarm_bodygroup_lod2 \
+    -flag engineer_robotarm_bodygroup_lod3 \
+    -flag engineer_robotarm_bodygroup_lod4 \
+    -flag engineer_robotarm_bodygroup_lod5
 #end optchar_egg
 
 #begin install_egg

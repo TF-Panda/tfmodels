@@ -1,0 +1,9 @@
+StandardMaterial
+{
+  $basetexture engineer_handr_red.ptex
+  $lightwarpTexture engineer_hands_lightwarp.ptex
+  //$rimlight 1
+  //$rimlightBoost 0.75
+  $roughness 0.4
+  //$halfLambert 1
+}

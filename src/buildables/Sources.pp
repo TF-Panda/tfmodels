@@ -1,5 +1,5 @@
 #define DIR_TYPE models
-#define INSTALL_TO buildables
+#define INSTALL_TO models/buildables
 
 #begin install_tex
   #define SOURCES \

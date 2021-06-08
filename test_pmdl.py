@@ -1,29 +1,22 @@
 from panda3d.core import *
 
-from direct.showbase.ShowBase import ShowBase
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-base = ShowBase()
+from test_base import *
 
 from direct.gui.DirectGui import *
-
-#base.camLens.setMinFov(54)
-
-from direct.showbase.InputStateGlobal import inputState
-inputState.watchWithModifiers('fwd', 'arrow_up', inputSource = inputState.ArrowKeys)
-inputState.watchWithModifiers('bck', 'arrow_down', inputSource = inputState.ArrowKeys)
-inputState.watchWithModifiers('left', 'arrow_left', inputSource = inputState.ArrowKeys)
-inputState.watchWithModifiers('right', 'arrow_right', inputSource = inputState.ArrowKeys)
 
 engie = loader.loadModel("engineer.pmdl")
 engie.node().setBounds(OmniBoundingVolume())
 engie.node().setFinal(1)
-engie.setScale(1/16)
+engie.reparentTo(render)
 charNode = engie.find("**/+CharacterNode")
 partBundle = charNode.node().getCharacter()
 partBundle.setFrameBlendFlag(True)
 
-wrench = loader.loadModel("src/weapons/wrench/w_wrench.egg")
-wrench.reparentTo(engie.find("**/weapon_bone"))
+#wrench = loader.loadModel("src/weapons/wrench/w_wrench.egg")
+#wrench.reparentTo(engie.find("**/weapon_bone"))
 
 animControls = {}
 animNodePaths = engie.findAllMatches("**/+AnimBundleNode")
@@ -33,243 +26,150 @@ for animNodePath in animNodePaths:
     if control:
         animControls[animNodePath.getName()] = control
 
-#####################################################################
-## RUN MELEE
+noBonesDesc = WeightListDesc("nobones")
+noBonesDesc.setWeight("bip_pelvis", 0.0)
+noBonesWeights = WeightList(partBundle, noBonesDesc)
 
-runNode = AnimBlendNode2D("run_melee_blend")
-runNode.addInput(animControls['a_runCenter_MELEE'], Point2(0, 0))
-runNode.addInput(animControls['a_runN_MELEE'], Point2(0, 1))
-runNode.addInput(animControls['a_runS_MELEE'], Point2(0, -1))
-runNode.addInput(animControls['a_runNE_MELEE'], Point2(1, 1))
-runNode.addInput(animControls['a_runNW_MELEE'], Point2(-1, 1))
-runNode.addInput(animControls['a_runE_MELEE'], Point2(1, 0))
-runNode.addInput(animControls['a_runW_MELEE'], Point2(-1, 0))
-runNode.addInput(animControls['a_runSW_MELEE'], Point2(-1, -1))
-runNode.addInput(animControls['a_runSE_MELEE'], Point2(1, -1))
+MeleeHipsTorso = WeightListDesc("Melee_HipsTorso")
+MeleeHipsTorso.setWeight("bip_pelvis", 0.75)
+MeleeHipsTorso.setWeight("bip_hip_R", 0.0)
+MeleeHipsTorso.setWeight("bip_hip_L", 0.0)
+MeleeHipsTorso.setWeight("bip_collar_L", 0.0)
+MeleeHipsTorso.setWeight("bip_collar_R", 0.0)
+MeleeHipsTorso.setWeight("bip_spine_0", 0.75)
+meleeHipsTorsoWeights = WeightList(partBundle, MeleeHipsTorso)
 
-aimNode = AnimBlendNode2D("run_melee_aim_blend")
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_straight_up'], Point2(0, 1))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_straight_up'], Point2(1, 1))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_straight_up'], Point2(-1, 1))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_up_right'], Point2(1, 0.5))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_up_center'], Point2(0, 0.5))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_up_left'], Point2(-1, 0.5))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_mid_right'], Point2(1, 0))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_mid_center'], Point2(0, 0))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_mid_left'], Point2(-1, 0))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_down_right'], Point2(1, -1))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_down_center'], Point2(0, -1))
-aimNode.addInput(animControls['a_MELEE_aimmatrix_run_down_left'], Point2(-1, -1))
+meleeArmsBlend = WeightListDesc("Melee_ArmsBlend")
+meleeArmsBlend.setWeight("bip_pelvis", 0.0)
+meleeArmsBlend.setWeight("bip_hip_R", 0.0)
+meleeArmsBlend.setWeight("bip_hip_L", 0.0)
+meleeArmsBlend.setWeight("bip_spine_1", 0.5)
+meleeArmsBlend.setWeight("bip_spine_2", 0.7)
+meleeArmsBlend.setWeight("bip_spine_3", 0.9)
+meleeArmsBlend.setWeight("bip_collar_L", 1.0)
+meleeArmsBlend.setWeight("bip_upperArm_L", 1.0)
+meleeArmsBlend.setWeight("bip_lowerArm_L", 1.0)
+meleeArmsBlend.setWeight("bip_collar_R", 1.0)
+meleeArmsBlend.setWeight("bip_upperArm_R", 1.0)
+meleeArmsBlend.setWeight("bip_lowerArm_R", 1.0)
+meleeArmsBlend.setWeight("bip_head", 0.0)
+meleeArmsBlend.setWeight("bip_neck", 0.0)
+meleeArmsBlendWeights = WeightList(partBundle, meleeArmsBlend)
 
-runMeleeAdd = AnimAddNode("run_melee_add")
-runMeleeAdd.setBase(runNode)
-runMeleeAdd.setAdd(aimNode)
-runMeleeAdd.setAlpha(1.0)
+meleeArmsBlend2 = WeightListDesc("Melee_ArmsBlend2")
+meleeArmsBlend2.setWeight("bip_pelvis", 0.0)
+meleeArmsBlend2.setWeight("bip_hip_R", 0.0)
+meleeArmsBlend2.setWeight("bip_hip_L", 0.0)
+meleeArmsBlend2.setWeight("bip_spine_0", 0.7)
+meleeArmsBlend2.setWeight("bip_spine_1", 0.8)
+meleeArmsBlend2.setWeight("bip_spine_2", 0.9)
+meleeArmsBlend2.setWeight("bip_spine_3", 1.0)
+meleeArmsBlend2.setWeight("bip_collar_L", 1.0)
+meleeArmsBlend2.setWeight("bip_upperArm_L", 1.0)
+meleeArmsBlend2.setWeight("bip_lowerArm_L", 1.0)
+meleeArmsBlend2.setWeight("bip_collar_R", 1.0)
+meleeArmsBlend2.setWeight("bip_upperArm_R", 1.0)
+meleeArmsBlend2.setWeight("bip_lowerArm_R", 1.0)
+meleeArmsBlend2.setWeight("bip_head", 0.7)
+meleeArmsBlendWeights2 = WeightList(partBundle, meleeArmsBlend2)
 
-runMelee = AnimSequence("run_melee", runMeleeAdd)
+Armslayer = AnimSequence("swing_melee_armslayer", animControls['armslayer_melee_swing'])
+Armslayer.setWeightList(meleeArmsBlendWeights)
+Bodylayer = AnimSequence("swing_melee_bodylayer", animControls['bodylayer_Melee_Swing'])
+Bodylayer.setWeightList(meleeHipsTorsoWeights)
+Bodylayer.setFlags(AnimSequence.FDelta | AnimSequence.FPost)
+SwingMelee = AnimSequence("swing_melee")
+SwingMelee.addLayer(Bodylayer, 0, 1, 20, 24, True, False)
+SwingMelee.addLayer(Armslayer, 0, 5, 20, 24, True, False)
 
-#####################################################################
+attackStandPrimary = AnimSequence("attack_stand_primary", animControls['AttackStand_PRIMARY'])
+attackStandPrimary.setFlags(AnimSequence.FDelta | AnimSequence.FPost)
 
-#####################################################################
-## STAND MELEE
+attackCrouchPrimary = AnimSequence("attack_crouch_primary", animControls['AttackCrouch_PRIMARY'])
+attackCrouchPrimary.setFlags(AnimSequence.FDelta | AnimSequence.FPost)
 
-aimMeleeNode = AnimBlendNode2D("idle_melee_aim_blend")
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_straight_up'], Point2(0, 1))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_straight_up'], Point2(1, 1))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_straight_up'], Point2(-1, 1))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_up_right'], Point2(1, 0.5))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_up_center'], Point2(0, 0.5))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_up_left'], Point2(-1, 0.5))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_mid_right'], Point2(1, 0))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_mid_center'], Point2(0, 0))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_mid_left'], Point2(-1, 0))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_down_right'], Point2(1, -1))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_down_center'], Point2(0, -1))
-aimMeleeNode.addInput(animControls['a_MELEE_aimmatrix_idle_down_left'], Point2(-1, -1))
+reloadPrimary = AnimSequence("reload_primary", animControls['gesture_reload_primary'])
+reloadPrimary.setFlags(AnimSequence.FDelta | AnimSequence.FPost)
 
-standMeleeAdd = AnimAddNode("idle_melee")
-standMeleeAdd.setBase(animControls['stand_MELEE'])
-standMeleeAdd.setAdd(aimMeleeNode)
-standMeleeAdd.setAlpha(1.0)
+reloadCrouchPrimary = AnimSequence("reload_crouch_primary", animControls['gesture_reload_crouch_primary'])
+reloadCrouchPrimary.setFlags(AnimSequence.FDelta | AnimSequence.FPost)
 
-standMelee = AnimSequence("idle_melee", standMeleeAdd)
+attackFSM = AnimStateMachine("attackFSM")
+attackFSM.addState("stand_primary", attackStandPrimary)
+attackFSM.addState("stand_primary_reload", reloadPrimary)
+attackFSM.addState("crouch_primary", attackCrouchPrimary)
+attackFSM.addState("crouch_primary_reload", reloadCrouchPrimary)
+attackFSM.addState("melee", SwingMelee)
+attackFSM.setState("crouch_primary", 0, 1)
 
-#####################################################################
+states = ["crouch", "stand", "run"]
 
-blend = True
+crouchSeq = AnimSequence("crouch_melee", animControls['crouch_MELEE'])
+standSeq = AnimSequence("stand_melee", animControls['stand_MELEE'])
+runSeq = AnimSequence("run_melee", animControls['a_runN_MELEE'])
+crouchPrimSeq = AnimSequence("crouch_primary", animControls['crouch_PRIMARY'])
+standPrimSeq = AnimSequence("stand_primary", animControls['stand_PRIMARY'])
+runPrimSeq = AnimSequence("run_primary", animControls['a_runN_PRIMARY'])
+fsm = AnimStateMachine("thing")
+fsm.addState("crouch_melee", crouchSeq)
+fsm.addState("stand_melee", standSeq)
+fsm.addState("run_melee", runSeq)
+fsm.addState("crouch_primary", crouchPrimSeq)
+fsm.addState("stand_primary", standPrimSeq)
+fsm.addState("run_primary", runPrimSeq)
 
-meleeState = AnimStateMachine("melee")
-meleeState.addState("run", runMelee, 0.2 if blend else 0.0)
-meleeState.addState("stand", standMelee, 0.2 if blend else 0.0)
-meleeState.setState("stand")
+fsm.setState("crouch_primary", 0, 1)
 
-partBundle.setAnimGraph(meleeState)
+state = "crouch"
 
-pelvis = NodePath('bip_pelvis')
-pelvis.reparentTo(charNode)
-bipPelvis = partBundle.findJoint('bip_pelvis')
-partBundle.addNetTransform(bipPelvis, pelvis.node())
-#partBundle.findChild('bip_pelvis').addNetTransform(pelvis.node())
+attackState = "primary"
+attackStates = ["primary", "primary_reload", "melee"]
 
-engie.reparentTo(render)
-
-al = AmbientLight('al')
-al.setColor((0.8, 0.9, 1.0, 1.0))
-alnp = render.attachNewNode(al)
-render.setLight(alnp)
-
-dl = CascadeLight('cl')
-dl.setColor((3, 3, 2.7, 1.0))
-dl.setCameraMask(BitMask32.bit(1))
-dl.setSceneCamera(base.cam)
-dl.setShadowCaster(True, 4096, 4096)
-dlnp = render.attachNewNode(dl)
-dlnp.setHpr(-45, -65, 0)
-render.setLight(dlnp)
-
-render.setAttrib(LightRampAttrib.makeHdr0())
-
-render.setAntialias(AntialiasAttrib.MMultisample)
-
-render.show(BitMask32.bit(1))
-
-def nextSkin():
-    skin = engie.node().getActiveMaterialGroup() + 1
-    if skin >= engie.node().getNumMaterialGroups():
-        skin = 0
-    engie.node().setActiveMaterialGroup(skin)
-
-def prevSkin():
-    skin = engie.node().getActiveMaterialGroup() - 1
-    if skin < 0:
-        skin = engie.node().getNumMaterialGroups() - 1
-    engie.node().setActiveMaterialGroup(skin)
-
-base.accept('wheel_up', nextSkin)
-base.accept('wheel_down', prevSkin)
-
-moveX = 0.0
-moveY = 0.0
-
-staticFriction = 0.3
-dynamicFriction = 0.3
-
-top = 320
-
-lastMoveX = 0.0
-lastMoveY = 0.0
-
-import math
-
-stateText = OnscreenText("State: Stand", parent = base.a2dTopLeft, pos = (0.1, -0.1), align = TextNode.ALeft)
-
-def update(task):
-    global lastMoveX, lastMoveY
-
-    dt = globalClock.getDt()
-
-    camera.setX(pelvis.getX(render))
-    camera.setY(pelvis.getY(render))
-    camera.setZ(2.5)
-    #camera.setH(90)
-    camera.setY(camera, -11)
-
-    forward = inputState.isSet('fwd')
-    reverse = inputState.isSet('bck')
-    left = inputState.isSet('left')
-    right = inputState.isSet('right')
-
-    if forward:
-        moveY = top
-    elif reverse:
-        moveY = -top
+def updateAnimState():
+    if attackState == "primary_reload":
+        theState = "primary"
     else:
-        moveY = 0.0
+        theState = attackState
+    fsm.setState(state + "_" + theState, 0, 1)
 
-    if left:
-        moveX = -top
-    elif right:
-        moveX = top
-    else:
-        moveX = 0
+def nextState():
+    global state
+    idx = states.index(state)
+    idx += 1
+    if (idx >= len(states)):
+        idx = 0
+    state = states[idx]
 
-    if blend:
-        sFriction = 1 - math.pow(1 - staticFriction, dt * 30.0)
-        dFriction = 1 - math.pow(1 - dynamicFriction, dt * 30.0)
+    updateAnimState()
+    updateAttackState()
 
-        # Apply friction to the goal speeds
-        if abs(moveX) < abs(lastMoveX):
-            lastMoveX = (moveX * dFriction + lastMoveX * (1 - dFriction))
+def updateAttackState():
+    if "primary" in attackState:
+        if state == "crouch":
+            attackFSM.setState("crouch_" + attackState, 1, 1)
         else:
-            lastMoveX = (moveX * sFriction + lastMoveX * (1 - sFriction))
-
-        if abs(moveY) < abs(lastMoveY):
-            lastMoveY = (moveY * dFriction + lastMoveY * (1 - dFriction))
-        else:
-            lastMoveY = (moveY * sFriction + lastMoveY * (1 - sFriction))
+            attackFSM.setState("stand_" + attackState, 1, 1)
     else:
-        lastMoveX = moveX
-        lastMoveY = moveY
+        attackFSM.setState(attackState, 1, 1)
 
-    moveX = lastMoveX
-    moveY = lastMoveY
-    if abs(moveX) < 1:
-        moveX = 0
-    if abs(moveY) < 1:
-        moveY = 0
+def nextAttack():
+    global attackState
+    idx = attackStates.index(attackState)
+    idx += 1
+    if (idx >= len(attackStates)):
+        idx = 0
+    attackState = attackStates[idx]
 
-    if moveX == 0 and moveY == 0:
-        meleeState.setState("stand")
-        stateText.setText("stand")
-    else:
-        meleeState.setState("run")
-        stateText.setText("run")
-        runNode.setInputX(moveX / top)
-        runNode.setInputY(moveY / top)
+    updateAnimState()
+    updateAttackState()
 
-    #print(engie.find("**/weapon_bone").getTransform())
+base.accept('arrow_right', nextState)
+base.accept('arrow_left', nextAttack)
 
-    #engie.ls()
+overlay = AnimOverlayNode("gestures", fsm, attackFSM)
 
-    return task.cont
+partBundle.setAnimGraph(overlay)
 
-taskMgr.add(update, 'update')
-
-hbaoControlZ = -0.2
-
-def updateLookX(value):
-    aimMeleeNode.setInputX(value)
-    aimNode.setInputX(value)
-
-def updateLookY(value):
-    aimMeleeNode.setInputY(value)
-    aimNode.setInputY(value)
-
-def titleSliderBar(title, min, max, callback):
-    global hbaoControlZ
-    def __updateVarValue(slider, title, text, callback):
-        text.setText("{0}: {1}".format(title, slider['value']))
-        callback(slider['value'])
-
-    value = 0
-    frame = DirectFrame(parent = base.a2dTopLeft, pos = (0.3, 0, hbaoControlZ), scale = 0.3)
-    titleText = OnscreenText("{0}: {1}".format(title, value), parent = frame, scale = 0.1)
-    slider = DirectSlider(
-        range = (min, max),
-        value = value,
-        command = __updateVarValue,
-        pos = (0.1, 0, -0.1),
-        parent = frame
-    )
-    slider['extraArgs'] = [slider, title, titleText, callback]
-
-    hbaoControlZ -= 0.1
-
-titleSliderBar("Look X", -1, 1, updateLookX)
-titleSliderBar("Look Y", -1, 1, updateLookY)
-
-base.disableMouse()
-
-engie.ls()
+base.enableMouse()
 
 base.run()

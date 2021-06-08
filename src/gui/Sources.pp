@@ -8,3 +8,9 @@
     $[if $[UNIX_PLATFORM],game.svg]
 
 #end install_misc
+
+#begin install_egg
+  #define SOURCES \
+    tf2_logo.egg \
+    tf2_logo_2.egg
+#end install_egg

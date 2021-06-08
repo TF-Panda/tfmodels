@@ -1,0 +1,4 @@
+StandardMaterial
+{
+  $baseTexture concretefloor01.ptex
+}

@@ -4,8 +4,8 @@ StandardMaterial {
 
   $lightwarpTexture "../../lightwarps/weapon_lightwarp.ptex"
 
-  $rimlight 0
-  $rimlightBoost 0.75
+  //$rimlight 0
+  //$rimlightBoost 0.75
 
-  $halfLambert 1
+  //$halfLambert 1
 }

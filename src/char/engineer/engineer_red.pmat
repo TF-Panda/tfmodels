@@ -6,10 +6,10 @@ StandardMaterial
 
   $lightwarptexture "../../lightwarps/player_lightwarp.ptex"
 
-  $halflambert 1
+  //$halflambert 1
 
-  $rimlight 1
-  $rimlightboost 0.75
+  //$rimlight 1
+  //$rimlightboost 0.75
 
-  $roughness 0.5
+  $armeTexture engineer_arme.ptex
 }

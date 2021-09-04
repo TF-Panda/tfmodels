@@ -1,0 +1,5 @@
+{
+  image "dirtroad001_sm.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

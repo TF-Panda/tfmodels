@@ -1,0 +1,74 @@
+{
+  model "optchar/sentry1_gib4-zero.egg"
+
+  //hpr [ 180 0 0 ]
+
+  custom_data {
+    surface_prop metal
+    contents solid
+
+    particles [
+      {
+        name spark_electric01
+        attachment_type follow_attachment
+        attachment_point sentry_spark1
+      }
+      {
+        name spark_electric01
+        attachment_type follow_attachment
+        attachment_point sentry_spark2
+      }
+      {
+        name spark_electric01
+        attachment_type follow_attachment
+        attachment_point sentry_spark3
+      }
+    ]
+  }
+
+  attachments [
+    {
+      name sentry_spark1
+      influences [
+        {
+          parent polymsh13
+          pos [ 0.66 23.07 -2.5 ]
+        }
+      ]
+    }
+    {
+      name sentry_spark2
+      influences [
+        {
+          parent polymsh13
+          pos [ -0.92 22.37 -3.55 ]
+        }
+      ]
+    }
+    {
+      name sentry_spark3
+      infleunces [
+        {
+          parent polymsh13
+          pos [ -4.05 20.5 -4.41 ]
+        }
+      ]
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ Sentry1_Gibs.pmat ]
+    }
+    {
+      name blue
+      materials [ sentry1_gibs_blue.pmat ]
+    }
+  ]
+
+  physics_model {
+    mesh sentry1_gib4_physics
+    mass 5000
+  }
+}

@@ -1,0 +1,5 @@
+{
+  image soldier_roughness.tga
+  format luminance
+  wrap clamp
+}

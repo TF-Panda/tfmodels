@@ -38,7 +38,8 @@
     -flag c_wrench_reference \
     -flag c_wrench_reference_lod1 \
     -flag c_wrench_reference_lod2 \
-    -flag c_wrench_reference_lod3
+    -flag c_wrench_reference_lod3 \
+    -flag c_wrench_physics
 #end optchar_egg
 
 #begin install_egg

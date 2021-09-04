@@ -1,3 +1,5 @@
-image v_shotgun_arme.png
-format rgb
-wrap clamp
+{
+  image v_shotgun_arme.png
+  format rgb
+  wrap clamp
+}

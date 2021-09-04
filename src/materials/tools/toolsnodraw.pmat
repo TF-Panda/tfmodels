@@ -1,0 +1,10 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "toolsnodraw.ptex"
+  }
+
+  tags [
+    compile_nodraw
+  ]
+}

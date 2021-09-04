@@ -17,3 +17,5 @@ filter/
 filter_egg/
 tfmodels_index
 __pycache__/
+index_name.txt
+*.zip

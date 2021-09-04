@@ -1,0 +1,46 @@
+{
+  model "optchar/c_grenadelauncher-zero.egg"
+
+  custom_data {
+    bodygroups [
+      {
+        name reload
+        nodes [
+          blank
+          "grenade_bodygroup*"
+        ]
+      }
+    ]
+  }
+
+  lods [
+    {
+      distance 0
+      groups [
+        c_grenadelauncher grenade_bodygroup
+      ]
+    }
+    {
+      distance 11
+      groups [
+        c_grenadelauncher_lod1 grenade_bodygroup_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        c_grenadelauncher_lod2 grenade_bodygroup_lod2
+      ]
+    }
+    {
+      distance 33
+      groups [
+        c_grenadelauncher_lod3 grenade_bodygroup_lod3
+      ]
+    }
+  ]
+
+  physics_model {
+    mesh c_grenadelauncher_physics
+  }
+}

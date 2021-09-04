@@ -1,3 +1,5 @@
-image crosshair_default.tga
-format srgb_alpha
-wrap clamp
+{
+  image crosshair_default.tga
+  format srgb_alpha
+  wrap clamp
+}

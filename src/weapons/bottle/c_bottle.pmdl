@@ -1,0 +1,50 @@
+{
+  model "optchar/c_bottle-zero.egg"
+
+  custom_data {
+    surface_prop glass
+    contents solid
+
+    bodygroups [
+      {
+        name broken
+        nodes [
+          "c_bottle*"
+          "c_bottle_broken*"
+        ]
+      }
+    ]
+  }
+
+  lods [
+    {
+      distance 0
+      groups [
+        c_bottle c_bottle_broken
+      ]
+    }
+    {
+      distance 11
+      groups [
+        c_bottle_lod1 c_bottle_broken_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        c_bottle_lod2 c_bottle_broken_lod2
+      ]
+    }
+    {
+      distance 33
+      groups [
+        c_bottle_lod3 c_bottle_broken_lod3
+      ]
+    }
+  ]
+
+  physics_model {
+    mesh c_bottle_physics
+    mass 1.0
+  }
+}

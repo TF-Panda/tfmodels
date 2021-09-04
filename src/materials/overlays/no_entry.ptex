@@ -1,0 +1,5 @@
+{
+  image "no_entry.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

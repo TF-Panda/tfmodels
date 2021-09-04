@@ -1,0 +1,5 @@
+{
+  image demoman_hands.tga
+  format srgb
+  wrap clamp
+}

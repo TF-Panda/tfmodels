@@ -1,0 +1,5 @@
+{
+  image "capture_zone.tga"
+  format "srgb_alpha"
+  wrap "clamp"
+}

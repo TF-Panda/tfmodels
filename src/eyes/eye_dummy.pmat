@@ -1,0 +1,9 @@
+// Material for dummy eyes.
+{
+  material StandardMaterial
+  parameters {
+    base_color [ 200 200 200 255 ]
+    roughness 0.1
+    env_map true
+  }
+}

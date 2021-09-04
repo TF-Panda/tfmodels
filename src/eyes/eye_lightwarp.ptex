@@ -1,3 +1,5 @@
-image eye_lightwarp.tga
-format rgb
-wrap clamp
+{
+  image eye_lightwarp.tga
+  format rgb
+  wrap clamp
+}

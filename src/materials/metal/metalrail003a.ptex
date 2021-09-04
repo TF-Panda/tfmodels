@@ -1,0 +1,5 @@
+{
+  image "metalrail003a.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

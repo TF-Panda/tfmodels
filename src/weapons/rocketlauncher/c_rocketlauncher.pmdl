@@ -1,0 +1,27 @@
+{
+  model "optchar/c_rocketlauncher-zero.egg"
+
+  physics_model {
+    mesh c_rocketlauncher_physics
+    mass 1.0
+  }
+
+  lods [
+    {
+      distance 0
+      groups [ c_rocketlauncher ]
+    }
+    {
+      distance 11
+      groups [ c_rocketlauncher_lod1 ]
+    }
+    {
+      distance 22
+      groups [ c_rocketlauncher_lod2 ]
+    }
+    {
+      distance 33
+      groups [ c_rocketlauncher_lod3 ]
+    }
+  ]
+}

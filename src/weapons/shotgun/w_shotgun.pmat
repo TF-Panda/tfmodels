@@ -1,11 +1,15 @@
-StandardMaterial {
-  $BaseTexture v_shotgun.ptex
-  $ArmeTexture v_shotgun_arme.ptex
+{
+  material StandardMaterial
 
-  $RimLight 1
-  $RimLightBoost 0.75
+  parameters {
+    base_texture v_shotgun.ptex
+    arme_texture v_shotgun_arme.ptex
 
-  $HalfLambert 1
+    rim_lighting 1
+    rim_lighting_boost 0.75
 
-  $LightwarpTexture "../../lightwarps/weapon_lightwarp.ptex"
+    half_lambert 1
+
+    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
+  }
 }

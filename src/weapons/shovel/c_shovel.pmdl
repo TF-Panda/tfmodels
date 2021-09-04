@@ -1,0 +1,29 @@
+{
+  model "optchar/c_shovel-zero.egg"
+
+  lods [
+    {
+      distance 0
+      groups [
+        c_shovel_reference
+      ]
+    }
+    {
+      distance 11
+      groups [
+        c_shovel_reference_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        c_shovel_reference_lod2
+      ]
+    }
+  ]
+
+  physics_model {
+    mesh c_shovel_physics
+    mass 1.0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  model "optchar/sentry1_gib3-zero.egg"
+
+  //hpr [ 180 0 0 ]
+
+  custom_data {
+    surface_prop metal
+    contents solid
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ Sentry1_Gibs.pmat ]
+    }
+    {
+      name blue
+      materials [ sentry1_gibs_blue.pmat ]
+    }
+  ]
+
+  physics_model {
+    mesh sentry1_gib3_physics
+    mass 4.327045
+  }
+}

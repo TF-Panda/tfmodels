@@ -1,0 +1,5 @@
+{
+  image v_bottle.tga
+  format srgb
+  wrap clamp
+}

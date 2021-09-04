@@ -1,0 +1,5 @@
+{
+  image soldier_sleeves_red.tga
+  format srgb
+  wrap clamp
+}

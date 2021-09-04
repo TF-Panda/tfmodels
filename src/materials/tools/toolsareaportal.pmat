@@ -1,0 +1,9 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "toolsareaportal.ptex"
+  }
+  tags [
+    compile_skip
+  ]
+}

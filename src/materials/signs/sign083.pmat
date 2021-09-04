@@ -1,0 +1,6 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "sign083.ptex"
+  }
+}

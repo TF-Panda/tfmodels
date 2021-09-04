@@ -1,0 +1,5 @@
+{
+  image p_rocketlauncher_albedo.tga
+  format srgb
+  wrap clamp
+}

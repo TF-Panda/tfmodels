@@ -1,2 +1,4 @@
-image sentry1_normal.tga
-format rgba
+{
+  image sentry1_normal.tga
+  format rgba
+}

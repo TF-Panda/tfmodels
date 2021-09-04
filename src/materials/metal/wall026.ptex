@@ -1,0 +1,5 @@
+{
+  image "wall026.tga"
+  format "srgb"
+  wrap "repeat"
+}

@@ -1,0 +1,5 @@
+{
+  image c_grenadelauncher_albedo.tga
+  format srgb
+  wrap clamp
+}

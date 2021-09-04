@@ -1,0 +1,5 @@
+{
+  image background01.tga
+  format srgb
+  wrap clamp
+}

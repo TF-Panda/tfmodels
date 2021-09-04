@@ -1,0 +1,5 @@
+{
+  image c_pistol_gloss.png
+  format luminance
+  wrap clamp
+}

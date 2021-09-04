@@ -1,10 +1,16 @@
-StandardMaterial
 {
-  $BaseTexture c_wrench.ptex
-  $SpecularTexture c_wrench_specular.ptex
-  $Roughness 0.25
-  $LightwarpTexture "../../lightwarps/weapon_lightwarp.ptex"
-  $RimLight 1
-  $RimLightBoost 0.75
-  $HalfLambert 1
+  material StandardMaterial
+
+  parameters {
+    base_texture c_wrench.ptex
+    metalness_texture c_wrench_specular.ptex
+    roughness_texture c_wrench_roughness.ptex
+    //roughness 0.5
+    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
+    env_map true
+
+    //rim_lighting 1
+    //rim_lighting_boost 0.75
+    //half_lambert 1
+  }
 }

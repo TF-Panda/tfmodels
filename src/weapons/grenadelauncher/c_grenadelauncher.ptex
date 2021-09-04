@@ -1,0 +1,5 @@
+{
+  image c_grenadelauncher.tga
+  format srgb
+  wrap clamp
+}

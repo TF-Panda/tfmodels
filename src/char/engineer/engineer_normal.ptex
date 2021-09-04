@@ -1,2 +1,4 @@
-image engineer_normal.tga
-format rgb
+{
+  image engineer_normal.tga
+  format rgb
+}

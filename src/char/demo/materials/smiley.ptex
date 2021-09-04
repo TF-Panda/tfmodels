@@ -1,3 +1,5 @@
-image smiley.tga
-format srgb
-wrap clamp
+{
+  image smiley.tga
+  format srgb
+  wrap clamp
+}

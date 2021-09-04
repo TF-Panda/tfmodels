@@ -1,0 +1,5 @@
+{
+  image "grain_elevator_facade_14c.tga"
+  format "srgb"
+  wrap "repeat"
+}

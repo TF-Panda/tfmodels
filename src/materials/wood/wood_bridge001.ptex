@@ -1,0 +1,5 @@
+{
+  image "wood_bridge001.tga"
+  format "srgb"
+  wrap "repeat"
+}

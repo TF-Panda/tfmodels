@@ -1,0 +1,10 @@
+{
+  material SkyBoxMaterial
+  parameters {
+    base_texture "toolsskybox.ptex"
+  }
+
+  tags [
+    compile_sky
+  ]
+}

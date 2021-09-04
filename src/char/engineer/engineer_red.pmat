@@ -1,15 +1,18 @@
-StandardMaterial
 {
-  $basetexture engineer_red.ptex
+  material StandardMaterial
+  parameters
+  {
+    base_texture engineer_red.ptex
 
-  $normaltexture engineer_normal.ptex
+    env_map true
 
-  $lightwarptexture "../../lightwarps/player_lightwarp.ptex"
+    normal_texture engineer_normal.ptex
 
-  //$halflambert 1
+    lightwarp_texture "../../lightwarps/player_lightwarp.ptex"
 
-  //$rimlight 1
-  //$rimlightboost 0.75
+    //half_lambert true
+    //rim_lighting_boost 0.75
 
-  $armeTexture engineer_arme.ptex
+    gloss_texture engineer_gloss.ptex
+  }
 }

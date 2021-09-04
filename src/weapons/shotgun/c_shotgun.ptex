@@ -1,3 +1,5 @@
-image c_shotgun.tga
-format srgb
-wrap clamp
+{
+  image c_shotgun.tga
+  format srgb
+  wrap clamp
+}

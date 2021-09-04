@@ -1,0 +1,9 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture c_shovel.ptex
+    gloss_texture c_shovel_gloss.ptex
+    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
+    env_map true
+  }
+}

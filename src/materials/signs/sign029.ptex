@@ -1,0 +1,5 @@
+{
+  image "sign029.tga"
+  format "srgb_alpha"
+  wrap "clamp"
+}

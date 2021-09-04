@@ -1,8 +1,10 @@
-StandardMaterial
 {
-  $basetexture "demoman_blue.ptex"
-  $normaltexture "demoman_normal.ptex"
-  $lightwarptexture "../../../lightwarps/player_lightwarp.ptex"
-
-  $roughness 0.5
+  material StandardMaterial
+  parameters {
+    base_texture demoman_blue.ptex
+    normal_texture demoman_normal.ptex
+    lightwarp_texture "../../../lightwarps/player_lightwarp.ptex"
+    env_map true
+    roughness 0.9
+  }
 }

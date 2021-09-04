@@ -1,0 +1,5 @@
+{
+  image expl001.rgba
+  format srgb_alpha
+  wrap clamp
+}

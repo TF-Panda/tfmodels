@@ -1,0 +1,5 @@
+{
+  image c_pistol.tga
+  format srgb
+  wrap clamp
+}

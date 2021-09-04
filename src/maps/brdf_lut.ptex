@@ -1,0 +1,8 @@
+{
+  image brdf_lut.png
+  format rgb
+  wrap clamp
+  minfilter linear
+  magfilter linear
+  anisotropic 0
+}

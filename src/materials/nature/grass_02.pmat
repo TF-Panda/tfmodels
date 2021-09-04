@@ -1,0 +1,6 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "grass_02.ptex"
+  }
+}

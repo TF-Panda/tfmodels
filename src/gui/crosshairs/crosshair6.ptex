@@ -1,3 +1,5 @@
-image crosshair6.tga
-format srgb_alpha
-wrap clamp
+{
+  image crosshair6.tga
+  format srgb_alpha
+  wrap clamp
+}

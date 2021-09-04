@@ -1,0 +1,5 @@
+{
+  image "toolsclip.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

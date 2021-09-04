@@ -1,0 +1,5 @@
+{
+  image "sign039.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

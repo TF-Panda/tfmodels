@@ -1,3 +1,5 @@
-image c_wrench_specular.rgb
-format sluminance
-wrap clamp
+{
+  image c_wrench_specular.rgb
+  format luminance
+  wrap clamp
+}

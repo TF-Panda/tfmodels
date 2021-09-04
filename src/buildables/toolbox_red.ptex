@@ -1,2 +1,4 @@
-image toolbox_red.tga
-format srgb_alpha
+{
+  image toolbox_red.tga
+  format srgb
+}

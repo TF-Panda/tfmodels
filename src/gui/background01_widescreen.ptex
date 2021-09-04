@@ -1,0 +1,5 @@
+{
+  image background01_widescreen.tga
+  format srgb
+  wrap clamp
+}

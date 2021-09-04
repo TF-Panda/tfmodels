@@ -1,0 +1,5 @@
+{
+  image "hay_01.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

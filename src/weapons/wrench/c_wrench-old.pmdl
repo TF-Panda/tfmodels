@@ -1,0 +1,23 @@
+$model "optchar/c_wrench-zero.egg"
+
+$sequence idle "optchar/c_wrench-idle.egg" fps 30
+
+$lod 0 11
+{
+  group c_wrench_reference
+}
+
+$lod 11 22
+{
+  group c_wrench_reference_lod1
+}
+
+$lod 22 33
+{
+  group c_wrench_reference_lod2
+}
+
+$lod 33 9999999
+{
+  group c_wrench_reference_lod3
+}

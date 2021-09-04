@@ -1,23 +1,27 @@
-$model "optchar/c_wrench-zero.egg"
-
-$sequence idle "optchar/c_wrench-idle.egg" fps 30
-
-$lod 0 11
 {
-  group c_wrench_reference
-}
+  model "optchar/c_wrench-zero.egg"
 
-$lod 11 22
-{
-  group c_wrench_reference_lod1
-}
+  physics_model {
+    mesh c_wrench_physics
+    mass 2.126574
+  }
 
-$lod 22 33
-{
-  group c_wrench_reference_lod2
-}
-
-$lod 33 9999999
-{
-  group c_wrench_reference_lod3
+  lods [
+    {
+      distance 0
+      groups [ c_wrench_reference ]
+    }
+    {
+      distance 11
+      groups [ c_wrench_reference_lod1 ]
+    }
+    {
+      distance 22
+      groups [ c_wrench_reference_lod2 ]
+    }
+    {
+      distance 33
+      groups [ c_wrench_reference_lod3 ]
+    }
+  ]
 }

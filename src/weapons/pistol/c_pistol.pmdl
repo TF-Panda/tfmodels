@@ -1,0 +1,23 @@
+{
+  model "optchar/c_pistol-zero.egg"
+
+  physics_model {
+    mesh c_pistol_physics
+    mass 0.964329
+  }
+
+  lods [
+    {
+      distance 0
+      groups [ c_pistol_reference ]
+    }
+    {
+      distance 11
+      groups [ c_pistol_reference_lod1 ]
+    }
+    {
+      distance 22
+      groups [ c_pistol_reference_lod2 ]
+    }
+  ]
+}

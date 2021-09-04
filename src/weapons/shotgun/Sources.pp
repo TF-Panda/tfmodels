@@ -10,7 +10,8 @@
 #begin install_tex
   #define SOURCES \
     c_shotgun.ptex \
-    c_shotgun_arme.ptex
+    c_shotgun_metalness.ptex \
+    c_shotgun_roughness.ptex
 #end install_tex
 
 #begin install_mat
@@ -37,7 +38,8 @@
     -keepall \
     -flag c_shotgun_reference \
     -flag c_shotgun_reference_lod1 \
-    -flag c_shotgun_reference_lod2
+    -flag c_shotgun_reference_lod2 \
+    -flag c_shotgun_physics
 #end optchar_egg
 
 #begin install_egg

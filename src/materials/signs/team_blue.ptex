@@ -1,0 +1,5 @@
+{
+  image "team_blue.tga"
+  format "srgb_alpha"
+  wrap "clamp"
+}

@@ -1,0 +1,46 @@
+{
+  model "optchar/sentry1_gib2-zero.egg"
+
+  //hpr [ 180 0 0 ]
+
+  custom_data {
+    surface_prop metal
+    contents solid
+
+    particles [
+      {
+        name spark_electric01
+        attachment_type follow_attachment
+        attachment_point sentry_spark1
+      }
+    ]
+  }
+
+  attachments [
+    {
+      name sentry_spark1
+      influences [
+        {
+          parent polymsh3
+          pos [ 0.94 32.75 -4.24 ]
+        }
+      ]
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ Sentry1_Gibs.pmat ]
+    }
+    {
+      name blue
+      materials [ sentry1_gibs_blue.pmat ]
+    }
+  ]
+
+  physics_model {
+    mesh sentry1_gib2_physics
+    mass 5.552447
+  }
+}

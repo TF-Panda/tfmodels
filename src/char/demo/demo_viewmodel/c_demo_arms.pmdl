@@ -1,0 +1,86 @@
+{
+  model "optchar/c_demo_arms-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../materials/demoman_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../materials/demoman_blue.pmat" ]
+    }
+  ]
+
+  joint_merges [
+    "root"
+    "bip_upperArm_L"
+    "bip_lowerArm_L"
+    "bip_upperArm_R"
+    "bip_lowerArm_R"
+    "bip_wrist_R"
+    "bip_hand_R"
+    "bip_wrist_L"
+    "bip_hand_L"
+    "weapon_bone"
+    "weapon_bone_1"
+    "weapon_bone_2"
+    "weapon_bone_3"
+    "weapon_bone_L"
+    "weapon_targe"
+    "weapon_bone_4"
+    "vm_weapon_bone"
+    "vm_weapon_bone_1"
+    "vm_weapon_bone_2"
+    "vm_weapon_bone_3"
+    "vm_weapon_bone_4"
+    "vm_weapon_bone_5"
+    "vm_weapon_bone_6"
+    "vm_weapon_bone_7"
+    "vm_weapon_bone_L"
+    "vm_weapon_bone_L_1"
+    "vm_weapon_bone_L_2"
+  ]
+
+  sequences [
+    {
+      name b_draw
+      anim "optchar/c_demo_arms-b_draw.egg"
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Bottle.Draw"
+        }
+      ]
+      activity Melee_VM_Draw
+    }
+
+    {
+      name b_idle
+      anim "optchar/c_demo_arms-b_idle.egg"
+      loop true
+      activity Melee_VM_Idle
+    }
+
+    {
+      name b_swing_a
+      anim "optchar/c_demo_arms-b_swing_a.egg"
+      activity Melee_VM_Swing
+      snap true
+    }
+
+    {
+      name b_swing_b
+      anim "optchar/c_demo_arms-b_swing_b.egg"
+      activity Melee_VM_Swing
+      snap true
+    }
+  ]
+}

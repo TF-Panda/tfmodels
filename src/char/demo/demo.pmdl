@@ -1,42 +1,498 @@
-$model "optchar/demo-zero.egg"
-
-$sequence layer_taunt01 "optchar/demo-layer_taunt01.egg" fps 30
-$sequence layer_taunt02 "optchar/demo-layer_taunt02.egg" fps 30
-$sequence layer_taunt03 "optchar/demo-layer_taunt03.egg" fps 30
-$sequence stand_PRIMARY "optchar/demo-stand_PRIMARY.egg" fps 30
-$sequence stand_SECONDARY "optchar/demo-stand_SECONDARY.egg" fps 30
-
-$lod 0 11
 {
-  group demo_morphs_low grenades_bodygroup shoes_bodygroup demo_smiley demo_eye
-}
+  model "optchar/demo-zero.egg"
 
-$lod 11 22
-{
-  group demo_morphs_low_lod1 grenades_bodygroup_lod1 shoes_bodygroup_lod1 demo_smiley_lod1
-}
+  hpr [ 180 0 0 ]
 
-$lod 22 33
-{
-  group demo_morphs_low_lod2 grenades_bodygroup_lod2 shoes_bodygroup_lod2 demo_smiley_lod2
-}
+  eyeballs [
+    {
+      name eye_right
+      material eyeball_r_demo
+      parent bip_head
+      pos [ -1.423510 -3.375235 78.598315 ]
+      diameter 1.4
+      z_offset 4
+      iris_size 0.6
+    }
+  ]
 
-$lod 33 44
-{
-  group demo_morphs_low_lod3 grenades_bodygroup_lod3 shoes_bodygroup_lod3 demo_smiley_lod3
-}
+  material_groups [
+    {
+      name red
+      materials [ materials/demoman_red.pmat materials/demoman_head.pmat ]
+    }
+    {
+      name blue
+      materials [ materials/demoman_blue.pmat materials/demoman_head.pmat ]
+    }
+  ]
 
-$lod 44 55
-{
-  group demo_morphs_low_lod4 grenades_bodygroup_lod4 shoes_bodygroup_lod4 demo_smiley_lod4
-}
+  custom_data {
+    bodygroups [
+      {
+        name smiley
+        nodes [
+          blank
+          "demo_smiley*"
+        ]
+      }
+    ]
+  }
 
-$lod 55 99999999
-{
-  group demo_morphs_low_lod5 grenades_bodygroup_lod5 shoes_bodygroup_lod5 demo_smiley_lod5
-}
+  pose_parameters [
+    {
+      name move_x
+      min -1 max 1
+    }
+    {
+      name move_y
+      min -1 max 1
+    }
+    {
+      name body_pitch
+      min -45 max 90
+      loop 360
+    }
+    {
+      name body_yaw
+      min -45 max 45
+      loop 360
+    }
+  ]
 
-$ikchain rhand bip_hand_R
-$ikchain lhand bip_hand_L
-$ikchain rfoot bip_foot_R
-$ikchain lfoot bip_foot_L
+  lods [
+    {
+      distance 0
+      groups [
+        demo_morphs_low grenades_bodygroup shoes_bodygroup demo_smiley demo_eye
+      ]
+    }
+    {
+      distance 11
+      groups [
+        demo_morphs_low_lod1 grenades_bodygroup_lod1 shoes_bodygroup_lod1 demo_smiley_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        demo_morphs_low_lod2 grenades_bodygroup_lod2 shoes_bodygroup_lod2 demo_smiley_lod2
+      ]
+    }
+    {
+      distance 33
+      groups [
+        demo_morphs_low_lod3 grenades_bodygroup_lod3 shoes_bodygroup_lod3 demo_smiley_lod3
+      ]
+    }
+    {
+      distance 44
+      groups [
+        demo_morphs_low_lod4 grenades_bodygroup_lod4 shoes_bodygroup_lod4 demo_smiley_lod4
+      ]
+    }
+    {
+      distance 55
+      groups [
+        demo_morphs_low_lod5 grenades_bodygroup_lod5 shoes_bodygroup_lod5 demo_smiley_lod5
+      ]
+    }
+  ]
+
+  joint_merges [
+    "bip_pelvis"
+    "bip_spine_0"
+    "bip_spine_1"
+    "bip_spine_2"
+    "bip_spine_3"
+    "bip_collar_L"
+    "bip_upperArm_L"
+    "bip_collar_R"
+    "bip_upperArm_R"
+    "bip_hip_L"
+    "bip_knee_L"
+    "bip_hip_R"
+    "bip_knee_R"
+    "bip_lowerArm_L"
+    "bip_lowerArm_R"
+    "bip_neck"
+    "bip_head"
+    "bip_hand_L"
+    "weapon_bone_L"
+    "weapon_targe"
+    "bip_hand_R"
+    "weapon_bone"
+    "weapon_bone_1"
+    "weapon_bone_2"
+    "weapon_bone_3"
+    "bip_foot_L"
+    "bip_foot_R"
+    "bip_toe_L"
+    "bip_toe_R"
+    "bip_jacketcollar_0_R"
+    "bip_jacketcollar_0_L"
+    "bip_jacketcollar_0_B"
+    "medal_bone"
+    "mvm"
+    "prop_bone"
+    "prop_bone_1"
+    "prop_bone_2"
+    "prop_bone_3"
+    "prop_bone_4"
+    "prop_bone_5"
+    "prop_bone_6"
+  ]
+
+  weight_lists [
+    {
+      name weights_armslayer_melee_swing
+      weights {
+        "bip_pelvis" 0
+        "bip_spine_0" 0
+        "bip_spine_1" 0.5
+        "bip_spine_2" 0.7
+        "bip_spine_3" 0.9
+        "bip_collar_L" 1
+        "bip_upperArm_L" 1
+        "bip_collar_R" 1
+        "bip_upperArm_R" 1
+        "bip_hip_L" 0
+        "bip_knee_L" 0
+        "bip_hip_R" 0
+        "bip_knee_R" 0
+        "bip_lowerArm_L" 1
+        "bip_lowerArm_R" 1
+        "bip_neck" 0.3
+        "bip_head" 0.3
+        "bip_hand_L" 1
+        "weapon_bone_L" 1
+        "weapon_targe" 1
+        "bip_hand_R" 1
+        "weapon_bone" 1
+        "weapon_bone_1" 1
+        "weapon_bone_2" 1
+        "weapon_bone_3" 1
+        "bip_foot_L" 0
+        "bip_foot_R" 0
+        "bip_toe_L" 0
+        "bip_toe_R" 0
+        "effect_hand_L" 1
+        "effect_hand_R" 1
+        "bip_grenade_2_R_0" 0.9
+        "bip_jacketcollar_0_R" 0.9
+        "bip_jacketcollar_0_L" 0.9
+        "bip_grenade_2_L_0" 0.9
+        "bip_jacketcollar_0_B" 0.9
+        "bip_grenade_1_R_0" 0.7
+        "bip_grenade_1_L_0" 0.7
+        "bip_grenade_0_R_0" 0.5
+        "bip_grenade_0_L_0" 0.5
+        "bip_stomachpouch_0" 0
+        "bip_crotchflap_0" 0
+        "bip_hippouch_0" 0
+        "bip_thumb_0_L" 1
+        "bip_thumb_1_L" 1
+        "bip_thumb_2_L" 1
+        "bip_index_0_L" 1
+        "bip_index_1_L" 1
+        "bip_index_2_L" 1
+        "bip_middle_0_L" 1
+        "bip_middle_1_L" 1
+        "bip_middle_2_L" 1
+        "bip_ring_0_L" 1
+        "bip_ring_1_L" 1
+        "bip_ring_2_L" 1
+        "bip_pinky_0_L" 1
+        "bip_pinky_1_L" 1
+        "bip_pinky_2_L" 1
+        "bip_thumb_0_R" 1
+        "bip_thumb_1_R" 1
+        "bip_thumb_2_R" 1
+        "bip_index_0_R" 1
+        "bip_index_1_R" 1
+        "bip_index_2_R" 1
+        "bip_middle_0_R" 1
+        "bip_middle_1_R" 1
+        "bip_middle_2_R" 1
+        "bip_ring_0_R" 1
+        "bip_ring_1_R" 1
+        "bip_ring_2_R" 1
+        "bip_pinky_0_R" 1
+        "bip_pinky_1_R" 1
+        "bip_pinky_2_R" 1
+        "medal_bone" 0.9
+        "mvm" 0
+        "prop_bone" 0
+        "prop_bone_1" 0
+        "prop_bone_2" 0
+        "prop_bone_3" 0
+        "prop_bone_4" 0
+        "prop_bone_5" 0
+        "prop_bone_6" 0
+      }
+    }
+    {
+      name weights_bodylayer_Melee_Swing
+      weights {
+        "bip_pelvis" 0.75
+        "bip_spine_0" 0.75
+        "bip_spine_1" 0.75
+        "bip_spine_2" 0.75
+        "bip_spine_3" 0.75
+        "bip_collar_L" 0
+        "bip_upperArm_L" 0
+        "bip_collar_R" 0
+        "bip_upperArm_R" 0
+        "bip_hip_L" 0
+        "bip_knee_L" 0
+        "bip_hip_R" 0
+        "bip_knee_R" 0
+        "bip_lowerArm_L" 0
+        "bip_lowerArm_R" 0
+        "bip_neck" 0.75
+        "bip_head" 0.75
+        "bip_hand_L" 0
+        "weapon_bone_L" 0
+        "weapon_targe" 0
+        "bip_hand_R" 0
+        "weapon_bone" 0
+        "weapon_bone_1" 0
+        "weapon_bone_2" 0
+        "weapon_bone_3" 0
+        "bip_foot_L" 0
+        "bip_foot_R" 0
+        "bip_toe_L" 0
+        "bip_toe_R" 0
+        "effect_hand_L" 0
+        "effect_hand_R" 0
+        "bip_grenade_2_R_0" 0.75
+        "bip_jacketcollar_0_R" 0.75
+        "bip_jacketcollar_0_L" 0.75
+        "bip_grenade_2_L_0" 0.75
+        "bip_jacketcollar_0_B" 0.75
+        "bip_grenade_1_R_0" 0.75
+        "bip_grenade_1_L_0" 0.75
+        "bip_grenade_0_R_0" 0.75
+        "bip_grenade_0_L_0" 0.75
+        "bip_stomachpouch_0" 0.75
+        "bip_crotchflap_0" 0.75
+        "bip_hippouch_0" 0.75
+        "bip_thumb_0_L" 0
+        "bip_thumb_1_L" 0
+        "bip_thumb_2_L" 0
+        "bip_index_0_L" 0
+        "bip_index_1_L" 0
+        "bip_index_2_L" 0
+        "bip_middle_0_L" 0
+        "bip_middle_1_L" 0
+        "bip_middle_2_L" 0
+        "bip_ring_0_L" 0
+        "bip_ring_1_L" 0
+        "bip_ring_2_L" 0
+        "bip_pinky_0_L" 0
+        "bip_pinky_1_L" 0
+        "bip_pinky_2_L" 0
+        "bip_thumb_0_R" 0
+        "bip_thumb_1_R" 0
+        "bip_thumb_2_R" 0
+        "bip_index_0_R" 0
+        "bip_index_1_R" 0
+        "bip_index_2_R" 0
+        "bip_middle_0_R" 0
+        "bip_middle_1_R" 0
+        "bip_middle_2_R" 0
+        "bip_ring_0_R" 0
+        "bip_ring_1_R" 0
+        "bip_ring_2_R" 0
+        "bip_pinky_0_R" 0
+        "bip_pinky_1_R" 0
+        "bip_pinky_2_R" 0
+        "medal_bone" 0.75
+        "mvm" 0.75
+        "prop_bone" 0.75
+        "prop_bone_1" 0.75
+        "prop_bone_2" 0.75
+        "prop_bone_3" 0.75
+        "prop_bone_4" 0.75
+        "prop_bone_5" 0.75
+        "prop_bone_6" 0.75
+      }
+    }
+  ]
+
+  sequences [
+    {
+      name MELEE_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/demo-a_MELEE_aimmatrix_idle_down_left.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_down_center.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_down_right.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_mid_left.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_mid_center.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_mid_right.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_up_left.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_up_center.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_up_right.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/demo-a_MELEE_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name stand_MELEE
+      anim "optchar/demo-stand_MELEE.egg"
+      activity Melee_Stand
+      loop true
+      layers [
+        {
+          sequence MELEE_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name MELEE_aimmatrix_run
+      blend {
+        anims [
+          "optchar/demo-a_MELEE_aimmatrix_run_down_left.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_down_center.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_down_right.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_mid_left.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_mid_center.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_mid_right.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_up_left.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_up_center.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_up_right.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/demo-a_MELEE_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name run_MELEE
+      blend {
+        anims [
+          "optchar/demo-a_runSW_MELEE.egg"
+          "optchar/demo-a_runS_MELEE.egg"
+          "optchar/demo-a_runSE_MELEE.egg"
+          "optchar/demo-a_runW_MELEE.egg"
+          "optchar/demo-a_runCenter_MELEE.egg"
+          "optchar/demo-a_runE_MELEE.egg"
+          "optchar/demo-a_runNW_MELEE.egg"
+          "optchar/demo-a_runN_MELEE.egg"
+          "optchar/demo-a_runNE_MELEE.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      activity Melee_Run
+      loop true
+      zero_x true
+      zero_y true
+      layers [
+        {
+          sequence MELEE_aimmatrix_run
+        }
+      ]
+    }
+
+    {
+      name jumpstart_MELEE
+      anim "optchar/demo-a_jumpstart_MELEE.egg"
+      activity Melee_Jump_Start
+      zero_x true
+      zero_y true
+    }
+
+    {
+      name jumpfloat_MELEE
+      anim "optchar/demo-a_jumpfloat_MELEE.egg"
+      activity Melee_Jump_Float
+      loop true
+      zero_x true
+      zero_y true
+    }
+
+    {
+      name jumpland_MELEE
+      anim "optchar/demo-jumpland_MELEE.egg"
+      activity Melee_Jump_Land
+      delta true
+    }
+
+    {
+      name armslayer_melee_swing
+      anim "optchar/demo-armslayer_melee_swing.egg"
+      weight_list weights_armslayer_melee_swing
+    }
+
+    {
+      name bodylayer_Melee_Swing
+      anim "optchar/demo-bodylayer_Melee_Swing.egg"
+      delta true
+      weight_list weights_bodylayer_Melee_Swing
+    }
+
+    {
+      name Melee_Swing
+      num_frames 25
+      fps 30
+      activity Melee_Attack_Stand
+      layers [
+        {
+          sequence bodylayer_Melee_Swing
+        }
+        {
+          sequence armslayer_melee_swing
+          start 0 peak 5 tail 20 end 24
+          spline true
+        }
+      ]
+    }
+
+    {
+      name a_flinch01
+      anim "optchar/demo-a_flinch01.egg"
+      activity Gesture_Flinch
+      delta true
+    }
+
+    {
+      name SelectionMenu_Anim01
+      anim "optchar/demo-selectionmenu_anim01.egg"
+      events [
+        {
+          frame 3 type 2 event Client_Play_Sound
+          data "Selection.DemoEquipment1"
+        }
+        {
+          frame 30 type 2 event Client_Play_Sound
+          data "Selection.DemoClipSpin"
+        }
+        {
+          frame 61 type 2 event Client_Play_Sound
+          data "Selection.DemoEquipment2"
+        }
+      ]
+    }
+
+    {
+      name SelectionMenu_Idle
+      anim "optchar/demo-selectionmenu_idle.egg"
+      loop true
+    }
+  ]
+}

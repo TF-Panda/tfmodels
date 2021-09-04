@@ -1,0 +1,10 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "toolstrigger.ptex"
+  }
+
+  tags [
+    compile_trigger
+  ]
+}

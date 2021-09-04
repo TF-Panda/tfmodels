@@ -1,0 +1,5 @@
+{
+  image "toolsareaportal.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

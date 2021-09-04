@@ -1,13 +1,20 @@
-StandardMaterial
 {
-  $basetexture engineer_head.ptex
+  material StandardMaterial
+  parameters
+  {
+    base_texture engineer_head.ptex
 
-  $lightwarptexture "../../lightwarps/player_lightwarp.ptex"
+    //base_color [ 0 0 0 255 ]
 
-  //$halflambert 1
+    lightwarp_texture "../../lightwarps/player_lightwarp.ptex"
 
-  //$rimlight 1
-  //$rimlightboost 0.75
+    env_map true
 
-  $roughness 0.75
+    //$halflambert 1
+
+    //$rimlight 1
+    //$rimlightboost 0.75
+
+    roughness 0.9
+  }
 }

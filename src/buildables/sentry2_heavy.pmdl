@@ -1,0 +1,253 @@
+{
+  model "optchar/sentry2_heavy-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surface_prop metal
+
+    contents solid
+
+    bbox {
+      mins [ -58.179 -43.94 -33.05 ]
+      maxs [ 36.449 51.932 80.479 ]
+    }
+
+    bodygroups [
+      {
+        name sentry2
+        nodes [
+          "sentry2_reference*"
+        ]
+      }
+      {
+        name S1Casing
+        nodes [
+          "sentry2_s1_casing*"
+          "sentry2_s2_casing*"
+        ]
+      }
+      {
+        name S1muzzle
+        nodes [
+          blank
+          "sentry2_s1_muzzle*"
+        ]
+      }
+      {
+        name S2Guns
+        nodes [
+          blank
+          "sentry2_s2_guns*"
+        ]
+      }
+      {
+        name S2Lid
+        nodes [
+          "sentry2_s2_lid*"
+          blank
+        ]
+      }
+      {
+        name sentry2_laser
+        nodes [
+          "sentry2_laser*"
+        ]
+      }
+    ]
+  }
+
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent S2chaingunL_05
+          pos [ -0.07 0.35 2.15 ]
+        }
+      ]
+    }
+  ]
+
+  pose_parameters [
+    {
+      name aim_pitch
+      min -50 max 50
+    }
+    {
+      name aim_yaw
+      min -180 max 180
+      loop 360
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [
+        sentry2_laser
+        sentry2_reference
+        sentry2_s1_casing
+        sentry2_s1_muzzle
+        sentry2_s2_casing
+        sentry2_s2_guns
+        sentry2_s2_lid
+      ]
+    }
+    {
+      distance 11
+      groups [
+        sentry2_laser_lod1
+        sentry2_reference_lod1
+        sentry2_s1_casing_lod1
+        sentry2_s1_muzzle_lod1
+        sentry2_s2_casing_lod1
+        sentry2_s2_guns_lod1
+        sentry2_s2_lid_lod1
+      ]
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ sentry1.pmat Sentry2.pmat ]
+    }
+    {
+      name blue
+      materials [ sentry1_blue.pmat sentry2_blue.pmat ]
+    }
+  ]
+
+  sequences [
+    {
+      name layer_aim_yaw
+      blend {
+        anims [
+          "optchar/sentry2_heavy-a_yaw_back.egg"
+          "optchar/sentry2_heavy-a_yaw_left.egg"
+          "optchar/sentry2_heavy-a_yaw_forward.egg"
+          "optchar/sentry2_heavy-a_yaw_right.egg"
+          "optchar/sentry2_heavy-a_yaw_back.egg"
+        ]
+        width 5
+        blend_x aim_yaw
+      }
+      delta true
+    }
+
+    {
+      name layer_aim_pitch
+      blend {
+        anims [
+          "optchar/sentry2_heavy-a_pitch_down.egg"
+          "optchar/sentry2_heavy-a_pitch_center.egg"
+          "optchar/sentry2_heavy-a_pitch_up.egg"
+        ]
+        width 3
+        blend_x aim_pitch
+      }
+      delta true
+    }
+
+    {
+      name upgrade
+      anim "optchar/sentry2_heavy-upgrade.egg"
+      fps 80
+      snap true
+      activity Object_Upgrade
+      events [
+        {
+          frame 0 type 2
+          event Client_Bodygroup_Set_Value
+          data "S1muzzle 1"
+        }
+        {
+          frame 5 type 2
+          event Client_Bodygroup_Set_Value
+          data "S1muzzle 0"
+        }
+        {
+          frame 25 type 2
+          event Client_Bodygroup_Set_Value
+          data "S1Casing 1"
+        }
+        {
+          frame 25 type 2
+          event Client_Bodygroup_Set_Value
+          data "S2Guns 1"
+        }
+        {
+          frame 24 type 2
+          event Client_Bodygroup_Set_Value
+          data "S2Lid 1"
+        }
+
+        {
+          frame 8 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.Build4"
+        }
+        {
+          frame 8 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam1"
+        }
+        {
+          frame 20 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam4"
+        }
+        {
+          frame 20 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.Build11"
+        }
+        {
+          frame 28 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.Build13"
+        }
+        {
+          frame 30 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.Build2"
+        }
+        {
+          frame 57 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam2"
+        }
+        {
+          frame 57 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.Build11"
+        }
+        {
+          frame 78 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam1"
+        }
+        {
+          frame 78 type 2
+          event Client_Play_Sound
+          data "Building_Sentrygun.Build11"
+        }
+      ]
+      layers [
+        {
+          sequence layer_aim_yaw
+        }
+        {
+          sequence layer_aim_pitch
+        }
+      ]
+    }
+
+    {
+      name aim_nat
+      anim "optchar/sentry2_heavy-aim_nat.egg"
+      fps 1
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  image "target_practice_sheet.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

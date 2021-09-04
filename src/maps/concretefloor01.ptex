@@ -1,3 +1,5 @@
-image concretefloor01.png
-format srgb
-wrap repeat
+{
+  image concretefloor01.png
+  format srgb
+  wrap repeat
+}

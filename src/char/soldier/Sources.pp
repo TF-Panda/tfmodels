@@ -889,6 +889,7 @@
     $[matrix anims/soldier-,$[SOLDIER_ANIMS],.egg]
 
   #define OPTCHAR_OPTS \
+    -keepall \
     -expose weapon_bone \
     -expose weapon_bone_L \
     -expose weapon_bone_1 \

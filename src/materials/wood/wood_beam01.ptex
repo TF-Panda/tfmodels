@@ -1,0 +1,5 @@
+{
+  image "wood_beam01.tga"
+  format "srgb"
+  wrap "repeat"
+}

@@ -1,0 +1,5 @@
+{
+  image "toolsskybox.tga"
+  format "srgb"
+  wrap "repeat"
+}

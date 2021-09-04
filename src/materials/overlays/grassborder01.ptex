@@ -1,0 +1,5 @@
+{
+  image "grassborder01.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

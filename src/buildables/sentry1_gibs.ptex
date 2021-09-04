@@ -1,0 +1,5 @@
+{
+  image sentry1_gibs.tga
+  format srgb
+  wrap clamp
+}

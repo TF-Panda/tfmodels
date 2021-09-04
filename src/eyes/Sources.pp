@@ -7,3 +7,8 @@
     eye-iris-brown.ptex eye-iris-green.ptex \
     eye-reflection-cubemap.ptex
 #end install_tex
+
+#begin install_mat
+  #define SOURCES \
+    eye_dummy.pmat
+#end install_mat

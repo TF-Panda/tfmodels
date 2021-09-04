@@ -1,8 +1,9 @@
-StandardMaterial
 {
-  $basetexture smiley.ptex
-  $lightwarptexture "../../../lightwarps/player_lightwarp.ptex"
-  $halflambert 1
-  $rimlight 1
-  $rimlightboost 0.75
+  material StandardMaterial
+  parameters {
+    base_texture smiley.ptex
+    lightwarp_texture "../../../lightwarps/player_lightwarp.ptex"
+    env_map true
+    roughness 0.95
+  }
 }

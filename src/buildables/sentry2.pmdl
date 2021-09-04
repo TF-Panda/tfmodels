@@ -1,0 +1,244 @@
+{
+  model "optchar/sentry2-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    contents solid
+    surface_prop metal
+
+    bbox {
+      mins [ -44.942 -34.227 -15.798 ]
+      maxs [ 27.132 38.166 56.385 ]
+    }
+  }
+
+  lods [
+    {
+      distance 0
+      groups [
+        sentry2_laser
+        sentry2_optimized_reference
+      ]
+    }
+    {
+      distance 11
+      groups [
+        sentry2_laser_lod1
+        sentry2_optimized_reference_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        sentry2_laser_lod2
+        sentry2_optimized_reference_lod2
+      ]
+    }
+    {
+      distance 33
+      groups [
+        sentry2_laser_lod3
+        sentry2_optimized_reference_lod3
+      ]
+    }
+    {
+      distance 44
+      groups [
+        sentry2_laser_lod4
+        sentry2_optimized_reference_lod4
+      ]
+    }
+  ]
+
+  attachments [
+    {
+      name muzzle_l
+      influences [
+        {
+          parent S2chaingunL_02
+          pos [ -0.07 0.35 23.11 ]
+        }
+      ]
+    }
+    {
+      name muzzle_r
+      influences [
+        {
+          parent S2chaingunR_02
+          pos [ 0.04 0.35 23.11 ]
+        }
+      ]
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ sentry1.pmat Sentry2.pmat ]
+    }
+    {
+      name blue
+      materials [ sentry1_blue.pmat sentry2_blue.pmat ]
+    }
+  ]
+
+  pose_parameters [
+    {
+      name aim_pitch
+      min -50 max 50
+    }
+    {
+      name aim_yaw
+      min -180 max 180
+      loop 360
+    }
+  ]
+
+  weight_lists [
+    {
+      name fire
+      weights {
+        "root" 0
+        "upper_telescope_01" 1
+        "S2turret_back" 1
+        "S2lFork_bolt" 1
+        "S2midHousingL" 1
+        "S2rFork_bolt" 1
+        "S2midHousingR" 1
+        "S2chaingunR_02" 1
+        "S2chaingunL_02" 1
+        "ammochain09" 1
+        "ammochain010" 1
+        "ammochain017" 1
+        "ammochain013" 1
+        "wirejointR07" 1
+        "wirejointL06" 1
+        "ammoBeltL2" 1
+        "ammoBeltL4" 1
+        "ammoBeltL7" 1
+        "ammoBeltL8" 1
+        "S2turretArm01" 1
+        "S2turretArm02" 1
+        "S2turretArm03" 1
+        "weapon_bone" 1
+        "hose_0_L" 1
+        "hose_1_L" 1
+        "hose_2_L" 1
+        "hose_0_R" 1
+        "hose_1_R" 1
+        "hose_2_R" 1
+        "hose_3_R" 1
+        "hose_3_L" 1
+      }
+    }
+    {
+      name fire_empty
+      weights {
+        "root" 0
+        "upper_telescope_01" 0
+        "S2turret_back" 0
+        "S2lFork_bolt" 0
+        "S2midHousingL" 0
+        "S2rFork_bolt" 0
+        "S2midHousingR" 0
+        "S2chaingunR_02" 1
+        "S2chaingunL_02" 1
+        "ammochain09" 0
+        "ammochain010" 0
+        "ammochain017" 0
+        "ammochain013" 0
+        "wirejointR07" 0
+        "wirejointL06" 0
+        "ammoBeltL2" 0
+        "ammoBeltL4" 0
+        "ammoBeltL7" 0
+        "ammoBeltL8" 0
+        "S2turretArm01" 0
+        "S2turretArm02" 0
+        "S2turretArm03" 0
+        "weapon_bone" 0
+        "hose_0_L" 0
+        "hose_1_L" 0
+        "hose_2_L" 0
+        "hose_0_R" 0
+        "hose_1_R" 0
+        "hose_2_R" 0
+        "hose_3_R" 0
+        "hose_3_L" 0
+      }
+    }
+  ]
+
+  sequences [
+    {
+      name layer_aim_yaw
+      blend {
+        anims [
+          "optchar/sentry2-a_yaw_back.egg"
+          "optchar/sentry2-a_yaw_left.egg"
+          "optchar/sentry2-a_yaw_forward.egg"
+          "optchar/sentry2-a_yaw_right.egg"
+          "optchar/sentry2-a_yaw_back.egg"
+        ]
+        width 5
+        blend_x aim_yaw
+      }
+      delta true
+    }
+
+    {
+      name layer_aim_pitch
+      blend {
+        anims [
+          "optchar/sentry2-a_pitch_down.egg"
+          "optchar/sentry2-a_pitch_center.egg"
+          "optchar/sentry2-a_pitch_up.egg"
+        ]
+        width 3
+        blend_x aim_pitch
+      }
+      delta true
+    }
+
+    {
+      name fire
+      anim "optchar/sentry2-fire.egg"
+      delta true
+      loop true
+      activity Object_Fire
+      weight_list fire
+    }
+
+    {
+      name idle_off
+      anim "optchar/sentry2-idle_off.egg"
+      activity Object_Idle
+      snap true
+      loop true
+      layers [
+        {
+          sequence layer_aim_yaw
+        }
+        {
+          sequence layer_aim_pitch
+        }
+      ]
+    }
+
+    {
+      name fire_empty
+      anim "optchar/sentry2-fire_empty.egg"
+      delta true
+      loop true
+      weight_list fire_empty
+      activity Object_Fire_Empty
+    }
+
+    {
+      name aim_nat
+      anim "optchar/sentry2-aim_nat.egg"
+      fps 1
+    }
+  ]
+}

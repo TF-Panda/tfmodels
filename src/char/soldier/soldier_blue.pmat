@@ -1,13 +1,11 @@
-StandardMaterial
 {
-  $baseTexture "soldier_blue.ptex"
-  $normalTexture "soldier_normal.ptex"
-  $lightwarpTexture "../../lightwarps/player_lightwarp.ptex"
-
-  $roughness 0.5
-
-  $rimLight 1
-  $rimLightBoost 0.75
-
-  $halfLambert 1
+  material StandardMaterial
+  parameters {
+    base_texture "soldier_blue.ptex"
+    normal_texture "soldier_normal.ptex"
+    lightwarp_texture "../../lightwarps/player_lightwarp.ptex"
+    env_map true
+    gloss_texture soldier_exponent.ptex
+    rim_lighting true
+  }
 }

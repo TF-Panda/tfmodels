@@ -1,0 +1,10 @@
+{
+  material StandardMaterial
+
+  parameters {
+    base_texture sentry1_gibs_blue.ptex
+    roughness 0.45
+    env_map true
+    lightwarp_texture sentry1_lightwarp.ptex
+  }
+}

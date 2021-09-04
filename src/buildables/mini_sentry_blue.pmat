@@ -1,12 +1,13 @@
-StandardMaterial
+
+
 {
-  $basetexture mini_sentry_blue.ptex
-
-  $normaltexture sentry1_normal.ptex
-
-  $lightwarptexture sentry1_lightwarp.ptex
-
-  $rimlight 0
-  $rimlightexponent 4
-  $rimlightboost 1.5
+  material StandardMaterial
+  parameters {
+    base_texture mini_sentry_blue.ptex
+    normal_texture sentry1_normal.ptex
+    lightwarp_texture sentry1_lightwarp.ptex
+    env_map true
+    //metalness 1.0
+    gloss_texture sentry1_exponent.ptex
+  }
 }

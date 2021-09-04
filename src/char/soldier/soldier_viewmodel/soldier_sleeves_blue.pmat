@@ -1,0 +1,10 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture soldier_sleeves_blue.ptex
+    lightwarp_texture "../../engineer/engineer_viewmodel/engineer_hands_lightwarp.ptex"
+    normal_texture soldier_sleeves_normal.ptex
+    env_map true
+    roughness 0.8
+  }
+}

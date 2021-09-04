@@ -1,51 +1,267 @@
-$model "optchar/sentry1-zero.egg"
-
-$materialgroup
 {
-  { sentry1.pmat          toolbox_red.pmat  mini_sentry_light_red.pmat }
-  { sentry1_blue.pmat     toolbox_blue.pmat mini_sentry_light_blue.pmat }
-  { mini_sentry_red.pmat  toolbox_red.pmat  mini_sentry_light_red.pmat }
-  { mini_sentry_blue.pmat toolbox_blue.pmat mini_sentry_light_blue.pmat }
-}
+  model "optchar/sentry1-zero.egg"
 
-$sequence build "optchar/sentry1-build.egg" fps 30
+  custom_data {
+    contents solid
+    surface_prop metal
 
-$lod 0 288
-{
-  group mini_sentry_light
-  group Sentry1_arms_reference
-  group Sentry1_reference
-  group Sentry1_toolbox_reference
-}
+    bbox {
+      mins [ -32.787 -19.225 -0.114 ]
+      maxs [ 20.477 19.491 52.664 ]
+    }
 
-$lod 288 480
-{
-  group mini_sentry_light_lod1
-  group Sentry1_arms_reference_lod1
-  group Sentry1_reference_lod1
-  group Sentry1_toolbox_reference_lod1
-}
+    gibs [
+      {
+        model "tfmodels/src/buildables/sentry1_gib1.pmdl"
+      }
+      {
+        model "tfmodels/src/buildables/sentry1_gib2.pmdl"
+      }
+      {
+        model "tfmodels/src/buildables/sentry1_gib3.pmdl"
+      }
+      {
+        model "tfmodels/src/buildables/sentry1_gib4.pmdl"
+      }
+    ]
+  }
 
-$lod 480 640
-{
-  group mini_sentry_light_lod2
-  group Sentry1_arms_reference_lod2
-  group Sentry1_reference_lod2
-  group Sentry1_toolbox_reference_lod2
-}
+  hpr [ 180 0 0 ]
 
-$lod 640 800
-{
-  group mini_sentry_light_lod3
-  group Sentry1_arms_reference_lod3
-  group Sentry1_reference_lod3
-  group Sentry1_toolbox_reference_lod3
-}
+  lods [
+    {
+      distance 0
+      groups [
+        mini_sentry_light
+        Sentry1_arms_reference
+        Sentry1_reference
+        Sentry1_toolbox_reference
+      ]
+    }
+    {
+      distance 11
+      groups [
+        mini_sentry_light_lod1
+        Sentry1_arms_reference_lod1
+        Sentry1_reference_lod1
+        Sentry1_toolbox_reference_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        mini_sentry_light_lod2
+        Sentry1_arms_reference_lod2
+        Sentry1_reference_lod2
+        Sentry1_toolbox_reference_lod2
+      ]
+    }
+    {
+      distance 33
+      groups [
+        mini_sentry_light_lod3
+        Sentry1_arms_reference_lod3
+        Sentry1_reference_lod3
+        Sentry1_toolbox_reference_lod3
+      ]
+    }
+    {
+      distance 44
+      groups [
+        mini_sentry_light_lod4
+        Sentry1_arms_reference_lod4
+        Sentry1_reference_lod4
+        Sentry1_toolbox_reference_lod4
+      ]
+    }
+  ]
 
-$lod 800 99999999
-{
-  group mini_sentry_light_lod4
-  group Sentry1_arms_reference_lod4
-  group Sentry1_reference_lod4
-  group Sentry1_toolbox_reference_lod4
+  material_groups [
+    {
+      name red
+      materials [ sentry1.pmat toolbox_red.pmat mini_sentry_light_red.pmat ]
+    }
+    {
+      name blue
+      materials [ sentry1_blue.pmat toolbox_blue.pmat mini_sentry_light_blue.pmat ]
+    }
+    {
+      name mini_red
+      materials [ mini_sentry_red.pmat toolbox_red.pmat mini_sentry_light_red.pmat ]
+    }
+    {
+      name mini_blue
+      materials [ mini_sentry_blue.pmat toolbox_blue.pmat mini_sentry_light_blue.pmat ]
+    }
+  ]
+
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent turret_muzzle
+          pos [ 0.06 0.01 3.64 ]
+          //hpr [ 0 -90 0 ]
+        }
+      ]
+    }
+  ]
+
+  pose_parameters [
+    {
+      name aim_yaw
+      min -180 max 180
+      loop 360
+    }
+    {
+      name aim_pitch
+      min -50 max 50
+    }
+  ]
+
+  sequences [
+    {
+      name build
+      anim "optchar/sentry1-build.egg"
+      activity Object_Build
+      snap true
+      fps 60
+      events [
+        {
+          frame 4 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build1"
+        }
+        {
+          frame 6 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam1"
+        }
+        {
+          frame 10 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build1A"
+        }
+        {
+          frame 23 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build1B"
+        }
+        {
+          frame 33 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build2"
+        }
+        {
+          frame 41 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam2"
+        }
+        {
+          frame 58 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build3"
+        }
+        {
+          frame 68 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam3"
+        }
+        {
+          frame 92 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build4"
+        }
+        {
+          frame 116 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build5"
+        }
+        {
+          frame 145 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build6"
+        }
+        {
+          frame 160 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam4"
+        }
+        {
+          frame 162 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build7"
+        }
+        {
+          frame 209 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build7A"
+        }
+        {
+          frame 216 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.BuildSteam5"
+        }
+        {
+          frame 233 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build8"
+        }
+        {
+          frame 254 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build9"
+        }
+        {
+          frame 260 type 2 event Client_Play_Sound
+          data "Building_Sentrygun.Build10"
+        }
+      ]
+    }
+
+    {
+      name fire
+      anim "optchar/sentry1-fire.egg"
+      delta true
+      activity Object_Fire
+      loop true
+    }
+
+    {
+      name layer_aim_yaw
+      blend {
+        anims [
+          "optchar/sentry1-a_yaw_back.egg"
+          "optchar/sentry1-a_yaw_left.egg"
+          "optchar/sentry1-a_yaw_forward.egg"
+          "optchar/sentry1-a_yaw_right.egg"
+          "optchar/sentry1-a_yaw_back.egg"
+        ]
+        width 5
+        blend_x aim_yaw
+      }
+      delta true
+    }
+
+    {
+      name layer_aim_pitch
+      blend {
+        anims [
+          "optchar/sentry1-a_pitch_down.egg"
+          "optchar/sentry1-a_pitch_center.egg"
+          "optchar/sentry1-a_pitch_up.egg"
+        ]
+        width 3
+        blend_x aim_pitch
+      }
+      delta true
+    }
+
+    {
+      name idle
+      snap true
+      anim "optchar/sentry1-idle_off.egg"
+      activity Object_Idle
+      loop true
+      layers [
+        {
+          sequence layer_aim_yaw
+        }
+        {
+          sequence layer_aim_pitch
+        }
+      ]
+    }
+
+    {
+      name disabled
+      anim "optchar/sentry1-disabled.egg"
+      activity Object_Disabled
+      loop true
+    }
+  ]
 }

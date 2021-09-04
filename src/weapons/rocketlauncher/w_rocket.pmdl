@@ -1,0 +1,31 @@
+{
+  model "optchar/w_rocket-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surface_prop metal
+    contents solid
+
+    bbox {
+      mins [ -18.571 -3.712 -3.716 ]
+      maxs [ 18.571 3.712 3.717 ]
+    }
+  }
+
+  attachments [
+    {
+      name trail
+      influences [
+        {
+          parent cylinder
+          pos [ 0 0 -9.64 ]
+        }
+      ]
+    }
+  ]
+
+  physics_model {
+    mesh w_rocket_physics
+  }
+}

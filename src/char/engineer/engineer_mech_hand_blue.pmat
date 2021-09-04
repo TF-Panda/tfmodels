@@ -1,13 +1,19 @@
-StandardMaterial
 {
-  $baseTexture engineer_mech_hand_blue.ptex
-  $armeTexture engineer_mech_hand_arme.ptex
+  material StandardMaterial
+  parameters {
+    base_texture engineer_mech_hand_blue.ptex
+    roughness_texture engineer_mech_hand_roughness.ptex
+    metalness_texture engineer_mech_hand_metalness.ptex
+    emission_texture engineer_mech_hand_emission.ptex
 
-  $lightwarptexture "../../lightwarps/player_lightwarp.ptex"
+    lightwarp_texture "../../lightwarps/player_lightwarp.ptex"
 
-  $selfillum 1
+    self_illum false
 
-  $halflambert 1
-  $rimlight 1
-  $rimlightboost 0.75
+    env_map true
+
+    //$halflambert 1
+    //$rimlight 1
+    //$rimlightboost 0.75
+  }
 }

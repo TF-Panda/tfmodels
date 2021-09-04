@@ -1,18 +1,29 @@
-$model "optchar/c_shotgun-zero.egg"
-
-$sequence idle "optchar/c_shotgun-idle.egg" fps 30
-
-$lod 0 11
 {
-  group c_shotgun_reference
-}
+  model "optchar/c_shotgun-zero.egg"
 
-$lod 11 22
-{
-  group c_shotgun_reference_lod1
-}
+  physics_model {
+    mesh c_shotgun_physics
+    mass 2.625185
+  }
 
-$lod 22 999999
-{
-  group c_shotgun_reference_lod2
+  lods [
+    {
+      distance 0
+      groups [
+        c_shotgun_reference
+      ]
+    }
+    {
+      distance 11
+      groups [
+        c_shotgun_reference_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        c_shotgun_reference_lod2
+      ]
+    }
+  ]
 }

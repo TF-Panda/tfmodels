@@ -1,3 +1,6 @@
-image engineer_handl.tga
-format srgb
-wrap clamp
+{
+  image engineer_handl.tga
+  format srgb
+  wrap clamp
+}
+

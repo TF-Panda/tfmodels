@@ -1,0 +1,6 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "grain_elevator_silo_06.ptex"
+  }
+}

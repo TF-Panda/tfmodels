@@ -1,0 +1,5 @@
+{
+  image "concrete_track_overlay002.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

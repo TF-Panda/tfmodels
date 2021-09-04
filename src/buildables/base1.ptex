@@ -1,2 +1,4 @@
-image base1.tga
-format srgb
+{
+  image base1.tga
+  format srgb
+}

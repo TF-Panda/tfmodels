@@ -1,0 +1,6 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "logo_red_white.ptex"
+  }
+}

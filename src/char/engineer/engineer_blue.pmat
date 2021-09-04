@@ -1,10 +1,11 @@
-StandardMaterial
 {
-  $basetexture engineer_blue.ptex
-
-  $normaltexture engineer_normal.ptex
-
-  $lightwarptexture "../../lightwarps/player_lightwarp.ptex"
-
-  $armeTexture engineer_arme.ptex
+  material StandardMaterial
+  parameters
+  {
+    base_texture engineer_blue.ptex
+    normal_texture engineer_normal.ptex
+    lightwarp_texture "../../lightwarps/player_lightwarp.ptex"
+    gloss_texture engineer_gloss.ptex
+    env_map true
+  }
 }

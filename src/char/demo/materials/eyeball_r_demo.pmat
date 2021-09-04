@@ -1,19 +1,22 @@
-EyeRefractMaterial
 {
-  $iris "../../../eyes/eye-iris-brown.ptex"
-  $ambientOcclTexture "../../../eyes/eye-extra.ptex"
-  $envmap "../../../eyes/eye-reflection-cubemap.ptex"
-  $corneaTexture "../../../eyes/eye-cornea.ptex"
-  $lightwarpTexture "../../../eyes/eye_lightwarp.ptex"
+  material EyeRefractMaterial
 
-  $eyeballRadius 0.7
-  $ambientOcclColor "1 1 1"
-  $dilation 0.5
-  $ParallaxStrength 0.25
-  $glossiness 0.5
-  $corneaBumpStrength 1.0
+  parameters {
+    iris_texture "../../eyes/eye-iris-brown.ptex"
+    ambient_occl_texture "../../eyes/eye-extra.ptex"
+    env_map "../../eyes/eye-reflection-cubemap.ptex"
+    cornea_texture "../../eyes/eye-cornea.ptex"
+    lightwarp_texture "../../eyes/eye_lightwarp.ptex"
 
-  $halfLambert 1
-  $RaytraceSphere 0
-  $SphereTexkillCombo 0
+    eyeball_radius 0.7
+    ambient_occl_color [ 255 255 255 ]
+    dilation 0.5
+    glossiness 0.5
+    parallax_strength 0.25
+    cornea_bump_strength 1.0
+
+    //half_lambert 1
+    ray_trace_sphere 0
+    sphere_texkill_combo 0
+  }
 }

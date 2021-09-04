@@ -1,0 +1,236 @@
+{
+  model "optchar/c_soldier_arms-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  joint_merges [
+    "root"
+    "bip_upperArm_L"
+    "bip_upperArm_R"
+    "bip_lowerArm_L"
+    "bip_lowerArm_R"
+    "bip_wrist_L"
+    "bip_wrist_R"
+    "bip_hand_L"
+    "bip_hand_R"
+    "effect_hand_L"
+    "effect_hand_R"
+    "vm_weapon_bone"
+    "vm_weapon_bone_1"
+    "vm_weapon_bone_2"
+    "vm_weapon_bone_3"
+    "vm_weapon_bone_4"
+    "vm_weapon_bone_5"
+    "vm_weapon_bone_6"
+    "vm_weapon_bone_7"
+    "vm_weapon_bone_L"
+    "vm_weapon_bone_L_1"
+    "vm_weapon_bone_L_2"
+    "weapon_bone"
+    "weapon_bone_1"
+    "weapon_bone_2"
+    "weapon_bone_3"
+    "weapon_bone_L"
+    "handle_bone"
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ soldier_sleeves_red.pmat ]
+    }
+    {
+      name blue
+      materials [ soldier_sleeves_blue.pmat ]
+    }
+  ]
+
+  sequences [
+    {
+      name dh_idle
+      anim "optchar/c_soldier_arms-dh_idle.egg"
+      snap true
+      loop true
+      activity Primary_VM_Idle
+    }
+
+    {
+      name dh_fire
+      anim "optchar/c_soldier_arms-dh_fire.egg"
+      snap true
+      activity Primary_VM_Fire
+    }
+
+    {
+      name dh_draw
+      anim "optchar/c_soldier_arms-dh_draw.egg"
+      snap true
+      activity Primary_VM_Draw
+      events [
+        {
+          frame 1 type 2
+          event Client_Play_Sound
+          data "Weapon_RPG.Draw"
+        }
+      ]
+    }
+
+    {
+      name dh_reload_start
+      anim "optchar/c_soldier_arms-dh_reload_start.egg"
+      activity Primary_VM_Reload_Start
+    }
+
+    {
+      name dh_reload_loop
+      anim "optchar/c_soldier_arms-dh_reload_loop.egg"
+      activity Primary_VM_Reload
+      snap true
+      events [
+        {
+          frame 2 type 2
+          event Client_Play_Sound
+          data "Weapon_RPG.Reload"
+        }
+        {
+          frame 10 type 1
+          event Server_Weapon_Increment_Ammo
+        }
+      ]
+    }
+
+    {
+      name dh_reload_finish
+      anim "optchar/c_soldier_arms-dh_reload_finish.egg"
+      snap true
+      activity Primary_VM_Reload_End
+    }
+
+    {
+      name draw_secondary
+      anim "optchar/c_soldier_arms-draw.egg"
+      snap true
+      activity Secondary_VM_Draw
+      events [
+        {
+          frame 1
+          type 2
+          event Client_Play_Sound
+          data "Weapon_RPG.Draw"
+        }
+      ]
+    }
+
+    {
+      name idle_secondary
+      anim "optchar/c_soldier_arms-idle.egg"
+      activity Secondary_VM_Idle
+      loop true
+      fps 20
+    }
+
+    {
+      name fire_secondary
+      anim "optchar/c_soldier_arms-fire.egg"
+      activity Secondary_VM_Fire
+      snap true
+      events [
+        {
+          frame 7 type 2
+          event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Back"
+        }
+        {
+          frame 12 type 2
+          event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Forward"
+        }
+      ]
+    }
+
+    {
+      name reload_start_secondary
+      anim "optchar/c_soldier_arms-reload_start.egg"
+      snap true
+      activity Secondary_VM_Reload_Start
+    }
+
+    {
+      name reload_loop_secondary
+      anim "optchar/c_soldier_arms-reload_loop.egg"
+      activity Secondary_VM_Reload
+      events [
+        {
+          frame 4 type 2
+          event Client_Play_Sound
+          data "Weapon_Shotgun.Reload"
+        }
+      ]
+      loop true
+    }
+
+    {
+      name reload_end_secondary
+      anim "optchar/c_soldier_arms-reload_end.egg"
+      activity Secondary_VM_Reload_End
+      snap true
+      events [
+        {
+          frame 7 type 2
+          event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Back"
+        }
+        {
+          frame 11 type 2
+          event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Forward"
+        }
+      ]
+    }
+
+    {
+      name s_draw
+      anim "optchar/c_soldier_arms-s_draw.egg"
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Shovel.Draw"
+        }
+      ]
+      activity Melee_VM_Draw
+    }
+
+    {
+      name s_idle
+      anim "optchar/c_soldier_arms-s_idle.egg"
+      loop true
+      activity Melee_VM_Idle
+    }
+
+    {
+      name s_swing_a
+      anim "optchar/c_soldier_arms-s_swing_a.egg"
+      snap true
+      activity Melee_VM_Swing
+    }
+
+    {
+      name s_swing_b
+      anim "optchar/c_soldier_arms-s_swing_b.egg"
+      snap true
+      activity Melee_VM_Swing
+    }
+
+    {
+      name s_swing_c
+      anim "optchar/c_soldier_arms-s_swing_c.egg"
+      snap true
+      activity Melee_VM_Swing_Hard
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  image "cobweb001.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

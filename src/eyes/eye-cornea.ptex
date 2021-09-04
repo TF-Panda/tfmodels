@@ -1,3 +1,5 @@
-image eye-cornea.tga
-format rgba
-wrap clamp
+{
+  image eye-cornea.tga
+  format rgba
+  wrap clamp
+}

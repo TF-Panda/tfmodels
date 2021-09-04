@@ -1,19 +1,12 @@
-StandardMaterial
 {
-  $basetexture sentry1.ptex
-
-  $normaltexture sentry1_normal.ptex
-
-  $lightwarptexture sentry1_lightwarp.ptex
-
-  $envmap "/home/lachbr/ttsp/game/resources/materials/sky/sky.ptex"
-
-  $metalness 1
-  $roughness 0.5
-
-  $halfLambert 1
-
-  $rimlight 1
-  $rimlightexponent 4
-  $rimlightboost 0.75
+  material StandardMaterial
+  parameters {
+    base_texture sentry1.ptex
+    normal_texture sentry1_normal.ptex
+    lightwarp_texture sentry1_lightwarp.ptex
+    env_map true
+    //metalness 1.0
+    roughness 0.45
+    //gloss_texture sentry1_exponent.ptex
+  }
 }

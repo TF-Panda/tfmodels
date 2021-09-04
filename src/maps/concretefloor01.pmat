@@ -1,4 +1,7 @@
-StandardMaterial
 {
-  $baseTexture concretefloor01.ptex
+  material StandardMaterial
+  parameters
+  {
+    base_texture concretefloor01.ptex
+  }
 }

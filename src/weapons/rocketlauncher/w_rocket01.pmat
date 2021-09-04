@@ -1,0 +1,11 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture w_rocket01.ptex
+    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
+    metalness 1.0
+    roughness 0.65
+    env_map true
+    rim_lighting true
+  }
+}

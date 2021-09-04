@@ -1,7 +1,10 @@
-StandardMaterial
 {
-  $basetexture toolbox_red.ptex
-  $lightwarptexture "../lightwarps/weapon_lightwarp.ptex"
-
-  $rimlight 0
+  material StandardMaterial
+  parameters {
+    base_texture toolbox_red.ptex
+    lightwarp_texture "../lightwarps/weapon_lightwarp.ptex"
+    env_map true
+    //metalness 1.0
+    roughness 0.45
+  }
 }

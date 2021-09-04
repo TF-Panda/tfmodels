@@ -6,11 +6,13 @@
     engineer_blue.ptex \
     engineer_red.ptex \
     engineer_head.ptex \
-    engineer_arme.ptex \
+    engineer_roughness.ptex \
     engineer_normal.ptex \
     engineer_mech_hand.ptex \
     engineer_mech_hand_blue.ptex \
-    engineer_mech_hand_arme.ptex
+    engineer_mech_hand_roughness.ptex \
+    engineer_mech_hand_metalness.ptex \
+    engineer_mech_hand_emission.ptex
 #end install_tex
 
 #begin install_mat

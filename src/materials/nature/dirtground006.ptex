@@ -1,0 +1,5 @@
+{
+  image "dirtground006.tga"
+  format "srgb"
+  wrap "repeat"
+}

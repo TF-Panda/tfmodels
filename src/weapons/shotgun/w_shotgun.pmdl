@@ -1,18 +1,25 @@
-$model "optchar/w_shotgun-zero.egg"
-
-$sequence idle "optchar/w_shotgun-idle.egg" fps 30
-
-$lod 0 11
 {
-  group w_shotgun_reference
-}
+  model "optchar/w_shotgun-zero.egg"
 
-$lod 11 22
-{
-  group w_shotgun_reference_lod1
-}
+  lods [
+    {
+      distance 0
+      groups [ w_shotgun_reference ]
+    }
+    {
+      distance 11
+      groups [ w_shotgun_reference_lod1 ]
+    }
+    {
+      distance 22
+      groups [ w_shotgun_reference_lod2 ]
+    }
+  ]
 
-$lod 22 9999999
-{
-  group w_shotgun_reference_lod2
+  sequences [
+    {
+      name idle
+      anim "optchar/w_shotgun-idle.egg"
+    }
+  ]
 }

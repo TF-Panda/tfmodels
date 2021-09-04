@@ -1,3 +1,5 @@
-image tf2_logo_2.tga
-format srgb_alpha
-wrap clamp
+{
+  image tf2_logo_2.tga
+  format srgb_alpha
+  wrap clamp
+}

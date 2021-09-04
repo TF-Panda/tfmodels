@@ -1,3 +1,5 @@
-image demoman_blue.tga
-format srgb
-wrap clamp
+{
+  image demoman_blue.tga
+  format srgb
+  wrap clamp
+}

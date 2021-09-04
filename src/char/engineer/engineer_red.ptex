@@ -1,2 +1,5 @@
-image engineer_red.tga
-format srgb
+{
+  image engineer_red.tga
+  format srgb
+  wrap clamp
+}

@@ -799,10 +799,7 @@
     $[matrix anims/demo-,$[DEMO_ANIMS],.egg]
 
   #define OPTCHAR_OPTS \
-    -expose weapon_bone \
-    -expose weapon_bone_L \
-    -expose weapon_bone_1 \
-    -expose bip_head \
+    -keepall \
     -flag demo_eye \
     -flag demo_morphs_low \
     -flag demo_morphs_low_lod1 \

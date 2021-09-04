@@ -1,0 +1,5 @@
+{
+  image "concrete_track001.tga"
+  format "srgb"
+  wrap "repeat"
+}

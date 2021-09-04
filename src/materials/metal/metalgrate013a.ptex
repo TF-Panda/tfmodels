@@ -1,0 +1,5 @@
+{
+  image "metalgrate013a.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

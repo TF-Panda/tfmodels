@@ -1,0 +1,5 @@
+{
+  image c_shotgun_metalness.tga
+  format luminance
+  wrap clamp
+}

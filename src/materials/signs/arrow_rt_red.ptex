@@ -1,0 +1,5 @@
+{
+  image "arrow_rt_red.tga"
+  format "srgb_alpha"
+  wrap "clamp"
+}

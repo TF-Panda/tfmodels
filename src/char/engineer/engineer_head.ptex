@@ -1,2 +1,4 @@
-image engineer_head.tga
-format srgb
+{
+  image engineer_head.tga
+  format srgb
+}

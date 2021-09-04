@@ -1,0 +1,10 @@
+{
+  material StandardMaterial
+  parameters {
+
+  }
+
+  tags [
+    compile_skip
+  ]
+}

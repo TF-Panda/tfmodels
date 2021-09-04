@@ -1,2 +1,4 @@
-image mini_sentry_blue.tga
-format srgb_alpha
+{
+  image mini_sentry_blue.tga
+  format srgb
+}

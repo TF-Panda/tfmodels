@@ -1,11 +1,19 @@
-StandardMaterial {
-  $baseTexture c_shotgun.ptex
-  $armeTexture c_shotgun_arme.ptex
+{
+  material StandardMaterial
 
-  $lightwarpTexture "../../lightwarps/weapon_lightwarp.ptex"
+  parameters {
+    base_texture c_shotgun.ptex
+    roughness_texture c_shotgun_roughness.ptex
+    roughness 0.8
+    env_map true
 
-  //$rimlight 0
-  //$rimlightBoost 0.75
+    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
 
-  //$halfLambert 1
+    metalness_texture c_shotgun_metalness.ptex
+
+    //rim_lighting 0
+    //rim_lighting_boost 0.75
+
+    //half_lambert 1
+  }
 }

@@ -1,0 +1,5 @@
+{
+  image c_rocketlauncher.tga
+  format srgb
+  wrap clamp
+}

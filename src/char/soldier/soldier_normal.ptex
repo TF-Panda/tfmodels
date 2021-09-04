@@ -1,3 +1,5 @@
-image soldier_normal.tga
-format rgb
-wrap clamp
+{
+  image soldier_normal.tga
+  format rgb
+  wrap clamp
+}

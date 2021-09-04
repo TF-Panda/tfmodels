@@ -1,47 +1,250 @@
-$model "optchar/c_engineer_arms-zero.egg"
-
-$materialgroup
 {
-  { "../engineer_red.pmat" }
-  { "../engineer_blue.pmat" }
+  model "optchar/c_engineer_arms-zero.egg"
+
+  custom_data {
+    omni true
+  }
+
+  hpr [ 180 0 0 ]
+
+  material_groups [
+    {
+      name red
+      materials [ "../engineer_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../engineer_blue.pmat" ]
+    }
+  ]
+
+  joint_merges [
+    "root"
+    "bip_upperArm_L"
+    "bip_upperArm_R"
+    "bip_lowerArm_L"
+    "bip_lowerArm_R"
+    "bip_wrist_R"
+    "bip_hand_L"
+    "bip_hand_R"
+    "arm_attach_R"
+    "effect_hand_L"
+    "effect_hand_R"
+    "vm_weapon_bone"
+    "vm_weapon_bone_1"
+    "vm_weapon_bone_2"
+    "vm_weapon_bone_3"
+    "vm_weapon_bone_4"
+    "vm_weapon_bone_5"
+    "vm_weapon_bone_6"
+    "vm_weapon_bone_7"
+    "vm_weapon_bone_L"
+    "vm_weapon_bone_L_1"
+    "vm_weapon_bone_L_2"
+    "weapon_bone"
+    "weapon_bone_1"
+    "weapon_bone_2"
+    "weapon_bone_3"
+    "weapon_bone_L"
+  ]
+
+  sequences [
+    {
+      name fj_draw
+      anim "optchar/c_engineer_arms-fj_draw.egg"
+      fps 30
+      snap true
+      activity Primary_VM_Draw
+      events [
+        {
+          frame 1
+          type 2
+          event Client_Play_Sound
+          data "Weapon_Shotgun.Draw"
+        }
+      ]
+    }
+
+    {
+      name fj_idle
+      anim "optchar/c_engineer_arms-fj_idle.egg"
+      fps 30
+      loop true
+      activity Primary_VM_Idle
+    }
+
+    {
+      name fj_fire
+      anim "optchar/c_engineer_arms-fj_fire.egg"
+      fps 30
+      snap true
+      activity Primary_VM_Fire
+      events [
+        {
+          frame 7
+          type 2
+          event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Back"
+        }
+        {
+          frame 12
+          type 2
+          event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Forward"
+        }
+      ]
+    }
+
+    {
+      name fj_reload_start
+      anim "optchar/c_engineer_arms-fj_reload_start.egg"
+      fps 30
+      activity Primary_VM_Reload_Start
+    }
+
+    {
+      name fj_reload_loop
+      anim "optchar/c_engineer_arms-fj_reload_loop.egg"
+      fps 30
+      loop true
+      activity Primary_VM_Reload
+      events [
+        {
+          frame 10
+          type 2
+          event Client_Play_Sound
+          data "Weapon_Shotgun.Reload"
+        }
+      ]
+    }
+
+    {
+      name fj_reload_end
+      anim "optchar/c_engineer_arms-fj_reload_end.egg"
+      fps 30
+      activity Primary_VM_Reload_End
+      events [
+        {
+          frame 12
+          type 2
+          event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Back"
+        }
+        {
+          frame 17
+          type 2
+          event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Forward"
+        }
+      ]
+    }
+
+    {
+      name spk_draw
+      anim "optchar/c_engineer_arms-spk_draw.egg"
+      fps 30
+      snap true
+      activity Melee_VM_Draw
+      events [
+        {
+          frame 3
+          type 2
+          event Client_Play_Sound
+          data "Weapon_Wrench.Draw"
+        }
+        {
+          frame 3
+          type 2
+          event Client_Play_Sound
+          data "Weapon_Wrench.Draw2"
+        }
+        {
+          frame 20
+          type 2
+          event Client_Play_Sound
+          data "Weapon_Wrench.HitHand"
+        }
+      ]
+    }
+
+    {
+      name spk_idle_tap
+      anim "optchar/c_engineer_arms-spk_idle_tap.egg"
+      loop true
+      fps 30
+      activity Melee_VM_Idle
+      events [
+        {
+          frame 21
+          type 2
+          event Client_Play_Sound
+          data "Weapon_Wrench.HitHand"
+        }
+      ]
+    }
+
+    {
+      name spk_swing_a
+      anim "optchar/c_engineer_arms-spk_swing_a.egg"
+      fps 30
+      activity Melee_VM_Swing
+      snap true
+    }
+
+    {
+      name spk_swing_b
+      anim "optchar/c_engineer_arms-spk_swing_b.egg"
+      fps 30
+      activity Melee_VM_Swing
+      snap true
+    }
+
+    {
+      name pstl_draw
+      anim "optchar/c_engineer_arms-pstl_draw.egg"
+      activity Secondary_VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2
+          event Client_Play_Sound
+          data "Weapon_Pistol.Draw"
+        }
+        {
+          frame 1 type 2
+          event Client_Play_Sound
+          data "Weapon_Pistol.Draw2"
+        }
+      ]
+    }
+
+    {
+      name pstl_idle
+      anim "optchar/c_engineer_arms-pstl_idle.egg"
+      activity Secondary_VM_Idle
+      snap true
+      loop true
+    }
+
+    {
+      name pstl_fire
+      anim "optchar/c_engineer_arms-pstl_fire.egg"
+      activity Secondary_VM_Fire
+      snap true
+    }
+
+    {
+      name pstl_reload
+      anim "optchar/c_engineer_arms-pstl_reload.egg"
+      activity Secondary_VM_Reload
+      snap true
+      events [
+        {
+          frame 14 type 2
+          event Client_Play_Sound
+          data "Weapon_Pistol.ClipIn"
+        }
+      ]
+    }
+  ]
 }
-
-$sequence fj_draw "optchar/c_engineer_arms-fj_draw.egg" fps 30
-$sequence fj_idle "optchar/c_engineer_arms-fj_idle.egg" fps 30
-$sequence fj_reload_start "optchar/c_engineer_arms-fj_reload_start.egg" fps 30
-$sequence fj_reload_loop "optchar/c_engineer_arms-fj_reload_loop.egg" fps 30
-$sequence fj_reload_end "optchar/c_engineer_arms-fj_reload_end.egg" fps 30
-$sequence fj_fire "optchar/c_engineer_arms-fj_fire.egg" fps 30
-$sequence spk_draw "optchar/c_engineer_arms-spk_draw.egg" fps 30
-$sequence spk_idle_tap "optchar/c_engineer_arms-spk_idle_tap.egg" fps 30
-$sequence spk_swing_a "optchar/c_engineer_arms-spk_swing_a.egg" fps 30
-$sequence spk_swing_b "optchar/c_engineer_arms-spk_swing_b.egg" fps 30
-$sequence spk_swing_c "optchar/c_engineer_arms-spk_swing_c.egg" fps 30
-
-$bonemerge "root"
-$bonemerge "bip_upperArm_L"
-$bonemerge "bip_upperArm_R"
-$bonemerge "bip_lowerArm_L"
-$bonemerge "bip_lowerArm_R"
-$bonemerge "bip_wrist_R"
-$bonemerge "bip_hand_L"
-$bonemerge "bip_hand_R"
-$bonemerge "arm_attach_R"
-$bonemerge "effect_hand_L"
-$bonemerge "effect_hand_R"
-$bonemerge "vm_weapon_bone"
-$bonemerge "vm_weapon_bone_1"
-$bonemerge "vm_weapon_bone_2"
-$bonemerge "vm_weapon_bone_3"
-$bonemerge "vm_weapon_bone_4"
-$bonemerge "vm_weapon_bone_5"
-$bonemerge "vm_weapon_bone_6"
-$bonemerge "vm_weapon_bone_7"
-$bonemerge "vm_weapon_bone_L"
-$bonemerge "vm_weapon_bone_L_1"
-$bonemerge "vm_weapon_bone_L_2"
-$bonemerge "weapon_bone"
-$bonemerge "weapon_bone_1"
-$bonemerge "weapon_bone_2"
-$bonemerge "weapon_bone_3"
-$bonemerge "weapon_bone_L"

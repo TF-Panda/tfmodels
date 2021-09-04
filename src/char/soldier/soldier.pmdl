@@ -1,47 +1,932 @@
-$model "optchar/soldier-zero.egg"
-
-$sequence layer_taunt01 "optchar/soldier-layer_taunt01.egg" fps 30
-$sequence layer_taunt02 "optchar/soldier-layer_taunt02.egg" fps 30
-$sequence layer_taunt03 "optchar/soldier-layer_taunt03.egg" fps 30
-$sequence stand_PRIMARY "optchar/soldier-stand_PRIMARY.egg" fps 30
-$sequence stand_SECONDARY "optchar/soldier-stand_SECONDARY.egg" fps 30
-$sequence selectionMenu_Anim0l "optchar/soldier-selectionMenu_Anim0l.egg" fps 30
-$sequence gesture_primary_positive "optchar/soldier-gesture_primary_positive.egg" fps 30
-$sequence gesture_primary_go "optchar/soldier-gesture_primary_go.egg" fps 30
-$sequence gesture_primary_help "optchar/soldier-gesture_primary_help.egg" fps 30
-$sequence gesture_primary_cheer "optchar/soldier-gesture_primary_cheer.egg" fps 30
-
-$lod 0 11
 {
-  group soldier_morphs_low medal_bodygroup grenades_bodygroup hat_bodygroup soldier_rocket soldier_eye_l soldier_eye_r
-}
+  model "optchar/soldier-zero.egg"
 
-$lod 11 22
-{
-  group soldier_morphs_low_lod1 medal_bodygroup_lod1 grenades_bodygroup_lod1 hat_bodygroup_lod1 soldier_rocket_lod1
-}
+  hpr [ 180 0 0 ]
 
-$lod 22 33
-{
-  group soldier_morphs_low_lod2 medal_bodygroup_lod2 grenades_bodygroup_lod2 hat_bodygroup_lod2 soldier_rocket_lod2
-}
+  custom_data {
+    bbox {
+      //min
+    }
 
-$lod 33 44
-{
-  group soldier_morphs_low_lod3 medal_bodygroup_lod3 grenades_bodygroup_lod3 hat_bodygroup_lod3 soldier_rocket_lod3
-}
+    bodygroups [
+      {
+        name rocket
+        nodes [
+          blank
+          "soldier_rocket*"
+        ]
+      }
+      {
+        name medal
+        nodes [
+          blank
+          "medal_bodygroup*"
+        ]
+      }
+    ]
+  }
 
-$lod 44 55
-{
-  group soldier_morphs_low_lod4 medal_bodygroup_lod4 grenades_bodygroup_lod4 hat_bodygroup_lod4 soldier_rocket_lod4
-}
+  attachments [
+  ]
 
-$lod 55 99999999
-{
-  group soldier_morphs_low_lod5 medal_bodygroup_lod5 grenades_bodygroup_lod5 hat_bodygroup_lod5 soldier_rocket_lod5
-}
+  pose_parameters [
+    {
+      name move_x
+      min -1 max 1
+    }
+    {
+      name move_y
+      min -1 max 1
+    }
+    {
+      name body_pitch
+      min -45 max 90
+      loop 360
+    }
+    {
+      name body_yaw
+      min -45 max 45
+      loop 360
+    }
+  ]
 
-$ikchain rhand bip_hand_R
-$ikchain lhand bip_hand_L
-$ikchain rfoot bip_foot_R
-$ikchain lfoot bip_foot_L
+  eyeballs [
+    {
+      name righteye
+      material eyeball_r_soldier
+      parent bip_head
+      pos [ -1.24 -3.09 78.62 ]
+      diameter 1.4
+      z_offset 4
+      iris_size 0.6
+    }
+    {
+      name lefteye
+      material eyeball_l_soldier
+      parent bip_head
+      pos [ 1.24 -3.09 78.62 ]
+      diameter 1.4
+      z_offset -4
+      iris_size 0.6
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ soldier_red.pmat soldier_head.pmat
+                  eyeball_l_soldier.pmat
+                  eyeball_r_soldier.pmat ]
+    }
+    {
+      name blue
+      materials [ soldier_blue.pmat soldier_head.pmat
+                  eyeball_l_soldier.pmat
+                  eyeball_r_soldier.pmat ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [
+        soldier_morphs_low medal_bodygroup grenades_bodygroup
+        hat_bodygroup soldier_rocket soldier_eye_l soldier_eye_r
+      ]
+    }
+    {
+      distance 11
+      groups [
+        soldier_morphs_low_lod1 medal_bodygroup_lod1 grenades_bodygroup_lod1
+        hat_bodygroup_lod1 soldier_rocket_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        soldier_morphs_low_lod2 medal_bodygroup_lod2 grenades_bodygroup_lod2
+        hat_bodygroup_lod2 soldier_rocket_lod2
+      ]
+    }
+    {
+      distance 33
+      groups [
+        soldier_morphs_low_lod3 medal_bodygroup_lod3 grenades_bodygroup_lod3
+        hat_bodygroup_lod3 soldier_rocket_lod3
+      ]
+    }
+    {
+      distance 44
+      groups [
+        soldier_morphs_low_lod4 medal_bodygroup_lod4 grenades_bodygroup_lod4
+        hat_bodygroup_lod4 soldier_rocket_lod4
+      ]
+    }
+    {
+      distance 55
+      groups [
+        soldier_morphs_low_lod5 medal_bodygroup_lod5 grenades_bodygroup_lod5
+        hat_bodygroup_lod5 soldier_rocket_lod5
+      ]
+    }
+  ]
+
+  joint_merges [
+    "bip_pelvis"
+    "bip_spine_0"
+    "bip_spine_1"
+    "bip_spine_2"
+    "bip_spine_3"
+    "bip_neck"
+    "bip_head"
+    "bip_collar_L"
+    "bip_collar_R"
+    "bip_upperArm_L"
+    "bip_upperArm_R"
+    "bip_lowerArm_L"
+    "bip_lowerArm_R"
+    "bip_hip_L"
+    "bip_hip_R"
+    "bip_knee_L"
+    "bip_knee_R"
+    "bip_foot_L"
+    "bip_foot_R"
+    "bip_hand_L"
+    "bip_hand_R"
+    "medal_bone"
+    "weapon_bone"
+    "weapon_bone_L"
+    "weapon_bone_1"
+    "mvm"
+    "bip_toe_L"
+    "bip_toe_R"
+    "prp_helmet"
+    "prp_grenade_bottom"
+    "prp_grenade_top"
+    "prop_bone"
+    "prop_bone_1"
+    "prop_bone_2"
+    "prop_bone_3"
+    "prop_bone_4"
+    "prop_bone_5"
+    "prop_bone_6"
+  ]
+
+  weight_lists [
+    {
+      name hips_upper_body
+      weights {
+        bip_pelvis 1.0
+        bip_hip_R 0.0
+        bip_hip_L 0.0
+      }
+    }
+    {
+      name no_joints
+      weights {
+        bip_pelvis 0.0
+      }
+    }
+    {
+      name arms_blend
+      weights {
+        bip_pelvis 0.0
+        bip_hip_R 0.0
+        bip_hip_L 0.0
+        bip_spine_0 0.0
+        bip_collar_L 0.4
+        bip_upperArm_L 1.0
+        bip_lowerArm_L 1.0
+        bip_collar_R 0.4
+        bip_upperArm_R 1.0
+        bip_lowerArm_R 1.0
+      }
+    }
+    {
+      name weights_layer_AttackStandMelee_arms
+      weights {
+        "bip_pelvis" 0
+        "bip_spine_0" 0
+        "bip_spine_1" 0
+        "bip_spine_2" 0
+        "bip_spine_3" 0
+        "bip_neck" 0
+        "bip_head" 0
+        "bip_collar_L" 1
+        "bip_collar_R" 1
+        "bip_upperArm_L" 1
+        "bip_upperArm_R" 1
+        "bip_lowerArm_L" 1
+        "bip_lowerArm_R" 1
+        "bip_hip_L" 0
+        "bip_hip_R" 0
+        "bip_knee_L" 0
+        "bip_knee_R" 0
+        "bip_foot_L" 0
+        "bip_foot_R" 0
+        "bip_hand_L" 1
+        "bip_hand_R" 1
+        "effect_hand_L" 1
+        "effect_hand_R" 1
+        "medal_bone" 0
+        "weapon_bone" 1
+        "weapon_bone_L" 1
+        "weapon_bone_1" 1
+        "handle_bone" 1
+        "mvm" 0
+        "rocket_joint" 1
+        "bip_toe_L" 0
+        "bip_toe_R" 0
+        "prp_helmet" 0
+        "prp_grenade_bottom" 0
+        "prp_grenade_top" 0
+        "prp_coatCollar_L" 0
+        "prp_coatCollar_R" 0
+        "prp_coatCollar_back" 0
+        "prp_coat_front_L" 0
+        "prp_coat_front_R" 0
+        "prp_coat_back_L" 0
+        "prp_coat_back_R" 0
+        "prp_coat_front_1_L" 0
+        "prp_coat_front_1_R" 0
+        "prp_coat_back_1_L" 0
+        "prp_coat_back_1_R" 0
+        "prp_pack_L" 0
+        "prp_pack_R" 0
+        "prp_pack_back" 0
+        "bip_thumb_0_L" 1
+        "bip_thumb_0_R" 1
+        "bip_index_0_L" 1
+        "bip_index_0_R" 1
+        "bip_middle_0_L" 1
+        "bip_middle_0_R" 1
+        "bip_ring_0_L" 1
+        "bip_ring_0_R" 1
+        "bip_pinky_0_L" 1
+        "bip_pinky_0_R" 1
+        "bip_thumb_1_L" 1
+        "bip_thumb_1_R" 1
+        "bip_index_1_L" 1
+        "bip_index_1_R" 1
+        "bip_middle_1_R" 1
+        "bip_middle_1_L" 1
+        "bip_ring_1_R" 1
+        "bip_ring_1_L" 1
+        "bip_pinky_1_L" 1
+        "bip_pinky_1_R" 1
+        "bip_thumb_2_R" 1
+        "bip_thumb_2_L" 1
+        "bip_index_2_L" 1
+        "bip_index_2_R" 1
+        "bip_middle_2_L" 1
+        "bip_middle_2_R" 1
+        "bip_ring_2_L" 1
+        "bip_ring_2_R" 1
+        "bip_pinky_2_L" 1
+        "bip_pinky_2_R" 1
+        "prop_bone" 0
+        "prop_bone_1" 0
+        "prop_bone_2" 0
+        "prop_bone_3" 0
+        "prop_bone_4" 0
+        "prop_bone_5" 0
+        "prop_bone_6" 0
+      }
+    }
+  ]
+
+  sequences [
+    {
+      name PRIMARY_aimmatrix_run
+      blend {
+        anims [
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_down_left.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_down_center.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_down_right.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_mid_left.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_mid_center.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_mid_right.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_up_left.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_up_center.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_up_right.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_straight_up.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_straight_up.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name run_PRIMARY
+      blend {
+        anims [
+          "optchar/soldier-a_runSW_PRIMARY.egg"
+          "optchar/soldier-a_runS_PRIMARY.egg"
+          "optchar/soldier-a_runSE_PRIMARY.egg"
+          "optchar/soldier-a_runW_PRIMARY.egg"
+          "optchar/soldier-a_runCenter_PRIMARY.egg"
+          "optchar/soldier-a_runE_PRIMARY.egg"
+          "optchar/soldier-a_runNW_PRIMARY.egg"
+          "optchar/soldier-a_runN_PRIMARY.egg"
+          "optchar/soldier-a_runNE_PRIMARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Primary_Run
+    }
+
+    {
+      name PRIMARY_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_down_left.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_down_center.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_down_right.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_mid_left.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_mid_center.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_mid_right.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_up_left.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_up_center.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_up_right.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+          "optchar/soldier-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name stand_PRIMARY
+      anim "optchar/soldier-stand_PRIMARY.egg"
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_idle
+        }
+      ]
+      loop true
+      activity Primary_Stand
+    }
+
+    {
+      name AttackStand_PRIMARY
+      anim "optchar/soldier-AttackStand_PRIMARY.egg"
+      delta true
+      activity Primary_Attack_Stand
+    }
+
+    {
+      name AttackCrouch_PRIMARY
+      anim "optchar/soldier-AttackCrouch_PRIMARY.egg"
+      delta true
+      activity Primary_Attack_Crouch
+    }
+
+    {
+      name layer_reload_standing_arms
+      anim "optchar/soldier-layer_reload_standing_arms.egg"
+      weight_list arms_blend
+    }
+
+    {
+      name ReloadStand_PRIMARY
+      anim "optchar/soldier-ReloadStand_PRIMARY.egg"
+      delta true
+      activity Primary_Reload_Stand
+      events [
+        // Body group events
+        {
+          frame 11 type 2
+          event Client_Bodygroup_Set_Value
+          data "rocket 1"
+        }
+        {
+          frame 21 type 2
+          event Client_Bodygroup_Set_Value
+          data "rocket 0"
+        }
+      ]
+      layers [
+        {
+          sequence layer_reload_standing_arms
+          start 0 peak 4 tail 32 end 32
+        }
+      ]
+    }
+
+    {
+      name layer_reload_standing_arms_loop
+      anim "optchar/soldier-layer_reload_standing_arms_loop.egg"
+      loop true
+      weight_list arms_blend
+    }
+
+    {
+      name ReloadStand_PRIMARY_loop
+      anim "optchar/soldier-ReloadStand_PRIMARY_loop.egg"
+      delta true
+      activity Primary_Reload_Stand_Loop
+      loop true
+      layers [
+        {
+          sequence layer_reload_standing_arms_loop
+        }
+      ]
+      events [
+        // body group events
+        {
+          frame 1 type 2
+          event Client_Bodygroup_Set_Value
+          data "rocket 0"
+        }
+        {
+          frame 12 type 2
+          event Client_Bodygroup_Set_Value
+          data "rocket 1"
+        }
+        {
+          frame 22 type 2
+          event Client_Bodygroup_Set_Value
+          data "rocket 0"
+        }
+      ]
+    }
+
+    {
+      name layer_reload_standing_arms_end
+      anim "optchar/soldier-layer_reload_standing_arms_end.egg"
+      fps 44
+      weight_list arms_blend
+    }
+
+    {
+      name ReloadStand_PRIMARY_end
+      anim "optchar/soldier-ReloadStand_PRIMARY_end.egg"
+      delta true
+      activity Primary_Reload_Stand_End
+      events [
+        // body groups
+        {
+          frame 1 type 2
+          event Client_Bodygroup_Set_Value
+          data "rocket 0"
+        }
+      ]
+      layers [
+        {
+          sequence layer_reload_standing_arms_end
+          start 0 peak 0 tail 10 end 18
+          spline true
+        }
+      ]
+    }
+
+    {
+      name jump_start_PRIMARY
+      anim "optchar/soldier-jump_start_PRIMARY.egg"
+      activity Primary_Jump_Start
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_idle
+        }
+      ]
+      zero_x true
+      zero_y true
+    }
+
+    {
+      name jump_float_PRIMARY
+      anim "optchar/soldier-jump_float_PRIMARY.egg"
+      activity Primary_Jump_Float
+      loop true
+      layers [
+        {
+          sequence layer_PRIMARY_jump_floatNoise
+        }
+        {
+          sequence PRIMARY_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name jumpland_PRIMARY
+      anim "optchar/soldier-jumpland_PRIMARY.egg"
+      delta true
+      activity Primary_Jump_Land
+    }
+
+    {
+      name SECONDARY_aimmatrix_run
+      blend {
+        anims [
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_down_left.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_down_center.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_down_right.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_mid_left.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_mid_center.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_mid_right.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_up_left.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_up_center.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_up_right.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      weight_list hips_upper_body
+    }
+
+    {
+      name run_SECONDARY
+      blend {
+        anims [
+          "optchar/soldier-a_runSW_SECONDARY.egg"
+          "optchar/soldier-a_runS_SECONDARY.egg"
+          "optchar/soldier-a_runSE_SECONDARY.egg"
+          "optchar/soldier-a_runW_SECONDARY.egg"
+          "optchar/soldier-a_runCenter_SECONDARY.egg"
+          "optchar/soldier-a_runE_SECONDARY.egg"
+          "optchar/soldier-a_runNW_SECONDARY.egg"
+          "optchar/soldier-a_runN_SECONDARY.egg"
+          "optchar/soldier-a_runNE_SECONDARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Secondary_Run
+    }
+
+    {
+      name SECONDARY_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_down_left.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_down_center.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_down_right.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_mid_left.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_mid_center.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_mid_right.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_up_left.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_up_center.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_up_right.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/soldier-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      weight_list hips_upper_body
+    }
+
+    {
+      name stand_SECONDARY
+      anim "optchar/soldier-stand_SECONDARY.egg"
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_idle
+        }
+      ]
+      loop true
+      activity Secondary_Stand
+    }
+
+    {
+      name layer_reload_standing_secondary_arms
+      anim "optchar/soldier-layer_reload_standing_secondary_arms.egg"
+      weight_list arms_blend
+    }
+
+    {
+      name ReloadStand_SECONDARY
+      anim "optchar/soldier-ReloadStand_SECONDARY.egg"
+      activity Secondary_Reload_Stand
+      delta true
+      layers [
+        {
+          sequence layer_reload_standing_secondary_arms
+          start 0
+          peak 4
+          tail 21
+          end 21
+          spline true
+        }
+      ]
+    }
+
+    {
+      name layer_reload_standing_secondary_arms_loop
+      anim "optchar/soldier-layer_reload_standing_secondary_arms_loop.egg"
+      weight_list arms_blend
+    }
+
+    {
+      name ReloadStand_SECONDARY_loop
+      anim "optchar/soldier-ReloadStand_SECONDARY_loop.egg"
+      activity Secondary_Reload_Stand_Loop
+      delta true
+      loop true
+      layers [
+        {
+          sequence layer_reload_standing_secondary_arms_loop
+        }
+      ]
+    }
+
+    {
+      name layer_reload_standing_secondary_arms_end
+      anim "optchar/soldier-layer_reload_standing_secondary_arms_end.egg"
+      weight_list arms_blend
+    }
+
+    {
+      name ReloadStand_SECONDARY_end
+      anim "optchar/soldier-ReloadStand_SECONDARY_end.egg"
+      delta true
+      activity Secondary_Reload_Stand_End
+      layers [
+        {
+          sequence layer_reload_standing_secondary_arms_end
+          start 0
+          peak 0
+          tail 8
+          end 15
+          spline true
+        }
+      ]
+    }
+
+    {
+      name AttackStand_secondary
+      anim "optchar/soldier-AttackStand_SECONDARY.egg"
+      activity Secondary_Attack_Stand
+      delta true
+    }
+
+    {
+      name jump_start_secondary
+      anim "optchar/soldier-jump_start_SECONDARY.egg"
+      activity Secondary_Jump_Start
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_idle
+        }
+      ]
+      zero_x true
+      zero_y true
+    }
+
+    {
+      name layer_PRIMARY_jump_floatNoise
+      anim "optchar/soldier-layer_PRIMARY_jump_floatNoise.egg"
+      delta true
+      real_time true
+    }
+
+    {
+      name jump_float_secondary
+      anim "optchar/soldier-jump_float_SECONDARY.egg"
+      activity Secondary_Jump_Float
+      layers [
+        {
+          sequence layer_PRIMARY_jump_floatNoise
+        }
+        {
+          sequence SECONDARY_aimmatrix_idle
+        }
+      ]
+      loop true
+    }
+
+    {
+      name jumpland_secondary
+      anim "optchar/soldier-jumpland_SECONDARY.egg"
+      delta true
+      activity Secondary_Jump_Land
+    }
+
+    {
+      name flinch01
+      anim "optchar/soldier-a_flinch01.egg"
+      activity Gesture_Flinch
+      delta true
+    }
+
+    {
+      name MELEE_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/soldier-a_MELEE_aimmatrix_idle_down_left.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_down_center.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_down_right.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_mid_left.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_mid_center.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_mid_right.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_up_left.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_up_center.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_up_right.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      weight_list hips_upper_body
+    }
+
+    {
+      name MELEE_aimmatrix_run
+      blend {
+        anims [
+          "optchar/soldier-a_MELEE_aimmatrix_run_down_left.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_down_center.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_down_right.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_mid_left.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_mid_center.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_mid_right.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_up_left.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_up_center.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_up_right.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/soldier-a_MELEE_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      weight_list hips_upper_body
+    }
+
+    {
+      name stand_MELEE
+      anim "optchar/soldier-stand_MELEE.egg"
+      loop true
+      activity Melee_Stand
+      layers [
+        {
+          sequence MELEE_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name run_MELEE
+      blend {
+        anims [
+          "optchar/soldier-a_runSW_MELEE.egg"
+          "optchar/soldier-a_runS_MELEE.egg"
+          "optchar/soldier-a_runSE_MELEE.egg"
+          "optchar/soldier-a_runW_MELEE.egg"
+          "optchar/soldier-a_runCenter_MELEE.egg"
+          "optchar/soldier-a_runE_MELEE.egg"
+          "optchar/soldier-a_runNW_MELEE.egg"
+          "optchar/soldier-a_runN_MELEE.egg"
+          "optchar/soldier-a_runNE_MELEE.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence MELEE_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Melee_Run
+    }
+
+    {
+      name layer_AttackStandMelee_arms
+      anim "optchar/soldier-layer_AttackStandMelee_arms.egg"
+      weight_list weights_layer_AttackStandMelee_arms
+    }
+
+    {
+      name Attack_Stand_MELEE
+      anim "optchar/soldier-Attack_Stand_MELEE.egg"
+      delta true
+      activity Melee_Attack_Stand
+      layers [
+        {
+          sequence layer_AttackStandMelee_arms
+          start 0 peak 3 tail 21 end 24
+          spline true
+        }
+      ]
+    }
+
+    {
+      name a_jumpstart_MELEE
+      anim "optchar/soldier-a_jumpstart_MELEE.egg"
+      activity Melee_Jump_Start
+      zero_x true
+      zero_y true
+    }
+
+    {
+      name a_jumpfloat_MELEE
+      anim "optchar/soldier-a_jumpfloat_MELEE.egg"
+      zero_x true
+      zero_y true
+      loop true
+      activity Melee_Jump_Float
+    }
+
+    {
+      name jumpland_MELEE
+      anim "optchar/soldier-jumpland_MELEE.egg"
+      activity Melee_Jump_Land
+      delta true
+    }
+
+    {
+      name SelectionMenu_Anim01
+      anim "optchar/soldier-selectionMenu_Anim0l.egg"
+      events [
+        {
+          frame 20 type 2 event Client_Play_Sound
+          data "Selection.SoldierLauncherGrab"
+        }
+        {
+          frame 24 type 2 event Client_Play_Sound
+          data "Selection.SoldierEquipment"
+        }
+        {
+          frame 36 type 2 event Client_Play_Sound
+          data "Selection.SoldierClothesRustle"
+        }
+        {
+          frame 47 type 2 event Client_Play_Sound
+          data "Selection.SoldierLauncherGrab"
+        }
+        {
+          frame 64 type 2 event Client_Play_Sound
+          data "Selection.SoldierClothesRustle"
+        }
+        {
+          frame 73 type 2 event Client_Play_Sound
+          data "Selection.SoldierLauncherGrab"
+        }
+        {
+          frame 94 type 2 event Client_Play_Sound
+          data "Selection.SoldierLauncherSetStart"
+        }
+        {
+          frame 103 type 2 event Client_Play_Sound
+          data "Selection.SoldierLauncherSetStop"
+        }
+        {
+          frame 103 type 2 event Client_Play_Sound
+          data "Selection.SoldierLauncherHitGround"
+        }
+      ]
+    }
+
+    {
+      name SelectionMenu_Idle
+      anim "optchar/soldier-selectionMenu_Idle.egg"
+      loop true
+    }
+  ]
+}

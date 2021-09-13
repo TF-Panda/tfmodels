@@ -1,0 +1,8 @@
+{
+  type cube_map
+  image sky#.png
+  format srgb
+  wrap clamp
+  minfilter linear_mipmap_linear
+  magfilter linear
+}

@@ -1,0 +1,33 @@
+<Comment> {
+  "egg-texture-cards -p 100,100 -o tf2_logo.egg ../maps/tf2_logo.png"
+}
+<Texture> tf2_logo {
+  "../maps/tf2_logo.png"
+}
+<Group> {
+  <VertexPool> vpool {
+    <Vertex> 0 {
+      -12 2.545 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 1 {
+      -12 -2.545 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 2 {
+      12 -2.545 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 3 {
+      12 2.545 0
+      <UV> { 1 1 }
+    }
+  }
+  <Group> tf2_logo {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { tf2_logo }
+      <VertexRef> { 0 1 2 3 <Ref> { vpool } }
+    }
+  }
+}

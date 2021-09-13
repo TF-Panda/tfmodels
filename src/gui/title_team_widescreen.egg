@@ -1,0 +1,33 @@
+<Comment> {
+  "egg-texture-cards -o title_team_widescreen.egg -g -1.77777,1.77777,-1,1 title_team_widescreen.tga"
+}
+<Texture> title_team_widescreen {
+  title_team_widescreen.tga
+}
+<Group> {
+  <VertexPool> vpool {
+    <Vertex> 0 {
+      -1.77777 1 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 1 {
+      -1.77777 -1 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 2 {
+      1.77777 -1 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 3 {
+      1.77777 1 0
+      <UV> { 1 1 }
+    }
+  }
+  <Group> title_team_widescreen {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { title_team_widescreen }
+      <VertexRef> { 0 1 2 3 <Ref> { vpool } }
+    }
+  }
+}

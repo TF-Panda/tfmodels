@@ -7,6 +7,6 @@
 #end blender_egg
 
 #begin install_egg
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     w_toolbox.egg
 #end install_egg

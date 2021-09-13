@@ -145,8 +145,8 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     c_engineer_arms-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix c_engineer_arms-,$[C_ENGINEER_ARMS_ANIMS],.egg]
 #end install_egg

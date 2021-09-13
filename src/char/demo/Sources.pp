@@ -829,8 +829,8 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     demo-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix demo-,$[DEMO_ANIMS],.egg]
 #end install_egg

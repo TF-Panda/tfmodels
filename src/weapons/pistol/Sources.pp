@@ -33,7 +33,7 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     c_pistol-zero.egg
 #end install_egg
 

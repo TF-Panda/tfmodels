@@ -36,7 +36,7 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     c_bottle-zero.egg
 #end install_egg
 

@@ -1,3 +1,6 @@
-image engineer_mech_hand_blue.tga
-format srgb
-wrap clamp
+{
+  image engineer_mech_hand_blue.tga
+  format srgb
+  wrap clamp
+}
+

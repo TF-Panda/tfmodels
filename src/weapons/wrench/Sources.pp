@@ -10,7 +10,8 @@
 #begin install_tex
   #define SOURCES \
     c_wrench.ptex \
-    c_wrench_specular.ptex
+    c_wrench_specular.ptex \
+    c_wrench_roughness.ptex
 #end install_tex
 
 #begin install_mat
@@ -44,9 +45,9 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     c_wrench-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix c_wrench-,$[C_WRENCH_ANIMS],.egg]
 #end install_egg
 
@@ -70,6 +71,6 @@
 #end blender_egg
 
 #begin install_egg
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     w_wrench.egg
 #end install_egg

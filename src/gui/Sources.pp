@@ -17,7 +17,7 @@
 #end install_misc
 
 #begin install_egg
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     tf2_logo.egg \
     tf2_logo_2.egg \
     title_team_widescreen.egg

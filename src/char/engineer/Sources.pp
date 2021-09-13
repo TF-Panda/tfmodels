@@ -7,6 +7,7 @@
     engineer_red.ptex \
     engineer_head.ptex \
     engineer_roughness.ptex \
+    engineer_gloss.ptex \
     engineer_normal.ptex \
     engineer_mech_hand.ptex \
     engineer_mech_hand_blue.ptex \
@@ -1204,8 +1205,8 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     engineer-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix engineer-,$[ENGINEER_ANIMS],.egg]
 #end install_egg

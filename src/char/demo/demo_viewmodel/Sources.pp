@@ -119,8 +119,8 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     c_demo_arms-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix c_demo_arms-,$[C_DEMO_ARMS_ANIMS],.egg]
 #end install_egg

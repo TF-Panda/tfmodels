@@ -38,6 +38,6 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     c_grenadelauncher-zero.egg
 #end install_egg

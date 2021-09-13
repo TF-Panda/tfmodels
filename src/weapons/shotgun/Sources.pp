@@ -44,9 +44,9 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     c_shotgun-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix c_shotgun-,$[C_SHOTGUN_ANIMS],.egg]
 #end install_egg
 
@@ -91,8 +91,8 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     w_shotgun-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix w_shotgun-,$[C_SHOTGUN_ANIMS],.egg]
 #end install_egg

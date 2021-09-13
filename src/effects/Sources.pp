@@ -2,6 +2,6 @@
 #define INSTALL_TO models/effects
 
 #begin install_egg
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     explosion.egg
 #end install_egg

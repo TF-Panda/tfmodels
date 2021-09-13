@@ -160,13 +160,13 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     sentry1-zero.egg \
     sentry1_gib1-zero.egg \
     sentry1_gib2-zero.egg \
     sentry1_gib3-zero.egg \
     sentry1_gib4-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix sentry1-,$[SENTRY1_ANIMS],.egg]
 #end install_egg
 
@@ -217,9 +217,9 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     sentry2_heavy-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix sentry2_heavy-,$[SENTRY2_HEAVY_ANIMS],.egg]
 #end install_egg
 
@@ -270,8 +270,8 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     sentry2-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix sentry2-,$[SENTRY2_ANIMS],.egg]
 #end install_egg

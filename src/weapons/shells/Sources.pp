@@ -18,6 +18,6 @@
 #end blender_egg
 
 #begin install_egg
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     shell_shotgun.egg
 #end install_egg

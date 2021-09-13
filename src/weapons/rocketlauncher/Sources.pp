@@ -59,10 +59,10 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     c_rocketlauncher-zero.egg \
     w_rocket-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix c_rocketlauncher-,$[C_ROCKETLAUNCHER_ANIMS],.egg]
 #end install_egg
 

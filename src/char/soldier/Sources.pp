@@ -4,7 +4,7 @@
 #begin install_tex
   #define SOURCES \
     soldier_red.ptex soldier_blue.ptex soldier_head.ptex \
-    soldier_normal.ptex
+    soldier_normal.ptex soldier_exponent.ptex
 #end install_tex
 
 #begin install_mat
@@ -930,8 +930,8 @@
 
 #begin install_egg
   #define SOURCE_DIR optchar
-  #define SOURCES \
+  #define UNPAL_SOURCES \
     soldier-zero.egg
-  #define SOURCES_NC \
+  #define UNPAL_SOURCES_NC \
     $[matrix soldier-,$[SOLDIER_ANIMS],.egg]
 #end install_egg

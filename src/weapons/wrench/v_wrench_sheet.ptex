@@ -1,2 +1,4 @@
-image v_wrench_sheet.tga
-format srgb
+{
+  image v_wrench_sheet.tga
+  format srgb
+}

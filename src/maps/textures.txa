@@ -1,0 +1,6 @@
+#
+# This is the input file to the egg-palettize tool.  It is completely empty
+# because tfmodels does not utilize egg-palettize.  It is still required to
+# exist because ppremake puts in a rule to always run egg-palettize on the
+# model tree, so we need this file to make egg-palettize happy.
+#

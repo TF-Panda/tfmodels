@@ -8,7 +8,7 @@
     tutorial_battle_props_palette_4samlc_1.ptex \
     expl001.ptex expl002.ptex expl003.ptex expl004.ptex \
     expl005.ptex expl006.ptex expl007.ptex expl008.ptex \
-    expl009.ptex expl010.ptex sky.ptex
+    expl009.ptex expl010.ptex sky.ptex brdf_lut.ptex
 #end install_tex
 
 #begin install_mat

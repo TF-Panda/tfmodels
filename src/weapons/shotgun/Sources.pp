@@ -1,5 +1,5 @@
 #define DIR_TYPE models
-#define INSTALL_TO models/weapons/shotgun
+#define INSTALL_TO models/weapons
 
 //
 // C_SHOTGUN
@@ -42,13 +42,10 @@
     -flag c_shotgun_physics
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    c_shotgun-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix c_shotgun-,$[C_SHOTGUN_ANIMS],.egg]
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    c_shotgun.pmdl
+#end install_mdl
 
 //
 // W_SHOTGUN
@@ -89,10 +86,7 @@
     -flag w_shotgun_reference_lod2
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    w_shotgun-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix w_shotgun-,$[C_SHOTGUN_ANIMS],.egg]
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    w_shotgun.pmdl
+#end install_mdl

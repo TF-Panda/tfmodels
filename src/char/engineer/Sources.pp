@@ -1,5 +1,5 @@
 #define DIR_TYPE models
-#define INSTALL_TO char/engineer
+#define INSTALL_TO models/char
 
 #begin install_tex
   #define SOURCES \
@@ -1203,10 +1203,7 @@
     -flag engineer_robotarm_bodygroup_lod5
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    engineer-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix engineer-,$[ENGINEER_ANIMS],.egg]
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    engineer.pmdl
+#end install_mdl

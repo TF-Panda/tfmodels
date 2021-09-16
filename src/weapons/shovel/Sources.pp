@@ -31,8 +31,7 @@
     -flag c_shovel_reference_lod2
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    c_shovel-zero.egg
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    c_shovel.pmdl
+#end install_mdl

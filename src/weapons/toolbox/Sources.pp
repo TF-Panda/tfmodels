@@ -1,5 +1,5 @@
 #define DIR_TYPE models
-#define INSTALL_TO models/weapons/toolbox
+#define INSTALL_TO models/weapons
 
 #begin blender_egg
   #define SOURCES \

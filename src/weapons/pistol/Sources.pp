@@ -31,9 +31,7 @@
     -flag c_pistol_physics
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    c_pistol-zero.egg
-#end install_egg
-
+#begin install_mdl
+  #define SOURCES \
+    c_pistol.pmdl
+#end install_mdl

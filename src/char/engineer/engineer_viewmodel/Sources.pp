@@ -1,5 +1,5 @@
 #define DIR_TYPE models
-#define INSTALL_TO models/char/c_engineer_arms
+#define INSTALL_TO models/char
 
 #begin install_tex
   #define SOURCES \
@@ -143,10 +143,7 @@
     -keepall
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    c_engineer_arms-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix c_engineer_arms-,$[C_ENGINEER_ARMS_ANIMS],.egg]
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    c_engineer_arms.pmdl
+#end install_mdl

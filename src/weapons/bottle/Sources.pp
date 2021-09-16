@@ -34,9 +34,8 @@
     -flag c_bottle_physics
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    c_bottle-zero.egg
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    c_bottle.pmdl
+#end install_mdl
 

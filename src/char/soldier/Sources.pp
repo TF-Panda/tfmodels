@@ -1,5 +1,5 @@
 #define DIR_TYPE models
-#define INSTALL_TO models/soldier
+#define INSTALL_TO models/char
 
 #begin install_tex
   #define SOURCES \
@@ -928,10 +928,7 @@
     -flag soldier_rocket_lod5
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    soldier-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix soldier-,$[SOLDIER_ANIMS],.egg]
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    soldier.pmdl
+#end install_mdl

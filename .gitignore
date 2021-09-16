@@ -3,6 +3,8 @@
 *.boo
 *.dat
 *.txo
+*.txo.pz
+*.bam
 *.mto
 *.blend1
 *.pyc

@@ -158,18 +158,6 @@
 
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    sentry1-zero.egg \
-    sentry1_gib1-zero.egg \
-    sentry1_gib2-zero.egg \
-    sentry1_gib3-zero.egg \
-    sentry1_gib4-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix sentry1-,$[SENTRY1_ANIMS],.egg]
-#end install_egg
-
 #define SENTRY2_HEAVY_ANIMS \
   a_pitch_center \
   a_pitch_down \
@@ -214,14 +202,6 @@
     -flag sentry2_s2_lid \
     -flag sentry2_s2_lid_lod1
 #end optchar_egg
-
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    sentry2_heavy-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix sentry2_heavy-,$[SENTRY2_HEAVY_ANIMS],.egg]
-#end install_egg
 
 #define SENTRY2_ANIMS \
   a_idle \
@@ -268,10 +248,13 @@
     -flag sentry2_optimized_reference_lod4
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    sentry2-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix sentry2-,$[SENTRY2_ANIMS],.egg]
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    sentry1.pmdl \
+    sentry1_gib1.pmdl \
+    sentry1_gib2.pmdl \
+    sentry1_gib3.pmdl \
+    sentry1_gib4.pmdl \
+    sentry2.pmdl \
+    sentry2_heavy.pmdl
+#end install_mdl

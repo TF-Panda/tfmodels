@@ -15,16 +15,11 @@
     w_rocket01.pmat
 #end install_mat
 
-#define C_ROCKETLAUNCHER_ANIMS \
-  idle
-
 #begin blender_char_egg
   #define BLENDER_PREFIX c_rocketlauncher-
   #define EGG_PREFIX c_rocketlauncher-
   #define POLY_MODEL zero
   #define CHAR_NAME c_rocketlauncher.qc_skeleton
-  #define ANIMS_DIR anims
-  #define ANIMS $[C_ROCKETLAUNCHER_ANIMS]
 #end blender_char_egg
 
 #begin blender_char_egg
@@ -45,8 +40,7 @@
 #begin optchar_egg
   #define TARGET_DIR optchar
   #define SOURCES \
-    c_rocketlauncher-zero.egg \
-    $[matrix anims/c_rocketlauncher-,$[C_ROCKETLAUNCHER_ANIMS],.egg]
+    c_rocketlauncher-zero.egg
 
   #define OPTCHAR_OPTS \
     -keepall \
@@ -57,12 +51,8 @@
     -flag c_rocketlauncher_physics
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    c_rocketlauncher-zero.egg \
-    w_rocket-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix c_rocketlauncher-,$[C_ROCKETLAUNCHER_ANIMS],.egg]
-#end install_egg
-
+#begin install_mdl
+  #define SOURCES \
+    c_rocketlauncher.pmdl \
+    w_rocket.pmdl
+#end install_mdl

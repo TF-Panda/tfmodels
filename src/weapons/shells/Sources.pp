@@ -1,5 +1,5 @@
 #define DIR_TYPE models
-#define INSTALL_TO models/weapons/shells
+#define INSTALL_TO models/weapons
 
 #begin install_tex
   #define SOURCES \

@@ -117,10 +117,7 @@
     -keepall
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    c_demo_arms-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix c_demo_arms-,$[C_DEMO_ARMS_ANIMS],.egg]
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    c_demo_arms.pmdl
+#end install_mdl

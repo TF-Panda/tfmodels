@@ -1,5 +1,5 @@
 #define DIR_TYPE models
-#define INSTALL_TO models/demo
+#define INSTALL_TO models/char
 
 #begin install_tex
   #define SOURCES \
@@ -827,10 +827,7 @@
     -flag shoes_bodygroup_lod5
 #end optchar_egg
 
-#begin install_egg
-  #define SOURCE_DIR optchar
-  #define UNPAL_SOURCES \
-    demo-zero.egg
-  #define UNPAL_SOURCES_NC \
-    $[matrix demo-,$[DEMO_ANIMS],.egg]
-#end install_egg
+#begin install_mdl
+  #define SOURCES \
+    demo.pmdl
+#end install_mdl

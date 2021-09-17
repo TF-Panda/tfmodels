@@ -929,4 +929,145 @@
       loop true
     }
   ]
+
+  physics_model {
+    mesh soldier_physics
+    mass 100
+    rot_damping 4
+    damping 0
+
+    joints [
+      {
+        name bip_pelvis
+        rot_damping 0
+        limit_x [ -180 180 ]
+        limit_y [ -180 180 ]
+        limit_z [ -180 180 ]
+      }
+      {
+        name bip_hip_R
+        mass_bias 0.8
+        limit_x [ -12 12 ]
+        limit_y [ -12 30 ]
+        limit_z [ -50 24 ]
+      }
+      {
+        name bip_knee_R
+        mass_bias 1.2
+        rot_damping 9
+        limit_x [ 0 0 ]
+        limit_y [ -12 100 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_hip_L
+        mass_bias 0.8
+        limit_x [ -12 12 ]
+        limit_y [ -12 30 ]
+        limit_z [ -24 50 ]
+      }
+      {
+        name bip_knee_L
+        mass_bias 1.2
+        rot_damping 9
+        limit_x [ 0 0 ]
+        limit_y [ -12 100 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_foot_L
+        mass_bias 0.75
+        rot_damping 7
+        limit_x [ -30 45 ]
+        limit_y [ -19 25 ]
+        limit_z [ -25 24 ]
+      }
+      {
+        name bip_spine_0
+        mass_bias 1.2
+        rot_damping 15
+        limit_x [ -30 15 ]
+        limit_y [ -16 16 ]
+        limit_z [ -15 15 ]
+      }
+      {
+        name bip_spine_2
+        mass_bias 1.6
+        rot_damping 10
+        limit_x [ -30 15 ]
+        limit_y [ -16 16 ]
+        limit_z [ -10 10 ]
+      }
+      {
+        name bip_upperArm_R
+        mass_bias 0.8
+        rot_damping 16
+        limit_x [ -40 50 ]
+        limit_y [ -32 55 ]
+        limit_z [ -80 25 ]
+      }
+      {
+        name bip_upperArm_L
+        mass_bias 0.8
+        rot_damping 16
+        limit_x [ -40 50 ]
+        limit_y [ -55 32 ]
+        limit_z [ -80 25 ]
+      }
+      {
+        name bip_lowerArm_L
+        mass_bias 0.8
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -120 -6 ]
+      }
+      {
+        name bip_hand_L
+        mass_bias 0.6
+        rot_damping 8
+        limit_x [ -30 37 ]
+        limit_y [ -12 8 ]
+        limit_z [ -20 35 ]
+      }
+      {
+        name bip_lowerArm_R
+        mass_bias 1.8
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -120 -6 ]
+      }
+      {
+        name bip_neck
+        mass_bias 0.5
+        rot_damping 9
+        limit_x [ -20 20 ]
+        limit_y [ -20 20 ]
+        limit_z [ -15 15 ]
+      }
+      {
+        name bip_hand_R
+        mass_bias 0.6
+        rot_damping 8
+        limit_x [ -37 30 ]
+        limit_y [ -8 12 ]
+        limit_z [ -35 20 ]
+      }
+      {
+        name bip_head
+        mass_bias 1.5
+        rot_damping 8
+        limit_x [ -20 20 ]
+        limit_y [ -20 20 ]
+        limit_z [ -20 20 ]
+      }
+      {
+        name bip_foot_R
+        mass_bias 0.75
+        rot_damping 7
+        limit_x [ -30 45 ]
+        limit_y [ -19 25 ]
+        limit_z [ -25 24 ]
+      }
+    ]
+  }
 }

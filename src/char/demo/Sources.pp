@@ -824,7 +824,8 @@
     -flag shoes_bodygroup_lod2 \
     -flag shoes_bodygroup_lod3 \
     -flag shoes_bodygroup_lod4 \
-    -flag shoes_bodygroup_lod5
+    -flag shoes_bodygroup_lod5 \
+    -flag demo_physics
 #end optchar_egg
 
 #begin install_mdl

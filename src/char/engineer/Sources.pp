@@ -1174,9 +1174,7 @@
     $[matrix anims/engineer-,$[ENGINEER_ANIMS],.egg]
 
   #define OPTCHAR_OPTS \
-    -expose weapon_bone \
-    -expose weapon_bone_L \
-    -expose weapon_bone_1 \
+    -keepall \
     -flag engineer_morphs_low \
     -flag engineer_morphs_low_lod1 \
     -flag engineer_morphs_low_lod2 \
@@ -1200,7 +1198,8 @@
     -flag engineer_robotarm_bodygroup_lod2 \
     -flag engineer_robotarm_bodygroup_lod3 \
     -flag engineer_robotarm_bodygroup_lod4 \
-    -flag engineer_robotarm_bodygroup_lod5
+    -flag engineer_robotarm_bodygroup_lod5 \
+    -flag engineer_physics
 #end optchar_egg
 
 #begin install_mdl

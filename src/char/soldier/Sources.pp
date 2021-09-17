@@ -890,10 +890,6 @@
 
   #define OPTCHAR_OPTS \
     -keepall \
-    -expose weapon_bone \
-    -expose weapon_bone_L \
-    -expose weapon_bone_1 \
-    -expose bip_head \
     -flag soldier_eye_l \
     -flag soldier_eye_r \
     -flag soldier_morphs_low \
@@ -925,7 +921,8 @@
     -flag soldier_rocket_lod2 \
     -flag soldier_rocket_lod3 \
     -flag soldier_rocket_lod4 \
-    -flag soldier_rocket_lod5
+    -flag soldier_rocket_lod5 \
+    -flag soldier_physics
 #end optchar_egg
 
 #begin install_mdl

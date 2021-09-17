@@ -13,6 +13,117 @@
         ]
       }
     ]
+
+    hit_boxes [
+      {
+        group 1
+        joint bip_head
+        mins [-6 -11 -8]
+        maxs [6 4 6]
+      }
+      {
+        group 0
+        joint bip_pelvis
+        mins [-9 -0.5 -7.5]
+        maxs [-9 11.5 3.5]
+      }
+      {
+        group 3
+        joint bip_spine_0
+        mins [-9 -2 -10]
+        maxs [9 4 4]
+      }
+      {
+        group 3
+        joint bip_spine_1
+        mins [-9 -3 -10.5]
+        maxs [9 3 4.5]
+      }
+      {
+        group 2
+        joint bip_spine_2
+        mins [-10 -3 -9]
+        maxs [10 3 5]
+      }
+      {
+        group 2
+        joint bip_spine_3
+        mins [-10 -3.5 -10]
+        maxs [10 1.5 4]
+      }
+      {
+        group 4
+        joint bip_upperArm_L
+        mins [0 -3.5 -2.75]
+        maxs [12 3.5 3.25]
+      }
+      {
+        group 4
+        joint bip_lowerArm_L
+        mins [0 -2.25 -3.25]
+        maxs [13 2.25 3.25]
+      }
+      {
+        group 4
+        joint bip_hand_L
+        mins [-3.5 -10 -3]
+        maxs [1.5 0 5]
+      }
+      {
+        group 5
+        joint bip_upperArm_R
+        mins [0 -3.5 -2.75]
+        maxs [12 3.5 3.25]
+      }
+      {
+        group 5
+        joint bip_lowerArm_R
+        mins [0 -3.25 -2.75]
+        maxs [13 3.25 2.75]
+      }
+      {
+        group 5
+        joint bip_hand_R
+        mins [-2.5 0.5 -3.5]
+        maxs [2.5 9.5 4.5]
+      }
+      {
+        group 6
+        joint bip_hip_L
+        mins [2 -4 -5]
+        maxs [16 4 4]
+      }
+      {
+        group 6
+        joint bip_knee_L
+        mins [0 -2.25 -4.5]
+        maxs [16 3.25 2.5]
+      }
+      {
+        group 6
+        joint bip_foot_L
+        mins [-2 -10 -3]
+        maxs [2 2 3]
+      }
+      {
+        group 7
+        joint bip_hip_R
+        mins [2 -4 -5]
+        maxs [16 4 4]
+      }
+      {
+        group 7
+        joint bip_knee_R
+        mins [0 -3.25 -4.5]
+        maxs [16 2.25 2.5]
+      }
+      {
+        group 7
+        joint bip_foot_R
+        mins [-2 -2 -2.5]
+        maxs [2 10 3.5]
+      }
+    ]
   }
 
   material_groups [

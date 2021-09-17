@@ -36,6 +36,117 @@
         ]
       }
     ]
+
+    hit_boxes [
+      {
+        group 1
+        joint bip_head
+        mins [ -6.00 -8.00 -7.50 ]
+        maxs [ 6.00 5.00 4.50 ]
+      }
+      {
+        group 0
+        joint bip_pelvis
+        mins [ -9.00 0.00 -5.50 ]
+        maxs [ 9.00 10.00 5.50 ]
+      }
+      {
+        group 3
+        joint bip_spine_0
+        mins [ -10.00 -2.00 -10.00 ]
+        maxs [ 10.00 4.00 6.00 ]
+      }
+      {
+        group 3
+        joint bip_spine_1
+        mins [ -11.00 -3.00 -11.00 ]
+        maxs [ 11.00 3.00 5.00 ]
+      }
+      {
+        group 2
+        joint bip_spine_2
+        mins [ -11.50 -3.00 -11.00 ]
+        maxs [ 11.50 3.00 5.00 ]
+      }
+      {
+        group 2
+        joint bip_spine_3
+        mins [ -13.11 -4.00 -10.00 ]
+        maxs [ 13.11 2.00 5.00 ]
+      }
+      {
+        group 4
+        joint bip_upperArm_L
+        mins [ 0.00 -3.00 -4.75 ]
+        maxs [ 16.00 3.00 2.75 ]
+      }
+      {
+        group 4
+        joint bip_lowerArm_L
+        mins [ 0.00 -2.25 -4.25 ]
+        maxs [ 13.00 2.25 2.75 ]
+      }
+      {
+        group 4
+        joint bip_hand_L
+        mins [ -5.00 -10.00 -3.00 ]
+        maxs [ 1.00 0.00 5.00 ]
+      }
+      {
+        group 5
+        joint bip_upperArm_R
+        mins [ 0.00 -2.75 -3.00 ]
+        maxs [ 16.00 4.75 3.00 ]
+      }
+      {
+        group 5
+        joint bip_lowerArm_R
+        mins [ 0.00 -2.25 -2.60 ]
+        maxs [ 13.00 4.25 2.10 ]
+      }
+      {
+        group 5
+        joint bip_hand_R
+        mins [ -1.00 0.00 -5.00 ]
+        maxs [ 5.00 10.00 3.00 ]
+      }
+      {
+        group 6
+        joint bip_hip_L
+        mins [ 1.50 -5.00 -5.00 ]
+        maxs [ 18.50 3.00 4.00 ]
+      }
+      {
+        group 6
+        joint bip_knee_L
+        mins [ -0.50 -2.50 -4.50 ]
+        maxs [ 20.50 3.00 2.50 ]
+      }
+      {
+        group 6
+        joint bip_foot_L
+        mins [ -2.45 -11.50 -4.00 ]
+        maxs [ 3.05 3.50 2.00 ]
+      }
+      {
+        group 7
+        joint bip_hip_R
+        mins [ 1.50 -4.00 -3.00 ]
+        maxs [ 18.50 5.00 5.00 ]
+      }
+      {
+        group 7
+        joint bip_knee_R
+        mins [ -0.50 -3.00 -4.50 ]
+        maxs [ 20.50 2.50 2.50 ]
+      }
+      {
+        group 7
+        joint bip_foot_R
+        mins [ -3.05 -3.50 -2.00 ]
+        maxs [ 2.45 11.50 4.00 ]
+      }
+    ]
   }
 
   pose_parameters [
@@ -495,4 +606,128 @@
       loop true
     }
   ]
+
+  physics_model {
+    mesh demo_physics
+
+    mass 100.00
+    inertia 10.00
+    damping 0.00
+    rot_damping 4.00
+
+    joints [
+      {
+        name bip_pelvis
+        rot_damping 0.00
+      }
+      {
+        name bip_hip_R
+        mass_bias 0.80
+        limit_x [ -30 15 ]
+        limit_y [ -25 25 ]
+        limit_z [ -79 57 ]
+      }
+      {
+        name bip_knee_R
+        mass_bias 1.20
+        rot_damping 3.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 116 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_hip_L
+        mass_bias 0.80
+        limit_x [ -15 25 ]
+        limit_y [ -70 50 ]
+        limit_z [ -25 30 ]
+      }
+      {
+        name bip_knee_L
+        mass_bias 1.20
+        rot_damping 3.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 116 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_foot_L
+        mass_bias 0.75
+        rot_damping 7.00
+        limit_x [ -10 30 ]
+        limit_y [ -19 25 ]
+        limit_z [ -25 30 ]
+      }
+      {
+        name bip_spine_1
+        mass_bias 1.60
+        rot_damping 12.00
+        limit_x [ -30 35 ]
+        limit_y [ -25 23 ]
+        limit_z [ -23 23 ]
+      }
+      {
+        name bip_upperArm_R
+        mass_bias 0.80
+        rot_damping 16.00
+        limit_x [ -50 60 ]
+        limit_y [ -19 55 ]
+        limit_z [ -80 55 ]
+      }
+      {
+        name bip_lowerArm_R
+        mass_bias 1.80
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -120 -6 ]
+      }
+      {
+        name bip_upperArm_L
+        mass_bias 0.80
+        rot_damping 16.00
+        limit_x [ -50 60 ]
+        limit_y [ -80 55 ]
+        limit_z [ -19 60 ]
+      }
+      {
+        name bip_lowerArm_L
+        mass_bias 1.80
+        limit_x [ 0 0 ]
+        limit_y [ -120 -6 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_hand_L
+        mass_bias 0.60
+        rot_damping 8.00
+        limit_x [ -30 25 ]
+        limit_y [ -60 55 ]
+        limit_z [ -30 40 ]
+      }
+      {
+        name bip_head
+        mass_bias 1.50
+        rot_damping 8.00
+        limit_x [ -30 10 ]
+        limit_y [ -45 45 ]
+        limit_z [ -30 30 ]
+      }
+      {
+        name bip_hand_R
+        mass_bias 0.60
+        rot_damping 8.00
+        limit_x [ -37 30 ]
+        limit_y [ -60 55 ]
+        limit_z [ -30 40 ]
+      }
+      {
+        name bip_foot_R
+        mass_bias 0.75
+        rot_damping 7.00
+        limit_x [ -10 30 ]
+        limit_y [ -19 25 ]
+        limit_z [ -17 24 ]
+      }
+    ]
+  }
 }

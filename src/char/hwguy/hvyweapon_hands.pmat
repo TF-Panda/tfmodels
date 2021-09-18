@@ -1,0 +1,9 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture hvyweapon_hands.ptex
+    lightwarp_texture "../../lightwarps/hand_lightwarp.ptex"
+    roughness 0.75
+    env_map true
+  }
+}

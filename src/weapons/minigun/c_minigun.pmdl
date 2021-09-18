@@ -1,0 +1,31 @@
+{
+  model "optchar/c_minigun-zero.egg"
+
+  lods [
+    {
+      distance 0
+      groups [ c_minigun ]
+    }
+    {
+      distance 11
+      groups [ c_minigun_lod1 ]
+    }
+    {
+      distance 22
+      groups [ c_minigun_lod2 ]
+    }
+    {
+      distance 33
+      groups [ c_minigun_lod3 ]
+    }
+    {
+      distance 44
+      groups [ c_minigun_lod4 ]
+    }
+  ]
+
+  physics_model {
+    mesh c_minigun_physics
+    mass 50000
+  }
+}

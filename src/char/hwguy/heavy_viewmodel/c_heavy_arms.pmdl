@@ -1,0 +1,170 @@
+{
+  model "optchar/c_heavy_arms-zero.egg"
+
+  custom_data {
+    omni true
+  }
+
+  hpr [ 180 0 0 ]
+
+  material_groups [
+    {
+      name red
+      materials [ "../hvyweapon_hands.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../hvyweapon_hands.pmat" ]
+    }
+  ]
+
+  joint_merges [
+    "root"
+    "bip_collar_L"
+    "bip_upperArm_L"
+    "bip_lowerArm_L"
+    "bip_hand_L"
+    "bip_collar_R"
+    "bip_upperArm_R"
+    "bip_lowerArm_R"
+    "bip_hand_R"
+    "weapon_bone"
+    "weapon_bone_1"
+    "weapon_bone_2"
+    "weapon_bone_3"
+    "weapon_bone_4"
+    "weapon_bone_L"
+    "vm_weapon_bone"
+    "vm_weapon_bone_1"
+    "vm_weapon_bone_2"
+    "vm_weapon_bone_3"
+    "vm_weapon_bone_4"
+    "vm_weapon_bone_5"
+    "vm_weapon_bone_6"
+    "vm_weapon_bone_7"
+    "vm_weapon_bone_L"
+    "vm_weapon_bone_1_L"
+    "vm_weapon_bone_2_L"
+    "vm_weapon_bone_3_L"
+    "vm_weapon_bone_4_L"
+    "effect_hand_L"
+    "effect_hand_R"
+  ]
+
+  sequences [
+    //
+    // Minigun
+    //
+    {
+      name m_idle
+      anim "optchar/c_heavy_arms-m_idle.egg"
+      loop true
+      activity Primary_VM_Idle
+    }
+    {
+      name m_fire
+      anim "optchar/c_heavy_arms-m_fire.egg"
+      loop true
+      snap true
+      activity Primary_VM_Fire
+    }
+    {
+      name m_spool_up
+      anim "optchar/c_heavy_arms-m_spool_up.egg"
+      activity Primary_Attack_Stand_Prefire
+      snap true
+    }
+    {
+      name m_spool_down
+      anim "optchar/c_heavy_arms-m_spool_down.egg"
+      snap true
+      activity Primary_Attack_Stand_Postfire
+    }
+    {
+      name m_draw
+      anim "optchar/c_heavy_arms-m_draw.egg"
+      activity Primary_VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2
+          event Client_Play_Sound
+          data "Weapon_Minigun.Draw"
+        }
+      ]
+    }
+    {
+      name m_spool_idle
+      anim "optchar/c_heavy_arms-m_spool_idle.egg"
+      activity Primary_VM_SecondaryFire
+      snap true
+      loop true
+    }
+
+    //
+    // Shotgun
+    //
+    {
+      name sg_draw
+      anim "optchar/c_heavy_arms-draw.egg"
+      activity Secondary_VM_Draw
+      snap true
+    }
+    {
+      name sg_idle
+      anim "optchar/c_heavy_arms-idle.egg"
+      activity Secondary_VM_Idle
+      loop true
+    }
+    {
+      name sg_fire
+      anim "optchar/c_heavy_arms-fire.egg"
+      snap true
+      activity Secondary_VM_Fire
+      events [
+        {
+          frame 9 type 2 event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Back"
+        }
+        {
+          frame 13 type 2 event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Forward"
+        }
+      ]
+    }
+    {
+      name sg_reload_start
+      anim "optchar/c_heavy_arms-reload_start.egg"
+      activity Secondary_VM_Reload_Start
+      snap true
+    }
+    {
+      name sg_reload_loop
+      anim "optchar/c_heavy_arms-reload_loop.egg"
+      loop true
+      activity Secondary_VM_Reload
+      events [
+        {
+          frame 2 type 2 event Client_Play_Sound
+          data "Weapon_Shotgun.Reload"
+        }
+      ]
+    }
+    {
+      name sg_reload_end
+      anim "optchar/c_heavy_arms-reload_end.egg"
+      activity Secondary_VM_Reload_End
+      fps 35
+      events [
+        {
+          frame 15 type 2 event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Back"
+        }
+        {
+          frame 20 type 2 event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Forward"
+        }
+      ]
+    }
+  ]
+}

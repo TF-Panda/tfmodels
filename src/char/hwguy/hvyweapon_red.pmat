@@ -1,0 +1,10 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture hvyweapon_red.ptex
+    lightwarp_texture "../../lightwarps/player_lightwarp.ptex"
+    normal_texture hvyweapon_normal.ptex
+    env_map true
+    gloss_texture hvyweapon_exponent.ptex
+  }
+}

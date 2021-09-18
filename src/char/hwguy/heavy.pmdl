@@ -1,0 +1,1118 @@
+{
+  model "optchar/heavy-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  eyeballs [
+    {
+      name righteye
+      material eyeball_r_heavy
+      parent bip_head
+      pos [ -1.425952 -1.799993 83.274601 ]
+      diameter 1.80356
+      z_offset 0
+      iris_size 0.6
+    }
+    {
+      name lefteye
+      material eyeball_l_heavy
+      parent bip_head
+      pos [ 1.425952 -1.799993 83.274601 ]
+      diameter 1.80356
+      z_offset 0
+      iris_size 0.6
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ hvyweapon_red.pmat heavy_head.pmat
+                  eyeball_l_heavy.pmat
+                  eyeball_r_heavy.pmat ]
+    }
+    {
+      name blue
+      materials [ hvyweapon_blue.pmat heavy_head.pmat
+                  eyeball_l_heavy.pmat
+                  eyeball_r_heavy.pmat ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [ heavy_morphs_low heavy_hands_bodygroup ]
+    }
+    {
+      distance 11
+      groups [ heavy_morphs_low_lod1 heavy_hands_bodygroup_lod1 ]
+    }
+    {
+      distance 22
+      groups [ heavy_morphs_low_lod2 heavy_hands_bodygroup_lod2 ]
+    }
+    {
+      distance 33
+      groups [ heavy_morphs_low_lod3 heavy_hands_bodygroup_lod3 ]
+    }
+    {
+      distance 44
+      groups [ heavy_morphs_low_lod4 heavy_hands_bodygroup_lod4 ]
+    }
+    {
+      distance 55
+      groups [ heavy_morphs_low_lod5 heavy_hands_bodygroup_lod5 ]
+    }
+  ]
+
+  physics_model {
+    mesh heavy_physics
+
+    mass 100.00
+    inertia 10.00
+    damping 0.00
+    rot_damping 4.00
+
+    joints [
+      {
+        name bip_pelvis
+        rot_damping 0.00
+      }
+      {
+        name bip_hip_R
+        mass_bias 0.80
+        limit_x [ -35 12 ]
+        limit_y [ -30 25 ]
+        limit_z [ -79 35 ]
+      }
+      {
+        name bip_knee_R
+        mass_bias 1.20
+        rot_damping 3.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ 0 116 ]
+      }
+      {
+        name bip_hip_L
+        mass_bias 0.80
+        limit_x [ -12 35 ]
+        limit_y [ -30 25 ]
+        limit_z [ -35 79 ]
+      }
+      {
+        name bip_knee_L
+        mass_bias 1.20
+        rot_damping 3.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 116 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_foot_L
+        mass_bias 0.75
+        rot_damping 7.00
+        limit_x [ -10 30 ]
+        limit_y [ -19 25 ]
+        limit_z [ -24 24 ]
+      }
+      {
+        name bip_spine_0
+        mass_bias 1.60
+        rot_damping 12.00
+        limit_x [ -30 30 ]
+        limit_y [ -16 16 ]
+        limit_z [ -20 15 ]
+      }
+      {
+        name bip_spine_1
+        mass_bias 1.60
+        rot_damping 12.00
+        limit_x [ -10 10 ]
+        limit_y [ -10 10 ]
+        limit_z [ -10 10 ]
+      }
+      {
+        name bip_upperArm_R
+        mass_bias 0.80
+        rot_damping 16.00
+        limit_x [ -50 40 ]
+        limit_y [ -25 55 ]
+        limit_z [ -80 50 ]
+      }
+      {
+        name bip_upperArm_L
+        mass_bias 0.80
+        rot_damping 16.00
+        limit_x [ -40 50 ]
+        limit_y [ -25 55 ]
+        limit_z [ -80 50 ]
+      }
+      {
+        name bip_lowerArm_L
+        mass_bias 1.80
+        limit_x [ 0 0 ]
+        limit_y [ -120 -6 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_hand_L
+        mass_bias 0.60
+        rot_damping 8.00
+        limit_x [ -20 10 ]
+        limit_y [ -50 50 ]
+        limit_z [ -20 35 ]
+      }
+      {
+        name bip_lowerArm_R
+        mass_bias 1.80
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -120 -6 ]
+      }
+      {
+        name bip_hand_R
+        mass_bias 0.60
+        rot_damping 8.00
+        limit_x [ -20 10 ]
+        limit_y [ -50 50 ]
+        limit_z [ -35 20 ]
+      }
+      {
+        name bip_head
+        mass_bias 1.50
+        rot_damping 8.00
+        limit_x [ -50 25 ]
+        limit_y [ -35 35 ]
+        limit_z [ -26 30 ]
+      }
+      {
+        name bip_foot_R
+        mass_bias 0.75
+        rot_damping 7.00
+        limit_x [ -10 30 ]
+        limit_y [ -19 25 ]
+        limit_z [ -24 24 ]
+      }
+    ]
+  }
+
+  pose_parameters [
+    {
+      name move_x
+      min -1 max 1
+    }
+    {
+      name move_y
+      min -1 max 1
+    }
+    {
+      name body_pitch
+      min -45 max 90
+      loop 360
+    }
+    {
+      name body_yaw
+      min -45 max 45
+      loop 360
+    }
+  ]
+
+  joint_merges [
+    "bip_pelvis"
+    "bip_spine_0"
+    "bip_spine_1"
+    "bip_spine_2"
+    "bip_spine_3"
+    "bip_neck"
+    "bip_head"
+    "bip_collar_L"
+    "bip_collar_R"
+    "bip_upperArm_L"
+    "bip_upperArm_R"
+    "bip_lowerArm_L"
+    "bip_lowerArm_R"
+    "bip_hand_L"
+    "bip_hand_R"
+    "weapon_bone"
+    "weapon_bone_L"
+    "weapon_bone_1"
+    "weapon_bone_2"
+    "weapon_bone_3"
+    "weapon_bone_4"
+    "medal_bone"
+    "mvm"
+    "prop_bone"
+    "prop_bone_1"
+    "prop_bone_2"
+    "prop_bone_3"
+    "prop_bone_4"
+    "prop_bone_5"
+    "prop_bone_6"
+  ]
+
+  weight_lists [
+    {
+      name weights_attackCrouch_PRIMARY
+      weights {
+        "bip_pelvis" 0.1
+        "bip_spine_0" 0.5
+        "bip_spine_1" 0.6
+        "bip_spine_2" 0.8
+        "bip_spine_3" 1
+        "bip_neck" 1
+        "bip_head" 1
+        "bip_collar_L" 1
+        "bip_collar_R" 1
+        "bip_upperArm_L" 1
+        "bip_upperArm_R" 1
+        "bip_lowerArm_L" 1
+        "bip_lowerArm_R" 1
+        "bip_hip_L" 0
+        "bip_hip_R" 0
+        "bip_knee_L" 0
+        "bip_knee_R" 0
+        "bip_hand_L" 1
+        "bip_hand_R" 1
+        "weapon_bone" 1
+        "weapon_bone_L" 1
+        "weapon_bone_1" 1
+        "weapon_bone_2" 1
+        "weapon_bone_3" 1
+        "weapon_bone_4" 1
+        "medal_bone" 0.8
+        "mvm" 0.1
+        "effect_hand_L" 1
+        "effect_hand_R" 1
+        "bip_foot_L" 0
+        "bip_foot_R" 0
+        "bip_toe_L" 0
+        "bip_toe_R" 0
+        "prp_bullet_shoulder" 1
+        "prp_bullet_backUpper" 0.8
+        "prp_bullet_backLower" 0.6
+        "prp_bullet_chestUpper" 0.6
+        "prp_bullet_side" 0.5
+        "prp_bullet_chestLower" 0.5
+        "bip_thumb_0_L" 1
+        "bip_thumb_0_R" 1
+        "bip_index_0_L" 1
+        "bip_index_0_R" 1
+        "bip_middle_0_L" 1
+        "bip_middle_0_R" 1
+        "bip_ring_0_L" 1
+        "bip_ring_0_R" 1
+        "bip_pinky_0_L" 1
+        "bip_pinky_0_R" 1
+        "bip_thumb_1_L" 1
+        "bip_thumb_1_R" 1
+        "bip_index_1_L" 1
+        "bip_index_1_R" 1
+        "bip_middle_1_L" 1
+        "bip_middle_1_R" 1
+        "bip_ring_1_L" 1
+        "bip_ring_1_R" 1
+        "bip_pinky_1_L" 1
+        "bip_pinky_1_R" 1
+        "bip_thumb_2_L" 1
+        "bip_thumb_2_R" 1
+        "bip_index_2_L" 1
+        "bip_index_2_R" 1
+        "bip_middle_2_L" 1
+        "bip_middle_2_R" 1
+        "bip_ring_2_L" 1
+        "bip_ring_2_R" 1
+        "bip_pinky_2_L" 1
+        "bip_pinky_2_R" 1
+        "prp_pack" 0.1
+        "prop_bone" 0.1
+        "prop_bone_1" 0.1
+        "prop_bone_2" 0.1
+        "prop_bone_3" 0.1
+        "prop_bone_4" 0.1
+        "prop_bone_5" 0.1
+        "prop_bone_6" 0.1
+      }
+    }
+    {
+      name weights_layer_attackCrouch_PRIMARY_spoolup
+      weights {
+        "bip_pelvis" 0.5
+        "bip_spine_0" 0.6
+        "bip_spine_1" 0.7
+        "bip_spine_2" 0.8
+        "bip_spine_3" 0.9
+        "bip_neck" 1
+        "bip_head" 1
+        "bip_collar_L" 0.9
+        "bip_collar_R" 0.9
+        "bip_upperArm_L" 0.9
+        "bip_upperArm_R" 1
+        "bip_lowerArm_L" 0.9
+        "bip_lowerArm_R" 1
+        "bip_hip_L" 0.5
+        "bip_hip_R" 0.5
+        "bip_knee_L" 0.5
+        "bip_knee_R" 0.5
+        "bip_hand_L" 0.9
+        "bip_hand_R" 1
+        "weapon_bone" 1
+        "weapon_bone_L" 0.9
+        "weapon_bone_1" 1
+        "weapon_bone_2" 1
+        "weapon_bone_3" 0.9
+        "weapon_bone_4" 0.9
+        "medal_bone" 0.8
+        "mvm" 0.5
+        "effect_hand_L" 0.9
+        "effect_hand_R" 1
+        "bip_foot_L" 0.5
+        "bip_foot_R" 0.5
+        "bip_toe_L" 0.5
+        "bip_toe_R" 0.5
+        "prp_bullet_shoulder" 0.9
+        "prp_bullet_backUpper" 0.8
+        "prp_bullet_backLower" 0.7
+        "prp_bullet_chestUpper" 0.7
+        "prp_bullet_side" 0.6
+        "prp_bullet_chestLower" 0.6
+        "bip_thumb_0_L" 0.9
+        "bip_thumb_0_R" 1
+        "bip_index_0_L" 0.9
+        "bip_index_0_R" 1
+        "bip_middle_0_L" 0.9
+        "bip_middle_0_R" 1
+        "bip_ring_0_L" 0.9
+        "bip_ring_0_R" 1
+        "bip_pinky_0_L" 0.9
+        "bip_pinky_0_R" 1
+        "bip_thumb_1_L" 0.9
+        "bip_thumb_1_R" 1
+        "bip_index_1_L" 0.9
+        "bip_index_1_R" 1
+        "bip_middle_1_L" 0.9
+        "bip_middle_1_R" 1
+        "bip_ring_1_L" 0.9
+        "bip_ring_1_R" 1
+        "bip_pinky_1_L" 0.9
+        "bip_pinky_1_R" 1
+        "bip_thumb_2_L" 0.9
+        "bip_thumb_2_R" 1
+        "bip_index_2_L" 0.9
+        "bip_index_2_R" 1
+        "bip_middle_2_L" 0.9
+        "bip_middle_2_R" 1
+        "bip_ring_2_L" 0.9
+        "bip_ring_2_R" 1
+        "bip_pinky_2_L" 0.9
+        "bip_pinky_2_R" 1
+        "prp_pack" 0.5
+        "prop_bone" 0.5
+        "prop_bone_1" 0.5
+        "prop_bone_2" 0.5
+        "prop_bone_3" 0.5
+        "prop_bone_4" 0.5
+        "prop_bone_5" 0.5
+        "prop_bone_6" 0.5
+      }
+    }
+    {
+      name weights_attackSwim_MELEE
+      weights {
+        "bip_pelvis" 0
+        "bip_spine_0" 0
+        "bip_spine_1" 0
+        "bip_spine_2" 0
+        "bip_spine_3" 0
+        "bip_neck" 0
+        "bip_head" 0
+        "bip_collar_L" 0
+        "bip_collar_R" 0
+        "bip_upperArm_L" 0
+        "bip_upperArm_R" 0
+        "bip_lowerArm_L" 0
+        "bip_lowerArm_R" 0
+        "bip_hip_L" 0
+        "bip_hip_R" 0
+        "bip_knee_L" 0
+        "bip_knee_R" 0
+        "bip_hand_L" 0
+        "bip_hand_R" 0
+        "weapon_bone" 0
+        "weapon_bone_L" 0
+        "weapon_bone_1" 0
+        "weapon_bone_2" 0
+        "weapon_bone_3" 0
+        "weapon_bone_4" 0
+        "medal_bone" 0
+        "mvm" 0
+        "effect_hand_L" 0
+        "effect_hand_R" 0
+        "bip_foot_L" 0
+        "bip_foot_R" 0
+        "bip_toe_L" 0
+        "bip_toe_R" 0
+        "prp_bullet_shoulder" 0
+        "prp_bullet_backUpper" 0
+        "prp_bullet_backLower" 0
+        "prp_bullet_chestUpper" 0
+        "prp_bullet_side" 0
+        "prp_bullet_chestLower" 0
+        "bip_thumb_0_L" 0
+        "bip_thumb_0_R" 0
+        "bip_index_0_L" 0
+        "bip_index_0_R" 0
+        "bip_middle_0_L" 0
+        "bip_middle_0_R" 0
+        "bip_ring_0_L" 0
+        "bip_ring_0_R" 0
+        "bip_pinky_0_L" 0
+        "bip_pinky_0_R" 0
+        "bip_thumb_1_L" 0
+        "bip_thumb_1_R" 0
+        "bip_index_1_L" 0
+        "bip_index_1_R" 0
+        "bip_middle_1_L" 0
+        "bip_middle_1_R" 0
+        "bip_ring_1_L" 0
+        "bip_ring_1_R" 0
+        "bip_pinky_1_L" 0
+        "bip_pinky_1_R" 0
+        "bip_thumb_2_L" 0
+        "bip_thumb_2_R" 0
+        "bip_index_2_L" 0
+        "bip_index_2_R" 0
+        "bip_middle_2_L" 0
+        "bip_middle_2_R" 0
+        "bip_ring_2_L" 0
+        "bip_ring_2_R" 0
+        "bip_pinky_2_L" 0
+        "bip_pinky_2_R" 0
+        "prp_pack" 0
+        "prop_bone" 0
+        "prop_bone_1" 0
+        "prop_bone_2" 0
+        "prop_bone_3" 0
+        "prop_bone_4" 0
+        "prop_bone_5" 0
+        "prop_bone_6" 0
+      }
+    }
+  ]
+
+  sequences [
+    ///////////////////////////////////////////////////////////////////////////
+    // Selection menu
+    ///////////////////////////////////////////////////////////////////////////
+    {
+      name SelectionMenu_Anim01
+      anim "optchar/heavy-selectionMenu_Anim01.egg"
+    }
+    {
+      name SelectionMenu_Idle
+      anim "optchar/heavy-selectionMenu_Idle.egg"
+      loop true
+    }
+    ///////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Primary weapon
+    ///////////////////////////////////////////////////////////////////////////
+    {
+      name PRIMARY_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_down_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_down_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_down_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_mid_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_mid_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_mid_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_up_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_up_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_up_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name stand_PRIMARY
+      anim "optchar/heavy-stand_PRIMARY.egg"
+      activity Primary_Stand
+      loop true
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name PRIMARY_aimmatrix_deployed
+      blend {
+        anims [
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_down_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_down_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_down_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_mid_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_mid_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_mid_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_up_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_up_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_up_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_deployed_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name stand_deployed_PRIMARY
+      anim "optchar/heavy-stand_deployed_PRIMARY.egg"
+      activity Primary_Deployed_Idle
+      loop true
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_deployed
+        }
+      ]
+    }
+
+    {
+      name PRIMARY_deployed_movement
+      blend {
+        anims [
+          "optchar/heavy-a_deployedSW_PRIMARY.egg"
+          "optchar/heavy-a_deployedS_PRIMARY.egg"
+          "optchar/heavy-a_deployedSE_PRIMARY.egg"
+          "optchar/heavy-a_deployedW_PRIMARY.egg"
+          "optchar/heavy-a_deployedCenter_PRIMARY.egg"
+          "optchar/heavy-a_deployedE_PRIMARY.egg"
+          "optchar/heavy-a_deployedNW_PRIMARY.egg"
+          "optchar/heavy-a_deployedN_PRIMARY.egg"
+          "optchar/heavy-a_deployedNE_PRIMARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_deployed
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Primary_Deployed
+    }
+
+    {
+      name AttackStand_PRIMARY
+      anim "optchar/heavy-attackStand_PRIMARY.egg"
+      activity Primary_Attack_Stand
+      delta true
+      weight_list weights_layer_attackCrouch_PRIMARY_spoolup
+    }
+
+    {
+      name layer_attackStand_PRIMARY_spoolup
+      anim "optchar/heavy-layer_attackStand_PRIMARY_spoolup.egg"
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_idle
+          start 0 peak 0 tail 0 end 5
+          spline true
+        }
+        {
+          sequence PRIMARY_aimmatrix_deployed
+          start 0 peak 5 tail 15 end 15
+          spline true
+        }
+      ]
+      weight_list weights_layer_attackCrouch_PRIMARY_spoolup
+    }
+
+    {
+      name attackStand_PRIMARY_spoolup
+      anim "optchar/heavy-attackStand_PRIMARY_spoolup.egg"
+      fade_in 0.7 fade_out 0.7
+      layers [
+        {
+          sequence layer_attackStand_PRIMARY_spoolup
+          start 0 peak 10 tail 15 end 15
+          spline true
+        }
+      ]
+      weight_list weights_attackSwim_MELEE
+      activity Primary_Attack_Stand_Prefire
+    }
+
+    {
+      name layer_attackStand_PRIMARY_spooldown
+      anim "optchar/heavy-layer_attackStand_PRIMARY_spooldown.egg"
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_deployed
+          start 0 peak 0 tail 0 end 10
+          spline true
+        }
+        {
+          sequence PRIMARY_aimmatrix_idle
+          start 0 peak 10 tail 30 end 30
+          spline true
+        }
+      ]
+      weight_list weights_layer_attackCrouch_PRIMARY_spoolup
+    }
+
+    {
+      name attackStand_PRIMARY_spooldown
+      anim "optchar/heavy-attackStand_PRIMARY_spooldown.egg"
+      activity Primary_Attack_Stand_Postfire
+      fade_in 0.5 fade_out 0.5
+      layers [
+        {
+          sequence layer_attackStand_PRIMARY_spooldown
+          start 0 peak 0 tail 20 end 30
+          spline true
+        }
+      ]
+      weight_list weights_attackSwim_MELEE
+    }
+
+    {
+      name PRIMARY_aimmatrix_run
+      blend {
+        anims [
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_down_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_down_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_down_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_mid_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_mid_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_mid_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_up_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_up_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_up_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name run_PRIMARY
+      blend {
+        anims [
+          "optchar/heavy-a_runSW_PRIMARY.egg"
+          "optchar/heavy-a_runS_PRIMARY.egg"
+          "optchar/heavy-a_runSE_PRIMARY.egg"
+          "optchar/heavy-a_runW_PRIMARY.egg"
+          "optchar/heavy-a_runCenter_PRIMARY.egg"
+          "optchar/heavy-a_runE_PRIMARY.egg"
+          "optchar/heavy-a_runNW_PRIMARY.egg"
+          "optchar/heavy-a_runN_PRIMARY.egg"
+          "optchar/heavy-a_runNE_PRIMARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Primary_Run
+    }
+
+    {
+      name PRIMARY_aimmatrix_crouch_idle
+      blend {
+        anims [
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_down_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_down_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_down_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_mid_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_mid_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_mid_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_up_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_up_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_up_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_crouch_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name crouch_PRIMARY
+      anim "optchar/heavy-crouch_PRIMARY.egg"
+      activity Primary_Crouch
+      loop true
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_crouch_idle
+        }
+      ]
+    }
+
+    {
+      name PRIMARY_aimMatrix_crouch_walkS
+      blend {
+        anims [
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_down_left.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_down_center.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_down_right.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_mid_left.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_mid_center.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_mid_right.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_up_left.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_up_center.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_up_right.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkS_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name PRIMARY_aimMatrix_crouch_walkN
+      blend {
+        anims [
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_down_left.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_down_center.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_down_right.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_mid_left.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_mid_center.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_mid_right.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_up_left.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_up_center.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_up_right.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimMatrix_crouch_walkN_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name crouch_walk_PRIMARY
+      blend {
+        anims [
+          "optchar/heavy-a_crouch_walkSW_PRIMARY.egg"
+          "optchar/heavy-a_crouch_walkS_PRIMARY.egg"
+          "optchar/heavy-a_crouch_walkSE_PRIMARY.egg"
+          "optchar/heavy-a_crouch_walkW_PRIMARY.egg"
+          "optchar/heavy-a_crouch_walkCenter_PRIMARY.egg"
+          "optchar/heavy-a_crouch_walkE_PRIMARY.egg"
+          "optchar/heavy-a_crouch_walkNW_PRIMARY.egg"
+          "optchar/heavy-a_crouch_walkN_PRIMARY.egg"
+          "optchar/heavy-a_crouch_walkNE_PRIMARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        // Blend between north and south crouch walk aim matrices.
+        {
+          sequence PRIMARY_aimMatrix_crouch_walkN
+          start -0.8 peak -0.2 tail 1 end 2
+          spline true
+          pose_parameter move_y
+        }
+        {
+          sequence PRIMARY_aimMatrix_crouch_walkS
+          start -2 peak -1 tail -0.8 end -0.2
+          spline true
+          pose_parameter move_y
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Primary_Crouch_Walk
+    }
+
+    {
+      name PRIMARY_aimmatrix_swim
+      blend {
+        anims [
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_down_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_down_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_down_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_mid_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_mid_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_mid_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_up_left.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_up_center.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_up_right.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_straight_up.egg"
+          "optchar/heavy-a_PRIMARY_aimmatrix_swim_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+    {
+      name swim_PRIMARY
+      blend {
+        anims [
+          "optchar/heavy-a_swimSW_PRIMARY.egg"
+          "optchar/heavy-a_swimS_PRIMARY.egg"
+          "optchar/heavy-a_swimSE_PRIMARY.egg"
+          "optchar/heavy-a_swimW_PRIMARY.egg"
+          "optchar/heavy-a_swimCenter_PRIMARY.egg"
+          "optchar/heavy-a_swimE_PRIMARY.egg"
+          "optchar/heavy-a_swimNW_PRIMARY.egg"
+          "optchar/heavy-a_swimN_PRIMARY.egg"
+          "optchar/heavy-a_swimNE_PRIMARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_swim
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Primary_Swim
+    }
+
+    {
+      name airwalk_PRIMARY
+      anim "optchar/heavy-airwalk_PRIMARY.egg"
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Primary_Air_Walk
+    }
+
+    {
+      name jumpstart_PRIMARY
+      anim "optchar/heavy-jumpstart_PRIMARY.egg"
+      activity Primary_Jump_Start
+    }
+    {
+      name jumpfloat_PRIMARY
+      anim "optchar/heavy-jumpfloat_PRIMARY.egg"
+      activity Primary_Jump_Float
+      loop true
+    }
+    {
+      name jumpland_PRIMARY
+      anim "optchar/heavy-jumpland_PRIMARY.egg"
+      activity Primary_Jump_Land
+      delta true
+    }
+    ///////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Secondary weapon
+    ///////////////////////////////////////////////////////////////////////////
+    {
+      name SECONDARY_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_down_left.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_down_center.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_down_right.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_mid_left.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_mid_center.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_mid_right.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_up_left.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_up_center.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_up_right.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+    {
+      name stand_SECONDARY
+      anim "optchar/heavy-stand_SECONDARY.egg"
+      activity Secondary_Stand
+      loop true
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name SECONDARY_aimmatrix_run
+      blend {
+        anims [
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_down_left.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_down_center.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_down_right.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_mid_left.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_mid_center.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_mid_right.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_up_left.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_up_center.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_up_right.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/heavy-a_SECONDARY_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+    {
+      name run_SECONDARY
+      blend {
+        anims [
+          "optchar/heavy-a_runSW_SECONDARY.egg"
+          "optchar/heavy-a_runS_SECONDARY.egg"
+          "optchar/heavy-a_runSE_SECONDARY.egg"
+          "optchar/heavy-a_runW_SECONDARY.egg"
+          "optchar/heavy-a_runCenter_SECONDARY.egg"
+          "optchar/heavy-a_runE_SECONDARY.egg"
+          "optchar/heavy-a_runNW_SECONDARY.egg"
+          "optchar/heavy-a_runN_SECONDARY.egg"
+          "optchar/heavy-a_runNE_SECONDARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Secondary_Run
+    }
+
+    {
+      name AttackStand_SECONDARY
+      anim "optchar/heavy-AttackStand_SECONDARY.egg"
+      delta true
+      activity Secondary_Attack_Stand
+    }
+
+    {
+      name SECONDARY_reload
+      anim "optchar/heavy-SECONDARY_reload.egg"
+      activity Secondary_Reload_Stand
+      delta true
+    }
+    {
+      name SECONDARY_reload_loop
+      anim "optchar/heavy-SECONDARY_reload_loop.egg"
+      delta true
+      activity Secondary_Reload_Stand_Loop
+    }
+    {
+      name SECONDARY_reload_end
+      anim "optchar/heavy-a_SECONDARY_reload_end.egg"
+      activity Secondary_Reload_Stand_End
+      delta true
+    }
+
+    {
+      name jumpstart_SECONDARY
+      anim "optchar/heavy-jumpstart_SECONDARY.egg"
+      activity Secondary_Jump_Start
+    }
+    {
+      name jumpfloat_SECONDARY
+      anim "optchar/heavy-jumpfloat_SECONDARY.egg"
+      activity Secondary_Jump_Float
+      loop true
+    }
+    {
+      name jumpland_SECONDARY
+      anim "optchar/heavy-jumpland_SECONDARY.egg"
+      activity Secondary_Jump_Land
+      delta true
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Flinches
+    ///////////////////////////////////////////////////////////////////////////
+    {
+      name PRIMARY_flinch
+      anim "optchar/heavy-PRIMARY_flinch.egg"
+      delta true
+      activity Gesture_Flinch
+      weight_list weights_attackCrouch_PRIMARY
+    }
+    {
+      name SECONDARY_flinch
+      anim "optchar/heavy-SECONDARY_flinch.egg"
+      delta true
+      activity Gesture_Flinch
+      weight_list weights_attackCrouch_PRIMARY
+    }
+    {
+      name MELEE_flinch
+      anim "optchar/heavy-MELEE_flinch.egg"
+      delta true
+      activity Gesture_Flinch
+      weight_list weights_attackCrouch_PRIMARY
+    }
+    ///////////////////////////////////////////////////////////////////////////
+  ]
+}

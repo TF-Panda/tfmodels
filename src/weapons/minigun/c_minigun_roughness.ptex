@@ -1,0 +1,5 @@
+{
+  image c_minigun_roughness.rgb
+  format luminance
+  wrap clamp
+}

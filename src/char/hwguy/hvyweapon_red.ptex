@@ -1,0 +1,5 @@
+{
+  image hvyweapon_red.tga
+  format srgb
+  wrap clamp
+}

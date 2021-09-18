@@ -1,0 +1,5 @@
+{
+  image heavy_head.tga
+  format srgb
+  wrap clamp
+}

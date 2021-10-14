@@ -1,0 +1,5 @@
+{
+  image "wall016b_harbor.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

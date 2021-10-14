@@ -1,0 +1,6 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "floor_tile_002a.ptex"
+  }
+}

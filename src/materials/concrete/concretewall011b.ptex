@@ -1,0 +1,5 @@
+{
+  image "concretewall011b.tga"
+  format "srgb"
+  wrap "repeat"
+}

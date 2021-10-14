@@ -1,0 +1,5 @@
+{
+  image "imetal003.tga"
+  format "srgb"
+  wrap "repeat"
+}

@@ -1,0 +1,5 @@
+{
+  image "blue001.tga"
+  format "srgb"
+  wrap "repeat"
+}

@@ -1,0 +1,5 @@
+{
+  image "dev_measurewall01blu.tga"
+  format "srgb"
+  wrap "repeat"
+}

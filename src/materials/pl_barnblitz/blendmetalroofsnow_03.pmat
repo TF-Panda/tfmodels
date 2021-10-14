@@ -1,0 +1,6 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "metalroof_prebump003.ptex"
+  }
+}

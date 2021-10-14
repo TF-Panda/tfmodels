@@ -1,0 +1,5 @@
+{
+  image "black_gradient.tga"
+  format "srgb_alpha"
+  wrap "clamp"
+}

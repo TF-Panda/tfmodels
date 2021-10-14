@@ -1,0 +1,5 @@
+{
+  image "rockwall012.tga"
+  format "srgb"
+  wrap "repeat"
+}

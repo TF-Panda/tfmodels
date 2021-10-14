@@ -1,0 +1,5 @@
+{
+  image "missing_reward_sign001.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

@@ -1,0 +1,5 @@
+{
+  image "mvm_warehouse_areaportal01.tga"
+  format "srgb"
+  wrap "repeat"
+}

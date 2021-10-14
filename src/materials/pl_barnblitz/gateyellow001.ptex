@@ -1,0 +1,5 @@
+{
+  image "gateyellow001.tga"
+  format "srgb"
+  wrap "repeat"
+}

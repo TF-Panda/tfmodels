@@ -1,0 +1,5 @@
+{
+  image "plaster_white01.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

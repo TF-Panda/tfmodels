@@ -1,0 +1,5 @@
+{
+  image "rockground008.tga"
+  format "srgb"
+  wrap "repeat"
+}

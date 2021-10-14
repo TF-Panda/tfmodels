@@ -1,0 +1,5 @@
+{
+  image "metaltrim02.tga"
+  format "srgb"
+  wrap "repeat"
+}

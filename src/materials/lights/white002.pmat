@@ -2,5 +2,8 @@
   material StandardMaterial
   parameters {
     base_texture "white002.ptex"
+    self_illum 1
+    self_illum_tint [ 255 255 255 ]
+    emission 1000
   }
 }

@@ -1,0 +1,5 @@
+{
+  image "metalroof_panels001.tga"
+  format "srgb"
+  wrap "repeat"
+}

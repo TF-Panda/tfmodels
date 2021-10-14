@@ -1,0 +1,5 @@
+{
+  image "metalpanel01.tga"
+  format "srgb"
+  wrap "repeat"
+}

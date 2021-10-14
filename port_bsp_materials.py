@@ -7,18 +7,38 @@ loadPrcFileData("", "model-path $TFMODELS/built_src/materials")
 
 import sys
 
-# Get the material names from the BSP file.
-process = Popen(["../panda/src/bsp/Opt3-Win64/extract-bsp-mat-names", sys.argv[1]], stdout=PIPE)
-(output, err) = process.communicate()
-exit_code = process.wait()
-mats = output.decode().split("\r\n")
+inFilename = Filename.fromOsSpecific(sys.argv[1])
+
+def collectVMFMats(kv, mats):
+    if kv.getName() == "side":
+        mat = kv.getValue("material").lower()
+        if not mat in mats:
+            mats.append(mat)
+    else:
+        for i in range(kv.getNumChildren()):
+            child = kv.getChild(i)
+            collectVMFMats(child, mats)
+
+if inFilename.getExtension() == "bsp":
+    # Get the material names from the BSP file.
+    process = Popen(["../panda/src/bsp/Opt3-Linux/extract-bsp-mat-names", sys.argv[1]], stdout=PIPE)
+    (output, err) = process.communicate()
+    exit_code = process.wait()
+    mats = output.decode().split("\r\n")
+elif inFilename.getExtension() == "vmf":
+    # Parse the VMF to get the material names
+    kv = KeyValues.load(inFilename)
+    if not kv:
+        sys.exit(1)
+    mats = []
+    collectVMFMats(kv, mats)
 
 import os
 
 outDir = Filename.fromOsSpecific(os.path.expandvars("$TFMODELS/src/materials"))
 print(outDir)
 
-vtf2tga = "D:\\SteamLibrary\\steamapps\\common\\Team Fortress 2\\bin\\vtf2tga.exe"
+vtf2tga = "/usr/local/bin/vtf2tga"
 
 PTexFormat = """{
   image "%s"
@@ -39,9 +59,13 @@ def convertTexture(path):
         return
 
     tgaOut = outDir / Filename(path.getFullpath().replace(".vtf", ".tga"))
+    ptexOut = Filename(tgaOut.getFullpathWoExtension() + ".ptex")
+    if ptexOut.isRegularFile():
+        return
+
     if not os.path.isdir(Filename(tgaOut.getDirname()).toOsSpecific()):
         os.makedirs(Filename(tgaOut.getDirname()).toOsSpecific())
-    process = Popen([vtf2tga, "-i", fullpath.toOsSpecific(), "-o", tgaOut.toOsSpecific()], stdout=PIPE)
+    process = Popen([vtf2tga, fullpath.toOsSpecific(), tgaOut.toOsSpecific()], stdout=PIPE)
     (output, err) = process.communicate()
     exit_code = process.wait()
     output = output.decode()
@@ -68,6 +92,8 @@ for matFname in mats:
 
     matFname = Filename.fromOsSpecific(matFname.lower())
     matOut = outDir / Filename(matFname.getFullpathWoExtension() + ".pmat")
+    if matOut.isRegularFile():
+        continue
 
     osMatOutDirname = Filename(matOut.getDirname()).toOsSpecific()
     if not os.path.isdir(osMatOutDirname):

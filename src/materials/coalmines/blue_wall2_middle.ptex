@@ -1,0 +1,5 @@
+{
+  image "blue_wall2_middle.tga"
+  format "srgb"
+  wrap "repeat"
+}

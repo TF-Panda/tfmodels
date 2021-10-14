@@ -1,0 +1,6 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "red_wall2_middle.ptex"
+  }
+}

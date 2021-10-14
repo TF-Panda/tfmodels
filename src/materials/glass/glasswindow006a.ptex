@@ -1,0 +1,5 @@
+{
+  image "glasswindow006a.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

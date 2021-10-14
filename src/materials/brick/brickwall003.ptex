@@ -1,0 +1,5 @@
+{
+  image "brickwall003.tga"
+  format "srgb"
+  wrap "repeat"
+}

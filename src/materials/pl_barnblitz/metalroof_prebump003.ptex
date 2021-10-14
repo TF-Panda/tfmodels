@@ -1,0 +1,5 @@
+{
+  image "metalroof_prebump003.tga"
+  format "srgb"
+  wrap "repeat"
+}

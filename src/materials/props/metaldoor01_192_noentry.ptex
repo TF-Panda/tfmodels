@@ -1,0 +1,5 @@
+{
+  image "metaldoor01_192_noentry.tga"
+  format "srgb"
+  wrap "repeat"
+}

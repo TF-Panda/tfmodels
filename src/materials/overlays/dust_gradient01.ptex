@@ -1,0 +1,5 @@
+{
+  image "dust_gradient01.tga"
+  format "srgb_alpha"
+  wrap "clamp"
+}

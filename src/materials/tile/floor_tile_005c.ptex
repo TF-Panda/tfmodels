@@ -1,5 +1,5 @@
 {
   image "floor_tile_005c.tga"
-  format "srgb_alpha"
+  format "srgb"
   wrap "repeat"
 }

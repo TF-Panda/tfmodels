@@ -1,0 +1,108 @@
+
+{
+  "model"   "terminal_chair.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/terminal_chair.pmat"
+        "../materials/terminal_chair_blue.pmat"
+        "../materials/terminal_chair_red_worn.pmat"
+        "../materials/terminal_chair_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/terminal_chair_blue.pmat"
+        "../materials/terminal_chair_blue.pmat"
+        "../materials/terminal_chair_red_worn.pmat"
+        "../materials/terminal_chair_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/terminal_chair_red_worn.pmat"
+        "../materials/terminal_chair_blue.pmat"
+        "../materials/terminal_chair_red_worn.pmat"
+        "../materials/terminal_chair_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/terminal_chair_blue_worn.pmat"
+        "../materials/terminal_chair_blue.pmat"
+        "../materials/terminal_chair_red_worn.pmat"
+        "../materials/terminal_chair_blue_worn.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "terminal_chair_reference"
+      ]
+    }
+
+    {
+      "distance"       15
+      "groups" 
+      [
+        "terminal_chair_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "terminal_chair_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "terminal_chair_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "terminal_chair_reference*"
+        ]
+      }
+    ]
+  }
+}

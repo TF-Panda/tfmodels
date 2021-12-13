@@ -1,0 +1,66 @@
+
+{
+  "model"   "train_boxcar_noladder_skybox.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/train_boxcar_noladder.pmat"
+        "../materials/train_boxcar_blue_noladder.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/train_boxcar_blue_noladder.pmat"
+        "../materials/train_boxcar_blue_noladder.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "train_boxcar_noladder_skybox_reference"
+      ]
+    }
+
+    {
+      "distance"       15
+      "groups" 
+      [
+        "train_boxcar_noladder_skybox_reference_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_boxcar_noladder_skybox_reference*"
+        ]
+      }
+    ]
+  }
+}

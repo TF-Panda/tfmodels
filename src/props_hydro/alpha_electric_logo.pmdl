@@ -1,0 +1,56 @@
+
+{
+  "model"   "alpha_electric_logo.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/alpha_electric_logo.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "alpha_electric_logo_reference"
+      ]
+    }
+
+    {
+      "distance"       65
+      "groups" 
+      [
+        "alpha_electric_logo_reference_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "concrete"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "alpha_electric_logo_reference*"
+        ]
+      }
+    ]
+  }
+}

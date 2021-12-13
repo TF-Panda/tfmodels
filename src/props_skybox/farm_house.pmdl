@@ -1,0 +1,56 @@
+
+{
+  "model"   "farm_house.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/house001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "farm_house"
+      ]
+    }
+
+    {
+      "distance"       300
+      "groups" 
+      [
+        "farm_house_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "farm_house*"
+        ]
+      }
+    ]
+  }
+}

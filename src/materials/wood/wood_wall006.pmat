@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "wood_wall006.ptex"
+    normal_texture "wood_wall006_bump_ssbump.ptex"
+    roughness 0.0
   }
 }

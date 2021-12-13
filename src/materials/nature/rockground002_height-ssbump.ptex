@@ -1,0 +1,5 @@
+{
+  image "rockground002_height-ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

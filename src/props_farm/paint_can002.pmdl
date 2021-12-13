@@ -1,0 +1,64 @@
+
+{
+  "model"   "paint_can002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/shelf_props01.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "paint_can002_reference"
+      ]
+    }
+
+    {
+      "distance"       25
+      "groups" 
+      [
+        "paint_can002_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "paint_can002_physics"
+    "mass"     20
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "paint_can002_reference*"
+        ]
+      }
+    ]
+  }
+}

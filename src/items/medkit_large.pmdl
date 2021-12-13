@@ -1,0 +1,45 @@
+
+{
+  "model"   "medkit_large.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/medkit.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "medkit_large_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "plastic"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "medkit_large_reference*"
+        ]
+      }
+    ]
+  }
+}

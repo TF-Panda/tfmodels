@@ -1,0 +1,47 @@
+
+{
+  "model"   "billboard_skybox001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/billboard001.pmat"
+        "../materials/billboard003.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/billboard003.pmat"
+        "../materials/billboard003.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "billboard_skybox001_reference*"
+        ]
+      }
+    ]
+  }
+}

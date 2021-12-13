@@ -1,0 +1,80 @@
+
+{
+  "model"   "dumptruck.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/dumptruck.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "dumptruck_reference"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "dumptruck_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "dumptruck_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       100
+      "groups" 
+      [
+        "dumptruck_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "dumptruck_physics"
+    "mass"     900
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "concrete"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "dumptruck_reference*"
+        ]
+      }
+    ]
+  }
+}

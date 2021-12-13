@@ -1,0 +1,39 @@
+
+{
+  "model"   "train_building003_skybox.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/brickwall001.pmat"
+        "../materials/concretefloor002.pmat"
+        "../materials/brickwall001b.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_building003_skybox_reference*"
+        ]
+      }
+    ]
+  }
+}

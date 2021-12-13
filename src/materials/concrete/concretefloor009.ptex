@@ -1,5 +1,5 @@
 {
   image "concretefloor009.tga"
-  format "srgb_alpha"
+  format "srgb"
   wrap "repeat"
 }

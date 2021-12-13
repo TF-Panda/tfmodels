@@ -1,0 +1,55 @@
+
+{
+  "model"   "lightbulb001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/lightbulb001.pmat"
+        "../materials/lightbulb001_off.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/lightbulb001_off.pmat"
+        "../materials/lightbulb001_off.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "lightbulb001_physics"
+    "mass"     30
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "lightbulb001_reference*"
+        ]
+      }
+    ]
+  }
+}

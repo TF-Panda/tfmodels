@@ -1,8 +1,11 @@
 {
   material StandardMaterial
+
   parameters {
     base_texture expl001.ptex
     self_illum 1
     emission 1
   }
+
+  transparency dual
 }

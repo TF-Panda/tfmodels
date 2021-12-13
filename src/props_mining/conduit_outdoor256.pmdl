@@ -1,0 +1,72 @@
+
+{
+  "model"   "conduit_outdoor256.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/conduit_outdoor01.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "conduit_outdoor256"
+      ]
+    }
+
+    {
+      "distance"       15
+      "groups" 
+      [
+        "conduit_outdoor256_lod1"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "conduit_outdoor256_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "conduit_outdoor256_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "conduit_outdoor256*"
+        ]
+      }
+    ]
+  }
+}

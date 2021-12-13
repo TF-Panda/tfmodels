@@ -1,0 +1,19 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/powercable_truss.ptex"
+    "phong"     1
+    "phongexponent"     10
+    "phongboost"     0.25
+    "phongfresnelranges" 
+    [
+      0.7
+      15
+      20
+    ]
+  }
+  "alpha_test"   "greater_equal"
+  "transparency"   "dual"
+}

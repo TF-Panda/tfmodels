@@ -1,0 +1,97 @@
+
+{
+  "model"   "handrail216.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/handrail128.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+        "../materials/handrail128_skin5.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+        "../materials/handrail128_skin5.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+        "../materials/handrail128_skin5.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/handrail128_skin4.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+        "../materials/handrail128_skin5.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed4"
+      "materials" 
+      [
+        "../materials/handrail128_skin5.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+        "../materials/handrail128_skin5.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "handrail216_physics"
+    "mass"     28.1852
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "handrail216_reference*"
+        ]
+      }
+    ]
+  }
+}

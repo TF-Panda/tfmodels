@@ -1,0 +1,8 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "water_hydro_base.ptex"
+    env_map true
+    gloss_texture "water_hydro_base_gloss.ptex"
+  }
+}

@@ -1,0 +1,45 @@
+
+{
+  "model"   "blast_door_frame.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/blast_door_frame01.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "blast_door_frame_physics"
+    "mass"     250.38
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "blast_door_frame_reference*"
+        ]
+      }
+    ]
+  }
+}

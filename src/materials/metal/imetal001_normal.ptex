@@ -1,0 +1,5 @@
+{
+  image "imetal001_normal.tga"
+  format "rgb"
+  wrap "repeat"
+}

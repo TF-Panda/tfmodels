@@ -1,0 +1,64 @@
+
+{
+  "model"   "mop_and_bucket.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/mop_and_bucket01.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "mop_and_bucket"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "mop_and_bucket_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "mop_and_bucket_physics"
+    "mass"     10
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "mop_and_bucket*"
+        ]
+      }
+    ]
+  }
+}

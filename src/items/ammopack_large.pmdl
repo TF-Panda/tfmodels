@@ -1,0 +1,45 @@
+
+{
+  "model"   "ammopack_large.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/ammo_box1.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "ammopack_large_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "ammopack_large_reference*"
+        ]
+      }
+    ]
+  }
+}

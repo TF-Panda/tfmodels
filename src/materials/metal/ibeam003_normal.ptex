@@ -1,0 +1,5 @@
+{
+  image "ibeam003_normal.tga"
+  format "rgb"
+  wrap "repeat"
+}

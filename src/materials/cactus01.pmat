@@ -1,0 +1,22 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/cactus01.ptex"
+    "bumpmap"     "../maps/cactus01_normal.ptex"
+    "phong"     1
+    "phongexponent"     8
+    "phongboost"     0.1
+    "phongfresnelranges" 
+    [
+      0.5
+      2
+      3
+    ]
+    "rimlight"     1
+    "rimlightexponent"     2
+    "rimlightboost"     2
+    "lightwarptexture"     "../maps/cactus01_lightwarp.ptex"
+  }
+}

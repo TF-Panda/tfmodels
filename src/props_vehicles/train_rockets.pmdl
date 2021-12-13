@@ -1,0 +1,64 @@
+
+{
+  "model"   "train_rockets.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/train_rockets.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "train_rockets_reference"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "train_rockets_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       200
+      "groups" 
+      [
+        "train_rockets_reference_lod2"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_rockets_reference*"
+        ]
+      }
+    ]
+  }
+}

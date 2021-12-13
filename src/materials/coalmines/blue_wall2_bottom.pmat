@@ -1,6 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "blue_wall2_bottom.ptex"
-  }
-}

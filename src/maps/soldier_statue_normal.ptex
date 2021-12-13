@@ -1,0 +1,8 @@
+
+{
+  "image"   "soldier_statue_normal.tga"
+  "format"   "rgba"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

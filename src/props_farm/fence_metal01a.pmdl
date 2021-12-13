@@ -1,0 +1,66 @@
+
+{
+  "model"   "fence_metal01a.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/rafters001.pmat"
+        "../materials/metal_fence02.pmat"
+        "../materials/metal_fence01.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "fence_metal01a_reference"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "fence_metal01a_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "fence_metal01a_physics"
+    "mass"     3153.82
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "fence_metal01a_reference*"
+        ]
+      }
+    ]
+  }
+}

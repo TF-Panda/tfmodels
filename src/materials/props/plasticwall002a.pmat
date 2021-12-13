@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "plasticwall002a.ptex"
+    normal_texture "plasticwall002a_normal.ptex"
+    roughness 0.0
   }
 }

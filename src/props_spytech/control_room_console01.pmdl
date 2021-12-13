@@ -1,0 +1,100 @@
+
+{
+  "model"   "control_room_console01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/control_room_consoles.pmat"
+        "../materials/control_room_consoles_skin2.pmat"
+        "../materials/control_room_consoles_red_worn.pmat"
+        "../materials/control_room_consoles_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/control_room_consoles_skin2.pmat"
+        "../materials/control_room_consoles_skin2.pmat"
+        "../materials/control_room_consoles_red_worn.pmat"
+        "../materials/control_room_consoles_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/control_room_consoles_red_worn.pmat"
+        "../materials/control_room_consoles_skin2.pmat"
+        "../materials/control_room_consoles_red_worn.pmat"
+        "../materials/control_room_consoles_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/control_room_consoles_blue_worn.pmat"
+        "../materials/control_room_consoles_skin2.pmat"
+        "../materials/control_room_consoles_red_worn.pmat"
+        "../materials/control_room_consoles_blue_worn.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "control_room_console01_reference"
+      ]
+    }
+
+    {
+      "distance"       12
+      "groups" 
+      [
+        "control_room_console01_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "control_room_console01_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "control_room_console01_reference*"
+        ]
+      }
+    ]
+  }
+}

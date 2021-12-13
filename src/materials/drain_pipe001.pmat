@@ -1,0 +1,9 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/drain_pipe001.ptex"
+  }
+  "cull"   "double_sided"
+}

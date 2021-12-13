@@ -1,0 +1,100 @@
+
+{
+  "model"   "handrail608.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/handrail128.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/handrail128_skin4.pmat"
+        "../materials/handrail128_skin2.pmat"
+        "../materials/handrail128_skin3.pmat"
+        "../materials/handrail128_skin4.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "handrail608_reference"
+      ]
+    }
+
+    {
+      "distance"       45
+      "groups" 
+      [
+        "handrail608_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "handrail608_physics"
+    "mass"     80.5191
+    "damping"     0
+    "rot_damping"     1
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "handrail608_reference*"
+        ]
+      }
+    ]
+  }
+}

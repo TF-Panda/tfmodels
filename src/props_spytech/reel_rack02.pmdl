@@ -1,0 +1,64 @@
+
+{
+  "model"   "reel_rack02.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/reel_rack.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "reel_rack02_reference"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "reel_rack02_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "reel_rack02_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "reel_rack02_reference*"
+        ]
+      }
+    ]
+  }
+}

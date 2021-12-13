@@ -1,0 +1,9 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/shrub_03_snow.ptex"
+  }
+  "alpha_test"   "greater_equal"
+}

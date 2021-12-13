@@ -1,0 +1,54 @@
+
+{
+  "model"   "target_demoman.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/target_demoman.pmat"
+        "../materials/target_demoman_blu.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/target_demoman_blu.pmat"
+        "../materials/target_demoman_blu.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "target_demoman_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "no_decal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "target_demoman"
+        "nodes" 
+        [
+          "target_demoman*"
+        ]
+      }
+    ]
+  }
+}

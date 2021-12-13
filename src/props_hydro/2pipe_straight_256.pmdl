@@ -1,0 +1,64 @@
+
+{
+  "model"   "2pipe_straight_256.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/2pipe.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "2pipe_straight_256"
+      ]
+    }
+
+    {
+      "distance"       65
+      "groups" 
+      [
+        "2pipe_straight_256_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "2pipe_straight_256_physics"
+    "mass"     32.4767
+    "damping"     0
+    "rot_damping"     1
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "2pipe_straight_256*"
+        ]
+      }
+    ]
+  }
+}

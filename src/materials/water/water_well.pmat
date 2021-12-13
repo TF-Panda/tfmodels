@@ -1,5 +1,7 @@
 {
   material StandardMaterial
   parameters {
+    env_map true
+    roughness 0.0
   }
 }

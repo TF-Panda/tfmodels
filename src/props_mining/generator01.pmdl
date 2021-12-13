@@ -1,0 +1,96 @@
+
+{
+  "model"   "generator01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/generator01.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "generator01_reference"
+      ]
+    }
+
+    {
+      "distance"       10
+      "groups" 
+      [
+        "generator01_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "generator01_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "generator01_reference_lod3"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "generator01_reference_lod4"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "generator01_reference_lod5"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "generator01_physics"
+    "mass"     1000
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "generator01_reference*"
+        ]
+      }
+    ]
+  }
+}

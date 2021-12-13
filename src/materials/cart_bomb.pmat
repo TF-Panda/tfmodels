@@ -1,0 +1,24 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/cart_bomb.ptex"
+    "selfillum"     1
+    "selfillummask"     "../maps/cart_bomb_selfillum.ptex"
+    "phong"     1
+    "phongexponent"     4
+    "phongboost"     0.9
+    "lightwarptexture"     "../maps/pyro_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      2
+      1
+      6
+    ]
+    "basemapalphaphongmask"     1
+    "rimlight"     1
+    "rimlightexponent"     2
+    "rimlightboost"     0.2
+  }
+}

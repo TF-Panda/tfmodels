@@ -1,0 +1,5 @@
+{
+  image "floor_tile_002a_gloss.rgb"
+  format "luminance"
+  wrap "repeat"
+}

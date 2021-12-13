@@ -1,0 +1,5 @@
+{
+  image "wall012_normal.tga"
+  format "rgb"
+  wrap "repeat"
+}

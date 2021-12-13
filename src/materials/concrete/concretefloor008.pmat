@@ -1,0 +1,9 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "concretefloor008.ptex"
+    env_map true
+    normal_texture "concretefloor008_normal.ptex"
+    gloss_texture "concretefloor008_gloss.ptex"
+  }
+}

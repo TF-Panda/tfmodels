@@ -1,0 +1,72 @@
+
+{
+  "model"   "train_signal001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/train_signal001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "train_signal001_reference"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "train_signal001_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       90
+      "groups" 
+      [
+        "train_signal001_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "train_signal001_physics"
+    "mass"     1000
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_signal001_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
   image "world_map002.tga"
-  format "srgb_alpha"
+  format "srgb"
   wrap "repeat"
 }

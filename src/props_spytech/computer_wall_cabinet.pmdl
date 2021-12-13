@@ -1,0 +1,44 @@
+
+{
+  "model"   "computer_wall_cabinet.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/computer_wall_cabinet.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "computer_wall_cabinet_physics"
+    "mass"     120.939
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "computer_wall_cabinet_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+
+{
+  "model"   "grain_machinery_set1.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/grain_machinery_set1.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "grain_machinery_set1_reference"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "grain_machinery_set1_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       75
+      "groups" 
+      [
+        "grain_machinery_set1_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "grain_machinery_set1_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "grain_machinery_set1_reference*"
+        ]
+      }
+    ]
+  }
+}

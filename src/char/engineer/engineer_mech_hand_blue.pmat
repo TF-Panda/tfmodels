@@ -6,7 +6,7 @@
     metalness_texture engineer_mech_hand_metalness.ptex
     emission_texture engineer_mech_hand_emission.ptex
 
-    lightwarp_texture "../../lightwarps/player_lightwarp.ptex"
+    lightwarp_texture "../../maps/pyro_lightwarp.ptex"
 
     self_illum false
 

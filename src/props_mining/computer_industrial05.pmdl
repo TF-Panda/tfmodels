@@ -1,0 +1,74 @@
+
+{
+  "model"   "computer_industrial05.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/computer_industrial05.pmat"
+        "../materials/computer_industrial05_skin2.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/computer_industrial05_skin2.pmat"
+        "../materials/computer_industrial05_skin2.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "computer_industrial05"
+      ]
+    }
+
+    {
+      "distance"       15
+      "groups" 
+      [
+        "computer_industrial05_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "computer_industrial05_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "computer_industrial05*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+
+{
+  "model"   "security_fence_light01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/security_fence_light01.pmat"
+        "../materials/security_fence_light01_on.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/security_fence_light01_on.pmat"
+        "../materials/security_fence_light01_on.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "security_fence_light01_reference"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "security_fence_light01_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "security_fence_light01_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "security_fence_light01_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "security_fence_light01_reference*"
+        ]
+      }
+    ]
+  }
+}

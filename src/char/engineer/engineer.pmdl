@@ -25,7 +25,7 @@
         group 0
         joint bip_pelvis
         mins [-9 -0.5 -7.5]
-        maxs [-9 11.5 3.5]
+        maxs [9 11.5 3.5]
       }
       {
         group 3
@@ -129,11 +129,11 @@
   material_groups [
     {
       name red
-      materials [ engineer_red.pmat engineer_head.pmat ]
+      materials [ "../../materials/engineer_red.pmat" "../../materials/engineer_head.pmat" ]
     }
     {
       name blue
-      materials [ engineer_blue.pmat engineer_head.pmat ]
+      materials [ "../../materials/engineer_blue.pmat" "../../materials/engineer_head.pmat" ]
     }
   ]
 

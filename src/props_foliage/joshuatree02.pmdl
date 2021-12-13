@@ -1,0 +1,64 @@
+
+{
+  "model"   "joshuatree02.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/joshuatree01.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "joshuatree02_reference"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "joshuatree02_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       100
+      "groups" 
+      [
+        "joshuatree02_reference_lod2"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "foliage"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "joshuatree02_reference*"
+        ]
+      }
+    ]
+  }
+}

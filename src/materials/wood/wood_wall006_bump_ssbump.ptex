@@ -1,0 +1,5 @@
+{
+  image "wood_wall006_bump_ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

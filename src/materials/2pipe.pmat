@@ -1,0 +1,28 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/2pipe.ptex"
+    "basemapalphaphongmask"     1
+    "envmap"     1
+    "envmaptint" 
+    [
+      0.2
+      0.2
+      0.2
+    ]
+    "phong"     1
+    "phongboost"     5
+    "phongexponent"     8
+    "phongfresnelranges" 
+    [
+      0.6
+      2
+      5
+    ]
+    "rimlight"     1
+    "rimlightboost"     2.5
+    "rimlightexponent"     15
+  }
+}

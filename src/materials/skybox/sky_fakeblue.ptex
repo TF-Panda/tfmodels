@@ -1,5 +1,0 @@
-{
-  image "sky_fakeblue.tga"
-  format "srgb"
-  wrap "repeat"
-}

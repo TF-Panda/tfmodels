@@ -1,0 +1,9 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/lamp002_noalpha.ptex"
+    "selfillum"     0
+  }
+}

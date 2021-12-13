@@ -2,7 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture smiley.ptex
-    lightwarp_texture "../../../lightwarps/player_lightwarp.ptex"
+    lightwarp_texture "../../../maps/pyro_lightwarp.ptex"
     env_map true
     roughness 0.95
   }

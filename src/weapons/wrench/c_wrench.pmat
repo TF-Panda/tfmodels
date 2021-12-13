@@ -6,7 +6,7 @@
     metalness_texture c_wrench_specular.ptex
     roughness_texture c_wrench_roughness.ptex
     //roughness 0.5
-    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
+    lightwarp_texture "../../maps/weapon_lightwarp.ptex"
     env_map true
 
     //rim_lighting 1

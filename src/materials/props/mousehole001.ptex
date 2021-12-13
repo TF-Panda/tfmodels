@@ -1,5 +1,0 @@
-{
-  image "mousehole001.tga"
-  format "srgb_alpha"
-  wrap "repeat"
-}

@@ -1,0 +1,39 @@
+
+{
+  "model"   "train_barn_skybox002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/ibeam001b.pmat"
+        "../materials/brickwall001.pmat"
+        "../materials/black.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_barn_skybox002_reference*"
+        ]
+      }
+    ]
+  }
+}

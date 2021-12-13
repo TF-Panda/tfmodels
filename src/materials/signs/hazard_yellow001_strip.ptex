@@ -1,5 +1,0 @@
-{
-  image "hazard_yellow001_strip.tga"
-  format "srgb_alpha"
-  wrap "clamp"
-}

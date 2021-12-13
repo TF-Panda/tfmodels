@@ -1,0 +1,64 @@
+
+{
+  "model"   "drain_pipe001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/drain_pipe001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "drain_pipe001"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "drain_pipe001_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "drain_pipe001_physics"
+    "mass"     50
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "drain_pipe001*"
+        ]
+      }
+    ]
+  }
+}

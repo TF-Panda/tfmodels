@@ -2,5 +2,6 @@
   material StandardMaterial
   parameters {
     base_texture "ground_04.ptex"
+    roughness 0.0
   }
 }

@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "wall015g.ptex"
+    normal_texture "wall015_bump-ssbump.ptex"
+    roughness 0.0
   }
 }

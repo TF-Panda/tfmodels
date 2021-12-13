@@ -1,0 +1,80 @@
+
+{
+  "model"   "train_enginecar.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/train_enginecar.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "train_enginecar_reference"
+      ]
+    }
+
+    {
+      "distance"       110
+      "groups" 
+      [
+        "train_enginecar_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       140
+      "groups" 
+      [
+        "train_enginecar_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       200
+      "groups" 
+      [
+        "train_enginecar_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "train_enginecar_physics"
+    "mass"     1000
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_enginecar_reference*"
+        ]
+      }
+    ]
+  }
+}

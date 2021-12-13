@@ -1,0 +1,88 @@
+
+{
+  "model"   "paint_can001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/paint_can001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "paint_can001_reference"
+      ]
+    }
+
+    {
+      "distance"       10
+      "groups" 
+      [
+        "paint_can001_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "paint_can001_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       30
+      "groups" 
+      [
+        "paint_can001_reference_lod3"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "paint_can001_reference_lod4"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "paint_can001_physics"
+    "mass"     20
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "paint_can001_reference*"
+        ]
+      }
+    ]
+  }
+}

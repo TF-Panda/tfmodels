@@ -31,11 +31,11 @@
   material_groups [
     {
       name red
-      materials [ Sentry1_Gibs.pmat ]
+      materials [ "../materials/sentry1_gibs.pmat" ]
     }
     {
       name blue
-      materials [ sentry1_gibs_blue.pmat ]
+      materials [ "../materials/sentry1_gibs_blue.pmat" ]
     }
   ]
 

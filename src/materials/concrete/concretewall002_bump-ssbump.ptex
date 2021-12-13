@@ -1,0 +1,5 @@
+{
+  image "concretewall002_bump-ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

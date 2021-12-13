@@ -1,0 +1,8 @@
+
+{
+  "image"   "cart_selfillum.tga"
+  "format"   "rgb"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

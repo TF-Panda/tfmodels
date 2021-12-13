@@ -1,0 +1,45 @@
+
+{
+  "model"   "ladder002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/ladder001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "ladder002_physics"
+    "mass"     15.5337
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "ladder002_reference*"
+        ]
+      }
+    ]
+  }
+}

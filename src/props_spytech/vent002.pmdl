@@ -1,0 +1,44 @@
+
+{
+  "model"   "vent002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/vent.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "vent002_physics"
+    "mass"     9.08705
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "vent002_reference*"
+        ]
+      }
+    ]
+  }
+}

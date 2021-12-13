@@ -1,0 +1,55 @@
+
+{
+  "model"   "siren.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/siren.pmat"
+        "../materials/siren_skin2.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/siren_skin2.pmat"
+        "../materials/siren_skin2.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "siren_physics"
+    "mass"     20
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "siren_reference*"
+        ]
+      }
+    ]
+  }
+}

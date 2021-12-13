@@ -10,6 +10,6 @@
 
     half_lambert 1
 
-    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
+    lightwarp_texture "../../maps/weapon_lightwarp.ptex"
   }
 }

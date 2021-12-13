@@ -2,5 +2,6 @@
   material StandardMaterial
   parameters {
     base_texture "metaldoor01_192.ptex"
+    roughness 0.0
   }
 }

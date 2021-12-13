@@ -1,0 +1,65 @@
+
+{
+  "model"   "silo_skybox004_cluster.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/silo002.pmat"
+        "../materials/silo_skybox004.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "silo_skybox004_cluster_reference"
+      ]
+    }
+
+    {
+      "distance"       30
+      "groups" 
+      [
+        "silo_skybox004_cluster_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "silo_skybox004_cluster_reference_lod2"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "silo_skybox004_cluster_reference*"
+        ]
+      }
+    ]
+  }
+}

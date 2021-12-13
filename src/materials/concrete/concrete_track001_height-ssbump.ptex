@@ -1,0 +1,5 @@
+{
+  image "concrete_track001_height-ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

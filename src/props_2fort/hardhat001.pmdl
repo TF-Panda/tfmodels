@@ -1,0 +1,45 @@
+
+{
+  "model"   "hardhat001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/hardhat001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "hardhat001_physics"
+    "mass"     30
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "hardhat001_reference*"
+        ]
+      }
+    ]
+  }
+}

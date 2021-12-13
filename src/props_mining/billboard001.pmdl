@@ -1,0 +1,82 @@
+
+{
+  "model"   "billboard001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/billboard001.pmat"
+        "../materials/billboard003.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/billboard003.pmat"
+        "../materials/billboard003.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "billboard001_reference"
+      ]
+    }
+
+    {
+      "distance"       125
+      "groups" 
+      [
+        "billboard001_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       400
+      "groups" 
+      [
+        "billboard001_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "billboard001_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "billboard001_reference*"
+        ]
+      }
+    ]
+  }
+}

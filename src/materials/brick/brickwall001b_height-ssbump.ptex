@@ -1,0 +1,5 @@
+{
+  image "brickwall001b_height-ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

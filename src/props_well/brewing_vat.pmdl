@@ -1,0 +1,80 @@
+
+{
+  "model"   "brewing_vat.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/brewing_vat.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "brewing_vat_reference"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "brewing_vat_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "brewing_vat_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       45
+      "groups" 
+      [
+        "brewing_vat_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "brewing_vat_physics"
+    "mass"     2
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "brewing_vat_reference*"
+        ]
+      }
+    ]
+  }
+}

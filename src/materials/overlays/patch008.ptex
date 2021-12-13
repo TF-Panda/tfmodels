@@ -1,5 +1,0 @@
-{
-  image "patch008.tga"
-  format "srgb_alpha"
-  wrap "clamp"
-}

@@ -1,0 +1,39 @@
+
+{
+  "model"   "building002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wood_wall002.pmat"
+        "../materials/wood_beam01.pmat"
+        "../materials/wall027.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "building002_reference*"
+        ]
+      }
+    ]
+  }
+}

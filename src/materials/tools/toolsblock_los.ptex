@@ -1,0 +1,5 @@
+{
+  image "toolsblock_los.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

@@ -1,0 +1,45 @@
+
+{
+  "model"   "window004c_glass.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/window_glass004.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "window004c_glass_physics"
+    "mass"     439.973
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "glass"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "window004_glassc_reference*"
+        ]
+      }
+    ]
+  }
+}

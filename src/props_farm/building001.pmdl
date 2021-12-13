@@ -1,0 +1,66 @@
+
+{
+  "model"   "building001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/building001.pmat"
+        "../materials/steeldoor001.pmat"
+        "../materials/building001_metal.pmat"
+        "../materials/building001_woodtrim.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "building001_reference"
+      ]
+    }
+
+    {
+      "distance"       120
+      "groups" 
+      [
+        "building001_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "building001_physics"
+    "mass"     1.92098e+06
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "Wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "building001_reference*"
+        ]
+      }
+    ]
+  }
+}

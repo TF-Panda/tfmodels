@@ -1,0 +1,44 @@
+
+{
+  "model"   "glass_door_handle001a.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/glass_door_handle001a.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "glass_door_handle001a_physics"
+    "mass"     9.2424
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "glass_door_handle001a_reference*"
+        ]
+      }
+    ]
+  }
+}

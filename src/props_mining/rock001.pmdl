@@ -1,0 +1,100 @@
+
+{
+  "model"   "rock001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/rock001.pmat"
+        "../materials/rock001a.pmat"
+        "../materials/rock001b.pmat"
+        "../materials/rock001c.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/rock001a.pmat"
+        "../materials/rock001a.pmat"
+        "../materials/rock001b.pmat"
+        "../materials/rock001c.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/rock001b.pmat"
+        "../materials/rock001a.pmat"
+        "../materials/rock001b.pmat"
+        "../materials/rock001c.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/rock001c.pmat"
+        "../materials/rock001a.pmat"
+        "../materials/rock001b.pmat"
+        "../materials/rock001c.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "rock001_reference"
+      ]
+    }
+
+    {
+      "distance"       75
+      "groups" 
+      [
+        "rock001_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "rock001_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "dirt"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "rock001_reference*"
+        ]
+      }
+    ]
+  }
+}

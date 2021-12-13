@@ -1,0 +1,134 @@
+
+{
+  "model"   "oildrum.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/oildrum001.pmat"
+        "../materials/oildrum002.pmat"
+        "../materials/oildrum003.pmat"
+        "../materials/oildrum004.pmat"
+        "../materials/oildrum005.pmat"
+        "../materials/oildrum006.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/oildrum002.pmat"
+        "../materials/oildrum002.pmat"
+        "../materials/oildrum003.pmat"
+        "../materials/oildrum004.pmat"
+        "../materials/oildrum005.pmat"
+        "../materials/oildrum006.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/oildrum003.pmat"
+        "../materials/oildrum002.pmat"
+        "../materials/oildrum003.pmat"
+        "../materials/oildrum004.pmat"
+        "../materials/oildrum005.pmat"
+        "../materials/oildrum006.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/oildrum004.pmat"
+        "../materials/oildrum002.pmat"
+        "../materials/oildrum003.pmat"
+        "../materials/oildrum004.pmat"
+        "../materials/oildrum005.pmat"
+        "../materials/oildrum006.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed4"
+      "materials" 
+      [
+        "../materials/oildrum005.pmat"
+        "../materials/oildrum002.pmat"
+        "../materials/oildrum003.pmat"
+        "../materials/oildrum004.pmat"
+        "../materials/oildrum005.pmat"
+        "../materials/oildrum006.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed5"
+      "materials" 
+      [
+        "../materials/oildrum006.pmat"
+        "../materials/oildrum002.pmat"
+        "../materials/oildrum003.pmat"
+        "../materials/oildrum004.pmat"
+        "../materials/oildrum005.pmat"
+        "../materials/oildrum006.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "oildrum_reference"
+      ]
+    }
+
+    {
+      "distance"       75
+      "groups" 
+      [
+        "oildrum_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "oildrum_physics"
+    "mass"     30.9815
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "oildrum_reference*"
+        ]
+      }
+    ]
+  }
+}

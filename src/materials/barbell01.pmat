@@ -1,0 +1,17 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/barbell01.ptex"
+    "phong"     1
+    "phongexponent"     15
+    "phongboost"     0.125
+    "phongfresnelranges" 
+    [
+      2
+      1
+      0.8
+    ]
+  }
+}

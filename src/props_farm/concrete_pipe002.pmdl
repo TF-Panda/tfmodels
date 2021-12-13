@@ -1,0 +1,72 @@
+
+{
+  "model"   "concrete_pipe002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/concrete_pipe001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "Concrete_Pipe002_reference"
+      ]
+    }
+
+    {
+      "distance"       100
+      "groups" 
+      [
+        "Concrete_Pipe002_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       250
+      "groups" 
+      [
+        "Concrete_Pipe002_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "concrete_pipe002_physics"
+    "mass"     46627.8
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "Concrete_Pipe002_reference*"
+        ]
+      }
+    ]
+  }
+}

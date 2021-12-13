@@ -1,6 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "mvm_warehouse_areaportal01.ptex"
-  }
-}

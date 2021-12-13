@@ -1,0 +1,55 @@
+
+{
+  "model"   "doorframe002b.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wood_bridge002.pmat"
+        "../materials/wood_bridge001.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/wood_bridge001.pmat"
+        "../materials/wood_bridge001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "doorframe002b_physics"
+    "mass"     516.829
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "Wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "doorframe002b_reference*"
+        ]
+      }
+    ]
+  }
+}

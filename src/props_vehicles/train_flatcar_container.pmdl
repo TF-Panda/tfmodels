@@ -1,0 +1,74 @@
+
+{
+  "model"   "train_flatcar_container.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/train_container.pmat"
+        "../materials/train_container_red.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/train_container_red.pmat"
+        "../materials/train_container_red.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "train_flatcar_container_reference"
+      ]
+    }
+
+    {
+      "distance"       300
+      "groups" 
+      [
+        "train_flatcar_container_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "train_flatcar_container_physics"
+    "mass"     1000
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_flatcar_container_reference*"
+        ]
+      }
+    ]
+  }
+}

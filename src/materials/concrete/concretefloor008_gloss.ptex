@@ -1,0 +1,5 @@
+{
+  image "concretefloor008_gloss.rgb"
+  format "luminance"
+  wrap "repeat"
+}

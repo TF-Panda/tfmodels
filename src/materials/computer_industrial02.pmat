@@ -1,0 +1,9 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/computer_industrial02.ptex"
+    "selfillum"     1
+  }
+}

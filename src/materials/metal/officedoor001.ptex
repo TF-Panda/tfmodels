@@ -1,5 +1,5 @@
 {
   image "officedoor001.tga"
-  format "srgb_alpha"
+  format "srgb"
   wrap "repeat"
 }

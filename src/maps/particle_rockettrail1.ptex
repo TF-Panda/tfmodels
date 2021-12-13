@@ -1,0 +1,5 @@
+{
+  image particle_rockettrail1.tga
+  format srgb_alpha
+  wrap clamp
+}

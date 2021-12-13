@@ -1,0 +1,64 @@
+
+{
+  "model"   "bridge_cover_sides001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wood_wall001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "bridge_cover_sides001_reference"
+      ]
+    }
+
+    {
+      "distance"       150
+      "groups" 
+      [
+        "bridge_cover_sides001_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "bridge_cover_sides001_physics"
+    "mass"     8168.43
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "Wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "bridge_cover_sides001_reference*"
+        ]
+      }
+    ]
+  }
+}

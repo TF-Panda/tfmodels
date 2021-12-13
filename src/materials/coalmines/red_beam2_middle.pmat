@@ -1,6 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "red_beam2_middle.ptex"
-  }
-}

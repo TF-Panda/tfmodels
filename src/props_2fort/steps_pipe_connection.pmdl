@@ -1,0 +1,45 @@
+
+{
+  "model"   "steps_pipe_connection.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/steps_pipes_piece.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "steps_pipe_connection_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "steps_pipe_connection_reference*"
+        ]
+      }
+    ]
+  }
+}

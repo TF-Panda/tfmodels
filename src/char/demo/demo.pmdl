@@ -18,11 +18,11 @@
   material_groups [
     {
       name red
-      materials [ materials/demoman_red.pmat materials/demoman_head.pmat ]
+      materials [ "../../materials/demoman_red.pmat" "../../materials/demoman_head.pmat" ]
     }
     {
       name blue
-      materials [ materials/demoman_blue.pmat materials/demoman_head.pmat ]
+      materials [ "../../materials/demoman_blue.pmat" "../../materials/demoman_head.pmat" ]
     }
   ]
 
@@ -572,6 +572,143 @@
           spline true
         }
       ]
+    }
+
+    {
+      name PRIMARY_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_down_left.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_down_center.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_down_right.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_mid_left.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_mid_center.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_mid_right.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_up_left.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_up_center.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_up_right.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name stand_PRIMARY
+      anim "optchar/demo-stand_SECONDARY.egg"
+      activity Primary_Stand
+      loop true
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name PRIMARY_aimmatrix_run
+      blend {
+        anims [
+          "optchar/demo-a_SECONDARY_aimmatrix_run_down_left.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_down_center.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_down_right.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_mid_left.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_mid_center.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_mid_right.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_up_left.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_up_center.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_up_right.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/demo-a_SECONDARY_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+    }
+
+    {
+      name run_PRIMARY
+      blend {
+        anims [
+          "optchar/demo-a_runSW_SECONDARY.egg"
+          "optchar/demo-a_runS_SECONDARY.egg"
+          "optchar/demo-a_runSE_SECONDARY.egg"
+          "optchar/demo-a_runW_SECONDARY.egg"
+          "optchar/demo-a_runCenter_SECONDARY.egg"
+          "optchar/demo-a_runE_SECONDARY.egg"
+          "optchar/demo-a_runNW_SECONDARY.egg"
+          "optchar/demo-a_runN_SECONDARY.egg"
+          "optchar/demo-a_runNE_SECONDARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      activity Primary_Run
+      loop true
+      zero_x true
+      zero_y true
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_run
+        }
+      ]
+    }
+
+    {
+      name AttackStand_PRIMARY
+      activity Primary_Attack_Stand
+      anim "optchar/demo-AttackStand_SECONDARY.egg"
+      delta true
+    }
+
+    {
+      name PRIMARY_reload
+      anim "optchar/demo-SECONDARY_reload.egg"
+      delta true
+      activity Primary_Reload_Stand
+    }
+    {
+      name PRIMARY_reload_loop
+      anim "optchar/demo-SECONDARY_reload_loop.egg"
+      delta true
+      activity Primary_Reload_Stand_Loop
+    }
+    {
+      name PRIMARY_reload_end
+      anim "optchar/demo-a_SECONDARY_reload_end.egg"
+      delta true
+      activity Primary_Reload_Stand_End
+    }
+
+    {
+      name a_jumpstart_PRIMARY
+      anim "optchar/demo-a_jumpstart_SECONDARY.egg"
+      zero_x true
+      zero_y true
+      activity Primary_Jump_Start
+    }
+    {
+      name a_jumpfloat_PRIMARY
+      anim "optchar/demo-a_jumpfloat_SECONDARY.egg"
+      activity Primary_Jump_Float
+      loop true
+      zero_x true
+      zero_y true
+    }
+    {
+      name jumpland_PRIMARY
+      anim "optchar/demo-jumpland_SECONDARY.egg"
+      delta true
+      activity Primary_Jump_Land
     }
 
     {

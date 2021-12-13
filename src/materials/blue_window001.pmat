@@ -1,0 +1,9 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/blue_window001.ptex"
+  }
+  "cull"   "double_sided"
+}

@@ -1,0 +1,5 @@
+{
+  image "metalduct001a_normal.tga"
+  format "rgb"
+  wrap "repeat"
+}

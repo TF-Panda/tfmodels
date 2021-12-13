@@ -1,0 +1,82 @@
+
+{
+  "model"   "train_boxcar_noladder.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/train_boxcar_noladder.pmat"
+        "../materials/train_boxcar_blue_noladder.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/train_boxcar_blue_noladder.pmat"
+        "../materials/train_boxcar_blue_noladder.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "train_boxcar_noladder_reference"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "train_boxcar_noladder_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       85
+      "groups" 
+      [
+        "train_boxcar_noladder_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "train_boxcar_noladder_physics"
+    "mass"     1000
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_boxcar_noladder_reference*"
+        ]
+      }
+    ]
+  }
+}

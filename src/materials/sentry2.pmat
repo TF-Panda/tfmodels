@@ -1,0 +1,23 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/Sentry2.ptex"
+    "bumpmap"     "../maps/Sentry2_normal.ptex"
+    "phong"     1
+    "phongboost"     10
+    "phongexponent"     25
+    "lightwarptexture"     "../maps/Sentry1_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.5
+      1.5
+      10
+    ]
+    "selfillum"     1
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     1.5
+  }
+}

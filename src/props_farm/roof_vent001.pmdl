@@ -1,0 +1,80 @@
+
+{
+  "model"   "roof_vent001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/roof_vent001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "roof_vent001_reference"
+      ]
+    }
+
+    {
+      "distance"       10
+      "groups" 
+      [
+        "roof_vent001_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "roof_vent001_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       30
+      "groups" 
+      [
+        "roof_vent001_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "roof_vent001_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "roof_vent001_reference*"
+        ]
+      }
+    ]
+  }
+}

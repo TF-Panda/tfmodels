@@ -12,16 +12,16 @@
 
     gibs [
       {
-        model "tfmodels/src/buildables/sentry1_gib1.pmdl"
+        model "models/buildables/sentry1_gib1"
       }
       {
-        model "tfmodels/src/buildables/sentry1_gib2.pmdl"
+        model "models/buildables/sentry1_gib2"
       }
       {
-        model "tfmodels/src/buildables/sentry1_gib3.pmdl"
+        model "models/buildables/sentry1_gib3"
       }
       {
-        model "tfmodels/src/buildables/sentry1_gib4.pmdl"
+        model "models/buildables/sentry1_gib4"
       }
     ]
   }
@@ -79,19 +79,19 @@
   material_groups [
     {
       name red
-      materials [ sentry1.pmat toolbox_red.pmat mini_sentry_light_red.pmat ]
+      materials [ "../materials/sentry1.pmat" toolbox_red.pmat "../materials/mini_sentry_light_red.pmat" ]
     }
     {
       name blue
-      materials [ sentry1_blue.pmat toolbox_blue.pmat mini_sentry_light_blue.pmat ]
+      materials [ "../materials/sentry1_blue.pmat" toolbox_blue.pmat "../materials/mini_sentry_light_blue.pmat" ]
     }
     {
       name mini_red
-      materials [ mini_sentry_red.pmat toolbox_red.pmat mini_sentry_light_red.pmat ]
+      materials [ "../materials/mini_sentry_red.pmat" toolbox_red.pmat "../materials/mini_sentry_light_red.pmat" ]
     }
     {
       name mini_blue
-      materials [ mini_sentry_blue.pmat toolbox_blue.pmat mini_sentry_light_blue.pmat ]
+      materials [ "../materials/mini_sentry_blue.pmat" toolbox_blue.pmat "../materials/mini_sentry_light_blue.pmat" ]
     }
   ]
 
@@ -102,7 +102,7 @@
         {
           parent turret_muzzle
           pos [ 0.06 0.01 3.64 ]
-          //hpr [ 0 -90 0 ]
+          hpr [ 0 90 0 ]
         }
       ]
     }

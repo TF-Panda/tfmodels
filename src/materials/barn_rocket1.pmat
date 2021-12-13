@@ -1,0 +1,19 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/barn_rocket1.ptex"
+    "basealphaenvmapmask"     1
+    "envmap"     1
+    "envmaptint" 
+    [
+      0.6
+      0.6
+      0.6
+    ]
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

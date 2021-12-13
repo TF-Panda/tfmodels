@@ -1,0 +1,8 @@
+
+{
+  "image"   "soldier_head_phongmask.tga"
+  "format"   "rgba"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

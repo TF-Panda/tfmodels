@@ -1,0 +1,64 @@
+
+{
+  "model"   "shrub_03_cluster.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/shrub_03.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "shrub_03_cluster_reference"
+      ]
+    }
+
+    {
+      "distance"       30
+      "groups" 
+      [
+        "shrub_03_cluster_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       90
+      "groups" 
+      [
+        "shrub_03_cluster_reference_lod2"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "foliage"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "shrub_03_cluster_reference*"
+        ]
+      }
+    ]
+  }
+}

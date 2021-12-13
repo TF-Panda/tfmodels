@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "gravelground001.ptex"
+    normal_texture "gravelground001_height-ssbump.ptex"
+    roughness 0.0
   }
 }

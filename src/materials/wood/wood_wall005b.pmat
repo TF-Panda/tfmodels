@@ -2,5 +2,6 @@
   material StandardMaterial
   parameters {
     base_texture "wood_wall005b.ptex"
+    roughness 0.0
   }
 }

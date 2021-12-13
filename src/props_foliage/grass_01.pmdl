@@ -1,0 +1,47 @@
+
+{
+  "model"   "grass_01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/grass_01.pmat"
+        "../materials/grass_01_skin2.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/grass_01_skin2.pmat"
+        "../materials/grass_01_skin2.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "foliage"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "grass_01*"
+        ]
+      }
+    ]
+  }
+}

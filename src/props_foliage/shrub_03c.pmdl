@@ -1,0 +1,74 @@
+
+{
+  "model"   "shrub_03c.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/shrub_03.pmat"
+        "../materials/shrub_03_snow.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/shrub_03_snow.pmat"
+        "../materials/shrub_03_snow.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "shrub_03c_reference"
+      ]
+    }
+
+    {
+      "distance"       30
+      "groups" 
+      [
+        "shrub_03c_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "shrub_03c_reference_lod2"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "foliage"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "shrub_03c_reference*"
+        ]
+      }
+    ]
+  }
+}

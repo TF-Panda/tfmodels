@@ -2,7 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture soldier_hands.ptex
-    lightwarp_texture "../../../lightwarps/hand_lightwarp.ptex"
+    lightwarp_texture "../../../maps/hand_lightwarp.ptex"
     env_map true
     roughness_texture soldier_hands_roughness.ptex
   }

@@ -1,0 +1,48 @@
+
+{
+  "model"   "train_building005_skybox.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/computerwall007.pmat"
+        "../materials/ibeam001b.pmat"
+        "../materials/concretewall026l.pmat"
+        "../materials/concretewall007.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "train_building005_skybox_physics"
+    "mass"     2863.93
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_building005_skybox_reference*"
+        ]
+      }
+    ]
+  }
+}

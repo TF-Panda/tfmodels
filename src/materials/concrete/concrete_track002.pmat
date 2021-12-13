@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "concrete_track002.ptex"
+    normal_texture "concrete_track002_height-ssbump.ptex"
+    roughness 0.0
   }
 }

@@ -1,0 +1,64 @@
+
+{
+  "model"   "junctionbox03.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/junctionbox01.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "junctionbox03"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "junctionbox03_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "junctionbox03_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "junctionbox03*"
+        ]
+      }
+    ]
+  }
+}

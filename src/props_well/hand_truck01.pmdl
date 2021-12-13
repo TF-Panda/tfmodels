@@ -1,0 +1,82 @@
+
+{
+  "model"   "hand_truck01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/hand_truck01.pmat"
+        "../materials/hand_truck01_skin2.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/hand_truck01_skin2.pmat"
+        "../materials/hand_truck01_skin2.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "hand_truck01_reference"
+      ]
+    }
+
+    {
+      "distance"       15
+      "groups" 
+      [
+        "hand_truck01_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       25
+      "groups" 
+      [
+        "hand_truck01_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "hand_truck01_physics"
+    "mass"     20
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "hand_truck01_reference*"
+        ]
+      }
+    ]
+  }
+}

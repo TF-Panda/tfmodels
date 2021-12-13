@@ -1,0 +1,156 @@
+
+{
+  "model"   "sign_wood_cap001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/sign_wood_cap001a.pmat"
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001c_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001c_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001c_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001c_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed4"
+      "materials" 
+      [
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001c_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed5"
+      "materials" 
+      [
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001c_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed6"
+      "materials" 
+      [
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001c_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed7"
+      "materials" 
+      [
+        "../materials/sign_wood_cap001c_blue.pmat"
+        "../materials/sign_wood_cap001b.pmat"
+        "../materials/sign_wood_cap001c.pmat"
+        "../materials/sign_wood_cap_redcart.pmat"
+        "../materials/sign_wood_cap_bluecart.pmat"
+        "../materials/sign_wood_cap001a_blue.pmat"
+        "../materials/sign_wood_cap001b_blue.pmat"
+        "../materials/sign_wood_cap001c_blue.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "sign_wood_cap001_physics"
+    "mass"     813.212
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "Wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "sign_wood_cap001_reference*"
+        ]
+      }
+    ]
+  }
+}

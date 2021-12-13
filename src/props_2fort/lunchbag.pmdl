@@ -1,0 +1,45 @@
+
+{
+  "model"   "lunchbag.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/lunchbag.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "lunchbag_physics"
+    "mass"     10
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "lunchbag_reference01*"
+        ]
+      }
+    ]
+  }
+}

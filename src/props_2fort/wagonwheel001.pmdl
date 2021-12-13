@@ -1,0 +1,64 @@
+
+{
+  "model"   "wagonwheel001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wagonwheel001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "wagonwheel001_reference"
+      ]
+    }
+
+    {
+      "distance"       65
+      "groups" 
+      [
+        "wagonwheel001_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "wagonwheel001_physics"
+    "mass"     333.1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "wagonwheel001_reference*"
+        ]
+      }
+    ]
+  }
+}

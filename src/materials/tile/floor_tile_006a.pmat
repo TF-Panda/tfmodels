@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "floor_tile_006a.ptex"
+    normal_texture "floor_tile_006a_normal.ptex"
+    roughness 0.0
   }
 }

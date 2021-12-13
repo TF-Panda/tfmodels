@@ -2,5 +2,6 @@
   material StandardMaterial
   parameters {
     base_texture "wood_bridge002.ptex"
+    roughness 0.0
   }
 }

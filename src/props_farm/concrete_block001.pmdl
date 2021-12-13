@@ -1,0 +1,45 @@
+
+{
+  "model"   "concrete_block001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/concrete_block001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "concrete_block001_physics"
+    "mass"     50
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "concrete"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "Concrete_Block001_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -2,7 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture heavy_head.ptex
-    lightwarp_texture "../../lightwarps/player_lightwarp.ptex"
+    lightwarp_texture "../../maps/pyro_lightwarp.ptex"
     roughness 0.65
     env_map true
   }

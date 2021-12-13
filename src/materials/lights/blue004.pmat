@@ -1,0 +1,7 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "blue001.ptex"
+    roughness 0.0
+  }
+}

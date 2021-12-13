@@ -1,0 +1,5 @@
+{
+  image "plasticwall001a_normal.tga"
+  format "rgb"
+  wrap "repeat"
+}

@@ -1,0 +1,45 @@
+
+{
+  "model"   "crane_platform001b.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/crane_platform001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "crane_platform001b_physics"
+    "mass"     6318.83
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "crane_platform001b_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+
+{
+  "model"   "soldier_statue.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/soldier_statue.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "soldier_statue_physics"
+    "mass"     500
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "soldier_statue*"
+        ]
+      }
+    ]
+  }
+}

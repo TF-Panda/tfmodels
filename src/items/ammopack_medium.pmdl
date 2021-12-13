@@ -1,0 +1,45 @@
+
+{
+  "model"   "ammopack_medium.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/ammo_box2.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "ammopack_medium_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "ammopack_medium_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -2,5 +2,6 @@
   material StandardMaterial
   parameters {
     base_texture "grain_elevator_facade_14c.ptex"
+    roughness 0.0
   }
 }

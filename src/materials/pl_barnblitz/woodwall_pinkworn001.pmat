@@ -1,6 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "woodwall_pinkworn001.ptex"
-  }
-}

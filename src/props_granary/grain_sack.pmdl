@@ -1,0 +1,74 @@
+
+{
+  "model"   "grain_sack.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/grain_sack_red.pmat"
+        "../materials/grain_sack_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/grain_sack_blue.pmat"
+        "../materials/grain_sack_blue.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "grain_sack_reference"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "grain_sack_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "grain_sack_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "grain_sack_reference*"
+        ]
+      }
+    ]
+  }
+}

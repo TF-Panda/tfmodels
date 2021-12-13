@@ -1,9 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "blue001.ptex"
-    self_illum 1
-    self_illum_tint [ 0 0 255 ]
-    emission 1000
-  }
-}

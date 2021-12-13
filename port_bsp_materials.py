@@ -32,13 +32,15 @@ elif inFilename.getExtension() == "vmf":
         sys.exit(1)
     mats = []
     collectVMFMats(kv, mats)
+    print(mats)
 
 import os
 
 outDir = Filename.fromOsSpecific(os.path.expandvars("$TFMODELS/src/materials"))
 print(outDir)
 
-vtf2tga = "/usr/local/bin/vtf2tga"
+#vtf2tga = "/usr/local/bin/vtf2tga"
+vtf2tga = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Team Fortress 2\\bin\\vtf2tga"
 
 PTexFormat = """{
   image "%s"
@@ -47,7 +49,7 @@ PTexFormat = """{
 }
 """
 
-def convertTexture(path):
+def convertTexture(path, isTransparent, sRGB, grayscale):
     path = path.lower()
     if not ".vtf" in path:
           path = path + ".vtf"
@@ -56,24 +58,40 @@ def convertTexture(path):
     fullpath = Filename(path)
     if not VirtualFileSystem.getGlobalPtr().resolveFilename(fullpath, getModelPath().getValue()):
         print("Could not find vtf file", path)
-        return
+        return None
 
     tgaOut = outDir / Filename(path.getFullpath().replace(".vtf", ".tga"))
     ptexOut = Filename(tgaOut.getFullpathWoExtension() + ".ptex")
     if ptexOut.isRegularFile():
-        return
+        return ptexOut
 
     if not os.path.isdir(Filename(tgaOut.getDirname()).toOsSpecific()):
         os.makedirs(Filename(tgaOut.getDirname()).toOsSpecific())
-    process = Popen([vtf2tga, fullpath.toOsSpecific(), tgaOut.toOsSpecific()], stdout=PIPE)
+    process = Popen([vtf2tga, "-i", fullpath.toOsSpecific(), "-o", tgaOut.toOsSpecific()], stdout=PIPE)
     (output, err) = process.communicate()
     exit_code = process.wait()
     output = output.decode()
 
     isClamped = ("TEXTUREFLAGS_CLAMPS=true" in output)
-    isTransparent = ("transparency: noalpha" not in output)
 
-    ptexData = PTexFormat % (tgaOut.getBasename(), "srgb_alpha" if isTransparent else "srgb", "clamp" if isClamped else "repeat")
+    if grayscale:
+        if sRGB:
+            texFormat = "sluminance"
+        else:
+            texFormat = "luminance"
+    else:
+        if sRGB:
+            if isTransparent:
+                texFormat = "srgb_alpha"
+            else:
+                texFormat = "srgb"
+        else:
+            if isTransparent:
+                texFormat = "rgba"
+            else:
+                texFormat = "rgb"
+
+    ptexData = PTexFormat % (tgaOut.getBasename(), texFormat, "clamp" if isClamped else "repeat")
 
     ptexOut = Filename(tgaOut.getFullpathWoExtension() + ".ptex")
     print("Writing", ptexOut)
@@ -99,39 +117,103 @@ for matFname in mats:
     if not os.path.isdir(osMatOutDirname):
         os.makedirs(osMatOutDirname)
 
+    print("Loading", matFname)
     kv = KeyValues.load(matFname)
     if not kv:
         print("Failed to read mat file", matFname)
         continue
+    print("Done loading")
 
     if kv.getNumChildren() == 0:
         continue
 
     matBlock = kv.getChild(0)
 
+    baseTexturePath = None
+    baseTextureOutPath = None
+    bumpPath = None
+    bumpOutPath = None
+    envMaskPath = None
+    envMaskOutPath = None
+    isTranslucent = False
+    hasEnvCubemap = False
+    envMapMaskLoc = None
+    for i in range(matBlock.getNumKeys()):
+        key = matBlock.getKey(i).lower()
+        if key == "$basetexture":
+            baseTexturePath = matBlock.getValue(i).lower()
+        elif key == "$bumpmap":
+            bumpPath = matBlock.getValue(i).lower()
+        elif key == "$translucent" or key == "$alphatest":
+            isTranslucent = bool(int(matBlock.getValue(i)))
+        elif key == "$envmap":
+            hasEnvCubemap = (matBlock.getValue(i).lower() == "env_cubemap")
+        elif key == "$basealphaenvmapmask":
+            envMapMaskLoc = 0
+        elif key == "$normalmapalphaenvmapmask":
+            envMapMaskLoc = 1
+        elif key == "$envmapmask":
+            envMaskPath = matBlock.getValue(i).lower()
+
+    if baseTexturePath:
+        baseTextureOutPath = convertTexture(baseTexturePath, isTranslucent, True, False)
+    if bumpPath:
+        bumpOutPath = convertTexture(bumpPath, False, False, False)
+    if envMaskPath:
+        envMaskOutPath = convertTexture(envMaskPath, False, False, True)
+
+    #print(matOut, baseTexturePath, baseTextureOutPath, bumpPath, bumpOutPath, envMaskPath, envMaskOutPath)
+
+    # Find the envmap mask and use it as the roughness mask for the standard material.
+    if not envMaskOutPath and envMapMaskLoc is not None and baseTextureOutPath is not None:
+        # It's embedded in either the normal map alpha or base texture alpha.
+        envMaskOutPath = Filename(baseTextureOutPath.getFullpathWoExtension() + "_gloss.ptex")
+        if not envMaskOutPath.isRegularFile():
+            valid = True
+            envMaskImg = PNMImage()
+            if envMapMaskLoc == 0:
+                valid = envMaskImg.read(baseTextureOutPath.getFullpathWoExtension() + ".tga")
+            elif envMapMaskLoc == 1:
+                valid = envMaskImg.read(bumpOutPath.getFullpathWoExtension() + ".tga")
+
+            if valid:
+                envMaskOutImg = PNMImage(envMaskImg.getXSize(), envMaskImg.getYSize())
+                envMaskOutImg.setNumChannels(1)
+                if envMaskImg.getNumChannels() == 4:
+                    # Copy from alpha of src image into base channel of dest.
+                    for y in range(envMaskOutImg.getYSize()):
+                        for x in range(envMaskOutImg.getXSize()):
+                            envMaskOutImg.setGrayVal(x, y, envMaskImg.getChannelVal(x, y, 3))
+                else:
+                    envMaskOutImg.fill(1.0)
+
+                envMaskOutImg.write(envMaskOutPath.getFullpathWoExtension() + ".rgb")
+
+                print("Writing", envMaskOutPath.getFullpath())
+                ptexFile = open(envMaskOutPath.toOsSpecific(), "w")
+                ptexFile.write(PTexFormat % (envMaskOutPath.getBasenameWoExtension() + ".rgb", "luminance", "repeat"))
+                ptexFile.flush()
+                ptexFile.close()
+            elif envMapMaskLoc == 0:
+                baseTextureOutPath = None
+            else:
+                bumpOutPath = None
+
     materialName = matBlock.getName()
-
-    keyName = None
-    if matBlock.hasKey("$basetexture"):
-        keyName = "$basetexture"
-    elif matBlock.hasKey("$baseTexture"):
-        keyName = "$baseTexture"
-    elif matBlock.hasKey("$BaseTexture"):
-        keyName = "$BaseTexture"
-    elif matBlock.hasKey("$BASETEXTURE"):
-        keyName = "$BASETEXTURE"
-
-    if keyName:
-        baseTexturePath = matBlock.getValue(keyName)
-        baseTextureOutPath = convertTexture(baseTexturePath)
-    else:
-        baseTextureOutPath = None
 
     pmatData = "{\n"
     pmatData += "  material StandardMaterial\n"
     pmatData += "  parameters {\n"
     if baseTextureOutPath:
         pmatData += "    base_texture \"%s\"\n" % baseTextureOutPath.getBasename()
+    if hasEnvCubemap:
+        pmatData += "    env_map true\n"
+    if bumpOutPath:
+        pmatData += "    normal_texture \"%s\"\n" % bumpOutPath.getBasename()
+    if envMaskOutPath:
+        pmatData += "    gloss_texture \"%s\"\n" % envMaskOutPath.getBasename()
+    else:
+        pmatData += "    roughness 0.0\n"
     pmatData += "  }\n"
     pmatData += "}\n"
 

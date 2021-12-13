@@ -1,0 +1,56 @@
+
+{
+  "model"   "dam.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/dam.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "dam_reference"
+      ]
+    }
+
+    {
+      "distance"       75
+      "groups" 
+      [
+        "dam_reference_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "concrete"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "dam_reference*"
+        ]
+      }
+    ]
+  }
+}

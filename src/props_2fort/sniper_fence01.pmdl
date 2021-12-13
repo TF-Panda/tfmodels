@@ -1,0 +1,74 @@
+
+{
+  "model"   "sniper_fence01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/sniper_fence01_red.pmat"
+        "../materials/sniper_fence01_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/sniper_fence01_blue.pmat"
+        "../materials/sniper_fence01_blue.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "sniper_fence01_reference"
+      ]
+    }
+
+    {
+      "distance"       90
+      "groups" 
+      [
+        "sniper_fence01_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "sniper_fence01_physics"
+    "mass"     12484.6
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "sniper_fence01_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+
+{
+  "model"   "train_building007_skybox.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/computerwall007.pmat"
+        "../materials/metaldoor001.pmat"
+        "../materials/concretefloor007.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_building007_skybox_reference*"
+        ]
+      }
+    ]
+  }
+}

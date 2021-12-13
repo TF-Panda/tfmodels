@@ -1,0 +1,27 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/wall_map.ptex"
+    "bumpmap"     "../maps/wall_map_normal.ptex"
+    "selfillum"     1
+    "envmap"     1
+    "normalmapalphaenvmapmask"     1
+    "envmaptint" 
+    [
+      0.1
+      0.12
+      0.14
+    ]
+    "phong"     1
+    "phongexponent"     15
+    "phongboost"     1
+    "phongfresnelranges" 
+    [
+      1
+      1.5
+      4
+    ]
+  }
+}

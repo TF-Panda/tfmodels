@@ -6,6 +6,19 @@
     mass 0.964329
   }
 
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent weapon_bone
+          pos [ 0 5.96 9.19 ]
+          hpr [ 0 90 0 ]
+        }
+      ]
+    }
+  ]
+
   lods [
     {
       distance 0

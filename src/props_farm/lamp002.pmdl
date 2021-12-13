@@ -1,0 +1,55 @@
+
+{
+  "model"   "lamp002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/lamp002.pmat"
+        "../materials/lamp002_skin1.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/lamp002_skin1.pmat"
+        "../materials/lamp002_skin1.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "lamp002_physics"
+    "mass"     200
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "Lamp002_reference*"
+        ]
+      }
+    ]
+  }
+}

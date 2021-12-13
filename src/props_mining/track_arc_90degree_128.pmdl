@@ -1,0 +1,74 @@
+
+{
+  "model"   "track_arc_90degree_128.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/track_mining.pmat"
+        "../materials/track_mining_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/track_mining_blue.pmat"
+        "../materials/track_mining_blue.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "track_arc_90degree_128_reference"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "track_arc_90degree_128_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "track_arc_90degree_128_reference_lod2"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "track_arc_90degree_128_reference*"
+        ]
+      }
+    ]
+  }
+}

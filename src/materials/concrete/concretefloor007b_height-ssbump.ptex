@@ -1,0 +1,5 @@
+{
+  image "concretefloor007b_height-ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

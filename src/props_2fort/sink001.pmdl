@@ -1,0 +1,80 @@
+
+{
+  "model"   "sink001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/sink001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "sink001_reference"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "sink001_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       70
+      "groups" 
+      [
+        "sink001_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       100
+      "groups" 
+      [
+        "sink001_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "sink001_physics"
+    "mass"     2
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "sink001_reference*"
+        ]
+      }
+    ]
+  }
+}

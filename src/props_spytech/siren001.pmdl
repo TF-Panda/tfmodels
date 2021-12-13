@@ -1,0 +1,90 @@
+
+{
+  "model"   "siren001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/siren001.pmat"
+        "../materials/siren001b.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/siren001b.pmat"
+        "../materials/siren001b.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "siren001_reference"
+      ]
+    }
+
+    {
+      "distance"       25
+      "groups" 
+      [
+        "siren001_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "siren001_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "siren001_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "siren001_physics"
+    "mass"     20
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "siren001_reference*"
+        ]
+      }
+    ]
+  }
+}

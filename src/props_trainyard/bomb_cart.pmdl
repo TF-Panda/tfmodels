@@ -1,0 +1,74 @@
+
+{
+  "model"   "bomb_cart.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/cart_base.pmat"
+        "../materials/cart_bomb.pmat"
+        "../materials/cart_dispenser.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "bomb_cart_reference"
+      ]
+    }
+
+    {
+      "distance"       45
+      "groups" 
+      [
+        "bomb_cart_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       75
+      "groups" 
+      [
+        "bomb_cart_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "bomb_cart_physics"
+    "mass"     11093.6
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "bomb_cart_reference*"
+        ]
+      }
+    ]
+  }
+}

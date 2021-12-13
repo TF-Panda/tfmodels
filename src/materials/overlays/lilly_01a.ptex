@@ -1,5 +1,0 @@
-{
-  image "lilly_01a.tga"
-  format "srgb_alpha"
-  wrap "clamp"
-}

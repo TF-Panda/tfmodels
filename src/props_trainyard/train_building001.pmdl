@@ -1,0 +1,47 @@
+
+{
+  "model"   "train_building001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wall027.pmat"
+        "../materials/brickwall001.pmat"
+        "../materials/black.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "train_building001_physics"
+    "mass"     3.77882e+06
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "train_building001_reference*"
+        ]
+      }
+    ]
+  }
+}

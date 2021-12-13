@@ -1,0 +1,45 @@
+
+{
+  "model"   "milk_crate.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/milk_crate.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "milk_crate_physics"
+    "mass"     450.713
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "snow"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "milk_crate*"
+        ]
+      }
+    ]
+  }
+}

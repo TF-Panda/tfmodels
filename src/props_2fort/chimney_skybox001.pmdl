@@ -1,0 +1,45 @@
+
+{
+  "model"   "chimney_skybox001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/chimney001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "chimney_skybox001_physics"
+    "mass"     0.300274
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "chimney_skybox001_reference*"
+        ]
+      }
+    ]
+  }
+}

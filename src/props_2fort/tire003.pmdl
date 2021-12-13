@@ -1,0 +1,72 @@
+
+{
+  "model"   "tire003.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/tire001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "tire003_reference"
+      ]
+    }
+
+    {
+      "distance"       45
+      "groups" 
+      [
+        "tire003_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "tire003_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "tire003_physics"
+    "mass"     48.1452
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "plastic"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "tire003_reference*"
+        ]
+      }
+    ]
+  }
+}

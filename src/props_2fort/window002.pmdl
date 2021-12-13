@@ -1,0 +1,67 @@
+
+{
+  "model"   "window002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/window002.pmat"
+        "../materials/window002b.pmat"
+        "../materials/window002_warm1.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/window002b.pmat"
+        "../materials/window002b.pmat"
+        "../materials/window002_warm1.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/window002_warm1.pmat"
+        "../materials/window002b.pmat"
+        "../materials/window002_warm1.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "window002_physics"
+    "mass"     100
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "window002_reference*"
+        ]
+      }
+    ]
+  }
+}

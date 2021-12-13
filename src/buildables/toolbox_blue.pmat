@@ -2,7 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture toolbox_blue.ptex
-    lightwarp_texture "../lightwarps/weapon_lightwarp.ptex"
+    lightwarp_texture "../maps/weapon_lightwarp.ptex"
     env_map true
     //metalness 1.0
     roughness 0.45

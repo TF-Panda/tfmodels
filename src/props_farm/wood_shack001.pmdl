@@ -1,0 +1,38 @@
+
+{
+  "model"   "wood_shack001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wall027.pmat"
+        "../materials/wood_wall002.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "wood_shack001_reference*"
+        ]
+      }
+    ]
+  }
+}

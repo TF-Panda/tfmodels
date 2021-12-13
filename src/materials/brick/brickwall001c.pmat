@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "brickwall001c.ptex"
+    normal_texture "brickwall001_height-ssbump.ptex"
+    roughness 0.0
   }
 }

@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "glasswindow001a.ptex"
+    env_map true
+    roughness 0.0
   }
 }

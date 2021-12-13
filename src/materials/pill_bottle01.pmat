@@ -1,0 +1,18 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/pill_bottle01.ptex"
+    "basemapalphaphongmask"     1
+    "phong"     1
+    "phongexponent"     10
+    "phongboost"     0.15
+    "phongfresnelranges" 
+    [
+      0.7
+      15
+      20
+    ]
+  }
+}

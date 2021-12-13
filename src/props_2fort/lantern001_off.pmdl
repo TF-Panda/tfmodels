@@ -1,0 +1,46 @@
+
+{
+  "model"   "lantern001_off.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/lantern_glass001_off.pmat"
+        "../materials/lantern001_off.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "lantern001_off_physics"
+    "mass"     65.689
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "lantern001_reference*"
+        ]
+      }
+    ]
+  }
+}

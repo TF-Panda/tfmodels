@@ -1,0 +1,114 @@
+
+{
+  "model"   "spotlight001a.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/spotlight001a.pmat"
+        "../materials/spotlight001a_off.pmat"
+        "../materials/spotlight001a_blue.pmat"
+        "../materials/spotlight001a_blue_off.pmat"
+        "../materials/spotlight001a_grey.pmat"
+        "../materials/spotlight001a_grey_off.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/spotlight001a_off.pmat"
+        "../materials/spotlight001a_off.pmat"
+        "../materials/spotlight001a_blue.pmat"
+        "../materials/spotlight001a_blue_off.pmat"
+        "../materials/spotlight001a_grey.pmat"
+        "../materials/spotlight001a_grey_off.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/spotlight001a_blue.pmat"
+        "../materials/spotlight001a_off.pmat"
+        "../materials/spotlight001a_blue.pmat"
+        "../materials/spotlight001a_blue_off.pmat"
+        "../materials/spotlight001a_grey.pmat"
+        "../materials/spotlight001a_grey_off.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/spotlight001a_blue_off.pmat"
+        "../materials/spotlight001a_off.pmat"
+        "../materials/spotlight001a_blue.pmat"
+        "../materials/spotlight001a_blue_off.pmat"
+        "../materials/spotlight001a_grey.pmat"
+        "../materials/spotlight001a_grey_off.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed4"
+      "materials" 
+      [
+        "../materials/spotlight001a_grey.pmat"
+        "../materials/spotlight001a_off.pmat"
+        "../materials/spotlight001a_blue.pmat"
+        "../materials/spotlight001a_blue_off.pmat"
+        "../materials/spotlight001a_grey.pmat"
+        "../materials/spotlight001a_grey_off.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed5"
+      "materials" 
+      [
+        "../materials/spotlight001a_grey_off.pmat"
+        "../materials/spotlight001a_off.pmat"
+        "../materials/spotlight001a_blue.pmat"
+        "../materials/spotlight001a_blue_off.pmat"
+        "../materials/spotlight001a_grey.pmat"
+        "../materials/spotlight001a_grey_off.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "spotlight001a_physics"
+    "mass"     6.63585
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "spotlight001a_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+
+{
+  "model"   "light_fluorescent_farm.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/lights.pmat"
+        "../materials/lights_off.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/lights_off.pmat"
+        "../materials/lights_off.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "light_fluorescent_farm_physics"
+    "mass"     1000
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "light_fluorescent_farm_reference*"
+        ]
+      }
+    ]
+  }
+}

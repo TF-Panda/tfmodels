@@ -1,0 +1,18 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/sign_gameplay01_skin12.ptex"
+    "bumpmap"     "../maps/sign_gameplay01_normal.ptex"
+    "selfillum"     1
+    "envmap"     1
+    "normalmapalphaenvmapmask"     1
+    "envmaptint" 
+    [
+      0.41
+      0.45
+      0.62
+    ]
+  }
+}

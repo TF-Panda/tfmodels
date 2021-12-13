@@ -1,0 +1,67 @@
+
+{
+  "model"   "window_industrial01_glass01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/window_industrial01_glass01.pmat"
+        "../materials/window_industrial01_glass01_skin2.pmat"
+        "../materials/window_industrial01_glass01_skin3.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/window_industrial01_glass01_skin2.pmat"
+        "../materials/window_industrial01_glass01_skin2.pmat"
+        "../materials/window_industrial01_glass01_skin3.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/window_industrial01_glass01_skin3.pmat"
+        "../materials/window_industrial01_glass01_skin2.pmat"
+        "../materials/window_industrial01_glass01_skin3.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "window_industrial01_glass01_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "window_industrial01_glass01_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,15 +1,8 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/char
 
-#begin install_tex
-  #define SOURCES \
-    soldier_red.ptex soldier_blue.ptex soldier_head.ptex \
-    soldier_normal.ptex soldier_exponent.ptex
-#end install_tex
-
 #begin install_mat
   #define SOURCES \
-    soldier_red.pmat soldier_blue.pmat soldier_head.pmat \
     eyeball_r_soldier.pmat eyeball_l_soldier.pmat
 #end install_mat
 

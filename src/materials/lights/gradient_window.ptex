@@ -1,5 +1,0 @@
-{
-  image "gradient_window.tga"
-  format "srgb_alpha"
-  wrap "repeat"
-}

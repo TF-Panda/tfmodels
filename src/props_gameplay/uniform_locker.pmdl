@@ -1,0 +1,90 @@
+
+{
+  "model"   "uniform_locker.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/unform_locker01.pmat"
+        "../materials/unform_locker01_skin2.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/unform_locker01_skin2.pmat"
+        "../materials/unform_locker01_skin2.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "uniform_locker_reference"
+      ]
+    }
+
+    {
+      "distance"       25
+      "groups" 
+      [
+        "uniform_locker_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       30
+      "groups" 
+      [
+        "uniform_locker_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "uniform_locker_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "uniform_locker_physics"
+    "mass"     245.222
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "uniform_locker_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+
+{
+  "image"   "soldier_head.tga"
+  "format"   "srgb"
+  "type"   "2d_texture"
+  "wrap_u"   "clamp"
+  "wrap_v"   "clamp"
+}

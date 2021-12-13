@@ -1,0 +1,45 @@
+
+{
+  "model"   "rock_worn_cluster001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/rock_worn001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "rock_worn_cluster001_physics"
+    "mass"     40
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "rock"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "rock_worn_cluster001"
+        "nodes" 
+        [
+          "rock_worn_cluster001*"
+        ]
+      }
+    ]
+  }
+}

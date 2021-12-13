@@ -1,0 +1,88 @@
+
+{
+  "model"   "satellite_dish001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/satellite_dish001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "satellite_dish001"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "satellite_dish001_lod1"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "satellite_dish001_lod2"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "satellite_dish001_lod3"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "satellite_dish001_lod4"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "satellite_dish001_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "satellite_dish001*"
+        ]
+      }
+    ]
+  }
+}

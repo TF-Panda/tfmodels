@@ -1,0 +1,8 @@
+
+{
+  "image"   "cactus01_lightwarp.tga"
+  "format"   "rgb"
+  "type"   "1d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

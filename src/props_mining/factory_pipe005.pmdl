@@ -1,0 +1,45 @@
+
+{
+  "model"   "factory_pipe005.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/factory_pipe005.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "factory_pipe005_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "factory_pipe005_reference*"
+        ]
+      }
+    ]
+  }
+}

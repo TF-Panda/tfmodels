@@ -1,0 +1,100 @@
+
+{
+  "model"   "computer_wall03.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/computer_wall03.pmat"
+        "../materials/computer_wall03b.pmat"
+        "../materials/computer_wall03_red_worn.pmat"
+        "../materials/computer_wall03_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/computer_wall03b.pmat"
+        "../materials/computer_wall03b.pmat"
+        "../materials/computer_wall03_red_worn.pmat"
+        "../materials/computer_wall03_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/computer_wall03_red_worn.pmat"
+        "../materials/computer_wall03b.pmat"
+        "../materials/computer_wall03_red_worn.pmat"
+        "../materials/computer_wall03_blue_worn.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed3"
+      "materials" 
+      [
+        "../materials/computer_wall03_blue_worn.pmat"
+        "../materials/computer_wall03b.pmat"
+        "../materials/computer_wall03_red_worn.pmat"
+        "../materials/computer_wall03_blue_worn.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "computer_wall03_reference"
+      ]
+    }
+
+    {
+      "distance"       12
+      "groups" 
+      [
+        "computer_wall03_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "computer_wall03_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "computer_wall03_reference*"
+        ]
+      }
+    ]
+  }
+}

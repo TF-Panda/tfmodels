@@ -1,0 +1,80 @@
+
+{
+  "model"   "haybale.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/haybale.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "haybale_reference"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "haybale_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "haybale_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       50
+      "groups" 
+      [
+        "haybale_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "haybale_physics"
+    "mass"     1485.12
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "grass"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "haybale_reference*"
+        ]
+      }
+    ]
+  }
+}

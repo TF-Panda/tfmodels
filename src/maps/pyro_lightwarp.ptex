@@ -1,0 +1,8 @@
+
+{
+  "image"   "pyro_lightwarp.tga"
+  "format"   "rgb"
+  "type"   "1d_texture"
+  "wrap_u"   "clamp"
+  "wrap_v"   "clamp"
+}

@@ -1,0 +1,47 @@
+
+{
+  "model"   "groundlight003.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/groundlight001_sheet.pmat"
+        "../materials/groundlight001_sheet_skin2.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/groundlight001_sheet_skin2.pmat"
+        "../materials/groundlight001_sheet_skin2.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "groundlight003_reference*"
+        ]
+      }
+    ]
+  }
+}

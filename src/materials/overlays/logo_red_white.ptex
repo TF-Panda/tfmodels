@@ -1,5 +1,0 @@
-{
-  image "logo_red_white.tga"
-  format "srgb_alpha"
-  wrap "clamp"
-}

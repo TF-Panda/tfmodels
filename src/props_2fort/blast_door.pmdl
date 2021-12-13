@@ -1,0 +1,80 @@
+
+{
+  "model"   "blast_door.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/blast_door.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "blast_door_reference"
+      ]
+    }
+
+    {
+      "distance"       25
+      "groups" 
+      [
+        "blast_door_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "blast_door_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "blast_door_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "blast_door_physics"
+    "mass"     800
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "blast_door_reference*"
+        ]
+      }
+    ]
+  }
+}

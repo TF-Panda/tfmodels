@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "rockwall007.ptex"
+    normal_texture "rockwall007_height-ssbump.ptex"
+    roughness 0.0
   }
 }

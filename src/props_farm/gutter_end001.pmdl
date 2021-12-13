@@ -1,0 +1,47 @@
+
+{
+  "model"   "gutter_end001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/gutters001.pmat"
+        "../materials/gutters001a.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/gutters001a.pmat"
+        "../materials/gutters001a.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "Gutter_End001*"
+        ]
+      }
+    ]
+  }
+}

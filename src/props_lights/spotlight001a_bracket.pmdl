@@ -1,0 +1,45 @@
+
+{
+  "model"   "spotlight001a_bracket.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/spotlight001a.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "spotlight001a_bracket_physics"
+    "mass"     1.76413
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "spotlight001a_bracket_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+
+{
+  "model"   "car_lift.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/car_lift.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "car_lift_physics"
+    "mass"     900
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "car_lift_reference*"
+        ]
+      }
+    ]
+  }
+}

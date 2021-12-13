@@ -1,0 +1,61 @@
+
+{
+  "model"   "barn_loft001a.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wall026.pmat"
+        "../materials/window002.pmat"
+        "../materials/wood_wall005a.pmat"
+        "../materials/wall027.pmat"
+        "../materials/wood_wall002.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/wall027.pmat"
+        "../materials/window002.pmat"
+        "../materials/wood_wall002.pmat"
+        "../materials/wall027.pmat"
+        "../materials/wood_wall002.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "barn_loft001a_physics"
+    "mass"     50
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "barn_loft001a_reference*"
+        ]
+      }
+    ]
+  }
+}

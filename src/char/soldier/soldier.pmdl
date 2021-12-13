@@ -185,13 +185,13 @@
   material_groups [
     {
       name red
-      materials [ soldier_red.pmat soldier_head.pmat
+      materials [ "../../materials/soldier_red.pmat" "../../materials/soldier_head.pmat"
                   eyeball_l_soldier.pmat
                   eyeball_r_soldier.pmat ]
     }
     {
       name blue
-      materials [ soldier_blue.pmat soldier_head.pmat
+      materials [ "../../materials/soldier_blue.pmat" "../../materials/soldier_head.pmat"
                   eyeball_l_soldier.pmat
                   eyeball_r_soldier.pmat ]
     }

@@ -1,0 +1,45 @@
+
+{
+  "model"   "corrugated_metal002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/corrugated_metal002.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "corrugated_metal002_physics"
+    "mass"     24.0744
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "corrugated_metal002_reference*"
+        ]
+      }
+    ]
+  }
+}

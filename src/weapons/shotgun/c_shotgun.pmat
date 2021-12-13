@@ -7,7 +7,7 @@
     roughness 0.8
     env_map true
 
-    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
+    lightwarp_texture "../../maps/weapon_lightwarp.ptex"
 
     metalness_texture c_shotgun_metalness.ptex
 

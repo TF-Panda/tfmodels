@@ -111,11 +111,11 @@
   material_groups [
     {
       name red
-      materials [ sentry1.pmat Sentry2.pmat ]
+      materials [ "../materials/sentry1.pmat" "../materials/sentry2.pmat" ]
     }
     {
       name blue
-      materials [ sentry1_blue.pmat sentry2_blue.pmat ]
+      materials [ "../materials/sentry1_blue.pmat" "../materials/sentry2_blue.pmat" ]
     }
   ]
 

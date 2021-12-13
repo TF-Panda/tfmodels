@@ -1,0 +1,74 @@
+
+{
+  "model"   "spytech_roofbeam03.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/spytech_roofbeam03.pmat"
+        "../materials/spytech_roofbeam03b.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/spytech_roofbeam03b.pmat"
+        "../materials/spytech_roofbeam03b.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "spytech_roofbeam03_reference"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "spytech_roofbeam03_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "spytech_roofbeam03_physics"
+    "mass"     57.7992
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "spytech_roofbeam03_reference*"
+        ]
+      }
+    ]
+  }
+}

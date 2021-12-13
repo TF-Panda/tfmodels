@@ -1,0 +1,15 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/window003b.ptex"
+    "selfillum"     1
+    "selfillumtint" 
+    [
+      0.8
+      0.46
+      0.2
+    ]
+  }
+}

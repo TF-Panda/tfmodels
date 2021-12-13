@@ -1,0 +1,18 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/milkjug001.ptex"
+    "basemapalphaphongmask"     1
+    "phong"     1
+    "phongexponent"     5
+    "phongboost"     0.75
+    "phongfresnelranges" 
+    [
+      0.7
+      15
+      20
+    ]
+  }
+}

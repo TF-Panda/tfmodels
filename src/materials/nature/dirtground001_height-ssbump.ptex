@@ -1,0 +1,5 @@
+{
+  image "dirtground001_height-ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

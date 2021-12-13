@@ -2,5 +2,6 @@
   material StandardMaterial
   parameters {
     base_texture "computerwall005.ptex"
+    roughness 0.0
   }
 }

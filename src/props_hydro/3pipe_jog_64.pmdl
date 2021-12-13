@@ -1,0 +1,64 @@
+
+{
+  "model"   "3pipe_jog_64.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/water_pipes.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "3pipe_jog_64"
+      ]
+    }
+
+    {
+      "distance"       65
+      "groups" 
+      [
+        "3pipe_jog_64_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "3pipe_jog_64_physics"
+    "mass"     426.541
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "3pipe_jog_64*"
+        ]
+      }
+    ]
+  }
+}

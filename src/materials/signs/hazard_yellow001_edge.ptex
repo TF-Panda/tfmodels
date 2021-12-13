@@ -1,5 +1,0 @@
-{
-  image "hazard_yellow001_edge.tga"
-  format "srgb_alpha"
-  wrap "clamp"
-}

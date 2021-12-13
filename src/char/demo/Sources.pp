@@ -3,15 +3,12 @@
 
 #begin install_tex
   #define SOURCES \
-    materials/demoman_blue.ptex materials/demoman_red.ptex \
-    materials/demoman_head.ptex materials/demoman_normal.ptex \
     materials/smiley.ptex
 #end install_tex
 
 #begin install_mat
   #define SOURCES \
-    materials/demoman_blue.pmat materials/demoman_red.pmat \
-    materials/demoman_head.pmat materials/smiley.pmat materials/eyeball_r_demo.pmat
+    materials/smiley.pmat materials/eyeball_r_demo.pmat
 #end install_mat
 
 #define DEMO_ANIMS \

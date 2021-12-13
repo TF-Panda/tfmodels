@@ -1,0 +1,5 @@
+{
+  image "concretefloor008_normal.tga"
+  format "rgb"
+  wrap "repeat"
+}

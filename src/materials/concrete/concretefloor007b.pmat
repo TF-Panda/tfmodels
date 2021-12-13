@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "concretefloor007b.ptex"
+    normal_texture "concretefloor007b_height-ssbump.ptex"
+    roughness 0.0
   }
 }

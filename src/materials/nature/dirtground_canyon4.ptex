@@ -1,0 +1,5 @@
+{
+  image "dirtground_canyon4.tga"
+  format "srgb"
+  wrap "repeat"
+}

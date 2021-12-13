@@ -1,0 +1,8 @@
+
+{
+  "image"   "small_substation1.tga"
+  "format"   "srgb"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

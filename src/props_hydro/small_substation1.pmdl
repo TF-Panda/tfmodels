@@ -1,0 +1,64 @@
+
+{
+  "model"   "small_substation1.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/small_substation1.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "small_substation1_reference"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "small_substation1_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "small_substation1_reference_lod2"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "small_substation1_reference*"
+        ]
+      }
+    ]
+  }
+}

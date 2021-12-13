@@ -1,0 +1,45 @@
+
+{
+  "model"   "telephonepole001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/telephonepole001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "telephonepole001_physics"
+    "mass"     1000
+    "damping"     0
+    "rot_damping"     1
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "telephonepole001_reference*"
+        ]
+      }
+    ]
+  }
+}

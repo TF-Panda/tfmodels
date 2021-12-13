@@ -1,0 +1,80 @@
+
+{
+  "model"   "air_intake.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/air_intake.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "air_intake_reference"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "air_intake_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "air_intake_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "air_intake_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "air_intake_physics"
+    "mass"     100
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "air_intake_reference*"
+        ]
+      }
+    ]
+  }
+}

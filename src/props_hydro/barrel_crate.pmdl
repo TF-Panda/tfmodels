@@ -1,0 +1,45 @@
+
+{
+  "model"   "barrel_crate.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/barrel_crate.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "barrel_crate_physics"
+    "mass"     7035.27
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "barrel_crate*"
+        ]
+      }
+    ]
+  }
+}

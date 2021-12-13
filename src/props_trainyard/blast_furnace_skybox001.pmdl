@@ -1,0 +1,56 @@
+
+{
+  "model"   "blast_furnace_skybox001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/blast_furnace001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "blast_furnace_skybox001_reference"
+      ]
+    }
+
+    {
+      "distance"       55
+      "groups" 
+      [
+        "blast_furnace_skybox001_reference_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "blast_furnace_skybox001_reference*"
+        ]
+      }
+    ]
+  }
+}

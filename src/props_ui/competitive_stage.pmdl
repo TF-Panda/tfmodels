@@ -1,0 +1,50 @@
+
+{
+  "model"   "competitive_stage.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/competitive_stage_crates.pmat"
+        "../materials/competitive_stage_tarps.pmat"
+        "../materials/competitive_stage.pmat"
+        "../materials/competitive_stage_top.pmat"
+        "../materials/competitive_stage_warehouse.pmat"
+        "../materials/lights.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "competitive_stage_physics"
+    "mass"     345506
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "competitive_stage*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+
+{
+  "model"   "crane_cable001b.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/crane_cable001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "crane_cable001b_reference"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "crane_cable001b_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "crane_cable001b_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       100
+      "groups" 
+      [
+        "crane_cable001b_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "crane_cable001b_physics"
+    "mass"     86.785
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "crane_cable001b_reference*"
+        ]
+      }
+    ]
+  }
+}

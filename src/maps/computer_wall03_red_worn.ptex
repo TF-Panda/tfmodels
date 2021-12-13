@@ -1,0 +1,8 @@
+
+{
+  "image"   "computer_wall03_red_worn.tga"
+  "format"   "srgb_alpha"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

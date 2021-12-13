@@ -1,0 +1,45 @@
+
+{
+  "model"   "railing_stairs001c.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/railing_stairs001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "railing_stairs001c_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     1
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "railing_stairs001c_reference*"
+        ]
+      }
+    ]
+  }
+}

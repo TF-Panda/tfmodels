@@ -1,0 +1,72 @@
+
+{
+  "model"   "coffeemachine.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/coffeemaker.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "CoffeeMachine_reference"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "CoffeeMachine_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "CoffeeMachine_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "coffeemachine_physics"
+    "mass"     10
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "CoffeeMachine_reference*"
+        ]
+      }
+    ]
+  }
+}

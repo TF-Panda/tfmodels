@@ -1,0 +1,24 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/demoman_red.ptex"
+    "bumpmap"     "../maps/demoman_normal.ptex"
+    "phong"     1
+    "phongexponenttexture"     "../maps/demoman_red_exponent.ptex"
+    "phongboost"     0.3
+    "rimmask"     1
+    "lightwarptexture"     "../maps/pyro_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.3
+      1
+      8
+    ]
+    "halflambert"     0
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

@@ -1,0 +1,73 @@
+
+{
+  "model"   "security_fence256_gate01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/security_fence_alpha.pmat"
+        "../materials/security_fence_big.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "security_fence256_gate01_reference"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "security_fence256_gate01_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "security_fence256_gate01_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "security_fence256_gate01_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "security_fence256_gate01_reference*"
+        ]
+      }
+    ]
+  }
+}

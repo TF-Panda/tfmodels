@@ -1,0 +1,64 @@
+
+{
+  "model"   "hanging_ceiling_lamp.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/hanging_ceiling_lamp.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "hanging_ceiling_lamp_reference"
+      ]
+    }
+
+    {
+      "distance"       22
+      "groups" 
+      [
+        "hanging_ceiling_lamp_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "hanging_ceiling_lamp_physics"
+    "mass"     20
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "hanging_ceiling_lamp_reference*"
+        ]
+      }
+    ]
+  }
+}

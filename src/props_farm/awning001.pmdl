@@ -1,0 +1,88 @@
+
+{
+  "model"   "awning001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/awning01_red.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "awning001_reference"
+      ]
+    }
+
+    {
+      "distance"       10
+      "groups" 
+      [
+        "awning001_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "awning001_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       30
+      "groups" 
+      [
+        "awning001_reference_lod3"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "awning001_reference_lod4"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "awning001_physics"
+    "mass"     50
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "awning001_reference*"
+        ]
+      }
+    ]
+  }
+}

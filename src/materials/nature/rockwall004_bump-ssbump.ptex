@@ -1,0 +1,5 @@
+{
+  image "rockwall004_bump-ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

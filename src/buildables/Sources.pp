@@ -4,38 +4,14 @@
 #begin install_tex
   #define SOURCES \
     base1.ptex \
-    mini_sentry_blue.ptex \
-    mini_sentry_light_blue.ptex \
-    mini_sentry_light_red.ptex \
-    mini_sentry_light_yellow.ptex \
-    mini_sentry_red.ptex \
-    sentry1_blue.ptex \
-    sentry1_exponent.ptex \
-    sentry1_lightwarp.ptex \
-    sentry1_normal.ptex \
-    sentry1.ptex \
     toolbox_blue.ptex \
-    toolbox_red.ptex \
-    sentry2.ptex \
-    sentry2_blue.ptex \
-    sentry1_gibs.ptex \
-    sentry1_gibs_blue.ptex
+    toolbox_red.ptex
 #end install_tex
 
 #begin install_mat
   #define SOURCES \
-    mini_sentry_blue.pmat \
-    mini_sentry_light_blue.pmat \
-    mini_sentry_light_red.pmat \
-    mini_sentry_red.pmat \
-    sentry1_blue.pmat \
-    sentry1.pmat \
     toolbox_blue.pmat \
-    toolbox_red.pmat \
-    Sentry2.pmat \
-    sentry2_blue.pmat \
-    Sentry1_Gibs.pmat \
-    sentry1_gibs_blue.pmat
+    toolbox_red.pmat
 #end install_mat
 
 #define SENTRY1_ANIMS \

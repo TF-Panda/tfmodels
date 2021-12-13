@@ -1,0 +1,67 @@
+
+{
+  "model"   "wood_framing001a.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wood_beam01.pmat"
+        "../materials/wood_beam02.pmat"
+        "../materials/wood_beam03.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/wood_beam02.pmat"
+        "../materials/wood_beam02.pmat"
+        "../materials/wood_beam03.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/wood_beam03.pmat"
+        "../materials/wood_beam02.pmat"
+        "../materials/wood_beam03.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "wood_framing001a_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "concrete"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "wood_framing001a_reference*"
+        ]
+      }
+    ]
+  }
+}

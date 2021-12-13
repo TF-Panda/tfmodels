@@ -1,0 +1,20 @@
+{
+  model "optchar/w_grenade_grenadelauncher.egg"
+
+  hpr [ 180 0 0 ]
+
+  material_groups [
+    {
+      name "red"
+      materials [ "../../materials/w_grenade_red.pmat" ]
+    }
+    {
+      name "blue"
+      materials [ "../../materials/w_grenade_blue.pmat" ]
+    }
+  ]
+
+  physics_model {
+    mesh w_grenade_grenadelauncher_physics
+  }
+}

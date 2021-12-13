@@ -1,0 +1,45 @@
+
+{
+  "model"   "pallet001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/pallet001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "pallet001_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "pallet001_reference*"
+        ]
+      }
+    ]
+  }
+}

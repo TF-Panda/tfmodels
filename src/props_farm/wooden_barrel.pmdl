@@ -1,0 +1,45 @@
+
+{
+  "model"   "wooden_barrel.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wooden_barrel.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "wooden_barrel_physics"
+    "mass"     60
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "wooden_barrel_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+
+{
+  "model"   "trainwheel002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/trainwheel001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "trainwheel002_reference"
+      ]
+    }
+
+    {
+      "distance"       50
+      "groups" 
+      [
+        "trainwheel002_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "trainwheel002_physics"
+    "mass"     1336.54
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "trainwheel002_reference*"
+        ]
+      }
+    ]
+  }
+}

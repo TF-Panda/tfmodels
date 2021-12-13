@@ -1,0 +1,56 @@
+
+{
+  "model"   "metal_watertower_skybox001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/metal_watertower001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "metal_watertower_skybox001_reference"
+      ]
+    }
+
+    {
+      "distance"       65
+      "groups" 
+      [
+        "metal_watertower_skybox001_reference_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "metal_watertower_skybox001_reference*"
+        ]
+      }
+    ]
+  }
+}

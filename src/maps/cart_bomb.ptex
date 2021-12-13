@@ -1,0 +1,8 @@
+
+{
+  "image"   "cart_bomb.tga"
+  "format"   "srgb_alpha"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

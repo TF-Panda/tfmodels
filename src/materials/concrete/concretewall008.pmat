@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "concretewall008.ptex"
+    normal_texture "concretewall002_bump-ssbump.ptex"
+    roughness 0.0
   }
 }

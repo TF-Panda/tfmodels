@@ -1,0 +1,38 @@
+
+{
+  "model"   "silo004b.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/silo_skybox004.pmat"
+        "../materials/silo002.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "silo004b_reference*"
+        ]
+      }
+    ]
+  }
+}

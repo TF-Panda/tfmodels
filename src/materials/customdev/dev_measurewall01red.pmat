@@ -1,6 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "dev_measurewall01red.ptex"
-  }
-}

@@ -1,0 +1,10 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/powertower02.ptex"
+  }
+  "alpha_test"   "greater_equal"
+  "cull"   "double_sided"
+}

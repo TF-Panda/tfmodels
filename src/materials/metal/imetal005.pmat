@@ -2,5 +2,7 @@
   material StandardMaterial
   parameters {
     base_texture "imetal005.ptex"
+    normal_texture "imetal001_normal.ptex"
+    roughness 0.0
   }
 }

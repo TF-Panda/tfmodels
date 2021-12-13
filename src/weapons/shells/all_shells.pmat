@@ -6,7 +6,7 @@
 
     normal_texture all_shells_normal.ptex
 
-    lightwarp_texture "../../lightwarps/weapon_lightwarp.ptex"
+    lightwarp_texture "../../maps/weapon_lightwarp.ptex"
 
     metalness 1.0
     roughness 0.6945

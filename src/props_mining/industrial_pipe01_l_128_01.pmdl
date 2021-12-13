@@ -1,0 +1,45 @@
+
+{
+  "model"   "industrial_pipe01_l_128_01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/industrial_pipe01.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "industrial_pipe01_l_128_01_physics"
+    "mass"     80
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "industrial_pipe01_L_128_01_reference*"
+        ]
+      }
+    ]
+  }
+}

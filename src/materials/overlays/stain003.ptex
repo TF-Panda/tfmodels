@@ -1,5 +1,0 @@
-{
-  image "stain003.tga"
-  format "srgb_alpha"
-  wrap "clamp"
-}

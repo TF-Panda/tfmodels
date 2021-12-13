@@ -1,0 +1,7 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "rockwall008.ptex"
+    roughness 0.0
+  }
+}

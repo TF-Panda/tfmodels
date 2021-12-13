@@ -1,0 +1,45 @@
+
+{
+  "model"   "awning001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/awning001.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "awning001_physics"
+    "mass"     1000
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "awning001_reference*"
+        ]
+      }
+    ]
+  }
+}

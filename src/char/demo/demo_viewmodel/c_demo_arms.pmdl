@@ -10,11 +10,11 @@
   material_groups [
     {
       name red
-      materials [ "../materials/demoman_red.pmat" ]
+      materials [ "../../../materials/demoman_red.pmat" ]
     }
     {
       name blue
-      materials [ "../materials/demoman_blue.pmat" ]
+      materials [ "../../../materials/demoman_blue.pmat" ]
     }
   ]
 
@@ -49,6 +49,80 @@
   ]
 
   sequences [
+    {
+      name g_draw
+      anim "optchar/c_demo_arms-g_draw.egg"
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_GrenadeLauncher.Draw"
+        }
+      ]
+      activity Primary_VM_Draw
+    }
+    {
+      name g_idle
+      anim "optchar/c_demo_arms-g_idle.egg"
+      loop true
+      activity Primary_VM_Idle
+    }
+    {
+      name g_fire
+      anim "optchar/c_demo_arms-g_fire.egg"
+      snap true
+      activity Primary_VM_Fire
+      events [
+        {
+          frame 11 type 2 event Client_Play_Sound
+          data "Weapon_GrenadeLauncher.DrumStart"
+        }
+        {
+          frame 16 type 2 event Client_Play_Sound
+          data "Weapon_GrenadeLauncher.DrumStart"
+        }
+      ]
+    }
+    {
+      name g_reload_start
+      anim "optchar/c_demo_arms-g_reload_start.egg"
+      activity Primary_VM_Reload_Start
+      snap true
+      events [
+        {
+          frame 5 type 2 event Client_Play_Sound
+          data "Weapon_GrenadeLauncher.DrumOpen"
+        }
+        //{
+        //  frame 1 type 2 event Client_Bodygroup_Set_Value
+        //  data "
+        //}
+      ]
+    }
+    {
+      name g_reload_loop
+      anim "optchar/c_demo_arms-g_reload_loop.egg"
+      activity Primary_VM_Reload
+      events [
+        {
+          frame 6 type 2 event Client_Play_Sound
+          data "Weapon_GrenadeLauncher.DrumLoad"
+        }
+      ]
+      snap true
+    }
+    {
+      name g_reload_end
+      anim "optchar/c_demo_arms-g_reload_end.egg"
+      snap true
+      activity Primary_VM_Reload_End
+      events [
+        {
+          frame 5 type 2 event Client_Play_Sound
+          data "Weapon_GrenadeLauncher.DrumClose"
+        }
+      ]
+    }
     {
       name b_draw
       anim "optchar/c_demo_arms-b_draw.egg"

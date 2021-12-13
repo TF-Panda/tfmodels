@@ -1,0 +1,18 @@
+{
+  material StandardMaterial
+  parameters
+  {
+    base_texture engineer_red.ptex
+
+    env_map true
+
+    normal_texture engineer_normal.ptex
+
+    lightwarp_texture "../../maps/pyro_lightwarp.ptex"
+
+    //half_lambert true
+    //rim_lighting_boost 0.75
+
+    gloss_texture engineer_gloss.ptex
+  }
+}

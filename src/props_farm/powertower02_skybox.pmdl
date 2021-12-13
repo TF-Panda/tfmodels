@@ -1,0 +1,45 @@
+
+{
+  "model"   "powertower02_skybox.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/powertower02.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "powertower02_skybox_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     1
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "powertower02_skybox*"
+        ]
+      }
+    ]
+  }
+}

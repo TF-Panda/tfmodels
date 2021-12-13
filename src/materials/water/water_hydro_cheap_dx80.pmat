@@ -1,6 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "water_hydro_base.ptex"
-  }
-}

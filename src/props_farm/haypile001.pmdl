@@ -1,0 +1,38 @@
+
+{
+  "model"   "haypile001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/haypile001.pmat"
+        "../materials/haypile001_card.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "haypile001_reference*"
+        ]
+      }
+    ]
+  }
+}

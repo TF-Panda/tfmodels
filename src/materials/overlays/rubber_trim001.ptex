@@ -1,5 +1,0 @@
-{
-  image "rubber_trim001.tga"
-  format "srgb_alpha"
-  wrap "repeat"
-}

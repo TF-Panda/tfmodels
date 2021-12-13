@@ -1,0 +1,19 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/hose001.ptex"
+    "phong"     1
+    "phongexponent"     25
+    "phongboost"     0.125
+    "phongfresnelranges" 
+    [
+      2
+      1
+      0.8
+    ]
+    "halflambert"     0
+    "basemapalphaphongmask"     1
+  }
+}

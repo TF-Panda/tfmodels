@@ -2,5 +2,8 @@
   material StandardMaterial
   parameters {
     base_texture "metalduct001a.ptex"
+    env_map true
+    normal_texture "metalduct001a_normal.ptex"
+    gloss_texture "metalduct001a_gloss.ptex"
   }
 }

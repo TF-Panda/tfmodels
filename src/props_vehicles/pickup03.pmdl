@@ -1,0 +1,90 @@
+
+{
+  "model"   "pickup03.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/pickup03.pmat"
+        "../materials/pickup04.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/pickup04.pmat"
+        "../materials/pickup04.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "pickup03_reference"
+      ]
+    }
+
+    {
+      "distance"       20
+      "groups" 
+      [
+        "pickup03_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "pickup03_reference_lod2"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "pickup03_reference_lod3"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "pickup03_physics"
+    "mass"     500
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "pickup03_reference*"
+        ]
+      }
+    ]
+  }
+}

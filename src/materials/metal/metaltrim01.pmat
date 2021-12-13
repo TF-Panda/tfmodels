@@ -2,5 +2,6 @@
   material StandardMaterial
   parameters {
     base_texture "metaltrim01.ptex"
+    roughness 0.0
   }
 }

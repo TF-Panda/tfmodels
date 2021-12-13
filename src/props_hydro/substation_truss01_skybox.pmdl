@@ -1,0 +1,64 @@
+
+{
+  "model"   "substation_truss01_skybox.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/substation_truss01.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "substation_truss01_skybox"
+      ]
+    }
+
+    {
+      "distance"       25
+      "groups" 
+      [
+        "substation_truss01_skybox_lod1"
+      ]
+    }
+
+    {
+      "distance"       75
+      "groups" 
+      [
+        "substation_truss01_skybox_lod2"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "substation_truss01_skybox*"
+        ]
+      }
+    ]
+  }
+}

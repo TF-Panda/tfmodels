@@ -1,0 +1,78 @@
+
+{
+  "model"   "grass_02_cluster01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/grass_02.pmat"
+        "../materials/grass_02_dark.pmat"
+        "../materials/grass_02_snow.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/grass_02_dark.pmat"
+        "../materials/grass_02_dark.pmat"
+        "../materials/grass_02_snow.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/grass_02_snow.pmat"
+        "../materials/grass_02_dark.pmat"
+        "../materials/grass_02_snow.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "grass_02_cluster01"
+      ]
+    }
+
+    {
+      "distance"       35
+      "groups" 
+      [
+        "grass_02_cluster01_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "foliage"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "grass_02_cluster01*"
+        ]
+      }
+    ]
+  }
+}

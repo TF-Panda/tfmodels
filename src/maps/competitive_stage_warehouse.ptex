@@ -1,0 +1,8 @@
+
+{
+  "image"   "competitive_stage_warehouse.tga"
+  "format"   "srgb_alpha"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

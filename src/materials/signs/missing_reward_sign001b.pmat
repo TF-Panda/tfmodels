@@ -1,6 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "missing_reward_sign001.ptex"
-  }
-}

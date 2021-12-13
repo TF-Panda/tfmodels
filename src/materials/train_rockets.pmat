@@ -1,0 +1,18 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/train_rockets.ptex"
+    "phong"     1
+    "phongexponent"     10
+    "phongboost"     0.25
+    "phongfresnelranges" 
+    [
+      0.7
+      15
+      20
+    ]
+    "basemapalphaphongmask"     1
+  }
+}

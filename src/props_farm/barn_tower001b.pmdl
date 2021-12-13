@@ -1,0 +1,45 @@
+
+{
+  "model"   "barn_tower001b.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/grain_elevator_facade_14b.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "barn_tower001b_physics"
+    "mass"     8534.88
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "Wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "barn_tower001b_reference*"
+        ]
+      }
+    ]
+  }
+}

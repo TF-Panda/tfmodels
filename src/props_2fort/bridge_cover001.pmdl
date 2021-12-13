@@ -1,0 +1,73 @@
+
+{
+  "model"   "bridge_cover001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wood_bridge001.pmat"
+        "../materials/roof_metal_bridge001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "bridge_cover001_reference"
+      ]
+    }
+
+    {
+      "distance"       100
+      "groups" 
+      [
+        "bridge_cover001_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       185
+      "groups" 
+      [
+        "bridge_cover001_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "bridge_cover001_physics"
+    "mass"     7859.9
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "Wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "bridge_cover001_reference*"
+        ]
+      }
+    ]
+  }
+}

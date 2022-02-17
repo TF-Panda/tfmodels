@@ -716,6 +716,12 @@
     conveyer_belt.pmat \
     conveyer_support.pmat \
     conveyer_belt_red.pmat \
-    grain_elevator_pipes.pmat
+    grain_elevator_pipes.pmat \
+    sky_granary_01_hdrbk.pmat \
+    sky_granary_01_hdrdn.pmat \
+    sky_granary_01_hdrft.pmat \
+    sky_granary_01_hdrlf.pmat \
+    sky_granary_01_hdrrt.pmat \
+    sky_granary_01_hdrup.pmat
 
 #end install_mat

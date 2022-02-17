@@ -758,7 +758,13 @@
     sky_well_01_hdrup.ptex \
     sky_upward_hdrup.ptex \
     sky_upward_hdrdn.ptex \
-    sky_upward_hdrside.ptex
+    sky_upward_hdrside.ptex \
+    sky_granary_01_hdrdn.ptex \
+    sky_granary_01_hdrup.ptex \
+    sky_granary_01_hdrlf.ptex \
+    sky_granary_01_hdrrt.ptex \
+    sky_granary_01_hdrft.ptex \
+    sky_granary_01_hdrbk.ptex
 
 #end install_tex
 

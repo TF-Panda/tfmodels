@@ -1,0 +1,5 @@
+{
+  image "goldground001_gloss.rgb"
+  format "luminance"
+  wrap "repeat"
+}

@@ -4,4 +4,7 @@
     base_texture "wood_wall001.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "wood"
+  }
 }

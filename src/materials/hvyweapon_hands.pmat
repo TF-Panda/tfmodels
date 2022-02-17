@@ -1,0 +1,23 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/hvyweapon_hands.ptex"
+    "basemapalphaphongmask"     1
+    "phong"     1
+    "phongexponent"     5
+    "phongboost"     1
+    "lightwarptexture"     "../maps/hand_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.5
+      3
+      5
+    ]
+    "halflambert"     1
+    "rimlight"     1
+    "rimlightexponent"     8
+    "rimlightboost"     0.8
+  }
+}

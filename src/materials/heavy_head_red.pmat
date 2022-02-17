@@ -1,0 +1,24 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/heavy_head.ptex"
+    "bumpmap"     "../maps/heavy_head_phongmask.ptex"
+    "phong"     1
+    "phongexponenttexture"     "../maps/heavy_head_exponent.ptex"
+    "phongboost"     1
+    "rimmask"     1
+    "lightwarptexture"     "../maps/pyro_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.3
+      1
+      8
+    ]
+    "halflambert"     0
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

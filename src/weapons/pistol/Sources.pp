@@ -1,17 +1,6 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/weapons
 
-#begin install_tex
-  #define SOURCES \
-    c_pistol.ptex \
-    c_pistol_gloss.ptex
-#end install_tex
-
-#begin install_mat
-  #define SOURCES \
-    c_pistol.pmat
-#end install_mat
-
 #begin blender_char_egg
   #define BLENDER_PREFIX c_pistol-
   #define EGG_PREFIX c_pistol-
@@ -31,7 +20,57 @@
     -flag c_pistol_physics
 #end optchar_egg
 
+//
+// V_PISTOL_ENGINEER
+//
+
+#define V_PISTOL_ANIMS \
+  draw \
+  fire \
+  idle \
+  reload
+
+#begin blender_char_egg
+  #define BLENDER_PREFIX v_pistol_engineer-
+  #define EGG_PREFIX v_pistol_engineer-
+  #define POLY_MODEL zero
+  #define CHAR_NAME v_pistol_engineer.qc_skeleton
+  #define ANIMS_DIR anims
+  #define ANIMS $[V_PISTOL_ANIMS]
+#end blender_char_egg
+
+#begin optchar_egg
+  #define TARGET_DIR optchar
+  #define SOURCES \
+    v_pistol_engineer-zero.egg \
+    $[matrix anims/v_pistol_engineer-,$[V_PISTOL_ANIMS],.egg]
+
+#end optchar_egg
+
+//
+// V_PISTOL_SCOUT
+//
+
+#begin blender_char_egg
+  #define BLENDER_PREFIX v_pistol_scout-
+  #define EGG_PREFIX v_pistol_scout-
+  #define POLY_MODEL zero
+  #define CHAR_NAME v_pistol_scout.qc_skeleton
+  #define ANIMS_DIR anims
+  #define ANIMS $[V_PISTOL_ANIMS]
+#end blender_char_egg
+
+#begin optchar_egg
+  #define TARGET_DIR optchar
+  #define SOURCES \
+    v_pistol_scout-zero.egg \
+    $[matrix anims/v_pistol_scout-,$[V_PISTOL_ANIMS],.egg]
+
+#end optchar_egg
+
 #begin install_mdl
   #define SOURCES \
-    c_pistol.pmdl
+    c_pistol.pmdl \
+    v_pistol_engineer.pmdl \
+    v_pistol_scout.pmdl
 #end install_mdl

@@ -1,0 +1,56 @@
+
+{
+  "model"   "radar001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/radar001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "radar001_reference"
+      ]
+    }
+
+    {
+      "distance"       100
+      "groups" 
+      [
+        "radar001_reference_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "radar001_reference*"
+        ]
+      }
+    ]
+  }
+}

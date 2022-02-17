@@ -1,0 +1,67 @@
+
+{
+  "model"   "boulder6_large.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/boulder6.pmat"
+        "../materials/boulder6_nonormal.pmat"
+        "../materials/boulder6_desat.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/boulder6_nonormal.pmat"
+        "../materials/boulder6_nonormal.pmat"
+        "../materials/boulder6_desat.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/boulder6_desat.pmat"
+        "../materials/boulder6_nonormal.pmat"
+        "../materials/boulder6_desat.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "boulder6_large_physics"
+    "mass"     1.56919e+06
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "rock"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "boulder6*"
+        ]
+      }
+    ]
+  }
+}

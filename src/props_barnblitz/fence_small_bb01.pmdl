@@ -1,0 +1,45 @@
+
+{
+  "model"   "fence_small_bb01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/fence_small_bb01.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "fence_small_bb01_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "fence_small_bb01_ref*"
+        ]
+      }
+    ]
+  }
+}

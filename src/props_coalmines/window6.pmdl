@@ -1,0 +1,44 @@
+
+{
+  "model"   "window6.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/window5.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "window6_physics"
+    "mass"     173.128
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "window6*"
+        ]
+      }
+    ]
+  }
+}

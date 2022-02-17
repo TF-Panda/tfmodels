@@ -1,9 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture v_wrench_sheet.ptex
-    lightwarp_texture "../../maps/weapon_lightwarp.ptex"
-    metalness 1.0
-    roughness 0.65
-  }
-}

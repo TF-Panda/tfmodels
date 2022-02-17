@@ -1,0 +1,33 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/c_shotgun.ptex"
+    "phongexponenttexture"     "../maps/c_shotgun_exp.ptex"
+    "phong"     1
+    "phongboost"     2.5
+    "phongexponentfactor"     150
+    "phongalbedotint"     1
+    "lightwarptexture"     "../maps/softened_weapon_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.3
+      0.5
+      3
+    ]
+    "halflambert"     1
+    "envmap"     1
+    "envmaptint" 
+    [
+      0.05
+      0.05
+      0.05
+    ]
+    "basemapalphaphongmask"     1
+    "rimlight"     1
+    "rimlightexponent"     1
+    "rimlightboost"     2.25
+    "rimmask"     1
+  }
+}

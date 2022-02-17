@@ -4,4 +4,7 @@
     base_texture "metaltrim01.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "metal"
+  }
 }

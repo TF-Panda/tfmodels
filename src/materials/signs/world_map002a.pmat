@@ -4,4 +4,7 @@
     base_texture "world_map002.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "default"
+  }
 }

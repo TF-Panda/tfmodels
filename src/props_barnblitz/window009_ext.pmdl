@@ -1,0 +1,59 @@
+
+{
+  "model"   "window009_ext.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/window009.pmat"
+        "../materials/window009_warm1.pmat"
+        "../materials/window009c.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/window009_warm1.pmat"
+        "../materials/window009_warm1.pmat"
+        "../materials/window009c.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/window009c.pmat"
+        "../materials/window009_warm1.pmat"
+        "../materials/window009c.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "window009_ref*"
+        ]
+      }
+    ]
+  }
+}

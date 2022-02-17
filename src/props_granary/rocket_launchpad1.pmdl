@@ -1,0 +1,84 @@
+
+{
+  "model"   "rocket_launchpad1.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/rocket_launchpad1.pmat"
+        "../materials/barn_rocket1.pmat"
+        "../materials/rocket_launchpad1_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/rocket_launchpad1_blue.pmat"
+        "../materials/barn_rocket1.pmat"
+        "../materials/rocket_launchpad1_blue.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "rocket_launchpad1_reference"
+      ]
+    }
+
+    {
+      "distance"       80
+      "groups" 
+      [
+        "rocket_launchpad1_reference_lod1"
+      ]
+    }
+
+    {
+      "distance"       150
+      "groups" 
+      [
+        "rocket_launchpad1_reference_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "rocket_launchpad1_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "rocket_launchpad1_reference*"
+        ]
+      }
+    ]
+  }
+}

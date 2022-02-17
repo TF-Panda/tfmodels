@@ -3,6 +3,10 @@
   parameters {
     base_texture "brickwall001b.ptex"
     normal_texture "brickwall001b_height-ssbump.ptex"
+    ssbump 1
     roughness 0.0
+  }
+  tags {
+    "surface_prop" "brick"
   }
 }

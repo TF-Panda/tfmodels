@@ -1,0 +1,56 @@
+
+{
+  "model"   "silo_top001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/silo_top001.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "silo_top001_reference"
+      ]
+    }
+
+    {
+      "distance"       300
+      "groups" 
+      [
+        "silo_top001_reference_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "silo_top001_reference*"
+        ]
+      }
+    ]
+  }
+}

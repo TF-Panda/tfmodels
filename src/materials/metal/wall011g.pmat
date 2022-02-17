@@ -5,4 +5,7 @@
     normal_texture "wall011_bump-ssbump.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "metal"
+  }
 }

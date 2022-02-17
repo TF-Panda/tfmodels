@@ -1,0 +1,12 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "brickwall004d.ptex"
+    normal_texture "brickwall004_height-ssbump.ptex"
+    ssbump 1
+    roughness 0.0
+  }
+  tags {
+    "surface_prop" "brick"
+  }
+}

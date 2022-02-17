@@ -1,0 +1,11 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "woodwall_grayslats001.ptex"
+    normal_texture "wood_wall006_bump_ssbump.ptex"
+    roughness 0.0
+  }
+  tags {
+    "surface_prop" "wood"
+  }
+}

@@ -1,0 +1,1409 @@
+{
+  model "optchar/scout-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  material_groups [
+    {
+      name red
+      materials [
+        "../../materials/scout_red.pmat" "../../materials/scout_head_red.pmat"
+        "materials/eyeball_l_scout.pmat" "materials/eyeball_r_scout.pmat"
+      ]
+    }
+    {
+      name blue
+      materials [
+        "../../materials/scout_blue.pmat" "../../materials/scout_head_blue.pmat"
+        "materials/eyeball_l_scout.pmat" "materials/eyeball_r_scout.pmat"
+      ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [
+        dogtags_bodygroup
+        hat_bodygroup
+        headphones_bodygroup
+        scout_morphs_low
+        shoes_socks_bodygroup
+      ]
+    }
+    {
+      distance 11
+      groups [
+        dogtags_bodygroup_lod1
+        hat_bodygroup_lod1
+        headphones_bodygroup_lod1
+        scout_morphs_low_lod1
+        shoes_socks_bodygroup_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        dogtags_bodygroup_lod2
+        hat_bodygroup_lod2
+        headphones_bodygroup_lod2
+        scout_morphs_low_lod2
+        shoes_socks_bodygroup_lod2
+      ]
+    }
+    {
+      distance 33
+      groups [
+        dogtags_bodygroup_lod3
+        hat_bodygroup_lod3
+        headphones_bodygroup_lod3
+        scout_morphs_low_lod3
+        shoes_socks_bodygroup_lod3
+      ]
+    }
+    {
+      distance 44
+      groups [
+        dogtags_bodygroup_lod4
+        hat_bodygroup_lod4
+        headphones_bodygroup_lod4
+        scout_morphs_low_lod4
+        shoes_socks_bodygroup_lod4
+      ]
+    }
+    {
+      distance 55
+      groups [
+        dogtags_bodygroup_lod5
+        hat_bodygroup_lod5
+        headphones_bodygroup_lod5
+        scout_morphs_low_lod5
+        shoes_socks_bodygroup_lod5
+      ]
+    }
+  ]
+
+  eyeballs [
+    {
+      name eye_right
+      material eyeball_r_scout
+      parent bip_head
+      pos [ -1.251646 -2.141015 75.814257 ]
+      diameter 1.4
+      z_offset 4
+      iris_size 0.6
+    }
+    {
+      name eye_left
+      material eyeball_l_scout
+      parent bip_head
+      pos [ 1.24 -2.141015 75.814257 ]
+      diameter 1.4
+      z_offset -4
+      iris_size 0.6
+    }
+  ]
+
+  ik_chains [
+    {
+      name rfoot
+      end_joint bip_foot_R
+      middle_joint_dir [ 0 0 0 ]//0.857 0.516 0.003 ]
+    }
+    {
+      name lfoot
+      end_joint bip_foot_L
+      middle_joint_dir [ 0 0 0 ]//[ 0.82 -0.002 -0.572 ]
+    }
+    {
+      name rhand
+      end_joint bip_hand_R
+      middle_joint_dir [ 0 0 0 ]//[ 0.709 -0.705 0.002 ]
+    }
+    {
+      name lhand
+      end_joint bip_hand_L
+      middle_joint_dir [ 0 0 0 ]//[ 0.708 -0.002 0.706 ]
+    }
+  ]
+
+  custom_data {
+    hit_boxes [
+      {
+        group 1
+        joint bip_head
+        mins [ -5.50 -9.00 -7.05 ]
+        maxs [ 5.50 4.00 4.95 ]
+      }
+      {
+        group 0
+        joint bip_pelvis
+        mins [ -7.50 -1.00 -4.50 ]
+        maxs [ 7.50 11.00 6.50 ]
+      }
+      {
+        group 3
+        joint bip_spine_0
+        mins [ -7.00 0.00 -6.50 ]
+        maxs [ 7.00 5.00 3.50 ]
+      }
+      {
+        group 3
+        joint bip_spine_1
+        mins [ -7.50 -2.00 -7.00 ]
+        maxs [ 7.50 4.00 3.00 ]
+      }
+      {
+        group 2
+        joint bip_spine_2
+        mins [ -8.00 -3.00 -7.50 ]
+        maxs [ 8.00 3.00 2.50 ]
+      }
+      {
+        group 2
+        joint bip_spine_3
+        mins [ -7.00 -3.00 -6.00 ]
+        maxs [ 7.00 2.00 4.00 ]
+      }
+      {
+        group 4
+        joint bip_upperArm_L
+        mins [ -1.00 -2.00 -2.00 ]
+        maxs [ 13.00 2.00 3.00 ]
+      }
+      {
+        group 4
+        joint bip_lowerArm_L
+        mins [ 0.00 -2.10 -2.00 ]
+        maxs [ 10.00 2.90 2.00 ]
+      }
+      {
+        group 4
+        joint bip_hand_L
+        mins [ -3.45 -9.50 -4.00 ]
+        maxs [ 1.05 -0.50 2.00 ]
+      }
+      {
+        group 5
+        joint bip_upperArm_R
+        mins [ -1.00 -3.00 -2.00 ]
+        maxs [ 13.00 2.00 2.00 ]
+      }
+      {
+        group 5
+        joint bip_lowerArm_R
+        mins [ 0.00 -2.90 -2.00 ]
+        maxs [ 10.00 2.10 2.00 ]
+      }
+      {
+        group 5
+        joint bip_hand_R
+        mins [ -1.05 0.50 -2.00 ]
+        maxs [ 3.45 9.50 4.00 ]
+      }
+      {
+        group 6
+        joint bip_hip_L
+        mins [ 4.00 -4.00 -5.00 ]
+        maxs [ 20.00 4.00 3.00 ]
+      }
+      {
+        group 6
+        joint bip_knee_L
+        mins [ 0.50 -2.50 -5.50 ]
+        maxs [ 19.50 3.50 1.50 ]
+      }
+      {
+        group 6
+        joint bip_foot_L
+        mins [ -1.75 -10.00 -2.50 ]
+        maxs [ 1.75 2.00 2.50 ]
+      }
+      {
+        group 7
+        joint bip_hip_R
+        mins [ 4.00 -3.00 -4.00 ]
+        maxs [ 20.00 5.00 4.00 ]
+      }
+      {
+        group 7
+        joint bip_knee_R
+        mins [ 0.50 -3.50 -5.50 ]
+        maxs [ 19.50 2.50 1.50 ]
+      }
+      {
+        group 7
+        joint bip_foot_R
+        mins [ -1.75 -2.00 -2.50 ]
+        maxs [ 1.75 10.00 2.50 ]
+      }
+      {
+        group 10
+        joint bip_packmiddle
+        mins [ -2.75 -10.00 -3.00 ]
+        maxs [ 4.25 8.00 5.00 ]
+      }
+    ]
+  }
+
+  attachments [
+  ]
+
+  pose_parameters [
+    {
+      name move_x
+      min -1 max 1
+    }
+    {
+      name move_y
+      min -1 max 1
+    }
+    {
+      name body_pitch
+      min -45 max 90
+      loop 360
+    }
+    {
+      name body_yaw
+      min -45 max 45
+      loop 360
+    }
+  ]
+
+  joint_merges [
+    bip_pelvis
+    bip_spine_0
+    bip_spine_1
+    bip_spine_2
+    bip_spine_3
+    bip_neck
+    bip_head
+    bip_collar_L
+    bip_collar_R
+    bip_upperArm_L
+    bip_upperArm_R
+    bip_lowerArm_L
+    bip_lowerArm_R
+    bip_hip_L
+    bip_hip_R
+    bip_knee_L
+    bip_knee_R
+    bip_foot_L
+    bip_foot_R
+    bip_hand_L
+    bip_hand_R
+    bip_toe_L
+    bip_toe_R
+    weapon_bone
+    weapon_bone_1
+    weapon_bone_2
+    weapon_bone_3
+    weapon_bone_4
+    weapon_bone_L
+    medal_bone
+    mvm
+    bip_dogtag_0
+    bip_dogtag_1
+    bip_dogtag_2
+    bip_dogtag_3
+    prop_bone
+    prop_bone_1
+    prop_bone_2
+    prop_bone_3
+    prop_bone_4
+    prop_bone_5
+    prop_bone_6
+  ]
+
+  weight_lists [
+    {
+      name weights_layer_reload_standing_arms_primary_start
+      weights {
+        "bip_pelvis" 0
+        "bip_spine_0" 0
+        "bip_spine_1" 0
+        "bip_spine_2" 0
+        "bip_spine_3" 0
+        "bip_neck" 0
+        "bip_head" 0
+        "bip_collar_L" 0.4
+        "bip_collar_R" 0.4
+        "bip_upperArm_L" 1
+        "bip_upperArm_R" 1
+        "bip_lowerArm_L" 1
+        "bip_lowerArm_R" 1
+        "bip_hip_L" 0
+        "bip_hip_R" 0
+        "bip_knee_L" 0
+        "bip_knee_R" 0
+        "bip_foot_L" 0
+        "bip_foot_R" 0
+        "bip_hand_L" 1
+        "bip_hand_R" 1
+        "bip_toe_L" 0
+        "bip_toe_R" 0
+        "weapon_bone" 1
+        "weapon_bone_1" 1
+        "weapon_bone_2" 1
+        "weapon_bone_3" 1
+        "weapon_bone_4" 1
+        "weapon_bone_L" 1
+        "medal_bone" 0
+        "mvm" 0
+        "effect_hand_L" 1
+        "effect_hand_R" 1
+        "bip_dogtag_0" 0
+        "bip_dogtag_1" 0
+        "bip_dogtag_2" 0
+        "bip_dogtag_3" 0
+        "bip_packtop" 0
+        "bip_packmiddle" 0
+        "bip_thumb_0_L" 1
+        "bip_thumb_0_R" 1
+        "bip_index_0_L" 1
+        "bip_index_0_R" 1
+        "bip_middle_0_L" 1
+        "bip_middle_0_R" 1
+        "bip_ring_0_L" 1
+        "bip_ring_0_R" 1
+        "bip_pinky_0_L" 1
+        "bip_pinky_0_R" 1
+        "bip_thumb_1_L" 1
+        "bip_thumb_1_R" 1
+        "bip_index_1_L" 1
+        "bip_index_1_R" 1
+        "bip_middle_1_L" 1
+        "bip_middle_1_R" 1
+        "bip_ring_1_L" 1
+        "bip_ring_1_R" 1
+        "bip_pinky_1_L" 1
+        "bip_pinky_1_R" 1
+        "bip_thumb_2_L" 1
+        "bip_thumb_2_R" 1
+        "bip_index_2_L" 1
+        "bip_index_2_R" 1
+        "bip_middle_2_L" 1
+        "bip_middle_2_R" 1
+        "bip_ring_2_L" 1
+        "bip_ring_2_R" 1
+        "bip_pinky_2_L" 1
+        "bip_pinky_2_R" 1
+        "prop_bone" 0
+        "prop_bone_1" 0
+        "prop_bone_2" 0
+        "prop_bone_3" 0
+        "prop_bone_4" 0
+        "prop_bone_5" 0
+        "prop_bone_6" 0
+      }
+    }
+  ]
+
+  sequences [
+    {
+      name PRIMARY_aimmatrix_run
+      blend {
+        anims [
+          "optchar/scout-a_PRIMARY_aimmatrix_run_down_left.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_down_center.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_down_right.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_mid_left.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_mid_center.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_mid_right.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_up_left.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_up_center.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_up_right.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_straight_up.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_straight_up.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name PRIMARY_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_down_left.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_down_center.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_down_right.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_mid_left.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_mid_center.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_mid_right.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_up_left.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_up_center.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_up_right.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+          "optchar/scout-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name layer_idleNoise
+      anim "optchar/scout-layer_idleNoise.egg"
+      delta true
+      loop true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name stand_PRIMARY
+      anim "optchar/scout-stand_PRIMARY.egg"
+      activity Primary_Stand
+      loop true
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_idle
+        }
+        {
+          sequence layer_idleNoise
+        }
+      ]
+    }
+    {
+      name run_PRIMARY
+      blend {
+        anims [
+          "optchar/scout-a_runSW_PRIMARY.egg"
+          "optchar/scout-a_runS_PRIMARY.egg"
+          "optchar/scout-a_runSE_PRIMARY.egg"
+          "optchar/scout-a_runW_PRIMARY.egg"
+          "optchar/scout-a_runCenter_PRIMARY.egg"
+          "optchar/scout-a_runE_PRIMARY.egg"
+          "optchar/scout-a_runNW_PRIMARY.egg"
+          "optchar/scout-a_runN_PRIMARY.egg"
+          "optchar/scout-a_runNE_PRIMARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Primary_Run
+    }
+
+    {
+      name AttackStand_PRIMARY
+      anim "optchar/scout-AttackStand_PRIMARY.egg"
+      delta true
+      activity Primary_Attack_Stand
+      snap true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+
+    {
+      name Jump_Start_primary
+      blend {
+        anims [
+          "optchar/scout-a_jumpstart_SW_primary.egg"
+          "optchar/scout-a_jumpstart_S_primary.egg"
+          "optchar/scout-a_jumpstart_SE_primary.egg"
+          "optchar/scout-a_jumpstart_W_primary.egg"
+          "optchar/scout-a_jumpstart_primary.egg"
+          "optchar/scout-a_jumpstart_E_primary.egg"
+          "optchar/scout-a_jumpstart_NW_primary.egg"
+          "optchar/scout-a_jumpstart_N_primary.egg"
+          "optchar/scout-a_jumpstart_NE_primary.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_idle
+        }
+      ]
+      activity Primary_Jump_Start
+      zero_x true
+      zero_y true
+    }
+    {
+      name layer_primary_jump_floatNoise
+      anim "optchar/scout-layer_primary_jump_floatNoise.egg"
+      delta true
+      real_time true
+
+    }
+    {
+      name Jump_Float_primary
+      blend {
+        anims [
+          "optchar/scout-a_jumpFloat_SW_primary.egg"
+          "optchar/scout-a_jumpFloat_S_primary.egg"
+          "optchar/scout-a_jumpFloat_SE_primary.egg"
+          "optchar/scout-a_jumpFloat_W_primary.egg"
+          "optchar/scout-a_jumpFloat_primary.egg"
+          "optchar/scout-a_jumpFloat_E_primary.egg"
+          "optchar/scout-a_jumpFloat_NW_primary.egg"
+          "optchar/scout-a_jumpFloat_N_primary.egg"
+          "optchar/scout-a_jumpFloat_NE_primary.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence PRIMARY_aimmatrix_idle
+        }
+        {
+          sequence layer_primary_jump_floatNoise
+        }
+      ]
+      activity Primary_Jump_Float
+      zero_x true
+      zero_y true
+    }
+    {
+      name jumpland_primary
+      anim "optchar/scout-jumpland_primary.egg"
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+      activity Primary_Jump_Land
+    }
+
+    {
+      name jump_double_primary
+      blend {
+        anims [
+          "optchar/scout-a_jumpDouble_S_primary.egg"
+          "optchar/scout-a_jumpDouble_S_primary.egg"
+          "optchar/scout-a_jumpDouble_S_primary.egg"
+          "optchar/scout-a_jumpDouble_W_primary.egg"
+          "optchar/scout-a_jumpDouble_center_primary.egg"
+          "optchar/scout-a_jumpDouble_E_primary.egg"
+          "optchar/scout-a_jumpDouble_NW_primary.egg"
+          "optchar/scout-a_jumpDouble_N_primary.egg"
+          "optchar/scout-a_jumpDouble_NE_primary.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      activity Double_Jump
+      delta true
+      zero_x true
+      zero_y true
+    }
+    {
+      name jump_double_loser
+      blend {
+        anims [
+          "optchar/scout-a_jumpDouble_S_loser.egg"
+          "optchar/scout-a_jumpDouble_S_loser.egg"
+          "optchar/scout-a_jumpDouble_S_loser.egg"
+          "optchar/scout-a_jumpDouble_W_loser.egg"
+          "optchar/scout-a_jumpDouble_center_loser.egg"
+          "optchar/scout-a_jumpDouble_E_loser.egg"
+          "optchar/scout-a_jumpDouble_NW_loser.egg"
+          "optchar/scout-a_jumpDouble_N_loser.egg"
+          "optchar/scout-a_jumpDouble_NE_loser.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      activity Double_Jump_Loser
+      delta true
+      zero_x true
+      zero_y true
+    }
+
+    {
+      name layer_reload_standing_arms_primary_start
+      anim "optchar/scout-layer_reload_standing_arms_primary_start.egg"
+      weight_list weights_layer_reload_standing_arms_primary_start
+    }
+    {
+      name layer_reload_standing_arms_primary_loop
+      anim "optchar/scout-layer_reload_standing_arms_primary_loop.egg"
+      loop true
+      weight_list weights_layer_reload_standing_arms_primary_start
+    }
+    {
+      name layer_reload_standing_arms_primary_end
+      anim "optchar/scout-layer_reload_standing_arms_primary_end.egg"
+      weight_list weights_layer_reload_standing_arms_primary_start
+    }
+
+    {
+      name PRIMARY_reload_start
+      anim "optchar/scout-PRIMARY_reload_start.egg"
+      delta true
+      activity Primary_Reload_Stand
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+      layers [
+        {
+          sequence layer_reload_standing_arms_primary_start
+          start 0 peak 4 tail 20 end 20
+          spline true
+        }
+      ]
+    }
+    {
+      name PRIMARY_reload_loop
+      anim "optchar/scout-PRIMARY_reload_loop.egg"
+      delta true
+      activity Primary_Reload_Stand_Loop
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+      loop true
+      layers [
+        {
+          sequence layer_reload_standing_arms_primary_loop
+        }
+      ]
+    }
+    {
+      name PRIMARY_reload_end
+      anim "optchar/scout-PRIMARY_reload_end.egg"
+      delta true
+      activity Primary_Reload_Stand_End
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+      layers [
+        {
+          sequence layer_reload_standing_arms_primary_end
+          start 0 peak 0 tail 6 end 10
+          spline true
+        }
+      ]
+    }
+
+    {
+      name SECONDARY_aimmatrix_run
+      blend {
+        anims [
+          "optchar/scout-a_SECONDARY_aimmatrix_run_down_left.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_down_center.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_down_right.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_mid_left.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_mid_center.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_mid_right.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_up_left.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_up_center.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_up_right.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name SECONDARY_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_down_left.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_down_center.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_down_right.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_mid_left.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_mid_center.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_mid_right.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_up_left.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_up_center.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_up_right.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/scout-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name stand_SECONDARY
+      anim "optchar/scout-stand_SECONDARY.egg"
+      activity Secondary_Stand
+      loop true
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_idle
+        }
+        {
+          sequence layer_idleNoise
+        }
+      ]
+    }
+    {
+      name run_SECONDARY
+      blend {
+        anims [
+          "optchar/scout-a_runSW_SECONDARY.egg"
+          "optchar/scout-a_runS_SECONDARY.egg"
+          "optchar/scout-a_runSE_SECONDARY.egg"
+          "optchar/scout-a_runW_SECONDARY.egg"
+          "optchar/scout-a_runCenter_SECONDARY.egg"
+          "optchar/scout-a_runE_SECONDARY.egg"
+          "optchar/scout-a_runNW_SECONDARY.egg"
+          "optchar/scout-a_runN_SECONDARY.egg"
+          "optchar/scout-a_runNE_SECONDARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Secondary_Run
+    }
+    {
+      name AttackStand_SECONDARY
+      anim "optchar/scout-AttackStand_SECONDARY.egg"
+      activity Secondary_Attack_Stand
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name layer_reload_standing_arms_secondary
+      anim "optchar/scout-layer_reload_standing_arms_secondary.egg"
+      ik_events [
+        {
+          chain lhand type touch joint bip_pelvis
+          start 3 peak 9 tail 13 end 19
+          spline true
+        }
+        {
+          chain lhand type touch joint bip_hand_R
+          start 19 peak 22 tail 23 end 28
+          spline true
+        }
+      ]
+      weight_list weights_layer_reload_standing_arms_primary_start
+    }
+    {
+      name ReloadStand_SECONDARY
+      anim "optchar/scout-ReloadStand_SECONDARY.egg"
+      delta true
+      activity Secondary_Reload_Stand
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+      layers [
+        {
+          sequence layer_reload_standing_arms_secondary
+          start 0 peak 11 tail 24 end 30
+          spline true
+        }
+      ]
+    }
+    {
+      name Jump_Start_secondary
+      blend {
+        anims [
+          "optchar/scout-a_jumpstart_SW_secondary.egg"
+          "optchar/scout-a_jumpstart_S_secondary.egg"
+          "optchar/scout-a_jumpstart_SE_secondary.egg"
+          "optchar/scout-a_jumpstart_W_secondary.egg"
+          "optchar/scout-a_jumpstart_secondary.egg"
+          "optchar/scout-a_jumpstart_E_secondary.egg"
+          "optchar/scout-a_jumpstart_NW_secondary.egg"
+          "optchar/scout-a_jumpstart_N_secondary.egg"
+          "optchar/scout-a_jumpstart_NE_secondary.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_idle
+        }
+      ]
+      activity Secondary_Jump_Start
+      zero_x true
+      zero_y true
+    }
+    {
+      name Jump_Float_secondary
+      blend {
+        anims [
+          "optchar/scout-a_jumpFloat_SW_secondary.egg"
+          "optchar/scout-a_jumpFloat_S_secondary.egg"
+          "optchar/scout-a_jumpFloat_SE_secondary.egg"
+          "optchar/scout-a_jumpFloat_W_secondary.egg"
+          "optchar/scout-a_jumpFloat_secondary.egg"
+          "optchar/scout-a_jumpFloat_E_secondary.egg"
+          "optchar/scout-a_jumpFloat_NW_secondary.egg"
+          "optchar/scout-a_jumpFloat_N_secondary.egg"
+          "optchar/scout-a_jumpFloat_NE_secondary.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_idle
+        }
+        {
+          sequence layer_primary_jump_floatNoise
+        }
+      ]
+      activity Secondary_Jump_Float
+      zero_x true
+      zero_y true
+    }
+    {
+      name jumpland_secondary
+      anim "optchar/scout-jumpland_secondary.egg"
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+      activity Secondary_Jump_Land
+    }
+
+    {
+      name MELEE_aimmatrix_run
+      blend {
+        anims [
+          "optchar/scout-a_MELEE_aimmatrix_run_down_left.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_down_center.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_down_right.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_mid_left.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_mid_center.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_mid_right.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_up_left.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_up_center.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_up_right.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/scout-a_MELEE_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
+    }
+    {
+      name MELEE_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/scout-a_MELEE_aimmatrix_idle_down_left.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_down_center.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_down_right.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_mid_left.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_mid_center.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_mid_right.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_up_left.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_up_center.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_up_right.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/scout-a_MELEE_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
+    }
+    {
+      name stand_MELEE
+      anim "optchar/scout-stand_MELEE.egg"
+      activity Melee_Stand
+      loop true
+      layers [
+        {
+          sequence MELEE_aimmatrix_idle
+        }
+      ]
+    }
+    {
+      name run_MELEE
+      blend {
+        anims [
+          "optchar/scout-a_runSW_MELEE.egg"
+          "optchar/scout-a_runS_MELEE.egg"
+          "optchar/scout-a_runSE_MELEE.egg"
+          "optchar/scout-a_runW_MELEE.egg"
+          "optchar/scout-a_runCenter_MELEE.egg"
+          "optchar/scout-a_runE_MELEE.egg"
+          "optchar/scout-a_runNW_MELEE.egg"
+          "optchar/scout-a_runN_MELEE.egg"
+          "optchar/scout-a_runNE_MELEE.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence MELEE_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Melee_Run
+    }
+    {
+      name layer_AttackStandMelee_arms
+      anim "optchar/scout-layer_AttackStandMelee_arms.egg"
+      fps 60
+      weight_list weights_layer_reload_standing_arms_primary_start
+    }
+    {
+      name layer_melee_swing
+      anim "optchar/scout-layer_melee_swing.egg"
+      delta true
+      fps 60
+      layers [
+        {
+          sequence layer_AttackStandMelee_arms
+          start 0 peak 0 tail 32 end 33
+        }
+      ]
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+    {
+      name layer_AttackStandMelee_runS_arms
+      anim "optchar/scout-layer_AttackStandMelee_runS_arms.egg"
+      fps 60
+      weight_list weights_layer_reload_standing_arms_primary_start
+    }
+    {
+      name layer_melee_swing_runS
+      anim "optchar/scout-layer_melee_swing_runS.egg"
+      delta true
+      fps 60
+      layers [
+        {
+          sequence layer_AttackStandMelee_runS_arms
+          start 0 peak 0 tail 32 end 33
+        }
+      ]
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+    {
+      name MELEE_swing
+      activity Melee_Attack_Stand
+      num_frames 34
+      fps 60
+      layers [
+        {
+          sequence layer_melee_swing
+          start -0.8 peak -0.2 tail 1 end 2 spline true
+          pose_parameter move_y
+        }
+        {
+          sequence layer_melee_swing_runS
+          start -2 peak -1 tail -0.8 end -0.2 spline true
+          pose_parameter move_y
+        }
+      ]
+    }
+    {
+      name Jump_Start_melee
+      blend {
+        anims [
+          "optchar/scout-a_jumpstart_SW_melee.egg"
+          "optchar/scout-a_jumpstart_S_melee.egg"
+          "optchar/scout-a_jumpstart_SE_melee.egg"
+          "optchar/scout-a_jumpstart_W_melee.egg"
+          "optchar/scout-a_jumpstart_melee.egg"
+          "optchar/scout-a_jumpstart_E_melee.egg"
+          "optchar/scout-a_jumpstart_NW_melee.egg"
+          "optchar/scout-a_jumpstart_N_melee.egg"
+          "optchar/scout-a_jumpstart_NE_melee.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      activity Melee_Jump_Start
+      zero_x true
+      zero_y true
+    }
+    {
+      name Jump_Float_melee
+      blend {
+        anims [
+          "optchar/scout-a_jumpFloat_SW_melee.egg"
+          "optchar/scout-a_jumpFloat_S_melee.egg"
+          "optchar/scout-a_jumpFloat_SE_melee.egg"
+          "optchar/scout-a_jumpFloat_W_melee.egg"
+          "optchar/scout-a_jumpFloat_melee.egg"
+          "optchar/scout-a_jumpFloat_E_melee.egg"
+          "optchar/scout-a_jumpFloat_NW_melee.egg"
+          "optchar/scout-a_jumpFloat_N_melee.egg"
+          "optchar/scout-a_jumpFloat_NE_melee.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence MELEE_aimmatrix_idle
+        }
+        {
+          sequence layer_primary_jump_floatNoise
+        }
+      ]
+      activity Melee_Jump_Float
+      zero_x true
+      zero_y true
+    }
+    {
+      name jumpland_melee
+      anim "optchar/scout-jumpland_melee.egg"
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+      activity Melee_Jump_Land
+    }
+
+    {
+      name a_flinch01
+      anim "optchar/scout-a_flinch01.egg"
+      delta true
+      activity Gesture_Flinch
+    }
+
+    {
+      name SelectionMenu_Anim01
+      anim "optchar/scout-selectionMenu_Anim01.egg"
+      events [
+        {
+          frame 42 type 2 event Client_Play_Sound
+          data "Selection.ScoutShotgunTwirl"
+        }
+        {
+          frame 59 type 2 event Client_Play_Sound
+          data "Selection.ScoutShotgunShoulder"
+        }
+      ]
+    }
+    {
+      name SelectionMenu_Idle
+      anim "optchar/scout-selectionMenu_Idle.egg"
+      loop true
+    }
+
+  ]
+
+  physics_model {
+    mesh scout_physics
+
+    mass 100.00
+    inertia 10.00
+    damping 0.00
+    rot_damping 16.00
+
+    joints [
+      {
+        name bip_pelvis
+        rot_damping 0.00
+      }
+      {
+        name bip_hip_R
+        mass_bias 1.30
+        rot_damping 8.00
+        limit_x [ -20 12 ]
+        limit_y [ -10 50 ]
+        limit_z [ -79 45 ]
+      }
+      {
+        name bip_knee_R
+        mass_bias 1.20
+        rot_damping 3.00
+        limit_x [ 0 0 ]
+        limit_y [ -15 100 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_hip_L
+        mass_bias 1.10
+        rot_damping 9.00
+        limit_x [ -20 12 ]
+        limit_y [ -45 50 ]
+        limit_z [ -10 45 ]
+      }
+      {
+        name bip_knee_L
+        mass_bias 1.20
+        rot_damping 3.00
+        limit_x [ 0 0 ]
+        limit_y [ -15 100 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_foot_L
+        mass_bias 0.75
+        rot_damping 7.00
+        limit_x [ -30 45 ]
+        limit_y [ -25 25 ]
+        limit_z [ -40 30 ]
+      }
+      {
+        name bip_spine_0
+        mass_bias 1.60
+        rot_damping 12.00
+        limit_x [ -30 30 ]
+        limit_y [ -16 16 ]
+        limit_z [ -20 15 ]
+      }
+      {
+        name bip_upperArm_R
+        mass_bias 1.20
+        limit_x [ -40 30 ]
+        limit_y [ -15 55 ]
+        limit_z [ -80 60 ]
+      }
+      {
+        name bip_lowerArm_R
+        mass_bias 1.80
+        rot_damping 4.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -100 -30 ]
+      }
+      {
+        name bip_upperArm_L
+        mass_bias 1.10
+        limit_x [ -30 40 ]
+        limit_y [ -55 15 ]
+        limit_z [ -80 60 ]
+      }
+      {
+        name bip_lowerArm_L
+        mass_bias 1.80
+        rot_damping 4.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -30 100 ]
+      }
+      {
+        name bip_hand_L
+        mass_bias 0.60
+        rot_damping 8.00
+        limit_x [ -30 37 ]
+        limit_y [ -35 35 ]
+        limit_z [ -60 50 ]
+      }
+      {
+        name bip_neck
+        mass_bias 0.50
+        rot_damping 18.00
+        limit_x [ -23 10 ]
+        limit_y [ -15 15 ]
+        limit_z [ -18 18 ]
+      }
+      {
+        name bip_head
+        mass_bias 1.80
+        limit_x [ -23 10 ]
+        limit_y [ -15 15 ]
+        limit_z [ -18 18 ]
+      }
+      {
+        name bip_dogtag_2
+        mass_bias 0.10
+        rot_damping 6.00
+        limit_x [ -40 30 ]
+        limit_y [ 0 0 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_hand_R
+        mass_bias 0.60
+        rot_damping 8.00
+        limit_x [ -37 30 ]
+        limit_y [ -35 35 ]
+        limit_z [ -50 60 ]
+      }
+      {
+        name bip_foot_R
+        mass_bias 0.75
+        rot_damping 7.00
+        limit_x [ -30 45 ]
+        limit_y [ -25 25 ]
+        limit_z [ -40 30 ]
+      }
+    ]
+  }
+}

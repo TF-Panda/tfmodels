@@ -6,4 +6,7 @@
     normal_texture "metalduct001a_normal.ptex"
     gloss_texture "metalduct001a_gloss.ptex"
   }
+  tags {
+    "surface_prop" "metal"
+  }
 }

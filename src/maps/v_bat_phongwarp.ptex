@@ -1,0 +1,8 @@
+
+{
+  "image"   "v_bat_phongwarp.tga"
+  "format"   "rgb"
+  "type"   "2d_texture"
+  "wrap_u"   "clamp"
+  "wrap_v"   "clamp"
+}

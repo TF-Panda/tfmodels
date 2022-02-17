@@ -4,4 +4,8 @@
     base_texture "glasswindow005a.ptex"
     roughness 0.0
   }
+  transparency dual
+  tags {
+    "surface_prop" "glass"
+  }
 }

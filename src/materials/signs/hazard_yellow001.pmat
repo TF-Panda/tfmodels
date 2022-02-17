@@ -4,4 +4,7 @@
     base_texture "hazard_yellow001.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "default"
+  }
 }

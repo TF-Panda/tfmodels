@@ -4,4 +4,8 @@
     base_texture "metalrail003a.ptex"
     roughness 0.0
   }
+  transparency dual
+  tags {
+    "surface_prop" "metalgrate"
+  }
 }

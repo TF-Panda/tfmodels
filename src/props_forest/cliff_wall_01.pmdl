@@ -1,0 +1,56 @@
+
+{
+  "model"   "cliff_wall_01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/cliff_wall_01.pmat"
+        "../materials/cliff_wall_01_snow.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/cliff_wall_01.pmat"
+        "../materials/cliff_wall_01_snow.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/cliff_wall_01_snow.pmat"
+        "../materials/cliff_wall_01_snow.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "stone"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "cliff_wall_01_reference*"
+        ]
+      }
+    ]
+  }
+}

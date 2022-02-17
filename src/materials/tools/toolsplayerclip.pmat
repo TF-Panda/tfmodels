@@ -1,10 +1,11 @@
 {
   material StandardMaterial
   parameters {
-    //base_texture "toolsplayerclip.ptex"
+    base_texture "toolsplayerclip.ptex"
+    roughness 0.0
   }
-
-  tags [
-    compile_clip
-  ]
+  tags {
+    compile_clip 1
+    "surface_prop" "default"
+  }
 }

@@ -1,9 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture c_minigun.ptex
-    roughness_texture c_minigun_roughness.ptex
-    lightwarp_texture "../../maps/weapon_lightwarp.ptex"
-    env_map true
-  }
-}

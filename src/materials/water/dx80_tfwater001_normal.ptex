@@ -1,0 +1,5 @@
+{
+  image "dx80_tfwater001_normal.tga"
+  format "rgb"
+  wrap "repeat"
+}

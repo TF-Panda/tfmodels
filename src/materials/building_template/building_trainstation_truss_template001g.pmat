@@ -1,0 +1,10 @@
+{
+  material StandardMaterial
+  parameters {
+    roughness 0.0
+  }
+  transparency dual
+  tags {
+    "surface_prop" "metal"
+  }
+}

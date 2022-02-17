@@ -1,0 +1,45 @@
+
+{
+  "model"   "support_wall001a.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wood_beam03.pmat"
+        "../materials/wall020.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "support_wall001a_physics"
+    "mass"     4368.32
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "Wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "support_wall001a_reference*"
+        ]
+      }
+    ]
+  }
+}

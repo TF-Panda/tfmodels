@@ -1,0 +1,5 @@
+{
+  image "toolsoccluder.tga"
+  format "srgb_alpha"
+  wrap "repeat"
+}

@@ -5,4 +5,7 @@
     normal_texture "rockwall003_height-ssbump.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "dirt"
+  }
 }

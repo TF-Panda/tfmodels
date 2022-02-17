@@ -1,0 +1,56 @@
+
+{
+  "model"   "fence_heads.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/fence_heads.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "fence_heads"
+      ]
+    }
+
+    {
+      "distance"       40
+      "groups" 
+      [
+        "fence_heads_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "fence_heads*"
+        ]
+      }
+    ]
+  }
+}

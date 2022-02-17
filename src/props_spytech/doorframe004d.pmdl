@@ -1,0 +1,45 @@
+
+{
+  "model"   "doorframe004d.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/doorframe003.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "doorframe004d_physics"
+    "mass"     127.126
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "doorframe004d_reference*"
+        ]
+      }
+    ]
+  }
+}

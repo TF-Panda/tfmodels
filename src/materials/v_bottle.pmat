@@ -1,0 +1,29 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/v_bottle.ptex"
+    "envmap"     1
+    "envmaptint" 
+    [
+      0.45
+      0.45
+      0.45
+    ]
+    "phong"     1
+    "phongexponent"     60
+    "phongboost"     20
+    "lightwarptexture"     "../maps/weapon_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.25
+      0.5
+      1
+    ]
+    "basemapalphaphongmask"     1
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

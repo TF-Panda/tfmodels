@@ -1,0 +1,815 @@
+{
+  model "optchar/pyro-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    hit_boxes [
+      {
+        group 1
+        joint bip_head
+        mins [ -6.00 -9.50 -8.00 ]
+        maxs [ 6.00 3.50 5.00 ]
+      }
+      {
+        group 0
+        joint bip_pelvis
+        mins [ -10.00 -1.00 -6.00 ]
+        maxs [ 10.00 11.00 10.00 ]
+      }
+      {
+        group 3
+        joint bip_spine_0
+        mins [ -9.50 -1.50 -11.75 ]
+        maxs [ 9.50 6.50 4.25 ]
+      }
+      {
+        group 3
+        joint bip_spine_1
+        mins [ -9.00 -2.00 -12.50 ]
+        maxs [ 9.00 4.00 3.50 ]
+      }
+      {
+        group 2
+        joint bip_spine_2
+        mins [ -9.00 -3.00 -10.50 ]
+        maxs [ 9.00 3.00 5.50 ]
+      }
+      {
+        group 2
+        joint bip_spine_3
+        mins [ -7.00 -3.00 -6.00 ]
+        maxs [ 7.00 2.00 4.00 ]
+      }
+      {
+        group 4
+        joint bip_upperArm_L
+        mins [ -1.50 -3.00 -2.75 ]
+        maxs [ 13.50 5.00 3.25 ]
+      }
+      {
+        group 4
+        joint bip_lowerArm_L
+        mins [ 0.00 -3.10 -3.00 ]
+        maxs [ 12.00 3.90 4.00 ]
+      }
+      {
+        group 4
+        joint bip_hand_L
+        mins [ -2.50 -9.50 -3.25 ]
+        maxs [ 2.50 -0.50 3.25 ]
+      }
+      {
+        group 5
+        joint bip_upperArm_R
+        mins [ -1.50 -5.00 -3.25 ]
+        maxs [ 13.50 3.00 2.75 ]
+      }
+      {
+        group 5
+        joint bip_lowerArm_R
+        mins [ 0.00 -3.90 -4.00 ]
+        maxs [ 12.00 3.10 3.00 ]
+      }
+      {
+        group 5
+        joint bip_hand_R
+        mins [ -2.50 0.50 -3.25 ]
+        maxs [ 2.50 9.50 3.25 ]
+      }
+      {
+        group 6
+        joint bip_hip_L
+        mins [ 2.00 -5.00 -6.00 ]
+        maxs [ 16.00 5.00 5.00 ]
+      }
+      {
+        group 6
+        joint bip_knee_L
+        mins [ 0.50 -6.50 -4.50 ]
+        maxs [ 19.50 2.50 2.50 ]
+      }
+      {
+        group 6
+        joint bip_foot_L
+        mins [ -1.75 -10.00 -4.00 ]
+        maxs [ 1.75 2.00 2.00 ]
+      }
+      {
+        group 7
+        joint bip_hip_R
+        mins [ 2.00 -5.00 -6.00 ]
+        maxs [ 16.00 5.00 5.00 ]
+      }
+      {
+        group 7
+        joint bip_knee_R
+        mins [ 0.50 -4.50 -6.50 ]
+        maxs [ 19.50 2.50 2.50 ]
+      }
+      {
+        group 7
+        joint bip_foot_R
+        mins [ -1.75 -2.00 -2.00 ]
+        maxs [ 1.75 10.00 4.00 ]
+      }
+      {
+        group 10
+        joint prp_fuelTank
+        mins [ -4.00 -20.00 -4.00 ]
+        maxs [ 6.00 8.00 4.00 ]
+      }
+    ]
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/pyro_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/pyro_blue.pmat" ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [
+        backpack_bodygroup grenades_bodygroup pyro_reference
+        righthand_bodygroup pyro_head_bodygroup
+      ]
+    }
+    {
+      distance 11
+      groups [
+        backpack_bodygroup_lod1 grenades_bodygroup_lod1 pyro_reference_lod1
+        righthand_bodygroup_lod1 pyro_head_bodygroup_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        backpack_bodygroup_lod2 grenades_bodygroup_lod2 pyro_reference_lod2
+        righthand_bodygroup_lod2 pyro_head_bodygroup_lod2
+      ]
+    }
+    {
+      distance 33
+      groups [
+        backpack_bodygroup_lod3 grenades_bodygroup_lod3 pyro_reference_lod3
+        righthand_bodygroup_lod3 pyro_head_bodygroup_lod3
+      ]
+    }
+    {
+      distance 44
+      groups [
+        backpack_bodygroup_lod4 grenades_bodygroup_lod4 pyro_reference_lod4
+        righthand_bodygroup_lod4 pyro_head_bodygroup_lod4
+      ]
+    }
+    {
+      distance 55
+      groups [
+        backpack_bodygroup_lod5 grenades_bodygroup_lod5 pyro_reference_lod5
+        righthand_bodygroup_lod5 pyro_head_bodygroup_lod5
+      ]
+    }
+  ]
+
+  pose_parameters [
+    {
+      name body_pitch
+      min -45 max 90 loop 360
+    }
+    {
+      name body_yaw
+      min -45 max 45 loop 360
+    }
+    {
+      name move_x
+      min -1 max 1 loop 0
+    }
+    {
+      name move_y
+      min -1 max 1 loop 0
+    }
+  ]
+
+  ik_chains [
+    {
+      name rhand
+      end_joint bip_hand_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lhand
+      end_joint bip_hand_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name rfoot
+      end_joint bip_foot_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lfoot
+      end_joint bip_foot_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+  ]
+
+  joint_merges [
+    "bip_pelvis"
+    "bip_spine_0"
+    "bip_spine_1"
+    "bip_spine_2"
+    "bip_spine_3"
+    "bip_neck"
+    "bip_head"
+    "bip_collar_L"
+    "bip_upperArm_L"
+    "bip_lowerArm_L"
+    "bip_hand_L"
+    "bip_collar_R"
+    "bip_upperArm_R"
+    "bip_lowerArm_R"
+    "bip_hand_R"
+    "weapon_bone_L"
+    "weapon_bone"
+    "weapon_bone_1"
+    "weapon_bone_2"
+    "weapon_bone_3"
+    "weapon_bone_4"
+    "medal_bone"
+    "mvm"
+    "prop_bone"
+    "prop_bone_1"
+    "prop_bone_2"
+    "prop_bone_3"
+    "prop_bone_4"
+    "prop_bone_5"
+    "prop_bone_6"
+    "taunt_effect"
+  ]
+
+  sequences [
+    {
+      name SECONDARY_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_down_left.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_down_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_down_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_mid_left.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_mid_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_mid_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_up_left.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_up_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_up_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+    {
+      name SECONDARY_aimmatrix_run
+      blend {
+        anims [
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_down_left.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_down_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_down_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_mid_left.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_mid_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_mid_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_up_left.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_up_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_up_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_straight_up.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+    {
+      name SECONDARY_aimmatrix_crouch_idle
+      blend {
+        anims [
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_straight_up.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_straight_up.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_straight_up.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_up_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_up_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_up_left.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_mid_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_mid_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_mid_left.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_down_right.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_down_center.egg"
+          "optchar/pyro-a_SECONDARY_aimmatrix_crouch_idle_down_left.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+    {
+      name stand_SECONDARY
+      anim "optchar/pyro-stand_SECONDARY.egg"
+      loop true
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_idle
+        }
+      ]
+      activity Secondary_Stand
+    }
+    {
+      name run_SECONDARY
+      blend {
+        anims [
+          "optchar/pyro-a_runSW_SECONDARY.egg"
+          "optchar/pyro-a_runS_SECONDARY.egg"
+          "optchar/pyro-a_runSE_SECONDARY.egg"
+          "optchar/pyro-a_runW_SECONDARY.egg"
+          "optchar/pyro-a_runCenter_SECONDARY.egg"
+          "optchar/pyro-a_runE_SECONDARY.egg"
+          "optchar/pyro-a_runNW_SECONDARY.egg"
+          "optchar/pyro-a_runN_SECONDARY.egg"
+          "optchar/pyro-a_runNE_SECONDARY.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence SECONDARY_aimmatrix_run
+        }
+      ]
+      activity Secondary_Run
+      zero_x true
+      zero_y true
+      loop true
+    }
+    {
+      name AttackStand_SECONDARY
+      anim "optchar/pyro-AttackStand_SECONDARY.egg"
+      activity Secondary_Attack_Stand
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+    {
+      name ReloadStand_SECONDARY
+      anim "optchar/pyro-ReloadStand_SECONDARY.egg"
+      activity Secondary_Reload_Stand
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+    {
+      name a_secondary_reload_loop
+      anim "optchar/pyro-a_secondary_crouch_reload_loop.egg"
+      activity Secondary_Reload_Stand_Loop
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
+    }
+    {
+      name a_secondary_reload_end
+      anim "optchar/pyro-a_secondary_reload_end.egg"
+      activity Secondary_Reload_Stand_End
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+    {
+      name a_jumpstart_SECONDARY
+      anim "optchar/pyro-a_jumpstart_SECONDARY.egg"
+      activity Secondary_Jump_Start
+      zero_x true
+      zero_y true
+      ik_events [
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+    {
+      name a_jumpfloat_SECONDARY
+      anim "optchar/pyro-a_jumpfloat_SECONDARY.egg"
+      activity Secondary_Jump_Float
+      zero_x true zero_y true
+      loop true
+      ik_events [
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+    {
+      name jumpland_SECONDARY
+      anim "optchar/pyro-jumpland_SECONDARY.egg"
+      delta true
+      activity Secondary_Jump_Land
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+
+    {
+      name MELEE_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/pyro-a_MELEE_aimmatrix_idle_down_left.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_down_center.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_down_right.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_mid_left.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_mid_center.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_mid_right.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_up_left.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_up_center.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_up_right.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name MELEE_aimmatrix_run
+      blend {
+        anims [
+          "optchar/pyro-a_MELEE_aimmatrix_run_down_left.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_down_center.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_down_right.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_mid_left.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_mid_center.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_mid_right.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_up_left.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_up_center.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_up_right.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/pyro-a_MELEE_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name stand_MELEE
+      anim "optchar/pyro-stand_MELEE.egg"
+      loop true
+      layers [
+        {
+          sequence MELEE_aimmatrix_idle
+        }
+      ]
+      activity Melee_Stand
+    }
+    {
+      name run_MELEE
+      blend {
+        anims [
+          "optchar/pyro-a_runSW_MELEE.egg"
+          "optchar/pyro-a_runS_MELEE.egg"
+          "optchar/pyro-a_runSE_MELEE.egg"
+          "optchar/pyro-a_runW_MELEE.egg"
+          "optchar/pyro-a_runCenter_MELEE.egg"
+          "optchar/pyro-a_runE_MELEE.egg"
+          "optchar/pyro-a_runNW_MELEE.egg"
+          "optchar/pyro-a_runN_MELEE.egg"
+          "optchar/pyro-a_runNE_MELEE.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence MELEE_aimmatrix_run
+        }
+      ]
+      activity Melee_Run
+      zero_x true
+      zero_y true
+      loop true
+    }
+    {
+      name AttackStand_Melee
+      anim "optchar/pyro-AttackStand_Melee.egg"
+      activity Melee_Attack_Stand
+      delta true
+      fps 40
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+    {
+      name a_jumpstart_MELEE
+      anim "optchar/pyro-a_jumpstart_MELEE.egg"
+      activity Melee_Jump_Start
+      zero_x true
+      zero_y true
+    }
+    {
+      name a_jumpfloat_MELEE
+      anim "optchar/pyro-a_jumpfloat_MELEE.egg"
+      activity Melee_Jump_Float
+      zero_x true zero_y true
+      loop true
+    }
+    {
+      name jumpland_MELEE
+      anim "optchar/pyro-jumpland_MELEE.egg"
+      delta true
+      activity Melee_Jump_Land
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+
+    {
+      name a_flinch01
+      anim "optchar/pyro-a_flinch01.egg"
+      delta true
+      activity Gesture_Flinch
+    }
+
+    {
+      name SelectionMenu_Anim01
+      anim "optchar/pyro-selectionMenu_Anim01.egg"
+      events [
+        {
+          frame 4 type 2 event Client_Play_Sound
+          data "Selection.PyroFootStomp"
+        }
+        {
+          frame 7 type 2 event Client_Play_Sound
+          data "Selection.PyroClothesRustle"
+        }
+        {
+          frame 9 type 2 event Client_Play_Sound
+          data "Selection.PyroEquipment1"
+        }
+        {
+          frame 32 type 2 event Client_Play_Sound
+          data "Selection.PyroEquipment2"
+        }
+      ]
+    }
+    {
+      name SelectionMenu_Idle
+      anim "optchar/pyro-selectionMenu_Idle.egg"
+      loop true
+    }
+  ]
+
+  physics_model {
+    mesh pyro_physics
+
+    mass 100.00
+    inertia 10.00
+    damping 0.00
+    rot_damping 8.00
+
+    joints [
+      {
+        name bip_pelvis
+        rot_damping 0.00
+      }
+      {
+        name bip_hip_R
+        rot_damping 4.00
+        limit_x [ -12 12 ]
+        limit_y [ -79 50 ]
+        limit_z [ -60 20 ]
+      }
+      {
+        name bip_knee_R
+        mass_bias 1.10
+        rot_damping 6.00
+        limit_x [ 0 0 ]
+        limit_y [ -15 100 ]
+        limit_z [ 0 0 ]
+      }
+      {
+        name bip_hip_L
+        mass_bias 0.80
+        rot_damping 4.00
+        limit_x [ -12 12 ]
+        limit_y [ -79 50 ]
+        limit_z [ -60 20 ]
+      }
+      {
+        name bip_knee_L
+        mass_bias 1.30
+        rot_damping 9.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -100 15 ]
+      }
+      {
+        name bip_foot_L
+        mass_bias 0.75
+        rot_damping 7.00
+        limit_x [ -10 22 ]
+        limit_y [ -19 25 ]
+        limit_z [ -17 24 ]
+      }
+      {
+        name bip_spine_0
+        mass_bias 1.60
+        rot_damping 12.00
+        limit_x [ -46 40 ]
+        limit_y [ -30 30 ]
+        limit_z [ -30 30 ]
+      }
+      {
+        name bip_upperArm_R
+        mass_bias 1.20
+        rot_damping 16.00
+        limit_x [ -50 40 ]
+        limit_y [ -32 55 ]
+        limit_z [ -80 25 ]
+      }
+      {
+        name bip_lowerArm_R
+        mass_bias 2.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -120 -6 ]
+      }
+      {
+        name bip_upperArm_L
+        mass_bias 0.90
+        rot_damping 16.00
+        limit_x [ -40 50 ]
+        limit_y [ -55 32 ]
+        limit_z [ -80 25 ]
+      }
+      {
+        name bip_lowerArm_L
+        mass_bias 1.90
+        rot_damping 7.00
+        limit_x [ 0 0 ]
+        limit_y [ 0 0 ]
+        limit_z [ -120 -6 ]
+      }
+      {
+        name bip_hand_L
+        mass_bias 0.70
+        limit_x [ -30 37 ]
+        limit_y [ -25 25 ]
+        limit_z [ -20 35 ]
+      }
+      {
+        name bip_head
+        mass_bias 1.50
+        limit_x [ -50 30 ]
+        limit_y [ -45 45 ]
+        limit_z [ -36 40 ]
+      }
+      {
+        name bip_hand_R
+        mass_bias 0.60
+        limit_x [ -37 30 ]
+        limit_y [ -25 25 ]
+        limit_z [ -35 20 ]
+      }
+      {
+        name bip_foot_R
+        mass_bias 0.75
+        rot_damping 7.00
+        limit_x [ -35 50 ]
+        limit_y [ -19 25 ]
+        limit_z [ -32 32 ]
+      }
+    ]
+  }
+}

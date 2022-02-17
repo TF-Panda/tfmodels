@@ -1,0 +1,5 @@
+{
+  image "snow_full001_gloss.rgb"
+  format "luminance"
+  wrap "repeat"
+}

@@ -4,4 +4,7 @@
     base_texture "concretewall001e.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "concrete"
+  }
 }

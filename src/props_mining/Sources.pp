@@ -93,3 +93,16 @@
 #include $[THISDIRPREFIX]Sources.watertower.pp
 #include $[THISDIRPREFIX]Sources.watertower002.pp
 #include $[THISDIRPREFIX]Sources.smoke_stack_skybox001.pp
+#include $[THISDIRPREFIX]Sources.tunnel_truss01b.pp
+#include $[THISDIRPREFIX]Sources.track_s_curve_48_mirrored.pp
+#include $[THISDIRPREFIX]Sources.wooden_barrier01.pp
+#include $[THISDIRPREFIX]Sources.minehead.pp
+#include $[THISDIRPREFIX]Sources.truss002.pp
+#include $[THISDIRPREFIX]Sources.truss006.pp
+#include $[THISDIRPREFIX]Sources.track_y_joint_s_curve_96.pp
+#include $[THISDIRPREFIX]Sources.track_y_joint_arc_90.pp
+#include $[THISDIRPREFIX]Sources.crane001.pp
+#include $[THISDIRPREFIX]Sources.truss008.pp
+#include $[THISDIRPREFIX]Sources.crane001_small.pp
+#include $[THISDIRPREFIX]Sources.support_wall001a.pp
+#include $[THISDIRPREFIX]Sources.silo_top001.pp

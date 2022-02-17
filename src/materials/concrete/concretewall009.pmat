@@ -3,6 +3,10 @@
   parameters {
     base_texture "concretewall009.ptex"
     normal_texture "concretewall009_height-ssbump.ptex"
+    ssbump 1
     roughness 0.0
+  }
+  tags {
+    "surface_prop" "concrete"
   }
 }

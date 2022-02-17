@@ -1,9 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture demoman_hands.ptex
-    lightwarp_texture "../../engineer/engineer_viewmodel/engineer_hands_lightwarp.ptex"
-    env_map true
-    roughness 0.9
-  }
-}

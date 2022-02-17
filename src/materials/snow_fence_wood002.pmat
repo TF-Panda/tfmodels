@@ -1,0 +1,8 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/snow_fence_wood002.ptex"
+  }
+}

@@ -1,0 +1,8 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/wooden_barrier01.ptex"
+  }
+}

@@ -49,3 +49,7 @@
 #include $[THISDIRPREFIX]Sources.window_skylight001.pp
 #include $[THISDIRPREFIX]Sources.crane_cable001b.pp
 #include $[THISDIRPREFIX]Sources.train_building001.pp
+#include $[THISDIRPREFIX]Sources.handrailcorner.pp
+#include $[THISDIRPREFIX]Sources.handrail_corner02.pp
+#include $[THISDIRPREFIX]Sources.train_billboard001.pp
+#include $[THISDIRPREFIX]Sources.handrail_stairs.pp

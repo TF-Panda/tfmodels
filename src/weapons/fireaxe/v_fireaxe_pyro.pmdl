@@ -1,0 +1,53 @@
+{
+  model "optchar/v_fireaxe_pyro-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/pyro_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/pyro_blue.pmat" ]
+    }
+  ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/v_fireaxe_pyro-idle.egg"
+      activity VM_Idle
+      loop true
+    }
+    {
+      name draw
+      anim "optchar/v_fireaxe_pyro-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_FireAxe.Draw"
+        }
+      ]
+    }
+    {
+      name swing_a
+      anim "optchar/v_fireaxe_pyro-swing_a.egg"
+      snap true
+      activity VM_Fire
+    }
+    {
+      name swing_b
+      anim "optchar/v_fireaxe_pyro-swing_b.egg"
+      snap true
+      activity VM_Fire
+    }
+  ]
+}

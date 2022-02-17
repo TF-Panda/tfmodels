@@ -42,3 +42,4 @@
 #include $[THISDIRPREFIX]Sources.sign_gameplay01_sm.pp
 #include $[THISDIRPREFIX]Sources.security_fence80.pp
 #include $[THISDIRPREFIX]Sources.door_grate001_floorplate.pp
+#include $[THISDIRPREFIX]Sources.bottle001.pp

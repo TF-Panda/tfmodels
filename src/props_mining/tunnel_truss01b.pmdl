@@ -1,0 +1,55 @@
+
+{
+  "model"   "tunnel_truss01b.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/tunnel_truss01.pmat"
+        "../materials/tunnel_truss01b.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/tunnel_truss01b.pmat"
+        "../materials/tunnel_truss01b.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "tunnel_truss01b_physics"
+    "mass"     171.467
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "Wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "tunnel_truss01b_reference*"
+        ]
+      }
+    ]
+  }
+}

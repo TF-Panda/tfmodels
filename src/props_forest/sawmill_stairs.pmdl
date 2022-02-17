@@ -1,0 +1,46 @@
+
+{
+  "model"   "sawmill_stairs.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/sawmill_wood.pmat"
+        "../materials/sawmill_bolts.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "sawmill_stairs_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "sawmill_stairs_reference*"
+        ]
+      }
+    ]
+  }
+}

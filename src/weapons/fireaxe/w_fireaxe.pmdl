@@ -1,0 +1,24 @@
+{
+  model "optchar/w_fireaxe-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  lods [
+    {
+      distance 0
+      groups [ w_fireaxe_reference ]
+    }
+    {
+      distance 11
+      groups [ w_fireaxe_reference_lod1 ]
+    }
+  ]
+
+  physics_model {
+    mesh w_fireaxe_physics
+    mass 4.035612
+    rot_damping 4
+    damping 0
+    inertia 1
+  }
+}

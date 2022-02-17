@@ -1,0 +1,5 @@
+{
+  image "snow_full001.tga"
+  format "srgb"
+  wrap "repeat"
+}

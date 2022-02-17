@@ -1,0 +1,55 @@
+
+{
+  "model"   "binder001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/binder001.pmat"
+        "../materials/binder001_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/binder001_blue.pmat"
+        "../materials/binder001_blue.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "binder001_physics"
+    "mass"     10
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "binder001_reference*"
+        ]
+      }
+    ]
+  }
+}

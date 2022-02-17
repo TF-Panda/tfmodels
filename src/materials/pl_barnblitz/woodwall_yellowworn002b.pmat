@@ -1,0 +1,11 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "woodwall_yellowworn002b.ptex"
+    normal_texture "grain_elevator_facade_06_normal.ptex"
+    roughness 0.0
+  }
+  tags {
+    "surface_prop" "wood"
+  }
+}

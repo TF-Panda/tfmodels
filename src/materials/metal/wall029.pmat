@@ -1,0 +1,12 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "wall029.ptex"
+    normal_texture "wall029_height-ssbump.ptex"
+    ssbump 1
+    roughness 0.0
+  }
+  tags {
+    "surface_prop" "metal"
+  }
+}

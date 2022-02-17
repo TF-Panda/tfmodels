@@ -1,8 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "rockwall005.ptex"
-    normal_texture "rockwall004_bump-ssbump.ptex"
-    roughness 0.0
-  }
-}

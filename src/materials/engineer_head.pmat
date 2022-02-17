@@ -7,7 +7,7 @@
     "bumpmap"     "../maps/shared_normal.ptex"
     "phong"     1
     "phongexponent"     20
-    "phongboost"     0.3
+    "phongboost"     0.1
     "lightwarptexture"     "../maps/pyro_lightwarp.ptex"
     "phongfresnelranges"
     [

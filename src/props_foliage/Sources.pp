@@ -21,3 +21,6 @@
 #include $[THISDIRPREFIX]Sources.shrub_03_card_skybox.pp
 #include $[THISDIRPREFIX]Sources.spikeplant01.pp
 #include $[THISDIRPREFIX]Sources.joshuatree02.pp
+#include $[THISDIRPREFIX]Sources.shrub_03b.pp
+#include $[THISDIRPREFIX]Sources.tree_pine01_4cluster.pp
+#include $[THISDIRPREFIX]Sources.corn_plant01.pp

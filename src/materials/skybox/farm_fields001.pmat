@@ -4,4 +4,7 @@
     base_texture "farm_fields001.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "default"
+  }
 }

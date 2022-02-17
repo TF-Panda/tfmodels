@@ -110,8 +110,11 @@ for matFname in mats:
 
     matFname = Filename.fromOsSpecific(matFname.lower())
     matOut = outDir / Filename(matFname.getFullpathWoExtension() + ".pmat")
-    if matOut.isRegularFile():
+    matBasename = matFname.getBasenameWoExtension()
+    if matBasename.startswith("tools"):
         continue
+    #if matOut.isRegularFile():
+    #    continue
 
     osMatOutDirname = Filename(matOut.getDirname()).toOsSpecific()
     if not os.path.isdir(osMatOutDirname):
@@ -138,12 +141,17 @@ for matFname in mats:
     isTranslucent = False
     hasEnvCubemap = False
     envMapMaskLoc = None
+    ssBump = False
+
+    tags = {}
     for i in range(matBlock.getNumKeys()):
         key = matBlock.getKey(i).lower()
         if key == "$basetexture":
             baseTexturePath = matBlock.getValue(i).lower()
         elif key == "$bumpmap":
             bumpPath = matBlock.getValue(i).lower()
+        elif key == "$ssbump":
+            ssBump = bool(int(matBlock.getValue(i)))
         elif key == "$translucent" or key == "$alphatest":
             isTranslucent = bool(int(matBlock.getValue(i)))
         elif key == "$envmap":
@@ -154,6 +162,37 @@ for matFname in mats:
             envMapMaskLoc = 1
         elif key == "$envmapmask":
             envMaskPath = matBlock.getValue(i).lower()
+        elif key == "$surfaceprop":
+            tags["surface_prop"] = matBlock.getValue(i).lower()
+
+    if not "surface_prop" in tags or tags["surface_prop"] == "default":
+        # Material doesn't have surface prop or its just given default.
+        # Infer from material name
+        matBnLower = matFname.getFullpathWoExtension()
+        if "concrete" in matBnLower:
+            tags["surface_prop"] = "concrete"
+        elif "brick" in matBnLower:
+            tags["surface_prop"] = "brick"
+        elif "wood" in matBnLower:
+            tags["surface_prop"] = "wood"
+        elif "metal" in matBnLower:
+            tags["surface_prop"] = "metal"
+        elif "rock" in matBnLower:
+            tags["surface_prop"] = "rock"
+        elif "glass" in matBnLower:
+            tags["surface_prop"] = "glass"
+        elif "plaster" in matBnLower:
+            tags["surface_prop"] = "plaster"
+        elif "tile" in matBnLower or "ceramic" in matBnLower:
+            tags["surface_prop"] = "ceramic"
+        elif "dirt" in matBnLower:
+            tags["surface_prop"] = "gravel"
+        else:
+            tags["surface_prop"] = "default"
+
+        print("Gave automatic surface prop:", tags["surface_prop"])
+    else:
+        print("Converted surface prop:", tags["surface_prop"])
 
     if baseTexturePath:
         baseTextureOutPath = convertTexture(baseTexturePath, isTranslucent, True, False)
@@ -210,11 +249,20 @@ for matFname in mats:
         pmatData += "    env_map true\n"
     if bumpOutPath:
         pmatData += "    normal_texture \"%s\"\n" % bumpOutPath.getBasename()
+        if ssBump:
+            pmatData += "    ssbump 1\n"
     if envMaskOutPath:
         pmatData += "    gloss_texture \"%s\"\n" % envMaskOutPath.getBasename()
     else:
         pmatData += "    roughness 0.0\n"
     pmatData += "  }\n"
+    if isTranslucent:
+        pmatData += "  transparency dual\n"
+    if tags:
+        pmatData += "  tags {\n"
+        for key, value in tags.items():
+            pmatData += "    \"%s\" \"%s\"\n" % (key, value)
+        pmatData += "  }\n"
     pmatData += "}\n"
 
     print("Writing", matOut.toOsSpecific())

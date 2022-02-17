@@ -1,0 +1,41 @@
+
+{
+  "model"   "mining_cart_supplies001.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/mining_car.pmat"
+        "../materials/ammo_box1.pmat"
+        "../materials/miningcrate001.pmat"
+        "../materials/w_rocket01.pmat"
+        "../materials/w_rocketlauncher01.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "mining_cart_supplies001_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,17 +1,6 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/weapons
 
-#begin install_tex
-  #define SOURCES \
-    c_grenadelauncher.ptex \
-    c_grenadelauncher_gloss.ptex
-#end install_tex
-
-#begin install_mat
-  #define SOURCES \
-    c_grenadelauncher.pmat
-#end install_mat
-
 #begin blender_char_egg
   #define BLENDER_PREFIX c_grenadelauncher-
   #define EGG_PREFIX c_grenadelauncher-

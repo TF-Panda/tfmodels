@@ -1,0 +1,5 @@
+{
+  image "wall029_height-ssbump.tga"
+  format "rgb"
+  wrap "repeat"
+}

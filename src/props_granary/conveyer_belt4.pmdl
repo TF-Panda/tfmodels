@@ -1,0 +1,76 @@
+
+{
+  "model"   "conveyer_belt4.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/conveyer_belt.pmat"
+        "../materials/conveyer_support.pmat"
+        "../materials/conveyer_belt_red.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/conveyer_belt_red.pmat"
+        "../materials/conveyer_support.pmat"
+        "../materials/conveyer_belt_red.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "conveyer_belt4_reference"
+      ]
+    }
+
+    {
+      "distance"       200
+      "groups" 
+      [
+        "conveyer_belt4_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "conveyer_belt4_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "conveyer_belt4_reference*"
+        ]
+      }
+    ]
+  }
+}

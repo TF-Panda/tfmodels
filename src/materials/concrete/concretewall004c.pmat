@@ -1,7 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "concretewall004c.ptex"
-    roughness 0.0
-  }
-}

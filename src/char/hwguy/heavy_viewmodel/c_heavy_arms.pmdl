@@ -10,11 +10,11 @@
   material_groups [
     {
       name red
-      materials [ "../hvyweapon_hands.pmat" ]
+      materials [ "../../../materials/hvyweapon_hands.pmat" ]
     }
     {
       name blue
-      materials [ "../hvyweapon_hands.pmat" ]
+      materials [ "../../../materials/hvyweapon_hands.pmat" ]
     }
   ]
 

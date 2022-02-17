@@ -1,8 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "wall020.ptex"
-    normal_texture "wall020_height-ssbump.ptex"
-    roughness 0.0
-  }
-}

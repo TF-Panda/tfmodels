@@ -1,17 +1,6 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/char
 
-#begin install_tex
-  #define SOURCES \
-    engineer_hands_lightwarp.ptex engineer_handl.ptex \
-    engineer_handr_red.ptex
-#end install_tex
-
-#begin install_mat
-  #define SOURCES \
-    engineer_handL.pmat engineer_handR_red.pmat
-#end install_mat
-
 #define C_ENGINEER_ARMS_ANIMS \
   PASSTIME_ball_catch1 \
   PASSTIME_ball_catch2 \

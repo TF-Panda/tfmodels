@@ -4,4 +4,7 @@
     base_texture "metaldoor01_96.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "metal"
+  }
 }

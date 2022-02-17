@@ -1,0 +1,70 @@
+{
+  model "optchar/v_rocketlauncher_soldier-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/soldier_sleeves_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/soldier_sleeves_blue.pmat" ]
+    }
+  ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/v_rocketlauncher_soldier-idle.egg"
+      activity VM_Idle
+      snap true
+    }
+    {
+      name fire
+      anim "optchar/v_rocketlauncher_soldier-fire.egg"
+      activity VM_Fire
+      snap true
+    }
+    {
+      name draw
+      anim "optchar/v_rocketlauncher_soldier-draw.egg"
+      activity VM_Draw
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_RPG.Draw"
+        }
+      ]
+    }
+    {
+      name reload_start
+      anim "optchar/v_rocketlauncher_soldier-reload_start.egg"
+      activity VM_Reload_Start
+    }
+    {
+      name reload_loop
+      anim "optchar/v_rocketlauncher_soldier-reload_loop.egg"
+      activity VM_Reload
+      snap true
+      loop true
+      events [
+        {
+          frame 2 type 2 event Client_Play_Sound
+          data "Weapon_RPG.Reload"
+        }
+      ]
+    }
+    {
+      name reload_finish
+      anim "optchar/v_rocketlauncher_soldier-reload_finish.egg"
+      activity VM_Reload_Finish
+      snap true
+    }
+  ]
+}

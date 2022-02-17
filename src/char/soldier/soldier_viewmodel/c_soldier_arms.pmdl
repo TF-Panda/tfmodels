@@ -41,11 +41,11 @@
   material_groups [
     {
       name red
-      materials [ soldier_sleeves_red.pmat ]
+      materials [ "../../../materials/soldier_sleeves_red.pmat" ]
     }
     {
       name blue
-      materials [ soldier_sleeves_blue.pmat ]
+      materials [ "../../../materials/soldier_sleeves_blue.pmat" ]
     }
   ]
 

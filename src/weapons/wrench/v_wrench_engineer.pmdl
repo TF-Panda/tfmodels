@@ -1,0 +1,74 @@
+{
+  model "optchar/v_wrench_engineer-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/engineer_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/engineer_blue.pmat" ]
+    }
+  ]
+
+  sequences [
+    {
+      name idle_tap
+      anim "optchar/v_wrench_engineer-idle_tap.egg"
+      activity VM_Idle
+      loop true
+      events [
+        {
+          frame 21 type 2 event Client_Play_Sound
+          data "Weapon_Wrench.HitHand"
+        }
+      ]
+    }
+    {
+      name draw
+      anim "optchar/v_wrench_engineer-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 3 type 2 event Client_Play_Sound
+          data "Weapon_Wrench.Draw"
+        }
+        {
+          frame 3 type 2 event Client_Play_Sound
+          data "Weapon_Wrench.Draw2"
+        }
+        {
+          frame 20 type 2 event Client_Play_Sound
+          data "Weapon_Wrench.HitHand"
+        }
+      ]
+    }
+    {
+      name swing_a
+      anim "optchar/v_wrench_engineer-swing_a.egg"
+      activity VM_Fire
+      snap true
+    }
+    {
+      name swing_b
+      anim "optchar/v_wrench_engineer-swing_b.egg"
+      activity VM_Fire
+      snap true
+    }
+    {
+      name swing_c
+      anim "optchar/v_wrench_engineer-swing_c.egg"
+      // This is the crit swing.
+      //activity VM_Fire
+      snap true
+    }
+  ]
+}

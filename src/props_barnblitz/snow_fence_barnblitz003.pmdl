@@ -1,0 +1,38 @@
+
+{
+  "model"   "snow_fence_barnblitz003.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/woodwall_darkbrown001.pmat"
+        "../materials/snow_fence_wood002.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "snow_fence_barnblitz003_ref*"
+        ]
+      }
+    ]
+  }
+}

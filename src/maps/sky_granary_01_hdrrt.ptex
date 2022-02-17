@@ -1,0 +1,7 @@
+{
+  image sky_granary_01_hdrrt.tga
+  format rgba
+  wrap clamp
+  minfilter nearest
+  magfilter nearest
+}

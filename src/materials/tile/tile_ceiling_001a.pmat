@@ -4,4 +4,7 @@
     base_texture "tile_ceiling_001a.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "ceramic"
+  }
 }

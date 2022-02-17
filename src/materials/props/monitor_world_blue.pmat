@@ -4,4 +4,7 @@
     base_texture "monitor_world_blue.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "glass"
+  }
 }

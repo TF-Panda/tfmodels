@@ -3,6 +3,29 @@
 
   hpr [ 180 0 0 ]
 
+  ik_chains [
+    {
+      name rfoot
+      end_joint bip_foot_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lfoot
+      end_joint bip_foot_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name rhand
+      end_joint bip_hand_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lhand
+      end_joint bip_hand_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+  ]
+
   custom_data {
     bbox {
       //min
@@ -429,6 +452,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -482,6 +516,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -501,6 +546,17 @@
       anim "optchar/soldier-AttackStand_PRIMARY.egg"
       delta true
       activity Primary_Attack_Stand
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -508,6 +564,17 @@
       anim "optchar/soldier-AttackCrouch_PRIMARY.egg"
       delta true
       activity Primary_Attack_Crouch
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -538,6 +605,14 @@
         {
           sequence layer_reload_standing_arms
           start 0 peak 4 tail 32 end 32
+        }
+      ]
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
         }
       ]
     }
@@ -578,6 +653,14 @@
           data "rocket 0"
         }
       ]
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -605,6 +688,14 @@
           sequence layer_reload_standing_arms_end
           start 0 peak 0 tail 10 end 18
           spline true
+        }
+      ]
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
         }
       ]
     }
@@ -642,6 +733,17 @@
       anim "optchar/soldier-jumpland_PRIMARY.egg"
       delta true
       activity Primary_Jump_Land
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -667,6 +769,17 @@
       }
       delta true
       weight_list hips_upper_body
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -721,6 +834,17 @@
       }
       delta true
       weight_list hips_upper_body
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -756,6 +880,14 @@
           spline true
         }
       ]
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -773,6 +905,14 @@
       layers [
         {
           sequence layer_reload_standing_secondary_arms_loop
+        }
+      ]
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
         }
       ]
     }
@@ -798,6 +938,14 @@
           spline true
         }
       ]
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -805,6 +953,17 @@
       anim "optchar/soldier-AttackStand_SECONDARY.egg"
       activity Secondary_Attack_Stand
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -847,6 +1006,17 @@
       anim "optchar/soldier-jumpland_SECONDARY.egg"
       delta true
       activity Secondary_Jump_Land
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -879,6 +1049,14 @@
       }
       delta true
       weight_list hips_upper_body
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -904,6 +1082,14 @@
       }
       delta true
       weight_list hips_upper_body
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -965,6 +1151,14 @@
           spline true
         }
       ]
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -989,6 +1183,14 @@
       anim "optchar/soldier-jumpland_MELEE.egg"
       activity Melee_Jump_Land
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {

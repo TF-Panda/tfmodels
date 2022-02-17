@@ -1,0 +1,23 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/scout_blue.ptex"
+    "bumpmap"     "../maps/scout_normal.ptex"
+    "phong"     1
+    "phongexponenttexture"     "../maps/scout_red_exponent.ptex"
+    "phongboost"     0.3
+    "lightwarptexture"     "../maps/pyro_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.3
+      1
+      8
+    ]
+    "halflambert"     0
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

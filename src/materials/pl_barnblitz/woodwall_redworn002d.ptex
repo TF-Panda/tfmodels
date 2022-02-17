@@ -1,0 +1,5 @@
+{
+  image "woodwall_redworn002d.tga"
+  format "srgb"
+  wrap "repeat"
+}

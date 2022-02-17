@@ -1,7 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "computer_panel_002b.ptex"
-    roughness 0.0
-  }
-}

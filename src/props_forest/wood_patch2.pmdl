@@ -1,0 +1,59 @@
+
+{
+  "model"   "wood_patch2.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wood_patch2.pmat"
+        "../materials/wood_patch2b.pmat"
+        "../materials/wood_patch2c.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/wood_patch2b.pmat"
+        "../materials/wood_patch2b.pmat"
+        "../materials/wood_patch2c.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/wood_patch2c.pmat"
+        "../materials/wood_patch2b.pmat"
+        "../materials/wood_patch2c.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "wood_patch2_reference*"
+        ]
+      }
+    ]
+  }
+}

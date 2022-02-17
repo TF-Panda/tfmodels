@@ -4,4 +4,8 @@
     base_texture "chicken_wire001.ptex"
     roughness 0.0
   }
+  transparency dual
+  tags {
+    "surface_prop" "metal"
+  }
 }

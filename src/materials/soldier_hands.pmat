@@ -1,0 +1,22 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/soldier_hands.ptex"
+    "basemapalphaphongmask"     1
+    "phong"     1
+    "phongexponent"     10
+    "phongboost"     0.65
+    "lightwarptexture"     "../maps/hand_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.3
+      0.6
+      3
+    ]
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

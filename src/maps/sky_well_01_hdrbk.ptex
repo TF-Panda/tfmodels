@@ -1,0 +1,7 @@
+{
+  image sky_well_01_hdrbk.tga
+  format rgba
+  wrap clamp
+  minfilter nearest
+  magfilter nearest
+}

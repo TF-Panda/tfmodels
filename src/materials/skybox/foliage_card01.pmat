@@ -1,7 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "foliage_card01.ptex"
-    roughness 0.0
-  }
-}

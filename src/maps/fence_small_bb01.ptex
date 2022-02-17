@@ -1,0 +1,8 @@
+
+{
+  "image"   "fence_small_bb01.tga"
+  "format"   "srgb"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

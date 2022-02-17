@@ -1,22 +1,6 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/char
 
-#begin install_tex
-  #define SOURCES \
-    soldier_hands.ptex \
-    soldier_hands_roughness.ptex \
-    soldier_sleeves_normal.ptex \
-    soldier_sleeves_blue.ptex \
-    soldier_sleeves_red.ptex
-#end install_tex
-
-#begin install_mat
-  #define SOURCES \
-    soldier_hands.pmat \
-    soldier_sleeves_red.pmat \
-    soldier_sleeves_blue.pmat
-#end install_mat
-
 #define C_SOLDIER_ARMS_ANIMS \
   PASSTIME_ball_catch1 \
   PASSTIME_ball_catch2 \

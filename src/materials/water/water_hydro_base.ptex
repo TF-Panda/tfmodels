@@ -1,5 +1,5 @@
 {
   image "water_hydro_base.tga"
-  format "srgb_alpha"
+  format "srgb"
   wrap "clamp"
 }

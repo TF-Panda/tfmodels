@@ -1,0 +1,67 @@
+
+{
+  "model"   "boulder2_large.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/boulder2.pmat"
+        "../materials/boulder2_nonormal.pmat"
+        "../materials/boulder2_desat.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/boulder2_nonormal.pmat"
+        "../materials/boulder2_nonormal.pmat"
+        "../materials/boulder2_desat.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed2"
+      "materials" 
+      [
+        "../materials/boulder2_desat.pmat"
+        "../materials/boulder2_nonormal.pmat"
+        "../materials/boulder2_desat.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "boulder2_large_physics"
+    "mass"     41853.6
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "rock"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "boulder2*"
+        ]
+      }
+    ]
+  }
+}

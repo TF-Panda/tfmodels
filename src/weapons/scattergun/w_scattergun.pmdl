@@ -1,0 +1,44 @@
+{
+  model "optchar/w_scattergun-zero.egg"
+
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent weapon_bone
+          pos [ 0 3.97 23.38 ]
+          hpr [ 0 90 0 ]
+        }
+      ]
+    }
+  ]
+
+  physics_model {
+    mesh w_scattergun_physics
+    mass 1.0
+  }
+
+  lods [
+    {
+      distance 0
+      groups [ w_scattergun_reference ]
+    }
+    {
+      distance 11
+      groups [ w_scattergun_reference_lod1 ]
+    }
+    {
+      distance 22
+      groups [ w_scattergun_reference_lod2 ]
+    }
+    {
+      distance 33
+      groups [ w_scattergun_reference_lod3 ]
+    }
+    {
+      distance 44
+      groups [ w_scattergun_reference_lod4 ]
+    }
+  ]
+}

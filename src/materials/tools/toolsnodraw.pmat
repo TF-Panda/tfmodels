@@ -2,9 +2,10 @@
   material StandardMaterial
   parameters {
     base_texture "toolsnodraw.ptex"
+    roughness 0.0
   }
-
-  tags [
-    compile_nodraw
-  ]
+  tags {
+    compile_nodraw 1
+    "surface_prop" "default"
+  }
 }

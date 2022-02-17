@@ -1,0 +1,53 @@
+{
+  model "optchar/v_bat_scout-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  sequences [
+    {
+      name idle
+      anim "optchar/v_bat_scout-idle.egg"
+      activity VM_Idle
+      snap true
+      loop true
+    }
+    {
+      name draw
+      anim "optchar/v_bat_scout-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Bat.Draw"
+        }
+        {
+          frame 8 type 2 event Client_Play_Sound
+          data "Weapon_Bat.DrawSwoosh2"
+        }
+        {
+          frame 16 type 2 event Client_Play_Sound
+          data "Weapon_Bat.DrawSwoosh1"
+        }
+        {
+          frame 20 type 2 event Client_Play_Sound
+          data "Weapon_Bat.DrawCatch"
+        }
+      ]
+    }
+    {
+      name swingMiss_a
+      anim "optchar/v_bat_scout-swingMiss_a.egg"
+      activity VM_Fire
+    }
+    {
+      name swingMiss_b
+      anim "optchar/v_bat_scout-swingMiss_b.egg"
+      activity VM_Fire
+    }
+  ]
+}

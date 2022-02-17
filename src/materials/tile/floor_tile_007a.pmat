@@ -4,4 +4,7 @@
     base_texture "floor_tile_007a.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "ceramic"
+  }
 }

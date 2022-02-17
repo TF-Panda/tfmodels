@@ -1,16 +1,6 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/weapons
 
-#begin install_tex
-  #define SOURCES \
-    v_bottle.ptex
-#end install_tex
-
-#begin install_mat
-  #define SOURCES \
-    v_bottle.pmat
-#end install_mat
-
 #begin blender_char_egg
   #define BLENDER_PREFIX c_bottle-
   #define EGG_PREFIX c_bottle-
@@ -34,8 +24,34 @@
     -flag c_bottle_physics
 #end optchar_egg
 
+#define V_BOTTLE_DEMOMAN_ANIMS \
+  draw \
+  idle \
+  swing_a \
+  swing_b \
+  swing_c
+
+#begin blender_char_egg
+  #define BLENDER_PREFIX v_bottle_demoman-
+  #define EGG_PREFIX v_bottle_demoman-
+  #define POLY_MODEL zero
+  #define CHAR_NAME v_bottle_demoman.qc_skeleton
+  #define ANIMS_DIR anims
+  #define ANIMS $[V_BOTTLE_DEMOMAN_ANIMS]
+
+#end blender_char_egg
+
+#begin optchar_egg
+  #define TARGET_DIR optchar
+  #define SOURCES \
+    v_bottle_demoman-zero.egg \
+    $[matrix anims/v_bottle_demoman-,$[V_BOTTLE_DEMOMAN_ANIMS],.egg]
+
+#end optchar_egg
+
 #begin install_mdl
   #define SOURCES \
-    c_bottle.pmdl
+    c_bottle.pmdl \
+    v_bottle_demoman.pmdl
 #end install_mdl
 

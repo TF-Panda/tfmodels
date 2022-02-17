@@ -1,0 +1,12 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "dirtground003.ptex"
+    normal_texture "dirtground006_height-ssbump.ptex"
+    ssbump 1
+    roughness 0.0
+  }
+  tags {
+    "surface_prop" "dirt"
+  }
+}

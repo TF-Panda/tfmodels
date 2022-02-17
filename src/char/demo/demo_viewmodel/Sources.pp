@@ -1,16 +1,6 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/char
 
-#begin install_tex
-  #define SOURCES \
-    demoman_hands.ptex
-#end install_tex
-
-#begin install_mat
-  #define SOURCES \
-    demoman_hands.pmat
-#end install_mat
-
 #define C_DEMO_ARMS_ANIMS \
   PASSTIME_ball_catch1 \
   PASSTIME_ball_catch2 \

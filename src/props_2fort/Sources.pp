@@ -101,3 +101,9 @@
 #include $[THISDIRPREFIX]Sources.window007b.pp
 #include $[THISDIRPREFIX]Sources.chimney_skybox001.pp
 #include $[THISDIRPREFIX]Sources.chimney_skybox008.pp
+#include $[THISDIRPREFIX]Sources.roof_metal003.pp
+#include $[THISDIRPREFIX]Sources.locker001.pp
+#include $[THISDIRPREFIX]Sources.silo_cluster01a.pp
+#include $[THISDIRPREFIX]Sources.roof_metal002.pp
+#include $[THISDIRPREFIX]Sources.roof_metal001.pp
+#include $[THISDIRPREFIX]Sources.trainwheel001.pp

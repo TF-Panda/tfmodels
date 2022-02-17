@@ -1,0 +1,63 @@
+{
+  model "optchar/v_bottle_demoman-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+
+    bodygroups [
+      {
+        name bottle
+        nodes [
+          "v_bottleunBroken_demoman"
+          "v_bottleBroken_demoman"
+        ]
+      }
+    ]
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/demoman_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/demoman_blue.pmat" ]
+    }
+  ]
+
+  sequences [
+    {
+      name draw
+      anim "optchar/v_bottle_demoman-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Bottle.Draw"
+        }
+      ]
+    }
+    {
+      name idle
+      anim "optchar/v_bottle_demoman-idle.egg"
+      loop true
+      activity VM_Idle
+    }
+    {
+      name swing_a
+      anim "optchar/v_bottle_demoman-swing_a.egg"
+      snap true
+      activity VM_Fire
+    }
+    {
+      name swing_b
+      anim "optchar/v_bottle_demoman-swing_b.egg"
+      snap true
+      activity VM_Fire
+    }
+  ]
+}

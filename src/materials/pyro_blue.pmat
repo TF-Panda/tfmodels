@@ -1,0 +1,23 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/pyro_blue.ptex"
+    "bumpmap"     "../maps/pyro_normal.ptex"
+    "phong"     1
+    "phongexponent"     15
+    "phongboost"     0.5
+    "lightwarptexture"     "../maps/pyro_lightwarp.ptex"
+    "phongfresnelranges"
+    [
+      2
+      5
+      15
+    ]
+    "halflambert"     1
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

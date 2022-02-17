@@ -4,7 +4,8 @@
     base_texture "toolsskybox.ptex"
   }
 
-  tags [
-    compile_sky
-  ]
+  tags {
+    surface_prop sky
+    compile_sky 1
+  }
 }

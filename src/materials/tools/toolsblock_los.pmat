@@ -4,4 +4,8 @@
     base_texture "toolsblock_los.ptex"
     roughness 0.0
   }
+
+  tags {
+    compile_skip 1
+  }
 }

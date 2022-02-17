@@ -1,0 +1,45 @@
+{
+  model "optchar/v_fist_heavy-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  sequences [
+    {
+      name swing_left
+      anim "optchar/v_fist_heavy-swing_left.egg"
+      activity VM_Hit_Left
+      fps 25
+    }
+    {
+      name swing_right
+      anim "optchar/v_fist_heavy-swing_right.egg"
+      activity VM_Hit_Right
+      fps 25
+    }
+    {
+      name idle
+      anim "optchar/v_fist_heavy-idle.egg"
+      activity VM_Idle
+      loop true
+    }
+    {
+      name draw
+      anim "optchar/v_fist_heavy-draw.egg"
+      activity VM_Draw
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Fist.Draw"
+        }
+        {
+          frame 5 type 2 event Client_Play_Sound
+          data "Weapon_Fist.HitHand"
+        }
+      ]
+    }
+  ]
+}

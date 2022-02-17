@@ -24,16 +24,39 @@
     }
   ]
 
+  ik_chains [
+    {
+      name rfoot
+      end_joint bip_foot_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lfoot
+      end_joint bip_foot_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name rhand
+      end_joint bip_hand_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lhand
+      end_joint bip_hand_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+  ]
+
   material_groups [
     {
       name red
-      materials [ hvyweapon_red.pmat heavy_head.pmat
+      materials [ "../../materials/hvyweapon_red.pmat" "../../materials/heavy_head_red.pmat"
                   eyeball_l_heavy.pmat
                   eyeball_r_heavy.pmat ]
     }
     {
       name blue
-      materials [ hvyweapon_blue.pmat heavy_head.pmat
+      materials [ "../../materials/hvyweapon_blue.pmat" "../../materials/heavy_head_blue.pmat"
                   eyeball_l_heavy.pmat
                   eyeball_r_heavy.pmat ]
     }
@@ -541,6 +564,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -577,6 +611,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -626,6 +671,17 @@
       activity Primary_Attack_Stand
       delta true
       weight_list weights_layer_attackCrouch_PRIMARY_spoolup
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -648,7 +704,9 @@
 
     {
       name attackStand_PRIMARY_spoolup
-      anim "optchar/heavy-attackStand_PRIMARY_spoolup.egg"
+      //anim "optchar/heavy-attackStand_PRIMARY_spoolup.egg"
+      num_frames 16
+      fps 30
       fade_in 0.7 fade_out 0.7
       layers [
         {
@@ -657,7 +715,15 @@
           spline true
         }
       ]
-      weight_list weights_attackSwim_MELEE
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+      //weight_list weights_attackSwim_MELEE
       activity Primary_Attack_Stand_Prefire
     }
 
@@ -681,7 +747,9 @@
 
     {
       name attackStand_PRIMARY_spooldown
-      anim "optchar/heavy-attackStand_PRIMARY_spooldown.egg"
+      //anim "optchar/heavy-attackStand_PRIMARY_spooldown.egg"
+      num_frames 31
+      fps 30
       activity Primary_Attack_Stand_Postfire
       fade_in 0.5 fade_out 0.5
       layers [
@@ -691,7 +759,18 @@
           spline true
         }
       ]
-      weight_list weights_attackSwim_MELEE
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+      //weight_list weights_attackSwim_MELEE
     }
 
     {
@@ -716,6 +795,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -769,6 +859,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -805,6 +906,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -829,6 +941,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -892,6 +1015,14 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
     {
       name swim_PRIMARY
@@ -952,6 +1083,17 @@
       anim "optchar/heavy-jumpland_PRIMARY.egg"
       activity Primary_Jump_Land
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
     }
     ///////////////////////////////////////////////////////////////////////////
 
@@ -980,6 +1122,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
     {
       name stand_SECONDARY
@@ -1015,6 +1168,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
     {
       name run_SECONDARY
@@ -1050,6 +1214,17 @@
       anim "optchar/heavy-AttackStand_SECONDARY.egg"
       delta true
       activity Secondary_Attack_Stand
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -1057,18 +1232,42 @@
       anim "optchar/heavy-SECONDARY_reload.egg"
       activity Secondary_Reload_Stand
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
     {
       name SECONDARY_reload_loop
       anim "optchar/heavy-SECONDARY_reload_loop.egg"
       delta true
       activity Secondary_Reload_Stand_Loop
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
     {
       name SECONDARY_reload_end
       anim "optchar/heavy-a_SECONDARY_reload_end.egg"
       activity Secondary_Reload_Stand_End
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -1087,6 +1286,195 @@
       anim "optchar/heavy-jumpland_SECONDARY.egg"
       activity Secondary_Jump_Land
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Melee Weapon
+    ///////////////////////////////////////////////////////////////////////////
+    {
+      name MELEE_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/heavy-a_MELEE_aimmatrix_idle_down_left.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_down_center.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_down_right.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_mid_left.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_mid_center.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_mid_right.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_up_left.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_up_center.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_up_right.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_straight_up.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
+    }
+    {
+      name stand_MELEE
+      anim "optchar/heavy-stand_MELEE.egg"
+      activity Melee_Stand
+      loop true
+      layers [
+        {
+          sequence MELEE_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name MELEE_aimmatrix_run
+      blend {
+        anims [
+          "optchar/heavy-a_MELEE_aimmatrix_run_down_left.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_down_center.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_down_right.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_mid_left.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_mid_center.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_mid_right.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_up_left.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_up_center.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_up_right.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_straight_up.egg"
+          "optchar/heavy-a_MELEE_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
+    }
+    {
+      name run_MELEE
+      blend {
+        anims [
+          "optchar/heavy-a_runSW_MELEE.egg"
+          "optchar/heavy-a_runS_MELEE.egg"
+          "optchar/heavy-a_runSE_MELEE.egg"
+          "optchar/heavy-a_runW_MELEE.egg"
+          "optchar/heavy-a_runCenter_MELEE.egg"
+          "optchar/heavy-a_runE_MELEE.egg"
+          "optchar/heavy-a_runNW_MELEE.egg"
+          "optchar/heavy-a_runN_MELEE.egg"
+          "optchar/heavy-a_runNE_MELEE.egg"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence MELEE_aimmatrix_run
+        }
+      ]
+      loop true
+      zero_x true
+      zero_y true
+      activity Melee_Run
+    }
+
+    {
+      name attackStand_MELEE_L
+      anim "optchar/heavy-attackStand_MELEE_L.egg"
+      delta true
+      activity Melee_Attack_Stand
+      fps 40
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+    {
+      name attackStand_MELEE_R
+      anim "optchar/heavy-attackStand_MELEE_R.egg"
+      delta true
+      activity Melee_Attack_Stand
+      fps 35
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+    {
+      name attackStand_MELEE_U
+      anim "optchar/heavy-attackStand_MELEE_U.egg"
+      delta true
+      activity Melee_Attack_Stand
+      fps 35
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+
+    {
+      name jumpstart_MELEE
+      anim "optchar/heavy-jumpstart_MELEE.egg"
+      activity Melee_Jump_Start
+    }
+    {
+      name jumpfloat_MELEE
+      anim "optchar/heavy-jumpfloat_MELEE.egg"
+      activity Melee_Jump_Float
+      loop true
+    }
+    {
+      name jumpland_MELEE
+      anim "optchar/heavy-jumpland_MELEE.egg"
+      activity Melee_Jump_Land
+      delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     ///////////////////////////////////////////////////////////////////////////

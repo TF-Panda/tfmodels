@@ -797,6 +797,7 @@
 
   #define OPTCHAR_OPTS \
     -keepall \
+    -drop hlp_forearm_L,hlp_forearm_R \
     -flag demo_eye \
     -flag demo_morphs_low \
     -flag demo_morphs_low_lod1 \

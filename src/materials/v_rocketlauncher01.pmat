@@ -1,0 +1,23 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/v_rocketlauncher01.ptex"
+    "phong"     1
+    "phongexponent"     15
+    "phongboost"     3
+    "lightwarptexture"     "../maps/weapon_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.3
+      0.5
+      3
+    ]
+    "halflambert"     1
+    "basemapalphaphongmask"     1
+    "rimlight"     1
+    "rimlightexponent"     20
+    "rimlightboost"     0.25
+  }
+}

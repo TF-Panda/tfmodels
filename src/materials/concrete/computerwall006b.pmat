@@ -1,7 +1,0 @@
-{
-  material StandardMaterial
-  parameters {
-    base_texture "computerwall006b.ptex"
-    roughness 0.0
-  }
-}

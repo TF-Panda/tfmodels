@@ -1,17 +1,6 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/weapons
 
-#begin install_tex
-  #define SOURCES \
-    c_shovel.ptex \
-    c_shovel_gloss.ptex
-#end install_tex
-
-#begin install_mat
-  #define SOURCES \
-    c_shovel.pmat
-#end install_mat
-
 #begin blender_char_egg
   #define BLENDER_PREFIX c_shovel-
   #define EGG_PREFIX c_shovel-
@@ -31,7 +20,34 @@
     -flag c_shovel_reference_lod2
 #end optchar_egg
 
+#define V_SHOVEL_SOLDIER_ANIMS \
+  draw \
+  idle \
+  ref \
+  swing_a \
+  swing_b \
+  swing_c
+
+#begin blender_char_egg
+  #define BLENDER_PREFIX v_shovel_soldier-
+  #define EGG_PREFIX v_shovel_soldier-
+  #define POLY_MODEL zero
+  #define CHAR_NAME v_shovel_soldier.qc_skeleton
+  #define ANIMS_DIR anims
+  #define ANIMS $[V_SHOVEL_SOLDIER_ANIMS]
+
+#end blender_char_egg
+
+#begin optchar_egg
+  #define TARGET_DIR optchar
+  #define SOURCES \
+    v_shovel_soldier-zero.egg \
+    $[matrix anims/v_shovel_soldier-,$[V_SHOVEL_SOLDIER_ANIMS],.egg]
+
+#end optchar_egg
+
 #begin install_mdl
   #define SOURCES \
-    c_shovel.pmdl
+    c_shovel.pmdl \
+    v_shovel_soldier.pmdl
 #end install_mdl

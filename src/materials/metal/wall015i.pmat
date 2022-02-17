@@ -3,6 +3,10 @@
   parameters {
     base_texture "wall015i.ptex"
     normal_texture "wall015_bump-ssbump.ptex"
+    ssbump 1
     roughness 0.0
+  }
+  tags {
+    "surface_prop" "metal"
   }
 }

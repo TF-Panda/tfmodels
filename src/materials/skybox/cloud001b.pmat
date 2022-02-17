@@ -4,4 +4,7 @@
     base_texture "cloud001b.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "default"
+  }
 }

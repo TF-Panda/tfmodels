@@ -1,0 +1,7 @@
+{
+  image sky_upward_hdrup.tga
+  format rgba
+  wrap clamp
+  minfilter nearest
+  magfilter nearest
+}

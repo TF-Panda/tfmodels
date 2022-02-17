@@ -5,4 +5,7 @@
     normal_texture "ibeam001_normal.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "metal"
+  }
 }

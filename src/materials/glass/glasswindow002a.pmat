@@ -5,4 +5,8 @@
     env_map true
     roughness 0.0
   }
+  transparency dual
+  tags {
+    "surface_prop" "glass"
+  }
 }

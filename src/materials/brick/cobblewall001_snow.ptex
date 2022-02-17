@@ -1,0 +1,5 @@
+{
+  image "cobblewall001_snow.tga"
+  format "srgb"
+  wrap "repeat"
+}

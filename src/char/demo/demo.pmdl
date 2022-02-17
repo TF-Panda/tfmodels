@@ -26,6 +26,29 @@
     }
   ]
 
+  ik_chains [
+    {
+      name rfoot
+      end_joint bip_foot_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lfoot
+      end_joint bip_foot_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name rhand
+      end_joint bip_hand_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lhand
+      end_joint bip_hand_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+  ]
+
   custom_data {
     bodygroups [
       {
@@ -453,6 +476,14 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -489,6 +520,14 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -542,6 +581,14 @@
       anim "optchar/demo-jumpland_MELEE.egg"
       activity Melee_Jump_Land
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -572,6 +619,14 @@
           spline true
         }
       ]
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -596,6 +651,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -632,6 +698,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -668,6 +745,17 @@
       activity Primary_Attack_Stand
       anim "optchar/demo-AttackStand_SECONDARY.egg"
       delta true
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -675,18 +763,42 @@
       anim "optchar/demo-SECONDARY_reload.egg"
       delta true
       activity Primary_Reload_Stand
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
     {
       name PRIMARY_reload_loop
       anim "optchar/demo-SECONDARY_reload_loop.egg"
       delta true
       activity Primary_Reload_Stand_Loop
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
     {
       name PRIMARY_reload_end
       anim "optchar/demo-a_SECONDARY_reload_end.egg"
       delta true
       activity Primary_Reload_Stand_End
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+      ]
     }
 
     {
@@ -709,6 +821,17 @@
       anim "optchar/demo-jumpland_SECONDARY.egg"
       delta true
       activity Primary_Jump_Land
+      ik_events [
+        {
+          chain lfoot type lock
+        }
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {

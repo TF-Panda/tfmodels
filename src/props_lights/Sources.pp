@@ -14,3 +14,4 @@
 #include $[THISDIRPREFIX]Sources.lamp001.pp
 #include $[THISDIRPREFIX]Sources.light_fluorescent_farm_124.pp
 #include $[THISDIRPREFIX]Sources.lamp002.pp
+#include $[THISDIRPREFIX]Sources.hangingbulb.pp

@@ -1,0 +1,94 @@
+{
+  model "optchar/v_shotgun_engineer-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent weapon_bone
+          pos [ 0 3.73 34.92 ]
+          hpr [ 0 90 0 ]
+        }
+      ]
+    }
+  ]
+
+  sequences [
+    {
+      name draw
+      anim "optchar/v_shotgun_engineer-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Shotgun.Draw"
+        }
+      ]
+    }
+    {
+      name idle
+      anim "optchar/v_shotgun_engineer-idle.egg"
+      activity VM_Idle
+      loop true
+    }
+    {
+      name fire
+      anim "optchar/v_shotgun_engineer-fire.egg"
+      activity VM_Fire
+      snap true
+      events [
+        {
+          frame 7 type 2 event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Back"
+        }
+        {
+          frame 12 type 2 event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Forward"
+        }
+      ]
+    }
+    {
+      name reload_start
+      anim "optchar/v_shotgun_engineer-reload_start.egg"
+      activity VM_Reload_Start
+      snap true
+    }
+    {
+      name reload_loop
+      anim "optchar/v_shotgun_engineer-reload_loop.egg"
+      activity VM_Reload
+      loop true
+      events [
+        {
+          frame 10 type 2 event Client_Play_Sound
+          data "Weapon_Shotgun.Reload"
+        }
+      ]
+    }
+    {
+      name reload_end
+      anim "optchar/v_shotgun_engineer-reload_end.egg"
+      activity VM_Reload_Finish
+      snap true
+      fps 35
+      events [
+        {
+          frame 12 type 2 event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Back"
+        }
+        {
+          frame 17 type 2 event Client_Play_Sound
+          data "Weapon_ShotgunEngineer.Cock_Forward"
+        }
+      ]
+    }
+  ]
+}

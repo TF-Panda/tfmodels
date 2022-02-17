@@ -1,19 +1,10 @@
 #define DIR_TYPE models
 #define INSTALL_TO models/char
 
-#begin install_tex
-  #define SOURCES \
-    heavy_head.ptex hvyweapon_normal.ptex \
-    hvyweapon_exponent.ptex hvyweapon_blue.ptex \
-    hvyweapon_red.ptex hvyweapon_hands.ptex
-
-#end install_tex
-
 #begin install_mat
   #define SOURCES \
-    heavy_head.pmat hvyweapon_blue.pmat \
-    hvyweapon_red.pmat eyeball_l_heavy.pmat \
-    eyeball_r_heavy.pmat hvyweapon_hands.pmat
+    eyeball_l_heavy.pmat \
+    eyeball_r_heavy.pmat
 
 #end install_mat
 
@@ -855,6 +846,7 @@
 
   #define OPTCHAR_OPTS \
     -keepall \
+    -drop hlp_forearm_L,hlp_forearm_R \
     -flag heavy_morphs_low \
     -flag heavy_morphs_low_lod1 \
     -flag heavy_morphs_low_lod2 \

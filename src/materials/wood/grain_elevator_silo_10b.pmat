@@ -4,4 +4,7 @@
     base_texture "grain_elevator_silo_10b.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "wood"
+  }
 }

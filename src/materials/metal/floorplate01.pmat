@@ -4,4 +4,7 @@
     base_texture "floorplate01.ptex"
     roughness 0.0
   }
+  tags {
+    "surface_prop" "metal"
+  }
 }

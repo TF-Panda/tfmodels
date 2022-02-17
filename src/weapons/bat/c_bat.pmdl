@@ -1,0 +1,33 @@
+{
+  model "optchar/c_bat-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surface_prop metal
+    contents solid
+  }
+
+  lods [
+    {
+      distance 0
+      groups [ c_bat_reference ]
+    }
+    {
+      distance 11
+      groups [ c_bat_reference_lod1 ]
+    }
+    {
+      distance 22
+      groups [ c_bat_reference_lod2 ]
+    }
+  ]
+
+  physics_model {
+    mesh c_bat_physics
+    mass 1.391426
+    rot_damping 4
+    damping 0
+    inertia 1
+  }
+}

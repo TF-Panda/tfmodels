@@ -1,0 +1,38 @@
+
+{
+  "model"   "corn_plant01.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/corn_plant01.pmat"
+        "../materials/corn_plant02.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "corn_plant01_reference*"
+        ]
+      }
+    ]
+  }
+}

@@ -86,3 +86,4 @@
 #include $[THISDIRPREFIX]Sources.silo_skybox001.pp
 #include $[THISDIRPREFIX]Sources.powertower01_skybox.pp
 #include $[THISDIRPREFIX]Sources.silo_skybox003.pp
+#include $[THISDIRPREFIX]Sources.sewer_grate_end01.pp

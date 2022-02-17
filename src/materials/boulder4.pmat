@@ -1,0 +1,13 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/boulder4.ptex"
+    "bumpmap"     "../maps/boulder4_normal.ptex"
+    "halflambert"     1
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

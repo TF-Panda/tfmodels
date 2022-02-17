@@ -1,0 +1,44 @@
+{
+  model "optchar/c_flamethrower-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/c_flamethrower.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/c_flamethrower_blue.pmat" ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [ c_flamethrower_reference ]
+    }
+    {
+      distance 11
+      groups [ c_flamethrower_reference_lod1 ]
+    }
+    {
+      distance 22
+      groups [ c_flamethrower_reference_lod2 ]
+    }
+    {
+      distance 33
+      groups [ c_flamethrower_reference_lod3 ]
+    }
+    {
+      distance 44
+      groups [ c_flamethrower_reference_lod4 ]
+    }
+  ]
+
+  physics_model {
+    mesh c_flamethrower_physics
+    mass 1.0
+  }
+}

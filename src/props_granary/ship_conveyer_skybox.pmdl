@@ -1,0 +1,56 @@
+
+{
+  "model"   "ship_conveyer_skybox.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/ship_conveyer.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "ship_conveyer_skybox_reference"
+      ]
+    }
+
+    {
+      "distance"       300
+      "groups" 
+      [
+        "ship_conveyer_skybox_reference_lod1"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "ship_conveyer_skybox_reference*"
+        ]
+      }
+    ]
+  }
+}

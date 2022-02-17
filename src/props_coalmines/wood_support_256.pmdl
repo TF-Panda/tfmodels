@@ -1,0 +1,45 @@
+
+{
+  "model"   "wood_support_256.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/wood_support_256.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "wood_support_256_physics"
+    "mass"     1599.85
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "wood"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "wood_support_256*"
+        ]
+      }
+    ]
+  }
+}

@@ -5,4 +5,7 @@
     env_map true
     gloss_texture "metalchrome002_gloss.ptex"
   }
+  tags {
+    "surface_prop" "metal"
+  }
 }

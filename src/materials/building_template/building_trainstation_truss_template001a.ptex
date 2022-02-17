@@ -1,0 +1,5 @@
+{
+  image "building_trainstation_truss_template001a.tga"
+  format "srgb"
+  wrap "repeat"
+}

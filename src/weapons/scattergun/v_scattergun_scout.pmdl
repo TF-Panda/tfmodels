@@ -1,0 +1,74 @@
+{
+  model "optchar/v_scattergun_scout-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent weapon_bone
+          pos [ 0 3.97 23.38 ]
+          hpr [ 0 90 0 ]
+        }
+      ]
+    }
+  ]
+
+  sequences [
+    {
+      name draw
+      anim "optchar/v_scattergun_scout-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Scatter_Gun.Draw"
+        }
+      ]
+    }
+    {
+      name idle
+      anim "optchar/v_scattergun_scout-idle.egg"
+      activity VM_Idle
+      loop true
+    }
+    {
+      name fire
+      anim "optchar/v_scattergun_scout-fire.egg"
+      activity VM_Fire
+      fade_in 0.1
+    }
+    {
+      name reload_start
+      anim "optchar/v_scattergun_scout-reload_start.egg"
+      activity VM_Reload_Start
+      fade_in 0.1
+    }
+    {
+      name reload_loop
+      anim "optchar/v_scattergun_scout-reload_loop.egg"
+      activity VM_Reload
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Scatter_Gun.Reload"
+        }
+      ]
+      fade_in 0.1
+    }
+    {
+      name reload_end
+      anim "optchar/v_scattergun_scout-reload_end.egg"
+      activity VM_Reload_Finish
+      fps 26
+      fade_in 0.1
+    }
+  ]
+}

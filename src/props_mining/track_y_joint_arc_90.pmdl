@@ -1,0 +1,47 @@
+
+{
+  "model"   "track_y_joint_arc_90.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/track_mining.pmat"
+        "../materials/track_mining_blue.pmat"
+      ]
+    }
+
+    {
+      "name"       "unnamed1"
+      "materials" 
+      [
+        "../materials/track_mining_blue.pmat"
+        "../materials/track_mining_blue.pmat"
+      ]
+    }
+  ]
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "track_Y_joint_arc_90_reference*"
+        ]
+      }
+    ]
+  }
+}

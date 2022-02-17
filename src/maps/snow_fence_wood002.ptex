@@ -1,0 +1,8 @@
+
+{
+  "image"   "snow_fence_wood002.tga"
+  "format"   "srgb"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

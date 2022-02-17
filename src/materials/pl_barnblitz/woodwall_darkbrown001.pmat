@@ -1,0 +1,10 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "woodwall_darkbrown001.ptex"
+    roughness 0.0
+  }
+  tags {
+    "surface_prop" "wood"
+  }
+}

@@ -1,0 +1,72 @@
+
+{
+  "model"   "mining_car_metal.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/mining_car.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "mining_car_metal"
+      ]
+    }
+
+    {
+      "distance"       30
+      "groups" 
+      [
+        "mining_car_metal_lod1"
+      ]
+    }
+
+    {
+      "distance"       70
+      "groups" 
+      [
+        "mining_car_metal_lod2"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "mining_car_metal_physics"
+    "mass"     500
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "mining_car_metal*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/grain_elevator_pipes.ptex"
+  }
+  "alpha_test"   "greater_equal"
+}

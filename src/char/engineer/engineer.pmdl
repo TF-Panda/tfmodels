@@ -126,6 +126,29 @@
     ]
   }
 
+  ik_chains [
+    {
+      name rfoot
+      end_joint bip_foot_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lfoot
+      end_joint bip_foot_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name rhand
+      end_joint bip_hand_R
+      middle_joint_dir [ 0 0 0 ]
+    }
+    {
+      name lhand
+      end_joint bip_hand_L
+      middle_joint_dir [ 0 0 0 ]
+    }
+  ]
+
   material_groups [
     {
       name red
@@ -324,7 +347,17 @@
         blend_y body_pitch
       }
       delta true
-      weight_list hips_upper_body
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -357,28 +390,79 @@
     }
 
     {
+      name a_PRIMARY_aimmatrix_idle_down_left
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_down_left.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_down_center
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_down_center.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_down_right
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_down_right.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_mid_left
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_mid_left.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_mid_center
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_mid_center.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_mid_right
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_mid_right.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_up_left
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_up_left.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_up_center
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_up_center.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_up_right
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_up_right.egg"
+    }
+    {
+      name a_PRIMARY_aimmatrix_idle_straight_up
+      anim "optchar/engineer-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+    }
+
+    {
       name PRIMARY_aimmatrix_idle
       blend {
         anims [
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_down_left.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_down_center.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_down_right.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_mid_left.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_mid_center.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_mid_right.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_up_left.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_up_center.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_up_right.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_straight_up.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_straight_up.egg"
-          "optchar/engineer-a_PRIMARY_aimmatrix_idle_straight_up.egg"
+          "a_PRIMARY_aimmatrix_idle_down_left"
+          "a_PRIMARY_aimmatrix_idle_down_center"
+          "a_PRIMARY_aimmatrix_idle_down_right"
+          "a_PRIMARY_aimmatrix_idle_mid_left"
+          "a_PRIMARY_aimmatrix_idle_mid_center"
+          "a_PRIMARY_aimmatrix_idle_mid_right"
+          "a_PRIMARY_aimmatrix_idle_up_left"
+          "a_PRIMARY_aimmatrix_idle_up_center"
+          "a_PRIMARY_aimmatrix_idle_up_right"
+          "a_PRIMARY_aimmatrix_idle_straight_up"
+          "a_PRIMARY_aimmatrix_idle_straight_up"
+          "a_PRIMARY_aimmatrix_idle_straight_up"
         ]
         width 3
         blend_x body_yaw
         blend_y body_pitch
       }
       delta true
-      weight_list hips_upper_body
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+        {
+          type touch chain lhand joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -398,6 +482,14 @@
       delta true
       activity Primary_Reload_Stand
       anim "optchar/engineer-ReloadStand_PRIMARY.egg"
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     {
@@ -406,6 +498,14 @@
       activity Primary_Reload_Stand_Loop
       activity_weight 2
       anim "optchar/engineer-a_PRIMARY_reload_loop.egg"
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     {
@@ -413,6 +513,14 @@
       delta true
       activity Primary_Reload_Stand_Loop
       anim "optchar/engineer-b_PRIMARY_reload_loop.egg"
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     {
@@ -420,6 +528,14 @@
       delta true
       activity Primary_Reload_Stand_End
       anim "optchar/engineer-PRIMARY_reload_end.egg"
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     {
@@ -427,6 +543,17 @@
       delta true
       activity Primary_Attack_Stand
       anim "optchar/engineer-AttackStand_PRIMARY.egg"
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+        {
+          type touch chain lhand joint weapon_bone_1
+        }
+      ]
     }
 
     {
@@ -451,7 +578,14 @@
         blend_y body_pitch
       }
       delta true
-      weight_list hips_upper_body
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     {
@@ -488,7 +622,17 @@
         blend_y body_pitch
       }
       delta true
-      weight_list hips_upper_body
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+        {
+          type touch chain lhand joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -556,6 +700,14 @@
           spline true
         }
       ]
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     //
@@ -584,6 +736,14 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     {
@@ -608,6 +768,14 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     {
@@ -632,6 +800,17 @@
         blend_y body_pitch
       }
       delta true
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+        {
+          type touch chain lhand joint weapon_bone
+        }
+      ]
     }
 
     {
@@ -639,6 +818,26 @@
       anim "optchar/engineer-AttackStand_SECONDARY.egg"
       delta true
       activity Secondary_Attack_Stand
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+        {
+          type touch chain lhand joint weapon_bone
+          // We need this IK event when we are firing while running backwards.
+          // Blend in the IK event the same way that the reverse aimmatrix is
+          // blended in.
+          pose_parameter move_y
+          spline true
+          start -2
+          peak -1
+          tail -0.8
+          end -0.2
+        }
+      ]
     }
 
     {
@@ -660,6 +859,14 @@
           tail 25
           end 28
           spline true
+        }
+      ]
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
         }
       ]
     }
@@ -742,6 +949,14 @@
       anim "optchar/engineer-jumpland_SECONDARY.egg"
       delta true
       activity Secondary_Jump_Land
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
     }
 
     // Flinches
@@ -788,6 +1003,17 @@
       delta true
       activity Primary_Jump_Land
       anim "optchar/engineer-jumpland_PRIMARY.egg"
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+        {
+          type touch chain lhand joint weapon_bone_1
+        }
+      ]
     }
     {
       name jumpfloat_melee

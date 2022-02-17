@@ -1,0 +1,11 @@
+{
+  material StandardMaterial
+  parameters {
+    base_texture "wall028.ptex"
+    normal_texture "snow_full001_normal.ptex"
+    roughness 0.0
+  }
+  tags {
+    "surface_prop" "metal"
+  }
+}

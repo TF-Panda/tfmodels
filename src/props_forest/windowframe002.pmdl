@@ -1,0 +1,45 @@
+
+{
+  "model"   "windowframe002.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/window002.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "windowframe002_physics"
+    "mass"     27.0293
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "windowframe002*"
+        ]
+      }
+    ]
+  }
+}

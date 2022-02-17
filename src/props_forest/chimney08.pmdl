@@ -1,0 +1,45 @@
+
+{
+  "model"   "chimney08.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/chimney08.pmat"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "chimney08_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "chimney08_reference*"
+        ]
+      }
+    ]
+  }
+}

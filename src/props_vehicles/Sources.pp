@@ -10,3 +10,6 @@
 #include $[THISDIRPREFIX]Sources.train_flatcar_leveltop.pp
 #include $[THISDIRPREFIX]Sources.train_rockets.pp
 #include $[THISDIRPREFIX]Sources.train_tankcar.pp
+#include $[THISDIRPREFIX]Sources.mining_car_metal.pp
+#include $[THISDIRPREFIX]Sources.train_caboose.pp
+#include $[THISDIRPREFIX]Sources.mining_cart_supplies001.pp

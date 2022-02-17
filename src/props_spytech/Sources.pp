@@ -71,3 +71,10 @@
 #include $[THISDIRPREFIX]Sources.satellite_dish001.pp
 #include $[THISDIRPREFIX]Sources.exit_mounted.pp
 #include $[THISDIRPREFIX]Sources.glass_door_handle001a.pp
+#include $[THISDIRPREFIX]Sources.vent_system_vent02.pp
+#include $[THISDIRPREFIX]Sources.radar001.pp
+#include $[THISDIRPREFIX]Sources.radar_top002.pp
+#include $[THISDIRPREFIX]Sources.binder001.pp
+#include $[THISDIRPREFIX]Sources.radio_tower_skybox001.pp
+#include $[THISDIRPREFIX]Sources.doorframe002c.pp
+#include $[THISDIRPREFIX]Sources.doorframe004d.pp

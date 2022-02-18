@@ -457,6 +457,8 @@
         }
         {
           chain lhand type touch joint weapon_bone_1
+          start 0 peak 4 tail 14 end 14
+          spline true
         }
       ]
     }

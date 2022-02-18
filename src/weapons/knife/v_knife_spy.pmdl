@@ -1,0 +1,95 @@
+{
+  model "optchar/v_knife_spy-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/spy_hands_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/spy_hands_blue.pmat" ]
+    }
+  ]
+
+  sequences [
+    {
+      name draw
+      anim "optchar/v_knife_spy-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Knife.Draw"
+        }
+        {
+          frame 10 type 2 event Client_Play_Sound
+          data "Weapon_Knife.Open1"
+        }
+        {
+          frame 16 type 2 event Client_Play_Sound
+          data "Weapon_Knife.Open5"
+        }
+        {
+          frame 22 type 2 event Client_Play_Sound
+          data "Weapon_Knife.Open8"
+        }
+      ]
+    }
+    {
+      name idle
+      anim "optchar/v_knife_spy-idle.egg"
+      activity VM_Idle
+      loop true
+    }
+    {
+      name stab_a
+      anim "optchar/v_knife_spy-stab_a.egg"
+      activity VM_Fire
+      snap true
+    }
+    {
+      name stab_b
+      anim "optchar/v_knife_spy-stab_b.egg"
+      activity VM_Fire
+      snap true
+    }
+    {
+      name stab_c
+      anim "optchar/v_knife_spy-stab_c.egg"
+      activity VM_Fire
+      snap true
+    }
+    {
+      name backstab
+      anim "optchar/v_knife_spy-backstab.egg"
+      snap true
+      activity VM_Swing_Hard
+    }
+    {
+      name backstab_up
+      anim "optchar/v_knife_spy-backstab_up.egg"
+      snap true
+      activity VM_Backstab_Up
+    }
+    {
+      name backstab_down
+      anim "optchar/v_knife_spy-backstab_down.egg"
+      snap true
+      activity VM_Backstab_Down
+    }
+    {
+      name backstab_idle
+      anim "optchar/v_knife_spy-backstab_idle.egg"
+      loop true
+      activity VM_Backstab_Idle
+    }
+  ]
+}

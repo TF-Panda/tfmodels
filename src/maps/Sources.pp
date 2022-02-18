@@ -764,7 +764,29 @@
     sky_granary_01_hdrlf.ptex \
     sky_granary_01_hdrrt.ptex \
     sky_granary_01_hdrft.ptex \
-    sky_granary_01_hdrbk.ptex
+    sky_granary_01_hdrbk.ptex \
+    spy_red.ptex \
+    spy_normal.ptex \
+    spy_blue.ptex \
+    spy_head_red.ptex \
+    spy_head_phongmask.ptex \
+    spy_head_exponent.ptex \
+    spy_head_blue.ptex \
+    spy_hands_red.ptex \
+    spy_hands_normal.ptex \
+    spy_hands_blue.ptex \
+    mask_demo.ptex \
+    mask_spy.ptex \
+    mask_engi.ptex \
+    mask_heavy.ptex \
+    mask_medic.ptex \
+    mask_pyro.ptex \
+    mask_scout.ptex \
+    mask_sniper.ptex \
+    mask_soldier.ptex \
+    v_knife.ptex \
+    w_revolver01.ptex \
+    v_revolver.ptex
 
 #end install_tex
 

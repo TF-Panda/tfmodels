@@ -1,0 +1,25 @@
+{
+  model "optchar/w_knife-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  lods [
+    {
+      distance 0
+      groups [ w_knife_reference ]
+    }
+    {
+      distance 14
+      groups [ w_knife_reference_lod1 ]
+    }
+  ]
+
+  custom_data {
+    surfaceprop metal
+  }
+
+  physics_model {
+    mesh w_knife_physics
+    mass 1.0
+  }
+}

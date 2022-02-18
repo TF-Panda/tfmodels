@@ -722,6 +722,25 @@
     sky_granary_01_hdrft.pmat \
     sky_granary_01_hdrlf.pmat \
     sky_granary_01_hdrrt.pmat \
-    sky_granary_01_hdrup.pmat
+    sky_granary_01_hdrup.pmat \
+    spy_red.pmat \
+    spy_blue.pmat \
+    spy_head_red.pmat \
+    spy_head_blue.pmat \
+    spy_hands_red.pmat \
+    spy_hands_blue.pmat \
+    mask_demo.pmat \
+    mask_spy.pmat \
+    mask_engi.pmat \
+    mask_heavy.pmat \
+    mask_medic.pmat \
+    mask_pyro.pmat \
+    mask_scout.pmat \
+    mask_sniper.pmat \
+    mask_soldier.pmat \
+    w_knife.pmat \
+    w_revolver01.pmat \
+    v_revolver.pmat \
+    v_knife.pmat
 
 #end install_mat

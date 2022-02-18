@@ -1,0 +1,80 @@
+{
+  model "optchar/v_revolver_spy-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent weapon_bone
+          pos [ 0 2.71 14.41 ]
+          hpr [ 0 90 0 ]
+        }
+      ]
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/spy_hands_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/spy_hands_blue.pmat" ]
+    }
+  ]
+
+  sequences [
+    {
+      name draw
+      anim "optchar/v_revolver_spy-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Revolver.Draw"
+        }
+      ]
+    }
+    {
+      name idle
+      anim "optchar/v_revolver_spy-idle.egg"
+      loop true
+      activity VM_Idle
+    }
+    {
+      name fire
+      anim "optchar/v_revolver_spy-fire.egg"
+      activity VM_Fire
+      snap true
+    }
+    {
+      name reload
+      anim "optchar/v_revolver_spy-reload.egg"
+      activity VM_Reload
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_Revolver.Reload1"
+        }
+        {
+          frame 12 type 2 event Client_Play_Sound
+          data "Weapon_Revolver.Reload2"
+        }
+        {
+          frame 28 type 2 event Client_Play_Sound
+          data "Weapon_Revolver.Reload3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/mask_sniper.ptex"
+    "basemapalphaphongmask"     1
+    "phong"     1
+    "phongboost"     0.2
+    "phongexponent"     10
+    "lightwarptexture"     "../maps/pyro_lightwarp.ptex"
+    "phongfresnelranges" 
+    [
+      0.7
+      15
+      20
+    ]
+    "halflambert"     1
+    "rimlight"     1
+    "rimlightexponent"     4
+    "rimlightboost"     2
+  }
+}

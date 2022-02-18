@@ -1,0 +1,60 @@
+{
+  model "optchar/w_revolver-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop metal
+  }
+
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent weapon_bone
+          pos [ 0 2.72 14.78 ]
+          hpr [ 0 90 0 ]
+        }
+      ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [
+        w_revolver_reference
+      ]
+    }
+    {
+      distance 20
+      groups [
+        w_revolver_reference_lod1
+      ]
+    }
+    {
+      distance 30
+      groups [
+        w_revolver_reference_lod2
+      ]
+    }
+    {
+      distance 40
+      groups [
+        w_revolver_reference_lod3
+      ]
+    }
+    {
+      distance 60
+      groups [
+        w_revolver_reference_lod4
+      ]
+    }
+  ]
+
+  physics_model {
+    mesh w_revolver_physics
+    mass 1.0
+  }
+}

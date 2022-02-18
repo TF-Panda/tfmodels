@@ -1,0 +1,21 @@
+{
+  material EyeRefractMaterial
+
+  parameters {
+    iris_texture "../../eyes/eye-iris-blue.ptex"
+    ambient_occl_texture "../../eyes/eye-extra.ptex"
+    env_map "../../eyes/eye-reflection-cubemap.ptex"
+    cornea_texture "../../eyes/eye-cornea.ptex"
+    lightwarp_texture "../../eyes/eye_lightwarp.ptex"
+
+    eyeball_radius 0.7
+    ambient_occl_color [ 255 255 255 ]
+    dilation 0.5
+    parallax_strength 0.25
+    cornea_bump_strength 1.0
+
+    //$halfLambert 1
+    ray_trace_sphere 0
+    sphere_texkill_combo 0
+  }
+}

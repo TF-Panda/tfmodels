@@ -4,6 +4,8 @@
   hpr [ 180 0 0 ]
 
   custom_data {
+    surfaceprop flesh
+
     hit_boxes [
       {
         group 1

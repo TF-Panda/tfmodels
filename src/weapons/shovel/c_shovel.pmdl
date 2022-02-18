@@ -1,6 +1,10 @@
 {
   model "optchar/c_shovel-zero.egg"
 
+  custom_data {
+    surfaceprop metal
+  }
+
   lods [
     {
       distance 0

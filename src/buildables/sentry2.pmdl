@@ -5,7 +5,7 @@
 
   custom_data {
     contents solid
-    surface_prop metal
+    surfaceprop metal
 
     bbox {
       mins [ -44.942 -34.227 -15.798 ]

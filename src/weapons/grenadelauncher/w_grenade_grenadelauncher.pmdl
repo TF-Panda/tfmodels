@@ -3,6 +3,10 @@
 
   hpr [ 180 0 0 ]
 
+  custom_data {
+    surfaceprop demoman_grenade
+  }
+
   material_groups [
     {
       name "red"

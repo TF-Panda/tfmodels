@@ -50,6 +50,8 @@
   ]
 
   custom_data {
+    surfaceprop flesh
+
     bodygroups [
       {
         name smiley

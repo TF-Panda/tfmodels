@@ -89,6 +89,121 @@
     }
   ]
 
+  custom_data {
+    surfaceprop flesh
+
+    hit_boxes [
+      {
+        group 1
+        joint bip_head
+        mins [ -6.00 -9.35 -8.70 ]
+        maxs [ 6.00 4.65 4.30 ]
+      }
+      {
+        group 0
+        joint bip_pelvis
+        mins [ -11.00 0.00 -9.00 ]
+        maxs [ 11.00 10.00 3.00 ]
+      }
+      {
+        group 3
+        joint bip_spine_0
+        mins [ -12.50 -4.00 -14.00 ]
+        maxs [ 12.50 6.00 4.00 ]
+      }
+      {
+        group 3
+        joint bip_spine_1
+        mins [ -12.50 -4.00 -15.00 ]
+        maxs [ 12.50 4.00 5.00 ]
+      }
+      {
+        group 2
+        joint bip_spine_2
+        mins [ -12.50 -4.00 -15.00 ]
+        maxs [ 12.50 4.00 5.00 ]
+      }
+      {
+        group 2
+        joint bip_spine_3
+        mins [ -13.11 -8.00 -12.50 ]
+        maxs [ 13.11 2.00 5.16 ]
+      }
+      {
+        group 4
+        joint bip_upperArm_L
+        mins [ -3.00 -5.50 -3.75 ]
+        maxs [ 19.00 5.50 3.75 ]
+      }
+      {
+        group 4
+        joint bip_lowerArm_L
+        mins [ 0.50 -5.00 -3.50 ]
+        maxs [ 16.50 4.00 3.50 ]
+      }
+      {
+        group 4
+        joint bip_hand_L
+        mins [ -5.50 -13.00 -4.25 ]
+        maxs [ 1.50 -1.00 6.25 ]
+      }
+      {
+        group 5
+        joint bip_upperArm_R
+        mins [ -3.00 -5.50 -3.75 ]
+        maxs [ 19.00 5.50 3.75 ]
+      }
+      {
+        group 5
+        joint bip_lowerArm_R
+        mins [ 0.50 -4.00 -3.50 ]
+        maxs [ 16.50 5.00 3.50 ]
+      }
+      {
+        group 5
+        joint bip_hand_R
+        mins [ -1.50 1.00 -6.25 ]
+        maxs [ 5.50 13.00 4.25 ]
+      }
+      {
+        group 6
+        joint bip_hip_L
+        mins [ 0.00 -4.30 -3.90 ]
+        maxs [ 14.00 3.70 3.10 ]
+      }
+      {
+        group 6
+        joint bip_knee_L
+        mins [ -0.50 -2.50 -4.75 ]
+        maxs [ 16.50 4.50 2.75 ]
+      }
+      {
+        group 6
+        joint bip_foot_L
+        mins [ -2.55 -12.50 -3.80 ]
+        maxs [ 2.95 2.50 2.20 ]
+      }
+      {
+        group 7
+        joint bip_hip_R
+        mins [ 0.00 -3.70 -3.90 ]
+        maxs [ 14.00 4.30 3.10 ]
+      }
+      {
+        group 7
+        joint bip_knee_R
+        mins [ -0.50 -2.50 -4.75 ]
+        maxs [ 16.50 4.50 2.75 ]
+      }
+      {
+        group 7
+        joint bip_foot_R
+        mins [ -2.95 -2.50 -2.20 ]
+        maxs [ 2.55 12.50 3.80 ]
+      }
+    ]
+  }
+
   physics_model {
     mesh heavy_physics
 

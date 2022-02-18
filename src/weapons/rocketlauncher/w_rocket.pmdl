@@ -4,7 +4,7 @@
   hpr [ 180 0 0 ]
 
   custom_data {
-    surface_prop metal
+    surfaceprop metal
     contents solid
 
     bbox {

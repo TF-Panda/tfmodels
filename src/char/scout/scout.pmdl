@@ -128,6 +128,8 @@
   ]
 
   custom_data {
+    surfaceprop flesh
+
     hit_boxes [
       {
         group 1

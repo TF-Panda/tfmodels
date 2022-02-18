@@ -1,6 +1,10 @@
 {
   model "optchar/w_scattergun-zero.egg"
 
+  custom_data {
+    surfaceprop metal
+  }
+
   attachments [
     {
       name muzzle

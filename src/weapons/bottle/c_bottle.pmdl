@@ -2,7 +2,7 @@
   model "optchar/c_bottle-zero.egg"
 
   custom_data {
-    surface_prop glass
+    surfaceprop glass
     contents solid
 
     bodygroups [

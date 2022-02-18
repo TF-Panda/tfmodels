@@ -31,6 +31,8 @@
       //min
     }
 
+    surfaceprop flesh
+
     bodygroups [
       {
         name rocket

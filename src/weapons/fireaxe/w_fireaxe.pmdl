@@ -14,6 +14,11 @@
     }
   ]
 
+  custom_data {
+    surfaceprop metal
+    contents solid
+  }
+
   physics_model {
     mesh w_fireaxe_physics
     mass 4.035612

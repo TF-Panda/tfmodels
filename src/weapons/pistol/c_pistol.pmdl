@@ -1,6 +1,10 @@
 {
   model "optchar/c_pistol-zero.egg"
 
+  custom_data {
+    surfaceprop metal
+  }
+
   physics_model {
     mesh c_pistol_physics
     mass 0.964329

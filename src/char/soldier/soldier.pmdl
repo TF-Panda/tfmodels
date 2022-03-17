@@ -226,43 +226,43 @@
     {
       distance 0
       groups [
-        soldier_morphs_low medal_bodygroup grenades_bodygroup
-        hat_bodygroup soldier_rocket soldier_eye_l soldier_eye_r
+        soldier_morphs_low
+        soldier_rocket
       ]
     }
     {
       distance 11
       groups [
-        soldier_morphs_low_lod1 medal_bodygroup_lod1 grenades_bodygroup_lod1
-        hat_bodygroup_lod1 soldier_rocket_lod1
+        soldier_morphs_low_lod1
+        soldier_rocket_lod1
       ]
     }
     {
       distance 22
       groups [
-        soldier_morphs_low_lod2 medal_bodygroup_lod2 grenades_bodygroup_lod2
-        hat_bodygroup_lod2 soldier_rocket_lod2
+        soldier_morphs_low_lod2
+        soldier_rocket_lod2
       ]
     }
     {
       distance 33
       groups [
-        soldier_morphs_low_lod3 medal_bodygroup_lod3 grenades_bodygroup_lod3
-        hat_bodygroup_lod3 soldier_rocket_lod3
+        soldier_morphs_low_lod3
+        soldier_rocket_lod3
       ]
     }
     {
       distance 44
       groups [
-        soldier_morphs_low_lod4 medal_bodygroup_lod4 grenades_bodygroup_lod4
-        hat_bodygroup_lod4 soldier_rocket_lod4
+        soldier_morphs_low_lod4
+        soldier_rocket_lod4
       ]
     }
     {
       distance 55
       groups [
-        soldier_morphs_low_lod5 medal_bodygroup_lod5 grenades_bodygroup_lod5
-        hat_bodygroup_lod5 soldier_rocket_lod5
+        soldier_morphs_low_lod5
+        soldier_rocket_lod5
       ]
     }
   ]

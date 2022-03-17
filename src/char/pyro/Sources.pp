@@ -863,12 +863,7 @@
 
   #define OPTCHAR_OPTS \
     -keepall \
-    -flag backpack_bodygroup,grenades_bodygroup,pyro_reference,righthand_bodygroup,pyro_head_bodygroup \
-    -flag backpack_bodygroup_lod1,grenades_bodygroup_lod1,pyro_reference_lod1,righthand_bodygroup_lod1,pyro_head_bodygroup_lod1 \
-    -flag backpack_bodygroup_lod2,grenades_bodygroup_lod2,pyro_reference_lod2,righthand_bodygroup_lod2,pyro_head_bodygroup_lod2 \
-    -flag backpack_bodygroup_lod3,grenades_bodygroup_lod3,pyro_reference_lod3,righthand_bodygroup_lod3,pyro_head_bodygroup_lod3 \
-    -flag backpack_bodygroup_lod4,grenades_bodygroup_lod4,pyro_reference_lod4,righthand_bodygroup_lod4,pyro_head_bodygroup_lod4 \
-    -flag backpack_bodygroup_lod5,grenades_bodygroup_lod5,pyro_reference_lod5,righthand_bodygroup_lod5,pyro_head_bodygroup_lod5 \
+    -flag pyro_reference,pyro_reference_lod1,pyro_reference_lod2,pyro_reference_lod3,pyro_reference_lod4,pyro_reference_lod5 \
     -flag pyro_physics
 
 #end optchar_egg

@@ -6,13 +6,6 @@
   custom_data {
     surfaceprop flesh
     bodygroups [
-      {
-        name robotarm
-        nodes [
-          blank
-          "engineer_robotarm_bodygroup*"
-        ]
-      }
     ]
 
     hit_boxes [
@@ -165,43 +158,37 @@
     {
       distance 0
       groups [
-        engineer_morphs_low engineer_glove_bodygroup
-        engineer_hat_bodygroup engineer_robotarm_bodygroup
+        engineer_morphs_low
       ]
     }
     {
       distance 11
       groups [
-        engineer_morphs_low_lod1 engineer_glove_bodygroup_lod1
-        engineer_hat_bodygroup_lod1 engineer_robotarm_bodygroup_lod1
+        engineer_morphs_low_lod1
       ]
     }
     {
       distance 22
       groups [
-        engineer_morphs_low_lod2 engineer_glove_bodygroup_lod2
-        engineer_hat_bodygroup_lod2 engineer_robotarm_bodygroup_lod2
+        engineer_morphs_low_lod2
       ]
     }
     {
       distance 33
       groups [
-        engineer_morphs_low_lod3 engineer_glove_bodygroup_lod3
-        engineer_hat_bodygroup_lod3 engineer_robotarm_bodygroup_lod3
+        engineer_morphs_low_lod3
       ]
     }
     {
       distance 44
       groups [
-        engineer_morphs_low_lod4 engineer_glove_bodygroup_lod4
-        engineer_hat_bodygroup_lod4 engineer_robotarm_bodygroup_lod4
+        engineer_morphs_low_lod4
       ]
     }
     {
       distance 55
       groups [
-        engineer_morphs_low_lod5 engineer_glove_bodygroup_lod5
-        engineer_hat_bodygroup_lod5 engineer_robotarm_bodygroup_lod5
+        engineer_morphs_low_lod5
       ]
     }
   ]

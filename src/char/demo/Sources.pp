@@ -798,7 +798,6 @@
   #define OPTCHAR_OPTS \
     -keepall \
     -drop hlp_forearm_L,hlp_forearm_R \
-    -flag demo_eye \
     -flag demo_morphs_low \
     -flag demo_morphs_low_lod1 \
     -flag demo_morphs_low_lod2 \
@@ -811,18 +810,6 @@
     -flag demo_smiley_lod3 \
     -flag demo_smiley_lod4 \
     -flag demo_smiley_lod5 \
-    -flag grenades_bodygroup \
-    -flag grenades_bodygroup_lod1 \
-    -flag grenades_bodygroup_lod2 \
-    -flag grenades_bodygroup_lod3 \
-    -flag grenades_bodygroup_lod4 \
-    -flag grenades_bodygroup_lod5 \
-    -flag shoes_bodygroup \
-    -flag shoes_bodygroup_lod1 \
-    -flag shoes_bodygroup_lod2 \
-    -flag shoes_bodygroup_lod3 \
-    -flag shoes_bodygroup_lod4 \
-    -flag shoes_bodygroup_lod5 \
     -flag demo_physics
 #end optchar_egg
 

@@ -1040,12 +1040,7 @@
   #define OPTCHAR_OPTS \
     -keepall \
     -drop hlp_forearm_L,hlp_forearm_R \
-    -flag dogtags_bodygroup,hat_bodygroup,headphones_bodygroup,scout_morphs_low,shoes_socks_bodygroup \
-    -flag dogtags_bodygroup_lod1,hat_bodygroup_lod1,headphones_bodygroup_lod1,scout_morphs_low_lod1,shoes_socks_bodygroup_lod1 \
-    -flag dogtags_bodygroup_lod2,hat_bodygroup_lod2,headphones_bodygroup_lod2,scout_morphs_low_lod2,shoes_socks_bodygroup_lod2 \
-    -flag dogtags_bodygroup_lod3,hat_bodygroup_lod3,headphones_bodygroup_lod3,scout_morphs_low_lod3,shoes_socks_bodygroup_lod3 \
-    -flag dogtags_bodygroup_lod4,hat_bodygroup_lod4,headphones_bodygroup_lod4,scout_morphs_low_lod4,shoes_socks_bodygroup_lod4 \
-    -flag dogtags_bodygroup_lod5,hat_bodygroup_lod5,headphones_bodygroup_lod5,scout_morphs_low_lod5,shoes_socks_bodygroup_lod5 \
+    -flag scout_morphs_low,scout_morphs_low_lod1,scout_morphs_low_lod2,scout_morphs_low_lod3,scout_morphs_low_lod4,scout_morphs_low_lod5 \
     -flag scout_physics
 
 #end optchar_egg

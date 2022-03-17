@@ -65,27 +65,27 @@
   lods [
     {
       distance 0
-      groups [ heavy_morphs_low heavy_hands_bodygroup ]
+      groups [ heavy_morphs_low ]
     }
     {
       distance 11
-      groups [ heavy_morphs_low_lod1 heavy_hands_bodygroup_lod1 ]
+      groups [ heavy_morphs_low_lod1 ]
     }
     {
       distance 22
-      groups [ heavy_morphs_low_lod2 heavy_hands_bodygroup_lod2 ]
+      groups [ heavy_morphs_low_lod2 ]
     }
     {
       distance 33
-      groups [ heavy_morphs_low_lod3 heavy_hands_bodygroup_lod3 ]
+      groups [ heavy_morphs_low_lod3 ]
     }
     {
       distance 44
-      groups [ heavy_morphs_low_lod4 heavy_hands_bodygroup_lod4 ]
+      groups [ heavy_morphs_low_lod4 ]
     }
     {
       distance 55
-      groups [ heavy_morphs_low_lod5 heavy_hands_bodygroup_lod5 ]
+      groups [ heavy_morphs_low_lod5 ]
     }
   ]
 

@@ -1181,24 +1181,6 @@
     -flag engineer_morphs_low_lod3 \
     -flag engineer_morphs_low_lod4 \
     -flag engineer_morphs_low_lod5 \
-    -flag engineer_hat_bodygroup \
-    -flag engineer_hat_bodygroup_lod1 \
-    -flag engineer_hat_bodygroup_lod2 \
-    -flag engineer_hat_bodygroup_lod3 \
-    -flag engineer_hat_bodygroup_lod4 \
-    -flag engineer_hat_bodygroup_lod5 \
-    -flag engineer_glove_bodygroup \
-    -flag engineer_glove_bodygroup_lod1 \
-    -flag engineer_glove_bodygroup_lod2 \
-    -flag engineer_glove_bodygroup_lod3 \
-    -flag engineer_glove_bodygroup_lod4 \
-    -flag engineer_glove_bodygroup_lod5 \
-    -flag engineer_robotarm_bodygroup \
-    -flag engineer_robotarm_bodygroup_lod1 \
-    -flag engineer_robotarm_bodygroup_lod2 \
-    -flag engineer_robotarm_bodygroup_lod3 \
-    -flag engineer_robotarm_bodygroup_lod4 \
-    -flag engineer_robotarm_bodygroup_lod5 \
     -flag engineer_physics
 #end optchar_egg
 

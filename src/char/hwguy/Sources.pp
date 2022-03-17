@@ -853,12 +853,6 @@
     -flag heavy_morphs_low_lod3 \
     -flag heavy_morphs_low_lod4 \
     -flag heavy_morphs_low_lod5 \
-    -flag heavy_hands_bodygroup \
-    -flag heavy_hands_bodygroup_lod1 \
-    -flag heavy_hands_bodygroup_lod2 \
-    -flag heavy_hands_bodygroup_lod3 \
-    -flag heavy_hands_bodygroup_lod4 \
-    -flag heavy_hands_bodygroup_lod5 \
     -flag heavy_physics
 #end optchar_egg
 

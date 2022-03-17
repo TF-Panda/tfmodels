@@ -139,43 +139,37 @@
     {
       distance 0
       groups [
-        backpack_bodygroup grenades_bodygroup pyro_reference
-        righthand_bodygroup pyro_head_bodygroup
+        pyro_reference
       ]
     }
     {
       distance 11
       groups [
-        backpack_bodygroup_lod1 grenades_bodygroup_lod1 pyro_reference_lod1
-        righthand_bodygroup_lod1 pyro_head_bodygroup_lod1
+        pyro_reference_lod1
       ]
     }
     {
       distance 22
       groups [
-        backpack_bodygroup_lod2 grenades_bodygroup_lod2 pyro_reference_lod2
-        righthand_bodygroup_lod2 pyro_head_bodygroup_lod2
+        pyro_reference_lod2
       ]
     }
     {
       distance 33
       groups [
-        backpack_bodygroup_lod3 grenades_bodygroup_lod3 pyro_reference_lod3
-        righthand_bodygroup_lod3 pyro_head_bodygroup_lod3
+        pyro_reference_lod3
       ]
     }
     {
       distance 44
       groups [
-        backpack_bodygroup_lod4 grenades_bodygroup_lod4 pyro_reference_lod4
-        righthand_bodygroup_lod4 pyro_head_bodygroup_lod4
+        pyro_reference_lod4
       ]
     }
     {
       distance 55
       groups [
-        backpack_bodygroup_lod5 grenades_bodygroup_lod5 pyro_reference_lod5
-        righthand_bodygroup_lod5 pyro_head_bodygroup_lod5
+        pyro_reference_lod5
       ]
     }
   ]

@@ -199,37 +199,37 @@
     {
       distance 0
       groups [
-        demo_morphs_low grenades_bodygroup shoes_bodygroup demo_smiley demo_eye
+        demo_morphs_low demo_smiley
       ]
     }
     {
       distance 11
       groups [
-        demo_morphs_low_lod1 grenades_bodygroup_lod1 shoes_bodygroup_lod1 demo_smiley_lod1
+        demo_morphs_low_lod1 demo_smiley_lod1
       ]
     }
     {
       distance 22
       groups [
-        demo_morphs_low_lod2 grenades_bodygroup_lod2 shoes_bodygroup_lod2 demo_smiley_lod2
+        demo_morphs_low_lod2 demo_smiley_lod2
       ]
     }
     {
       distance 33
       groups [
-        demo_morphs_low_lod3 grenades_bodygroup_lod3 shoes_bodygroup_lod3 demo_smiley_lod3
+        demo_morphs_low_lod3 demo_smiley_lod3
       ]
     }
     {
       distance 44
       groups [
-        demo_morphs_low_lod4 grenades_bodygroup_lod4 shoes_bodygroup_lod4 demo_smiley_lod4
+        demo_morphs_low_lod4 demo_smiley_lod4
       ]
     }
     {
       distance 55
       groups [
-        demo_morphs_low_lod5 grenades_bodygroup_lod5 shoes_bodygroup_lod5 demo_smiley_lod5
+        demo_morphs_low_lod5 demo_smiley_lod5
       ]
     }
   ]

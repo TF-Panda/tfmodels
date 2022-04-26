@@ -1,0 +1,64 @@
+
+{
+  "model"   "water_machinery2.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/water_machinery2.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "water_machinery2"
+      ]
+    }
+
+    {
+      "distance"       150
+      "groups" 
+      [
+        "water_machinery2_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "water_machinery2_physics"
+    "mass"     136742
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "water_machinery2*"
+        ]
+      }
+    ]
+  }
+}

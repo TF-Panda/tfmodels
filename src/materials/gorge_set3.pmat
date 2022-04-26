@@ -1,0 +1,25 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/gorge_set3.ptex"
+    "basemapalphaphongmask"     1
+    "envmap"     1
+    "envmaptint" 
+    [
+      0.12
+      0.12
+      0.12
+    ]
+    "phong"     1
+    "phongboost"     0.6
+    "phongexponent"     3
+    "phongfresnelranges" 
+    [
+      3
+      5
+      8
+    ]
+  }
+}

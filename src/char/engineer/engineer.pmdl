@@ -8,6 +8,31 @@
     bodygroups [
     ]
 
+    gibs [
+      {
+        model "models/char/engineergib001"
+      }
+      {
+        model "models/char/engineergib002"
+      }
+      {
+        model "models/char/engineergib003"
+      }
+      {
+        model "models/char/engineergib004"
+      }
+      {
+        model "models/char/engineergib005"
+      }
+      {
+        model "models/char/engineergib006"
+        is_head true
+      }
+      {
+        model "models/char/engineergib007"
+      }
+    ]
+
     hit_boxes [
       {
         group 1
@@ -349,18 +374,62 @@
     }
 
     {
+      name a_runSW_PRIMARY
+      anim "optchar/engineer-a_runSW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_PRIMARY
+      anim "optchar/engineer-a_runS_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_PRIMARY
+      anim "optchar/engineer-a_runSE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_PRIMARY
+      anim "optchar/engineer-a_runW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_PRIMARY
+      anim "optchar/engineer-a_runCenter_PRIMARY.egg"
+    }
+    {
+      name a_runE_PRIMARY
+      anim "optchar/engineer-a_runE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_PRIMARY
+      anim "optchar/engineer-a_runNW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_PRIMARY
+      anim "optchar/engineer-a_runN_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_PRIMARY
+      anim "optchar/engineer-a_runNE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
       name run_PRIMARY
       blend {
         anims [
-          "optchar/engineer-a_runSW_PRIMARY.egg"
-          "optchar/engineer-a_runS_PRIMARY.egg"
-          "optchar/engineer-a_runSE_PRIMARY.egg"
-          "optchar/engineer-a_runW_PRIMARY.egg"
-          "optchar/engineer-a_runCenter_PRIMARY.egg"
-          "optchar/engineer-a_runE_PRIMARY.egg"
-          "optchar/engineer-a_runNW_PRIMARY.egg"
-          "optchar/engineer-a_runN_PRIMARY.egg"
-          "optchar/engineer-a_runNE_PRIMARY.egg"
+          a_runSW_PRIMARY
+          a_runS_PRIMARY
+          a_runSE_PRIMARY
+          a_runW_PRIMARY
+          a_runCenter_PRIMARY
+          a_runE_PRIMARY
+          a_runNW_PRIMARY
+          a_runN_PRIMARY
+          a_runNE_PRIMARY
         ]
         width 3
         blend_x move_x
@@ -372,8 +441,6 @@
         }
       ]
       loop true
-      zero_x true
-      zero_y true
       activity Primary_Run
     }
 
@@ -624,26 +691,68 @@
     }
 
     {
+      name a_runSW_MELEE
+      anim "optchar/engineer-a_runSW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_MELEE
+      anim "optchar/engineer-a_runS_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_MELEE
+      anim "optchar/engineer-a_runSE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_MELEE
+      anim "optchar/engineer-a_runW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_MELEE
+      anim "optchar/engineer-a_runCenter_MELEE.egg"
+    }
+    {
+      name a_runE_MELEE
+      anim "optchar/engineer-a_runE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_MELEE
+      anim "optchar/engineer-a_runNW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_MELEE
+      anim "optchar/engineer-a_runN_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_MELEE
+      anim "optchar/engineer-a_runNE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
       name MELEE_run
       blend {
         anims [
-          "optchar/engineer-a_runSW_MELEE.egg"
-          "optchar/engineer-a_runS_MELEE.egg"
-          "optchar/engineer-a_runSE_MELEE.egg"
-          "optchar/engineer-a_runW_MELEE.egg"
-          "optchar/engineer-a_runCenter_MELEE.egg"
-          "optchar/engineer-a_runE_MELEE.egg"
-          "optchar/engineer-a_runNW_MELEE.egg"
-          "optchar/engineer-a_runN_MELEE.egg"
-          "optchar/engineer-a_runNE_MELEE.egg"
+          "a_runSW_MELEE"
+          "a_runS_MELEE"
+          "a_runSE_MELEE"
+          "a_runW_MELEE"
+          "a_runCenter_MELEE"
+          "a_runE_MELEE"
+          "a_runNW_MELEE"
+          "a_runN_MELEE"
+          "a_runNE_MELEE"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
       loop true
-      zero_x true
-      zero_y true
       activity Melee_Run
       layers [
         {
@@ -872,26 +981,68 @@
     }
 
     {
+      name a_runSW_SECONDARY
+      anim "optchar/engineer-a_runSW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_SECONDARY
+      anim "optchar/engineer-a_runS_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_SECONDARY
+      anim "optchar/engineer-a_runSE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_SECONDARY
+      anim "optchar/engineer-a_runW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_SECONDARY
+      anim "optchar/engineer-a_runCenter_SECONDARY.egg"
+    }
+    {
+      name a_runE_SECONDARY
+      anim "optchar/engineer-a_runE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_SECONDARY
+      anim "optchar/engineer-a_runNW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_SECONDARY
+      anim "optchar/engineer-a_runN_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_SECONDARY
+      anim "optchar/engineer-a_runNE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
       name SECONDARY_run
       blend {
         anims [
-          "optchar/engineer-a_runSW_SECONDARY.egg"
-          "optchar/engineer-a_runS_SECONDARY.egg"
-          "optchar/engineer-a_runSE_SECONDARY.egg"
-          "optchar/engineer-a_runW_SECONDARY.egg"
-          "optchar/engineer-a_runCenter_SECONDARY.egg"
-          "optchar/engineer-a_runE_SECONDARY.egg"
-          "optchar/engineer-a_runNW_SECONDARY.egg"
-          "optchar/engineer-a_runN_SECONDARY.egg"
-          "optchar/engineer-a_runNE_SECONDARY.egg"
+          "a_runSW_SECONDARY"
+          "a_runS_SECONDARY"
+          "a_runSE_SECONDARY"
+          "a_runW_SECONDARY"
+          "a_runCenter_SECONDARY"
+          "a_runE_SECONDARY"
+          "a_runNW_SECONDARY"
+          "a_runN_SECONDARY"
+          "a_runNE_SECONDARY"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
       loop true
-      zero_x true
-      zero_y true
       activity Secondary_Run
       layers [
         {
@@ -918,8 +1069,7 @@
     {
       name jumpstart_SECONDARY
       anim "optchar/engineer-a_jumpstart_SECONDARY.egg"
-      zero_x true
-      zero_y true
+      motion [ x y ]
       activity Secondary_Jump_Start
     }
 
@@ -928,8 +1078,7 @@
       anim "optchar/engineer-a_jumpfloat_SECONDARY.egg"
       activity Secondary_Jump_Float
       loop true
-      zero_x true
-      zero_y true
+      motion [ x y ]
     }
 
     {
@@ -943,6 +1092,372 @@
         }
         {
           type lock chain lfoot
+        }
+      ]
+    }
+
+    //
+    // PDA sequences
+    //
+
+    {
+      name PDA_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/engineer-a_PDA_aimmatrix_idle_down_left.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_down_center.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_down_right.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_mid_left.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_mid_center.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_mid_right.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_up_left.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_up_center.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_up_right.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_straight_up.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_straight_up.egg"
+          "optchar/engineer-a_PDA_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+      ]
+    }
+
+    {
+      name PDA_aimmatrix_run
+      blend {
+        anims [
+          "optchar/engineer-a_PDA_aimmatrix_run_down_left.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_down_center.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_down_right.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_mid_left.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_mid_center.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_mid_right.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_up_left.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_up_center.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_up_right.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_straight_up.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_straight_up.egg"
+          "optchar/engineer-a_PDA_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+
+    {
+      name stand_PDA
+      anim "optchar/engineer-stand_PDA.egg"
+      activity PDA_Stand
+      loop true
+      layers [
+        {
+          sequence PDA_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name a_runSW_PDA
+      anim "optchar/engineer-a_runSW_PDA.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_PDA
+      anim "optchar/engineer-a_runS_PDA.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_PDA
+      anim "optchar/engineer-a_runSE_PDA.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_PDA
+      anim "optchar/engineer-a_runW_PDA.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_PDA
+      anim "optchar/engineer-a_runCenter_PDA.egg"
+    }
+    {
+      name a_runE_PDA
+      anim "optchar/engineer-a_runE_PDA.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_PDA
+      anim "optchar/engineer-a_runNW_PDA.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_PDA
+      anim "optchar/engineer-a_runN_PDA.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_PDA
+      anim "optchar/engineer-a_runNE_PDA.egg"
+      motion [ x y ]
+    }
+    {
+      name run_PDA
+      blend {
+        anims [
+          "a_runSW_PDA"
+          "a_runS_PDA"
+          "a_runSE_PDA"
+          "a_runW_PDA"
+          "a_runCenter_PDA"
+          "a_runE_PDA"
+          "a_runNW_PDA"
+          "a_runN_PDA"
+          "a_runNE_PDA"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence PDA_aimmatrix_run
+        }
+      ]
+      loop true
+      activity PDA_Run
+    }
+
+    {
+      name a_jumpstart_PDA
+      anim "optchar/engineer-a_jumpstart_PDA.egg"
+      activity PDA_Jump_Start
+      motion [ x y ]
+    }
+    {
+      name a_jumpfloat_PDA
+      anim "optchar/engineer-a_jumpfloat_PDA.egg"
+      activity PDA_Jump_Float
+      loop true
+      motion [ x y ]
+    }
+    {
+      name jumpland_PDA
+      anim "optchar/engineer-jumpland_PDA.egg"
+      activity PDA_Jump_Land
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+      ]
+    }
+
+    //
+    // BUILDING sequences.
+    //
+    {
+      name BUILDING_aimmatrix_idle
+      blend {
+        anims [
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_down_left.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_down_center.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_down_right.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_mid_left.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_mid_center.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_mid_right.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_up_left.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_up_center.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_up_right.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_straight_up.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_straight_up.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_idle_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          type lock chain rfoot
+        }
+        {
+          type lock chain lfoot
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+
+    {
+      name BUILDING_aimmatrix_run
+      blend {
+        anims [
+          "optchar/engineer-a_BUILDING_aimmatrix_run_down_left.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_down_center.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_down_right.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_mid_left.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_mid_center.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_mid_right.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_up_left.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_up_center.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_up_right.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_straight_up.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_straight_up.egg"
+          "optchar/engineer-a_BUILDING_aimmatrix_run_straight_up.egg"
+        ]
+        width 3
+        blend_x body_yaw
+        blend_y body_pitch
+      }
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
+        }
+      ]
+    }
+
+    {
+      name stand_BUILDING
+      anim "optchar/engineer-stand_BUILDING.egg"
+      activity Building_Stand
+      loop true
+      layers [
+        {
+          sequence BUILDING_aimmatrix_idle
+        }
+      ]
+    }
+
+    {
+      name a_runSW_BUILDING
+      anim "optchar/engineer-a_runSW_BUILDING.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_BUILDING
+      anim "optchar/engineer-a_runS_BUILDING.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_BUILDING
+      anim "optchar/engineer-a_runSE_BUILDING.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_BUILDING
+      anim "optchar/engineer-a_runW_BUILDING.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_BUILDING
+      anim "optchar/engineer-a_runCenter_BUILDING.egg"
+    }
+    {
+      name a_runE_BUILDING
+      anim "optchar/engineer-a_runE_BUILDING.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_BUILDING
+      anim "optchar/engineer-a_runNW_BUILDING.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_BUILDING
+      anim "optchar/engineer-a_runN_BUILDING.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_BUILDING
+      anim "optchar/engineer-a_runNE_BUILDING.egg"
+      motion [ x y ]
+    }
+    {
+      name run_BUILDING
+      blend {
+        anims [
+          "a_runSW_BUILDING"
+          "a_runS_BUILDING"
+          "a_runSE_BUILDING"
+          "a_runW_BUILDING"
+          "a_runCenter_BUILDING"
+          "a_runE_BUILDING"
+          "a_runNW_BUILDING"
+          "a_runN_BUILDING"
+          "a_runNE_BUILDING"
+        ]
+        width 3
+        blend_x move_x
+        blend_y move_y
+      }
+      layers [
+        {
+          sequence BUILDING_aimmatrix_run
+        }
+      ]
+      loop true
+      activity Building_Run
+    }
+
+    {
+      name a_jumpstart_BUILDING
+      anim "optchar/engineer-a_jumpstart_BUILDING.egg"
+      activity Building_Jump_Start
+      motion [ x y ]
+    }
+    {
+      name a_jumpfloat_BUILDING
+      anim "optchar/engineer-a_jumpfloat_BUILDING.egg"
+      activity Building_Jump_Float
+      loop true
+      motion [ x y ]
+    }
+    {
+      name jumpland_BUILDING
+      anim "optchar/engineer-jumpland_BUILDING.egg"
+      activity Building_Jump_Land
+      delta true
+      ik_events [
+        {
+          chain rfoot type lock
+        }
+        {
+          chain lfoot type lock
+        }
+        {
+          chain lhand type touch joint weapon_bone
         }
       ]
     }
@@ -974,15 +1489,13 @@
     {
       name jumpfloat_primary
       loop true
-      zero_x true
-      zero_y true
+      motion [ x y ]
       activity Primary_Jump_Float
       anim "optchar/engineer-a_jumpfloat_PRIMARY.egg"
     }
     {
       name jumpstart_primary
-      zero_x true
-      zero_y true
+      motion [ x y ]
       activity Primary_Jump_Start
       anim "optchar/engineer-a_jumpstart_PRIMARY.egg"
     }
@@ -1006,15 +1519,13 @@
     {
       name jumpfloat_melee
       loop true
-      zero_x true
-      zero_y true
+      motion [ x y ]
       activity Melee_Jump_Float
       anim "optchar/engineer-a_jumpfloat_MELEE.egg"
     }
     {
       name jumpstart_melee
-      zero_x true
-      zero_y true
+      motion [ x y ]
       activity Melee_Jump_Start
       anim "optchar/engineer-a_jumpstart_MELEE.egg"
     }

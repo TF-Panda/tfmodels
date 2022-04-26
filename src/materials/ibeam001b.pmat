@@ -1,8 +1,12 @@
 
 {
-  "material"   "SourceMaterial"
+  "material"   "SourceLightmappedMaterial"
   "parameters" 
   {
     "basetexture"     "../maps/Ibeam001b.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "metal"
   }
 }

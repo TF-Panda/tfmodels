@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/red_beam2_middle.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "default"
+  }
+}

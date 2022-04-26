@@ -4,6 +4,9 @@
   parameters {
     sky_texture "../maps/sky_granary_01_hdrft.ptex"
     compressed_hdr 1
-    texcoord_scale [ 1 2 1 ]
+    texcoord_transform {
+      scale     [ 1  2 ]
+      translate [ 0 -1 ]
+    }
   }
 }

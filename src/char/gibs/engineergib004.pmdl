@@ -1,0 +1,26 @@
+{
+  model "engineergib004.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop flesh
+    contents solid
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/engineer_red_gib.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/engineer_blue_gib.pmat" ]
+    }
+  ]
+
+  physics_model {
+    mesh engineergib004_physics
+    mass 12.36311
+  }
+}

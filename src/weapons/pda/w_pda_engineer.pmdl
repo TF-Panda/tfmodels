@@ -1,0 +1,25 @@
+{
+  model "optchar/w_pda_engineer-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop metal
+  }
+
+  lods [
+    {
+      distance 0
+      groups [ w_PDA_Engineer_reference ]
+    }
+    {
+      distance 18
+      groups [ w_PDA_Engineer_reference_lod1 ]
+    }
+  ]
+
+  physics_model {
+    mesh w_pda_engineer_physics
+    mass 1.0
+  }
+}

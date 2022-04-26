@@ -1,0 +1,18 @@
+{
+  model "optchar/dispenser_blueprint-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/dispenser_blueprint-idle.egg"
+      fps 1
+    }
+    {
+      name reject
+      anim "optchar/dispenser_blueprint-reject.egg"
+      fps 1
+    }
+  ]
+}

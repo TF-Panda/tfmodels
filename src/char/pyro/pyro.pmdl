@@ -6,6 +6,11 @@
   custom_data {
     surfaceprop flesh
 
+    bbox {
+      mins [ -16.232 -22.611 -3.144 ]
+      maxs [ 13.487 22.611 82.521 ]
+    }
+
     hit_boxes [
       {
         group 1
@@ -365,32 +370,74 @@
       activity Secondary_Stand
     }
     {
-      name run_SECONDARY
+      name a_runSW_SECONDARY
+      anim "optchar/pyro-a_runSW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_SECONDARY
+      anim "optchar/pyro-a_runS_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_SECONDARY
+      anim "optchar/pyro-a_runSE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_SECONDARY
+      anim "optchar/pyro-a_runW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_SECONDARY
+      anim "optchar/pyro-a_runCenter_SECONDARY.egg"
+    }
+    {
+      name a_runE_SECONDARY
+      anim "optchar/pyro-a_runE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_SECONDARY
+      anim "optchar/pyro-a_runNW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_SECONDARY
+      anim "optchar/pyro-a_runN_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_SECONDARY
+      anim "optchar/pyro-a_runNE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name SECONDARY_run
       blend {
         anims [
-          "optchar/pyro-a_runSW_SECONDARY.egg"
-          "optchar/pyro-a_runS_SECONDARY.egg"
-          "optchar/pyro-a_runSE_SECONDARY.egg"
-          "optchar/pyro-a_runW_SECONDARY.egg"
-          "optchar/pyro-a_runCenter_SECONDARY.egg"
-          "optchar/pyro-a_runE_SECONDARY.egg"
-          "optchar/pyro-a_runNW_SECONDARY.egg"
-          "optchar/pyro-a_runN_SECONDARY.egg"
-          "optchar/pyro-a_runNE_SECONDARY.egg"
+          "a_runSW_SECONDARY"
+          "a_runS_SECONDARY"
+          "a_runSE_SECONDARY"
+          "a_runW_SECONDARY"
+          "a_runCenter_SECONDARY"
+          "a_runE_SECONDARY"
+          "a_runNW_SECONDARY"
+          "a_runN_SECONDARY"
+          "a_runNE_SECONDARY"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
+      loop true
+      activity Secondary_Run
       layers [
         {
           sequence SECONDARY_aimmatrix_run
         }
       ]
-      activity Secondary_Run
-      zero_x true
-      zero_y true
-      loop true
     }
     {
       name AttackStand_SECONDARY
@@ -460,25 +507,14 @@
       name a_jumpstart_SECONDARY
       anim "optchar/pyro-a_jumpstart_SECONDARY.egg"
       activity Secondary_Jump_Start
-      zero_x true
-      zero_y true
-      ik_events [
-        {
-          chain lhand type touch joint weapon_bone_1
-        }
-      ]
+      motion [ x y ]
     }
     {
       name a_jumpfloat_SECONDARY
       anim "optchar/pyro-a_jumpfloat_SECONDARY.egg"
       activity Secondary_Jump_Float
-      zero_x true zero_y true
+      motion [ x y ]
       loop true
-      ik_events [
-        {
-          chain lhand type touch joint weapon_bone_1
-        }
-      ]
     }
     {
       name jumpland_SECONDARY
@@ -578,32 +614,74 @@
       activity Melee_Stand
     }
     {
-      name run_MELEE
+      name a_runSW_MELEE
+      anim "optchar/pyro-a_runSW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_MELEE
+      anim "optchar/pyro-a_runS_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_MELEE
+      anim "optchar/pyro-a_runSE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_MELEE
+      anim "optchar/pyro-a_runW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_MELEE
+      anim "optchar/pyro-a_runCenter_MELEE.egg"
+    }
+    {
+      name a_runE_MELEE
+      anim "optchar/pyro-a_runE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_MELEE
+      anim "optchar/pyro-a_runNW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_MELEE
+      anim "optchar/pyro-a_runN_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_MELEE
+      anim "optchar/pyro-a_runNE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name MELEE_run
       blend {
         anims [
-          "optchar/pyro-a_runSW_MELEE.egg"
-          "optchar/pyro-a_runS_MELEE.egg"
-          "optchar/pyro-a_runSE_MELEE.egg"
-          "optchar/pyro-a_runW_MELEE.egg"
-          "optchar/pyro-a_runCenter_MELEE.egg"
-          "optchar/pyro-a_runE_MELEE.egg"
-          "optchar/pyro-a_runNW_MELEE.egg"
-          "optchar/pyro-a_runN_MELEE.egg"
-          "optchar/pyro-a_runNE_MELEE.egg"
+          "a_runSW_MELEE"
+          "a_runS_MELEE"
+          "a_runSE_MELEE"
+          "a_runW_MELEE"
+          "a_runCenter_MELEE"
+          "a_runE_MELEE"
+          "a_runNW_MELEE"
+          "a_runN_MELEE"
+          "a_runNE_MELEE"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
+      loop true
+      activity Melee_Run
       layers [
         {
           sequence MELEE_aimmatrix_run
         }
       ]
-      activity Melee_Run
-      zero_x true
-      zero_y true
-      loop true
     }
     {
       name AttackStand_Melee
@@ -627,14 +705,13 @@
       name a_jumpstart_MELEE
       anim "optchar/pyro-a_jumpstart_MELEE.egg"
       activity Melee_Jump_Start
-      zero_x true
-      zero_y true
+      motion [ x y ]
     }
     {
       name a_jumpfloat_MELEE
       anim "optchar/pyro-a_jumpfloat_MELEE.egg"
       activity Melee_Jump_Float
-      zero_x true zero_y true
+      motion [ x y ]
       loop true
     }
     {

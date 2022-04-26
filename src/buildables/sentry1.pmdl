@@ -79,19 +79,19 @@
   material_groups [
     {
       name red
-      materials [ "../materials/sentry1.pmat" toolbox_red.pmat "../materials/mini_sentry_light_red.pmat" ]
+      materials [ "../materials/sentry1.pmat" "../materials/toolbox_red.pmat" "../materials/mini_sentry_light_red.pmat" ]
     }
     {
       name blue
-      materials [ "../materials/sentry1_blue.pmat" toolbox_blue.pmat "../materials/mini_sentry_light_blue.pmat" ]
+      materials [ "../materials/sentry1_blue.pmat" "../materials/toolbox_blue.pmat" "../materials/mini_sentry_light_blue.pmat" ]
     }
     {
       name mini_red
-      materials [ "../materials/mini_sentry_red.pmat" toolbox_red.pmat "../materials/mini_sentry_light_red.pmat" ]
+      materials [ "../materials/mini_sentry_red.pmat" "../materials/toolbox_red.pmat" "../materials/mini_sentry_light_red.pmat" ]
     }
     {
       name mini_blue
-      materials [ "../materials/mini_sentry_blue.pmat" toolbox_blue.pmat "../materials/mini_sentry_light_blue.pmat" ]
+      materials [ "../materials/mini_sentry_blue.pmat" "../materials/toolbox_blue.pmat" "../materials/mini_sentry_light_blue.pmat" ]
     }
   ]
 

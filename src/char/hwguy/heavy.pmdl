@@ -752,18 +752,62 @@
     }
 
     {
+      name a_deployedSW_PRIMARY
+      anim "optchar/heavy-a_deployedSW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_deployedS_PRIMARY
+      anim "optchar/heavy-a_deployedS_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_deployedSE_PRIMARY
+      anim "optchar/heavy-a_deployedSE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_deployedW_PRIMARY
+      anim "optchar/heavy-a_deployedW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_deployedCenter_PRIMARY
+      anim "optchar/heavy-a_deployedCenter_PRIMARY.egg"
+    }
+    {
+      name a_deployedE_PRIMARY
+      anim "optchar/heavy-a_deployedE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_deployedNW_PRIMARY
+      anim "optchar/heavy-a_deployedNW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_deployedN_PRIMARY
+      anim "optchar/heavy-a_deployedN_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_deployedNE_PRIMARY
+      anim "optchar/heavy-a_deployedNE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
       name PRIMARY_deployed_movement
       blend {
         anims [
-          "optchar/heavy-a_deployedSW_PRIMARY.egg"
-          "optchar/heavy-a_deployedS_PRIMARY.egg"
-          "optchar/heavy-a_deployedSE_PRIMARY.egg"
-          "optchar/heavy-a_deployedW_PRIMARY.egg"
-          "optchar/heavy-a_deployedCenter_PRIMARY.egg"
-          "optchar/heavy-a_deployedE_PRIMARY.egg"
-          "optchar/heavy-a_deployedNW_PRIMARY.egg"
-          "optchar/heavy-a_deployedN_PRIMARY.egg"
-          "optchar/heavy-a_deployedNE_PRIMARY.egg"
+          "a_deployedSW_PRIMARY"
+          "a_deployedS_PRIMARY"
+          "a_deployedSE_PRIMARY"
+          "a_deployedW_PRIMARY"
+          "a_deployedCenter_PRIMARY"
+          "a_deployedE_PRIMARY"
+          "a_deployedNW_PRIMARY"
+          "a_deployedN_PRIMARY"
+          "a_deployedNE_PRIMARY"
         ]
         width 3
         blend_x move_x
@@ -775,8 +819,6 @@
         }
       ]
       loop true
-      zero_x true
-      zero_y true
       activity Primary_Deployed
     }
 
@@ -924,18 +966,62 @@
     }
 
     {
+      name a_runSW_PRIMARY
+      anim "optchar/heavy-a_runSW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_PRIMARY
+      anim "optchar/heavy-a_runS_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_PRIMARY
+      anim "optchar/heavy-a_runSE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_PRIMARY
+      anim "optchar/heavy-a_runW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_PRIMARY
+      anim "optchar/heavy-a_runCenter_PRIMARY.egg"
+    }
+    {
+      name a_runE_PRIMARY
+      anim "optchar/heavy-a_runE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_PRIMARY
+      anim "optchar/heavy-a_runNW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_PRIMARY
+      anim "optchar/heavy-a_runN_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_PRIMARY
+      anim "optchar/heavy-a_runNE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
       name run_PRIMARY
       blend {
         anims [
-          "optchar/heavy-a_runSW_PRIMARY.egg"
-          "optchar/heavy-a_runS_PRIMARY.egg"
-          "optchar/heavy-a_runSE_PRIMARY.egg"
-          "optchar/heavy-a_runW_PRIMARY.egg"
-          "optchar/heavy-a_runCenter_PRIMARY.egg"
-          "optchar/heavy-a_runE_PRIMARY.egg"
-          "optchar/heavy-a_runNW_PRIMARY.egg"
-          "optchar/heavy-a_runN_PRIMARY.egg"
-          "optchar/heavy-a_runNE_PRIMARY.egg"
+          a_runSW_PRIMARY
+          a_runS_PRIMARY
+          a_runSE_PRIMARY
+          a_runW_PRIMARY
+          a_runCenter_PRIMARY
+          a_runE_PRIMARY
+          a_runNW_PRIMARY
+          a_runN_PRIMARY
+          a_runNE_PRIMARY
         ]
         width 3
         blend_x move_x
@@ -947,8 +1033,6 @@
         }
       ]
       loop true
-      zero_x true
-      zero_y true
       activity Primary_Run
     }
 
@@ -1070,18 +1154,62 @@
     }
 
     {
+      name a_crouch_walkSW_PRIMARY
+      anim "optchar/heavy-a_crouch_walkSW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_crouch_walkS_PRIMARY
+      anim "optchar/heavy-a_crouch_walkS_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_crouch_walkSE_PRIMARY
+      anim "optchar/heavy-a_crouch_walkSE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_crouch_walkW_PRIMARY
+      anim "optchar/heavy-a_crouch_walkW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_crouch_walkCenter_PRIMARY
+      anim "optchar/heavy-a_crouch_walkCenter_PRIMARY.egg"
+    }
+    {
+      name a_crouch_walkE_PRIMARY
+      anim "optchar/heavy-a_crouch_walkE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_crouch_walkNW_PRIMARY
+      anim "optchar/heavy-a_crouch_walkNW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_crouch_walkN_PRIMARY
+      anim "optchar/heavy-a_crouch_walkN_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_crouch_walkNE_PRIMARY
+      anim "optchar/heavy-a_crouch_walkNE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
       name crouch_walk_PRIMARY
       blend {
         anims [
-          "optchar/heavy-a_crouch_walkSW_PRIMARY.egg"
-          "optchar/heavy-a_crouch_walkS_PRIMARY.egg"
-          "optchar/heavy-a_crouch_walkSE_PRIMARY.egg"
-          "optchar/heavy-a_crouch_walkW_PRIMARY.egg"
-          "optchar/heavy-a_crouch_walkCenter_PRIMARY.egg"
-          "optchar/heavy-a_crouch_walkE_PRIMARY.egg"
-          "optchar/heavy-a_crouch_walkNW_PRIMARY.egg"
-          "optchar/heavy-a_crouch_walkN_PRIMARY.egg"
-          "optchar/heavy-a_crouch_walkNE_PRIMARY.egg"
+          "a_crouch_walkSW_PRIMARY"
+          "a_crouch_walkS_PRIMARY"
+          "a_crouch_walkSE_PRIMARY"
+          "a_crouch_walkW_PRIMARY"
+          "a_crouch_walkCenter_PRIMARY"
+          "a_crouch_walkE_PRIMARY"
+          "a_crouch_walkNW_PRIMARY"
+          "a_crouch_walkN_PRIMARY"
+          "a_crouch_walkNE_PRIMARY"
         ]
         width 3
         blend_x move_x
@@ -1103,8 +1231,6 @@
         }
       ]
       loop true
-      zero_x true
-      zero_y true
       activity Primary_Crouch_Walk
     }
 
@@ -1140,18 +1266,62 @@
       ]
     }
     {
+      name a_swimSW_PRIMARY
+      anim "optchar/heavy-a_swimSW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_swimS_PRIMARY
+      anim "optchar/heavy-a_swimS_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_swimSE_PRIMARY
+      anim "optchar/heavy-a_swimSE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_swimW_PRIMARY
+      anim "optchar/heavy-a_swimW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_swimCenter_PRIMARY
+      anim "optchar/heavy-a_swimCenter_PRIMARY.egg"
+    }
+    {
+      name a_swimE_PRIMARY
+      anim "optchar/heavy-a_swimE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_swimNW_PRIMARY
+      anim "optchar/heavy-a_swimNW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_swimN_PRIMARY
+      anim "optchar/heavy-a_swimN_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_swimNE_PRIMARY
+      anim "optchar/heavy-a_swimNE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
       name swim_PRIMARY
       blend {
         anims [
-          "optchar/heavy-a_swimSW_PRIMARY.egg"
-          "optchar/heavy-a_swimS_PRIMARY.egg"
-          "optchar/heavy-a_swimSE_PRIMARY.egg"
-          "optchar/heavy-a_swimW_PRIMARY.egg"
-          "optchar/heavy-a_swimCenter_PRIMARY.egg"
-          "optchar/heavy-a_swimE_PRIMARY.egg"
-          "optchar/heavy-a_swimNW_PRIMARY.egg"
-          "optchar/heavy-a_swimN_PRIMARY.egg"
-          "optchar/heavy-a_swimNE_PRIMARY.egg"
+          "a_swimSW_PRIMARY"
+          "a_swimS_PRIMARY"
+          "a_swimSE_PRIMARY"
+          "a_swimW_PRIMARY"
+          "a_swimCenter_PRIMARY"
+          "a_swimE_PRIMARY"
+          "a_swimNW_PRIMARY"
+          "a_swimN_PRIMARY"
+          "a_swimNE_PRIMARY"
         ]
         width 3
         blend_x move_x
@@ -1163,22 +1333,19 @@
         }
       ]
       loop true
-      zero_x true
-      zero_y true
       activity Primary_Swim
     }
 
     {
       name airwalk_PRIMARY
       anim "optchar/heavy-airwalk_PRIMARY.egg"
+      motion [ x y ]
       layers [
         {
           sequence PRIMARY_aimmatrix_run
         }
       ]
       loop true
-      zero_x true
-      zero_y true
       activity Primary_Air_Walk
     }
 
@@ -1186,12 +1353,14 @@
       name jumpstart_PRIMARY
       anim "optchar/heavy-jumpstart_PRIMARY.egg"
       activity Primary_Jump_Start
+      motion [ x y ]
     }
     {
       name jumpfloat_PRIMARY
       anim "optchar/heavy-jumpfloat_PRIMARY.egg"
       activity Primary_Jump_Float
       loop true
+      motion [ x y ]
     }
     {
       name jumpland_PRIMARY
@@ -1296,32 +1465,74 @@
       ]
     }
     {
-      name run_SECONDARY
+      name a_runSW_SECONDARY
+      anim "optchar/heavy-a_runSW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_SECONDARY
+      anim "optchar/heavy-a_runS_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_SECONDARY
+      anim "optchar/heavy-a_runSE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_SECONDARY
+      anim "optchar/heavy-a_runW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_SECONDARY
+      anim "optchar/heavy-a_runCenter_SECONDARY.egg"
+    }
+    {
+      name a_runE_SECONDARY
+      anim "optchar/heavy-a_runE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_SECONDARY
+      anim "optchar/heavy-a_runNW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_SECONDARY
+      anim "optchar/heavy-a_runN_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_SECONDARY
+      anim "optchar/heavy-a_runNE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name SECONDARY_run
       blend {
         anims [
-          "optchar/heavy-a_runSW_SECONDARY.egg"
-          "optchar/heavy-a_runS_SECONDARY.egg"
-          "optchar/heavy-a_runSE_SECONDARY.egg"
-          "optchar/heavy-a_runW_SECONDARY.egg"
-          "optchar/heavy-a_runCenter_SECONDARY.egg"
-          "optchar/heavy-a_runE_SECONDARY.egg"
-          "optchar/heavy-a_runNW_SECONDARY.egg"
-          "optchar/heavy-a_runN_SECONDARY.egg"
-          "optchar/heavy-a_runNE_SECONDARY.egg"
+          "a_runSW_SECONDARY"
+          "a_runS_SECONDARY"
+          "a_runSE_SECONDARY"
+          "a_runW_SECONDARY"
+          "a_runCenter_SECONDARY"
+          "a_runE_SECONDARY"
+          "a_runNW_SECONDARY"
+          "a_runN_SECONDARY"
+          "a_runNE_SECONDARY"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
+      loop true
+      activity Secondary_Run
       layers [
         {
           sequence SECONDARY_aimmatrix_run
         }
       ]
-      loop true
-      zero_x true
-      zero_y true
-      activity Secondary_Run
     }
 
     {
@@ -1389,12 +1600,14 @@
       name jumpstart_SECONDARY
       anim "optchar/heavy-jumpstart_SECONDARY.egg"
       activity Secondary_Jump_Start
+      motion [ x y ]
     }
     {
       name jumpfloat_SECONDARY
       anim "optchar/heavy-jumpfloat_SECONDARY.egg"
       activity Secondary_Jump_Float
       loop true
+      motion [ x y ]
     }
     {
       name jumpland_SECONDARY
@@ -1492,32 +1705,74 @@
       ]
     }
     {
-      name run_MELEE
+      name a_runSW_MELEE
+      anim "optchar/heavy-a_runSW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_MELEE
+      anim "optchar/heavy-a_runS_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_MELEE
+      anim "optchar/heavy-a_runSE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_MELEE
+      anim "optchar/heavy-a_runW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_MELEE
+      anim "optchar/heavy-a_runCenter_MELEE.egg"
+    }
+    {
+      name a_runE_MELEE
+      anim "optchar/heavy-a_runE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_MELEE
+      anim "optchar/heavy-a_runNW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_MELEE
+      anim "optchar/heavy-a_runN_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_MELEE
+      anim "optchar/heavy-a_runNE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name MELEE_run
       blend {
         anims [
-          "optchar/heavy-a_runSW_MELEE.egg"
-          "optchar/heavy-a_runS_MELEE.egg"
-          "optchar/heavy-a_runSE_MELEE.egg"
-          "optchar/heavy-a_runW_MELEE.egg"
-          "optchar/heavy-a_runCenter_MELEE.egg"
-          "optchar/heavy-a_runE_MELEE.egg"
-          "optchar/heavy-a_runNW_MELEE.egg"
-          "optchar/heavy-a_runN_MELEE.egg"
-          "optchar/heavy-a_runNE_MELEE.egg"
+          "a_runSW_MELEE"
+          "a_runS_MELEE"
+          "a_runSE_MELEE"
+          "a_runW_MELEE"
+          "a_runCenter_MELEE"
+          "a_runE_MELEE"
+          "a_runNW_MELEE"
+          "a_runN_MELEE"
+          "a_runNE_MELEE"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
+      loop true
+      activity Melee_Run
       layers [
         {
           sequence MELEE_aimmatrix_run
         }
       ]
-      loop true
-      zero_x true
-      zero_y true
-      activity Melee_Run
     }
 
     {
@@ -1570,12 +1825,14 @@
       name jumpstart_MELEE
       anim "optchar/heavy-jumpstart_MELEE.egg"
       activity Melee_Jump_Start
+      motion [ x y ]
     }
     {
       name jumpfloat_MELEE
       anim "optchar/heavy-jumpfloat_MELEE.egg"
       activity Melee_Jump_Float
       loop true
+      motion [ x y ]
     }
     {
       name jumpland_MELEE
@@ -1599,21 +1856,21 @@
       name PRIMARY_flinch
       anim "optchar/heavy-PRIMARY_flinch.egg"
       delta true
-      activity Gesture_Flinch
+      activity Primary_Gesture_Flinch
       weight_list weights_attackCrouch_PRIMARY
     }
     {
       name SECONDARY_flinch
       anim "optchar/heavy-SECONDARY_flinch.egg"
       delta true
-      activity Gesture_Flinch
+      activity Secondary_Gesture_Flinch
       weight_list weights_attackCrouch_PRIMARY
     }
     {
       name MELEE_flinch
       anim "optchar/heavy-MELEE_flinch.egg"
       delta true
-      activity Gesture_Flinch
+      activity Melee_Gesture_Flinch
       weight_list weights_attackCrouch_PRIMARY
     }
     ///////////////////////////////////////////////////////////////////////////

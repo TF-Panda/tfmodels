@@ -34,3 +34,9 @@
 #include $[THISDIRPREFIX]Sources.wood_patch4_small.pp
 #include $[THISDIRPREFIX]Sources.wood_patch2.pp
 #include $[THISDIRPREFIX]Sources.wood_patch1.pp
+#include $[THISDIRPREFIX]Sources.cliff_wall_02c.pp
+#include $[THISDIRPREFIX]Sources.cliff_wall_02b.pp
+#include $[THISDIRPREFIX]Sources.cliff_wall_09.pp
+#include $[THISDIRPREFIX]Sources.cliff_wall_02a.pp
+#include $[THISDIRPREFIX]Sources.rock006c.pp
+#include $[THISDIRPREFIX]Sources.tree_pine_stump01.pp

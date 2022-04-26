@@ -1,0 +1,26 @@
+{
+  model "demogib006.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop flesh
+    contents solid
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/demoman_red_gib.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/demoman_blue_gib.pmat" ]
+    }
+  ]
+
+  physics_model {
+    mesh demogib006_physics
+    mass 7.683404
+  }
+}

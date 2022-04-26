@@ -1,0 +1,63 @@
+
+{
+  "model"   "barrel02.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/barrel02.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "barrel02_reference"
+      ]
+    }
+
+    {
+      "distance"       60
+      "groups" 
+      [
+        "barrel02_reference_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "barrel02_physics"
+    "mass"     1
+    "damping"     0
+    "rot_damping"     0
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "metal"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "Body"
+        "nodes" 
+        [
+          "barrel02_reference*"
+        ]
+      }
+    ]
+  }
+}

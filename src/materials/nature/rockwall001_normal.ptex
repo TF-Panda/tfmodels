@@ -1,5 +1,0 @@
-{
-  image "rockwall001_normal.tga"
-  format "rgb"
-  wrap "repeat"
-}

@@ -1,5 +1,0 @@
-{
-  image "metalchrome001_gloss.rgb"
-  format "luminance"
-  wrap "repeat"
-}

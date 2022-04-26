@@ -1,0 +1,23 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/floor_tile_002a.ptex"
+    "envmap"     1
+    "envmapcontrast"     1
+    "envmapsaturation"     1
+    "envmaptint" 
+    [
+      0.75
+      0.75
+      0.75
+    ]
+    "basealphaenvmapmask"     1
+    "bumpmap"     "../maps/floor_tile_001a_normal.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "ceramic"
+  }
+}

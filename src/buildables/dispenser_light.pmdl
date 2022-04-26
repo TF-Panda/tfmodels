@@ -1,0 +1,131 @@
+{
+  model "optchar/dispenser_light-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop metal
+
+    bbox {
+      mins [ -23.543 -25.181 -0.25 ]
+      maxs [ 21.952 22.669 58.347 ]
+    }
+
+    gibs [
+      {
+        model "models/buildables/dispenser_gib1"
+      }
+      {
+        model "models/buildables/dispenser_gib2"
+      }
+      {
+        model "models/buildables/dispenser_gib3"
+      }
+      {
+        model "models/buildables/dispenser_gib4"
+      }
+      {
+        model "models/buildables/dispenser_gib5"
+      }
+    ]
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../materials/dispenser.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../materials/dispenser_blue.pmat" ]
+    }
+  ]
+
+  attachments [
+    {
+      name dispenserRoot
+      influences [
+        {
+          parent dispenserRoot
+        }
+      ]
+    }
+    {
+      name controlpanel1_ll
+      influences [
+        {
+          parent dispenserRoot
+          pos [ 10 36.74 -7 ]
+        }
+      ]
+    }
+    {
+      name controlpanel1_ur
+      influences [
+        {
+          parent dispenserRoot
+          pos [ -10 47.74 -7 ]
+        }
+      ]
+    }
+    {
+      name controlpanel0_ll
+      influences [
+        {
+          parent dispenserRoot
+          pos [ -10 36.74 7 ]
+        }
+      ]
+    }
+    {
+      name controlpanel0_ur
+      influences [
+        {
+          parent dispenserRoot
+          pos [ 10 47.74 7 ]
+        }
+      ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [
+        dispenser_light_reference
+      ]
+    }
+    {
+      distance 17
+      groups [
+        dispenser_light_reference_lod1
+      ]
+    }
+    {
+      distance 25
+      groups [
+        dispenser_light_reference_lod2
+      ]
+    }
+    {
+      distance 35
+      groups [
+        dispenser_light_reference_lod3
+      ]
+    }
+    {
+      distance 45
+      groups [
+        dispenser_light_reference_lod4
+      ]
+    }
+  ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/dispenser_light-a_idle.egg"
+      activity Object_Idle
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+
+{
+  "image"   "water_hydro_base.tga"
+  "format"   "srgb_alpha"
+  "type"   "2d_texture"
+  "wrap_u"   "clamp"
+  "wrap_v"   "clamp"
+}

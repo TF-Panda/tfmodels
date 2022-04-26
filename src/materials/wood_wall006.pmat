@@ -1,0 +1,14 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/wood_wall006.ptex"
+    "bumpmap"     "../maps/wood_wall006_bump_ssbump.ptex"
+    "ssbump"     1
+  }
+  "tags" 
+  {
+    "surface_prop"     "wood"
+  }
+}

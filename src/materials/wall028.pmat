@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/wall028.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "metal"
+  }
+}

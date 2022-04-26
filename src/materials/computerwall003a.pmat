@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/computerwall003a.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "concrete"
+  }
+}

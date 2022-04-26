@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/tile_ceiling_worn.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "ceramic"
+  }
+}

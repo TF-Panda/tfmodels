@@ -1,0 +1,11 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/blueprint_model.ptex"
+  }
+  "cull"   "double_sided"
+  "transparency"   "alpha"
+  depth_write off
+}

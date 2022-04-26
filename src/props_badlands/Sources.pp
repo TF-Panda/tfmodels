@@ -6,3 +6,4 @@
 #include $[THISDIRPREFIX]Sources.rock002_skybox.pp
 #include $[THISDIRPREFIX]Sources.barrel01.pp
 #include $[THISDIRPREFIX]Sources.barrel03.pp
+#include $[THISDIRPREFIX]Sources.barrel02.pp

@@ -1,0 +1,113 @@
+{
+  model "optchar/teleporter-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop metal
+    bbox {
+      mins [ -47.645 -25.657 0.0 ]
+      maxs [ 15.597 25.657 40.0 ]
+    }
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../materials/teleporter.pmat"
+                  "../materials/toolbox_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../materials/teleporter_blue.pmat"
+                  "../materials/toolbox_blue.pmat" ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [
+        teleporter_reference
+      ]
+    }
+    {
+      distance 9
+      groups [
+        teleporter_reference_lod1
+      ]
+    }
+    {
+      distance 22
+      groups [
+        teleporter_reference_lod2
+      ]
+    }
+  ]
+
+  sequences [
+    {
+      name build
+      anim "optchar/teleporter-build.egg"
+      activity Object_Build
+
+      events [
+        {
+          frame 3 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build1"
+        }
+        {
+          frame 10 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build1a"
+        }
+        {
+          frame 24 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build2"
+        }
+        {
+          frame 31 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build2a"
+        }
+        {
+          frame 34 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build2b"
+        }
+        {
+          frame 40 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build2c"
+        }
+        {
+          frame 58 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build3"
+        }
+        {
+          frame 71 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build3a"
+        }
+        {
+          frame 82 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build3b"
+        }
+        {
+          frame 132 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build4"
+        }
+        {
+          frame 253 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build4a"
+        }
+        {
+          frame 290 type 2 event Client_Play_Sound
+          data "Building_Teleporter.Build5"
+        }
+      ]
+    }
+
+    {
+      name idle
+      anim "optchar/teleporter-idle.egg"
+      activity Object_Idle
+      loop true
+    }
+  ]
+}

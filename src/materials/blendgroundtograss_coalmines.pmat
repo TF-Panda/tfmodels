@@ -1,0 +1,16 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/dirtground003.ptex"
+    "basetexture2"     "../maps/dirtground004.ptex"
+    "bumpmap"     "../maps/dirtground006_height-ssbump.ptex"
+    "bumpmap2"     "../maps/dirtground003_height-ssbump.ptex"
+    "ssbump"     1
+  }
+  "tags" 
+  {
+    "surface_prop"     "dirt"
+  }
+}

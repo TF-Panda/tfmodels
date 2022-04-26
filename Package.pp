@@ -67,3 +67,33 @@
 #define FLT2EGG_OPTS -tbnall -nv 70
 #define LWO2EGG_OPTS -tbnall -nv 70
 #define SOFT2EGG_OPTS -tbnall -nv 70
+
+// Define a subroutine to simplify exporting character+animation
+// egg files.
+#defsub tf_char_egg prefix,anims,optchar_opts
+
+#begin blender_char_egg
+  #define EGG_PREFIX $[prefix]-
+  #define BLENDER_PREFIX $[prefix]-
+  #define POLY_MODEL zero
+  #define CHAR_NAME $[prefix].qc_skeleton
+  #if $[anims]
+    #define ANIMS_DIR anims
+    #define ANIMS $[anims]
+  #endif
+
+#end blender_char_egg
+
+#begin optchar_egg
+  #define TARGET_DIR optchar
+  #define SOURCES \
+    $[prefix]-zero.egg
+  #if $[anims]
+    #define SOURCES $[SOURCES] \
+      $[matrix anims/$[prefix]-,$[anims],.egg]
+  #endif
+  #define OPTCHAR_OPTS $[optchar_opts]
+
+#end optchar_egg
+
+#end tf_char_egg

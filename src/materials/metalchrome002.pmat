@@ -1,0 +1,20 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/metalchrome002.ptex"
+    "envmap"     1
+    "basealphaenvmapmask"     1
+    "envmaptint" 
+    [
+      0.25
+      0.25
+      0.25
+    ]
+  }
+  "tags" 
+  {
+    "surface_prop"     "metal"
+  }
+}

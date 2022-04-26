@@ -1,0 +1,16 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/dust_gradient02.ptex"
+  }
+  "color_scale" 
+  [
+    0.2
+    0.18
+    0.15
+    0.4
+  ]
+  "transparency"   "alpha"
+}

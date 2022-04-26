@@ -1,0 +1,20 @@
+{
+  model "optchar/c_flamethrower_pilotlight-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  lods [
+    {
+      distance 0
+      groups [ c_flamethrower_pilotlight ]
+    }
+    {
+      distance 11
+      groups [ c_flamethrower_pilotlight_lod1 ]
+    }
+    {
+      distance 22
+      groups [ c_flamethrower_pilotlight_lod2 ]
+    }
+  ]
+}

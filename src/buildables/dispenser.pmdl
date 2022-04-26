@@ -1,0 +1,219 @@
+{
+  model "optchar/dispenser-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop metal
+
+    bbox {
+      mins [ -23.543 -26.045 -0.25 ]
+      maxs [ 17.382 64.574 58.347 ]
+    }
+
+    gibs [
+      {
+        model "models/buildables/dispenser_gib1"
+      }
+      {
+        model "models/buildables/dispenser_gib2"
+      }
+      {
+        model "models/buildables/dispenser_gib3"
+      }
+      {
+        model "models/buildables/dispenser_gib4"
+      }
+      {
+        model "models/buildables/dispenser_gib5"
+      }
+    ]
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../materials/dispenser.pmat" "../materials/toolbox_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../materials/dispenser_blue.pmat" "../materials/toolbox_blue.pmat" ]
+    }
+  ]
+
+  lods [
+    {
+      distance 0
+      groups [
+        dispenser_toolbox dispenser_toolbox_junk
+      ]
+    }
+    {
+      distance 17
+      groups [
+        dispenser_toolbox_lod1 dispenser_toolbox_junk_lod1
+      ]
+    }
+    {
+      distance 25
+      groups [
+        dispenser_toolbox_lod2 dispenser_toolbox_junk_lod2
+      ]
+    }
+    {
+      distance 35
+      groups [
+        dispenser_toolbox_lod3 dispenser_toolbox_junk_lod3
+      ]
+    }
+    {
+      distance 45
+      groups [
+        dispenser_toolbox_lod4 dispenser_toolbox_junk_lod4
+      ]
+    }
+  ]
+
+  sequences [
+    {
+      name ref
+      anim "optchar/dispenser-a_idle.egg"
+    }
+    {
+      name build
+      activity Object_Build
+      anim "optchar/dispenser-a_build_1.egg"
+      fps 30
+      events [
+        {
+          frame 4 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build1"
+        }
+        {
+          frame 4 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build1a"
+        }
+        {
+          frame 15 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build1b"
+        }
+        {
+          frame 25 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build2"
+        }
+        {
+          frame 38 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build3"
+        }
+        {
+          frame 51 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build4"
+        }
+        {
+          frame 62 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build5"
+        }
+        {
+          frame 71 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build6"
+        }
+        {
+          frame 88 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build7"
+        }
+        {
+          frame 91 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build8"
+        }
+        {
+          frame 105 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build9"
+        }
+        {
+          frame 111 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build10"
+        }
+        {
+          frame 116 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build11"
+        }
+        {
+          frame 121 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build13"
+        }
+        {
+          frame 127 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build13"
+        }
+        {
+          frame 132 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build14"
+        }
+        {
+          frame 142 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build15"
+        }
+        {
+          frame 145 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build16"
+        }
+        {
+          frame 165 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build17"
+        }
+        {
+          frame 185 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build18"
+        }
+        {
+          frame 188 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build18a"
+        }
+        {
+          frame 195 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build19"
+        }
+        {
+          frame 215 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build20"
+        }
+        {
+          frame 237 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build21"
+        }
+        {
+          frame 264 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build22"
+        }
+        {
+          frame 267 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build23"
+        }
+        {
+          frame 270 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build24"
+        }
+        {
+          frame 285 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build24a"
+        }
+        {
+          frame 280 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build24b"
+        }
+        {
+          frame 283 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build24c"
+        }
+        {
+          frame 286 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build24d"
+        }
+        {
+          frame 293 type 2 event Client_Play_Sound
+          data "Building_Dispenser.Build25"
+        }
+      ]
+    }
+  ]
+}

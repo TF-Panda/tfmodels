@@ -1,0 +1,18 @@
+{
+  model "optchar/teleporter_blueprint_enter-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/teleporter_blueprint_enter-enter_idle.egg"
+      loop true
+    }
+    {
+      name reject
+      anim "optchar/teleporter_blueprint_enter-enter_reject.egg"
+      fps 1
+    }
+  ]
+}

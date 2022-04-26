@@ -1,0 +1,14 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/wall029b.ptex"
+    "bumpmap"     "../maps/wall029_height-ssbump.ptex"
+    "ssbump"     1
+  }
+  "tags" 
+  {
+    "surface_prop"     "metal"
+  }
+}

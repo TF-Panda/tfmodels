@@ -1,0 +1,25 @@
+{
+  model "optchar/dispenser_gib3-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop metal
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../materials/dispenser_gibs.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../materials/dispenser_gibs_blue.pmat" ]
+    }
+  ]
+
+  physics_model {
+    mesh dispenser_gib3_physics
+    mass 12.91665
+  }
+}

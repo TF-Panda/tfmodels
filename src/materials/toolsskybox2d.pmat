@@ -1,0 +1,13 @@
+
+{
+  "material"   "SkyBoxMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/toolsskybox.ptex"
+  }
+  "tags"
+  {
+    "surface_prop"     "default_silent"
+    "compile_sky" 1
+  }
+}

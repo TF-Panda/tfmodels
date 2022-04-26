@@ -1,0 +1,20 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/water_hydro_base.ptex"
+    "bumpmap"     "../maps/dx80_tfwater001_normal.ptex"
+    "envmap"     1
+    "envmaptint" 
+    [
+      0.2
+      0.2
+      0.2
+    ]
+  }
+  "tags" 
+  {
+    "surface_prop"     "water"
+  }
+}

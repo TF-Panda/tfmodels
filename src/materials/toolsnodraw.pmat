@@ -1,0 +1,13 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/toolsnodraw.ptex"
+  }
+  "tags"
+  {
+    "surface_prop"     "default"
+    compile_nodraw 1
+  }
+}

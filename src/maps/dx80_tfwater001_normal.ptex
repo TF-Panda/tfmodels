@@ -1,0 +1,8 @@
+
+{
+  "image"   "dx80_tfwater001_normal000.tga"
+  "format"   "rgba"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

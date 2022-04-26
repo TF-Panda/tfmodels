@@ -1,0 +1,52 @@
+{
+  model "optchar/v_builder_engineer-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  material_groups [
+    {
+      name red
+      materials [
+        "../../materials/engineer_red.pmat"
+        "../../materials/engineer_handr_red.pmat"
+      ]
+    }
+    {
+      name blue
+      materials [
+        "../../materials/engineer_blue.pmat"
+        "../../materials/engineer_handr_blue.pmat"
+      ]
+    }
+  ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/v_builder_engineer-idle.egg"
+      activity VM_Idle
+      loop true
+    }
+    {
+      name draw
+      anim "optchar/v_builder_engineer-draw.egg"
+      activity VM_Draw
+      snap true
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_PDA.DrawEngineer"
+        }
+        {
+          frame 11 type 2 event Client_Play_Sound
+          data "Weapon_Builder.SwitchEngineer"
+        }
+      ]
+    }
+  ]
+
+}

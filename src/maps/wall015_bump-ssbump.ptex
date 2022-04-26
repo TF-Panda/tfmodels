@@ -1,0 +1,8 @@
+
+{
+  "image"   "wall015_bump-ssbump.tga"
+  "format"   "rgb"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

@@ -2,6 +2,26 @@
 #define INSTALL_TO models/weapons
 
 #begin blender_char_egg
+  #define BLENDER_PREFIX c_flamethrower_pilotlight-
+  #define EGG_PREFIX c_flamethrower_pilotlight-
+  #define POLY_MODEL zero
+  #define CHAR_NAME c_flamethrower_pilotlight.qc_skeleton
+
+#end blender_char_egg
+
+#begin optchar_egg
+  #define TARGET_DIR optchar
+  #define SOURCES \
+    c_flamethrower_pilotlight-zero.egg
+  #define OPTCHAR_OPTS \
+    -keepall \
+    -flag c_flamethrower_pilotlight \
+    -flag c_flamethrower_pilotlight_lod1 \
+    -flag c_flamethrower_pilotlight_lod2
+
+#end optchar_egg
+
+#begin blender_char_egg
   #define BLENDER_PREFIX c_flamethrower-
   #define EGG_PREFIX c_flamethrower-
   #define POLY_MODEL zero
@@ -24,6 +44,6 @@
 
 #begin install_mdl
   #define SOURCES \
-    c_flamethrower.pmdl //\
-    //c_flamethrower_pilotlight.pmdl
+    c_flamethrower.pmdl \
+    c_flamethrower_pilotlight.pmdl
 #end install_mdl

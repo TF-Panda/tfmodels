@@ -1,0 +1,13 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/toolsoccluder.ptex"
+  }
+  "tags"
+  {
+    "surface_prop"     "default"
+    "compile_skip" 1
+  }
+}

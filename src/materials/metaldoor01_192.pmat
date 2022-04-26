@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/metaldoor01_192.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "metal"
+  }
+}

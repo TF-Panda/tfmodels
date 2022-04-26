@@ -10,11 +10,17 @@
   material_groups [
     {
       name red
-      materials [ "../../materials/engineer_red.pmat" ]
+      materials [
+        "../../materials/engineer_red.pmat"
+        "../../materials/engineer_handr_red.pmat"
+      ]
     }
     {
       name blue
-      materials [ "../../materials/engineer_blue.pmat" ]
+      materials [
+        "../../materials/engineer_blue.pmat"
+        "../../materials/engineer_handr_blue.pmat"
+      ]
     }
   ]
 

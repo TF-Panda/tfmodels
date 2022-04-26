@@ -1,0 +1,14 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/toolsblockbullets.ptex"
+  }
+  "transparency"   "alpha"
+  "tags"
+  {
+    "surface_prop"     "default"
+    compile_skip 1
+  }
+}

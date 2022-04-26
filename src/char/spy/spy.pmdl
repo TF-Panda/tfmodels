@@ -755,32 +755,74 @@
     }
 
     {
-      name run_SECONDARY
+      name a_runSW_SECONDARY
+      anim "optchar/spy-a_runSW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_SECONDARY
+      anim "optchar/spy-a_runS_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_SECONDARY
+      anim "optchar/spy-a_runSE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_SECONDARY
+      anim "optchar/spy-a_runW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_SECONDARY
+      anim "optchar/spy-a_runCenter_SECONDARY.egg"
+    }
+    {
+      name a_runE_SECONDARY
+      anim "optchar/spy-a_runE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_SECONDARY
+      anim "optchar/spy-a_runNW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_SECONDARY
+      anim "optchar/spy-a_runN_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_SECONDARY
+      anim "optchar/spy-a_runNE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name SECONDARY_run
       blend {
         anims [
-          "optchar/spy-a_runSW_SECONDARY.egg"
-          "optchar/spy-a_runS_SECONDARY.egg"
-          "optchar/spy-a_runSE_SECONDARY.egg"
-          "optchar/spy-a_runW_SECONDARY.egg"
-          "optchar/spy-a_runCenter_SECONDARY.egg"
-          "optchar/spy-a_runE_SECONDARY.egg"
-          "optchar/spy-a_runNW_SECONDARY.egg"
-          "optchar/spy-a_runN_SECONDARY.egg"
-          "optchar/spy-a_runNE_SECONDARY.egg"
+          "a_runSW_SECONDARY"
+          "a_runS_SECONDARY"
+          "a_runSE_SECONDARY"
+          "a_runW_SECONDARY"
+          "a_runCenter_SECONDARY"
+          "a_runE_SECONDARY"
+          "a_runNW_SECONDARY"
+          "a_runN_SECONDARY"
+          "a_runNE_SECONDARY"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
+      loop true
+      activity Secondary_Run
       layers [
         {
           sequence SECONDARY_aimmatrix_run
         }
       ]
-      loop true
-      zero_x true
-      zero_y true
-      activity Secondary_Run
     }
 
     {
@@ -846,6 +888,12 @@
       name layer_reload_standing_arms_SECONDARY
       anim "optchar/spy-layer_reload_standing_arms_SECONDARY.egg"
       weight_list weights_layer_reload_standing_arms_SECONDARY
+      ik_events [
+        {
+          chain lhand type touch joint weapon_bone
+          start 6 peak 14 tail 35 end 40 spline true
+        }
+      ]
     }
     {
       name ReloadStand_SECONDARY
@@ -858,10 +906,6 @@
         }
         {
           chain lfoot type lock
-        }
-        {
-          chain lhand type touch joint weapon_bone
-          start 6 peak 14 tail 35 end 40 spline true
         }
       ]
       layers [
@@ -877,15 +921,13 @@
       name a_jumpstart_SECONDARY
       anim "optchar/spy-a_jumpstart_SECONDARY.egg"
       activity Secondary_Jump_Start
-      zero_x true
-      zero_y true
+      motion [ x y ]
     }
     {
       name a_jumpfloat_SECONDARY
       anim "optchar/spy-a_jumpfloat_SECONDARY.egg"
       activity Secondary_Jump_Float
-      zero_x true
-      zero_y true
+      motion [ x y ]
       loop true
     }
     {
@@ -936,32 +978,74 @@
     }
 
     {
-      name run_MELEE
+      name a_runSW_MELEE
+      anim "optchar/spy-a_runSW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_MELEE
+      anim "optchar/spy-a_runS_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_MELEE
+      anim "optchar/spy-a_runSE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_MELEE
+      anim "optchar/spy-a_runW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_MELEE
+      anim "optchar/spy-a_runCenter_MELEE.egg"
+    }
+    {
+      name a_runE_MELEE
+      anim "optchar/spy-a_runE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_MELEE
+      anim "optchar/spy-a_runNW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_MELEE
+      anim "optchar/spy-a_runN_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_MELEE
+      anim "optchar/spy-a_runNE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name MELEE_run
       blend {
         anims [
-          "optchar/spy-a_runSW_MELEE.egg"
-          "optchar/spy-a_runS_MELEE.egg"
-          "optchar/spy-a_runSE_MELEE.egg"
-          "optchar/spy-a_runW_MELEE.egg"
-          "optchar/spy-a_runCenter_MELEE.egg"
-          "optchar/spy-a_runE_MELEE.egg"
-          "optchar/spy-a_runNW_MELEE.egg"
-          "optchar/spy-a_runN_MELEE.egg"
-          "optchar/spy-a_runNE_MELEE.egg"
+          "a_runSW_MELEE"
+          "a_runS_MELEE"
+          "a_runSE_MELEE"
+          "a_runW_MELEE"
+          "a_runCenter_MELEE"
+          "a_runE_MELEE"
+          "a_runNW_MELEE"
+          "a_runN_MELEE"
+          "a_runNE_MELEE"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
+      loop true
+      activity Melee_Run
       layers [
         {
           sequence MELEE_aimmatrix_run
         }
       ]
-      loop true
-      zero_x true
-      zero_y true
-      activity Melee_Run
     }
 
     {
@@ -1084,15 +1168,13 @@
       name a_jumpstart_MELEE
       anim "optchar/spy-a_jumpstart_MELEE.egg"
       activity Melee_Jump_Start
-      zero_x true
-      zero_y true
+      motion [ x y ]
     }
     {
       name a_jumpfloat_MELEE
       anim "optchar/spy-a_jumpfloat_MELEE.egg"
       activity Melee_Jump_Float
-      zero_x true
-      zero_y true
+      motion [ x y ]
       loop true
     }
     {

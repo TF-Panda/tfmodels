@@ -1,0 +1,14 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/toolsskip.ptex"
+  }
+  "transparency"   "dual"
+  "tags"
+  {
+    "surface_prop"     "default"
+    compile_skip 1
+  }
+}

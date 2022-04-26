@@ -1,17 +1,32 @@
-$model "w_toolbox.egg"
-
-$materialgroup
 {
-  { "../../buildables/toolbox_red.pmat" }
-  { "../../buildables/toolbox_blue.pmat" }
-}
+  model "optchar/w_toolbox-zero.egg"
 
-$lod 0 14
-{
-  group w_toolbox_reference
-}
+  hpr [ 180 0 0 ]
 
-$lod 14 1000000
-{
-  group w_toolbox_reference_lod1
+  lods [
+    {
+      distance 0
+      groups [ w_toolbox_reference ]
+    }
+    {
+      distance 14
+      groups [ w_toolbox_reference_lod1 ]
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [ "../../materials/toolbox_red.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../../materials/toolbox_blue.pmat" ]
+    }
+  ]
+
+  physics_model {
+    mesh w_toolbox_physics
+    mass 1.0
+  }
 }

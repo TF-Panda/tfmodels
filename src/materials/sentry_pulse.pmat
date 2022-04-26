@@ -1,0 +1,17 @@
+
+{
+  "material"   "TwoTextureMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/sentry_pulse.ptex"
+    "texture2"     "../maps/sentry_pulse2.ptex"
+
+    "texture2scroll" [ 0.1 0.1 ]
+  }
+  "color_blend"   "additive"
+  depth_write off
+  light off
+  fog off
+  // Fixed bin renders in front of transparent bin.
+  bin fixed
+}

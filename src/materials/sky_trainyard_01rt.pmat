@@ -1,0 +1,12 @@
+{
+  material SourceSkyMaterial
+
+  parameters {
+    sky_texture "../maps/sky_trainyard_01rt.ptex"
+    compressed_hdr 0
+    texcoord_transform {
+      scale     [ 1  2 ]
+      translate [ 0 -1 ]
+    }
+  }
+}

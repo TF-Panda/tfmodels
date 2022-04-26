@@ -52,6 +52,31 @@
   custom_data {
     surfaceprop flesh
 
+    gibs [
+      {
+        model "models/char/demogib001"
+      }
+      {
+        model "models/char/demogib002"
+      }
+      {
+        model "models/char/demogib003"
+      }
+      {
+        model "models/char/demogib004"
+      }
+      {
+        model "models/char/demogib005"
+      }
+      {
+        model "models/char/demogib006"
+        is_head true
+      }
+      {
+        model "models/char/random_organ"
+      }
+    ]
+
     bodygroups [
       {
         name smiley
@@ -533,27 +558,69 @@
     }
 
     {
-      name run_MELEE
+      name a_runSW_MELEE
+      anim "optchar/demo-a_runSW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_MELEE
+      anim "optchar/demo-a_runS_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_MELEE
+      anim "optchar/demo-a_runSE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_MELEE
+      anim "optchar/demo-a_runW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_MELEE
+      anim "optchar/demo-a_runCenter_MELEE.egg"
+    }
+    {
+      name a_runE_MELEE
+      anim "optchar/demo-a_runE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_MELEE
+      anim "optchar/demo-a_runNW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_MELEE
+      anim "optchar/demo-a_runN_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_MELEE
+      anim "optchar/demo-a_runNE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name MELEE_run
       blend {
         anims [
-          "optchar/demo-a_runSW_MELEE.egg"
-          "optchar/demo-a_runS_MELEE.egg"
-          "optchar/demo-a_runSE_MELEE.egg"
-          "optchar/demo-a_runW_MELEE.egg"
-          "optchar/demo-a_runCenter_MELEE.egg"
-          "optchar/demo-a_runE_MELEE.egg"
-          "optchar/demo-a_runNW_MELEE.egg"
-          "optchar/demo-a_runN_MELEE.egg"
-          "optchar/demo-a_runNE_MELEE.egg"
+          "a_runSW_MELEE"
+          "a_runS_MELEE"
+          "a_runSE_MELEE"
+          "a_runW_MELEE"
+          "a_runCenter_MELEE"
+          "a_runE_MELEE"
+          "a_runNW_MELEE"
+          "a_runN_MELEE"
+          "a_runNE_MELEE"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
-      activity Melee_Run
       loop true
-      zero_x true
-      zero_y true
+      activity Melee_Run
       layers [
         {
           sequence MELEE_aimmatrix_run
@@ -565,8 +632,7 @@
       name jumpstart_MELEE
       anim "optchar/demo-a_jumpstart_MELEE.egg"
       activity Melee_Jump_Start
-      zero_x true
-      zero_y true
+      motion [ x y ]
     }
 
     {
@@ -574,8 +640,7 @@
       anim "optchar/demo-a_jumpfloat_MELEE.egg"
       activity Melee_Jump_Float
       loop true
-      zero_x true
-      zero_y true
+      motion [ x y ]
     }
 
     {
@@ -714,32 +779,74 @@
     }
 
     {
+      name a_runSW_PRIMARY
+      anim "optchar/demo-a_runSW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_PRIMARY
+      anim "optchar/demo-a_runS_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_PRIMARY
+      anim "optchar/demo-a_runSE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_PRIMARY
+      anim "optchar/demo-a_runW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_PRIMARY
+      anim "optchar/demo-a_runCenter_PRIMARY.egg"
+    }
+    {
+      name a_runE_PRIMARY
+      anim "optchar/demo-a_runE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_PRIMARY
+      anim "optchar/demo-a_runNW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_PRIMARY
+      anim "optchar/demo-a_runN_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_PRIMARY
+      anim "optchar/demo-a_runNE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
       name run_PRIMARY
       blend {
         anims [
-          "optchar/demo-a_runSW_SECONDARY.egg"
-          "optchar/demo-a_runS_SECONDARY.egg"
-          "optchar/demo-a_runSE_SECONDARY.egg"
-          "optchar/demo-a_runW_SECONDARY.egg"
-          "optchar/demo-a_runCenter_SECONDARY.egg"
-          "optchar/demo-a_runE_SECONDARY.egg"
-          "optchar/demo-a_runNW_SECONDARY.egg"
-          "optchar/demo-a_runN_SECONDARY.egg"
-          "optchar/demo-a_runNE_SECONDARY.egg"
+          a_runSW_PRIMARY
+          a_runS_PRIMARY
+          a_runSE_PRIMARY
+          a_runW_PRIMARY
+          a_runCenter_PRIMARY
+          a_runE_PRIMARY
+          a_runNW_PRIMARY
+          a_runN_PRIMARY
+          a_runNE_PRIMARY
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
-      activity Primary_Run
-      loop true
-      zero_x true
-      zero_y true
       layers [
         {
           sequence PRIMARY_aimmatrix_run
         }
       ]
+      loop true
+      activity Primary_Run
     }
 
     {
@@ -806,8 +913,7 @@
     {
       name a_jumpstart_PRIMARY
       anim "optchar/demo-a_jumpstart_SECONDARY.egg"
-      zero_x true
-      zero_y true
+      motion [ x y ]
       activity Primary_Jump_Start
     }
     {
@@ -815,8 +921,7 @@
       anim "optchar/demo-a_jumpfloat_SECONDARY.egg"
       activity Primary_Jump_Float
       loop true
-      zero_x true
-      zero_y true
+      motion [ x y ]
     }
     {
       name jumpland_PRIMARY

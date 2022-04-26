@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/toolsblack.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "default"
+  }
+}

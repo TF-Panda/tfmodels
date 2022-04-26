@@ -1,8 +1,13 @@
 
 {
-  "material"   "SourceMaterial"
+  "material"   "SourceLightmappedMaterial"
   "parameters" 
   {
     "basetexture"     "../maps/metaldoor001.ptex"
+    "bumpmap"     "../maps/metaldoor001_normal.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "metal"
   }
 }

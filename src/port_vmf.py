@@ -4,6 +4,8 @@ import os
 
 p = argparse.ArgumentParser(description="Port models and materials referenced by a vmf file")
 p.add_argument('-i', '--input', help='Input .vmf filename', required=True)
+p.add_argument('-b', '--brushes', action='store_true', default=False, help='Port brush materials.')
+p.add_argument('-p', '--props', action='store_true', default=False, help='Port static_prop models and materials.')
 args = p.parse_args()
 
 from panda3d.core import *
@@ -14,6 +16,7 @@ if not kv:
     sys.exit(1)
 
 ported = []
+portedSideMaterials = []
 
 tfModels = Filename.fromOsSpecific(os.environ.get("TFMODELS"))
 
@@ -50,9 +53,31 @@ def parseEntity(ent):
     runCommand("python port_mdl.py " + Filename.fromOsSpecific(modelFile).getFullpath())
     ported.append(modelFile)
 
+def parseSide(side):
+    # Ports the brush material.
+    material = side.getValue("material").lower()
+    if "tools/tools" in material:
+        return
+    material += ".vmt"
+    material = Filename.fromOsSpecific(material)
+
+    if material in portedSideMaterials:
+        return
+
+    # Skip it if we already have a .pmat for it.
+    pmatFilename = tfModels / Filename("src/materials/" + material.getBasenameWoExtension() + ".pmat")
+    #print(pmatFilename)
+    #if pmatFilename.isRegularFile():
+    #    return
+
+    runCommand("python port_vmt.py " + material.getFullpath())
+    portedSideMaterials.append(material)
+
 def parseBlock(block):
-    if block.getName() == "entity":
+    if args.props and block.getName() == "entity":
         parseEntity(block)
+    elif args.brushes and block.getName() == "side":
+        parseSide(block)
 
     for i in range(block.getNumChildren()):
         child = block.getChild(i)

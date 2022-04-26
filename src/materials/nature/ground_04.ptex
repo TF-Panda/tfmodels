@@ -1,5 +1,0 @@
-{
-  image "ground_04.tga"
-  format "srgb"
-  wrap "repeat"
-}

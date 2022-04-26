@@ -1,0 +1,65 @@
+
+{
+  "model"   "water_barrel_cluster.egg"
+  "hpr" 
+  [
+    180
+    0
+    0
+  ]
+  "material_groups" 
+  [
+
+    {
+      "name"       "unnamed0"
+      "materials" 
+      [
+        "../materials/water_barrel.pmat"
+        "../materials/wood_pallet.pmat"
+      ]
+    }
+  ]
+  "lods" 
+  [
+
+    {
+      "distance"       0
+      "groups" 
+      [
+        "water_barrel_cluster"
+      ]
+    }
+
+    {
+      "distance"       50
+      "groups" 
+      [
+        "water_barrel_cluster_lod1"
+      ]
+    }
+  ]
+  "physics_model" 
+  {
+    "mesh"     "water_barrel_cluster_physics"
+    "mass"     18108.9
+    "damping"     0
+    "rot_damping"     0
+    "concave"     1
+  }
+  "custom_data" 
+  {
+    "contents"     "solid"
+    "surfaceprop"     "default"
+    "bodygroups" 
+    [
+
+      {
+        "name"         "body"
+        "nodes" 
+        [
+          "water_barrel_cluster*"
+        ]
+      }
+    ]
+  }
+}

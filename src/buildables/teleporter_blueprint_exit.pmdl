@@ -1,0 +1,18 @@
+{
+  model "optchar/teleporter_blueprint_exit-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/teleporter_blueprint_exit-exit_idle.egg"
+      loop true
+    }
+    {
+      name reject
+      anim "optchar/teleporter_blueprint_exit-exit_reject.egg"
+      fps 1
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  model "random_organ.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop flesh
+    contents solid
+  }
+
+  physics_model {
+    mesh random_organ_physics
+    mass 0.716001
+  }
+}

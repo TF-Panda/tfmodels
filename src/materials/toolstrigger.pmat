@@ -1,0 +1,14 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/toolstrigger.ptex"
+  }
+  "transparency"   "dual"
+  "tags"
+  {
+    "surface_prop"     "default"
+    compile_trigger 1
+  }
+}

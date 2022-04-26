@@ -1,0 +1,13 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/Ibeam002.ptex"
+    "bumpmap"     "../maps/Ibeam002_normal.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "metal"
+  }
+}

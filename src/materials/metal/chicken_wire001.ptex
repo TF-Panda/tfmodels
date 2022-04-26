@@ -1,5 +1,0 @@
-{
-  image "chicken_wire001.tga"
-  format "srgb_alpha"
-  wrap "repeat"
-}

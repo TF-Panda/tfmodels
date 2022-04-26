@@ -1,5 +1,0 @@
-{
-  image "cloud001b.tga"
-  format "srgb_alpha"
-  wrap "repeat"
-}

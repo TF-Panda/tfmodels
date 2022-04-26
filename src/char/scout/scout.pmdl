@@ -478,18 +478,62 @@
       ]
     }
     {
+      name a_runSW_PRIMARY
+      anim "optchar/scout-a_runSW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_PRIMARY
+      anim "optchar/scout-a_runS_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_PRIMARY
+      anim "optchar/scout-a_runSE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_PRIMARY
+      anim "optchar/scout-a_runW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_PRIMARY
+      anim "optchar/scout-a_runCenter_PRIMARY.egg"
+    }
+    {
+      name a_runE_PRIMARY
+      anim "optchar/scout-a_runE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_PRIMARY
+      anim "optchar/scout-a_runNW_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_PRIMARY
+      anim "optchar/scout-a_runN_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_PRIMARY
+      anim "optchar/scout-a_runNE_PRIMARY.egg"
+      motion [ x y ]
+    }
+    {
       name run_PRIMARY
       blend {
         anims [
-          "optchar/scout-a_runSW_PRIMARY.egg"
-          "optchar/scout-a_runS_PRIMARY.egg"
-          "optchar/scout-a_runSE_PRIMARY.egg"
-          "optchar/scout-a_runW_PRIMARY.egg"
-          "optchar/scout-a_runCenter_PRIMARY.egg"
-          "optchar/scout-a_runE_PRIMARY.egg"
-          "optchar/scout-a_runNW_PRIMARY.egg"
-          "optchar/scout-a_runN_PRIMARY.egg"
-          "optchar/scout-a_runNE_PRIMARY.egg"
+          a_runSW_PRIMARY
+          a_runS_PRIMARY
+          a_runSE_PRIMARY
+          a_runW_PRIMARY
+          a_runCenter_PRIMARY
+          a_runE_PRIMARY
+          a_runNW_PRIMARY
+          a_runN_PRIMARY
+          a_runNE_PRIMARY
         ]
         width 3
         blend_x move_x
@@ -501,8 +545,6 @@
         }
       ]
       loop true
-      zero_x true
-      zero_y true
       activity Primary_Run
     }
 
@@ -526,18 +568,63 @@
     }
 
     {
+      name a_jumpstart_SW_primary
+      anim "optchar/scout-a_jumpstart_SW_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_S_primary
+      anim "optchar/scout-a_jumpstart_S_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_SE_primary
+      anim "optchar/scout-a_jumpstart_SE_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_W_primary
+      anim "optchar/scout-a_jumpstart_W_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_primary
+      anim "optchar/scout-a_jumpstart_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_E_primary
+      anim "optchar/scout-a_jumpstart_E_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_NW_primary
+      anim "optchar/scout-a_jumpstart_NW_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_N_primary
+      anim "optchar/scout-a_jumpstart_N_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_NE_primary
+      anim "optchar/scout-a_jumpstart_NE_primary.egg"
+      motion [ x y ]
+    }
+    {
       name Jump_Start_primary
       blend {
         anims [
-          "optchar/scout-a_jumpstart_SW_primary.egg"
-          "optchar/scout-a_jumpstart_S_primary.egg"
-          "optchar/scout-a_jumpstart_SE_primary.egg"
-          "optchar/scout-a_jumpstart_W_primary.egg"
-          "optchar/scout-a_jumpstart_primary.egg"
-          "optchar/scout-a_jumpstart_E_primary.egg"
-          "optchar/scout-a_jumpstart_NW_primary.egg"
-          "optchar/scout-a_jumpstart_N_primary.egg"
-          "optchar/scout-a_jumpstart_NE_primary.egg"
+          "a_jumpstart_SW_primary"
+          "a_jumpstart_S_primary"
+          "a_jumpstart_SE_primary"
+          "a_jumpstart_W_primary"
+          "a_jumpstart_primary"
+          "a_jumpstart_E_primary"
+          "a_jumpstart_NW_primary"
+          "a_jumpstart_N_primary"
+          "a_jumpstart_NE_primary"
         ]
         width 3
         blend_x move_x
@@ -549,29 +636,71 @@
         }
       ]
       activity Primary_Jump_Start
-      zero_x true
-      zero_y true
     }
     {
       name layer_primary_jump_floatNoise
       anim "optchar/scout-layer_primary_jump_floatNoise.egg"
       delta true
       real_time true
-
+    }
+    {
+      name a_jumpFloat_SW_primary
+      anim "optchar/scout-a_jumpFloat_SW_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_S_primary
+      anim "optchar/scout-a_jumpFloat_S_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_SE_primary
+      anim "optchar/scout-a_jumpFloat_SE_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_W_primary
+      anim "optchar/scout-a_jumpFloat_W_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_primary
+      anim "optchar/scout-a_jumpFloat_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_E_primary
+      anim "optchar/scout-a_jumpFloat_E_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_NW_primary
+      anim "optchar/scout-a_jumpFloat_NW_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_N_primary
+      anim "optchar/scout-a_jumpFloat_N_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_NE_primary
+      anim "optchar/scout-a_jumpFloat_NE_primary.egg"
+      motion [ x y ]
     }
     {
       name Jump_Float_primary
       blend {
         anims [
-          "optchar/scout-a_jumpFloat_SW_primary.egg"
-          "optchar/scout-a_jumpFloat_S_primary.egg"
-          "optchar/scout-a_jumpFloat_SE_primary.egg"
-          "optchar/scout-a_jumpFloat_W_primary.egg"
-          "optchar/scout-a_jumpFloat_primary.egg"
-          "optchar/scout-a_jumpFloat_E_primary.egg"
-          "optchar/scout-a_jumpFloat_NW_primary.egg"
-          "optchar/scout-a_jumpFloat_N_primary.egg"
-          "optchar/scout-a_jumpFloat_NE_primary.egg"
+          "a_jumpFloat_SW_primary"
+          "a_jumpFloat_S_primary"
+          "a_jumpFloat_SE_primary"
+          "a_jumpFloat_W_primary"
+          "a_jumpFloat_primary"
+          "a_jumpFloat_E_primary"
+          "a_jumpFloat_NW_primary"
+          "a_jumpFloat_N_primary"
+          "a_jumpFloat_NE_primary"
         ]
         width 3
         blend_x move_x
@@ -586,8 +715,6 @@
         }
       ]
       activity Primary_Jump_Float
-      zero_x true
-      zero_y true
     }
     {
       name jumpland_primary
@@ -605,18 +732,53 @@
     }
 
     {
+      name a_jumpDouble_S_primary
+      anim "optchar/scout-a_jumpDouble_S_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_W_primary
+      anim "optchar/scout-a_jumpDouble_W_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_center_primary
+      anim "optchar/scout-a_jumpDouble_center_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_E_primary
+      anim "optchar/scout-a_jumpDouble_E_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_NW_primary
+      anim "optchar/scout-a_jumpDouble_NW_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_N_primary
+      anim "optchar/scout-a_jumpDouble_N_primary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_NE_primary
+      anim "optchar/scout-a_jumpDouble_NE_primary.egg"
+      motion [ x y ]
+    }
+    {
       name jump_double_primary
       blend {
         anims [
-          "optchar/scout-a_jumpDouble_S_primary.egg"
-          "optchar/scout-a_jumpDouble_S_primary.egg"
-          "optchar/scout-a_jumpDouble_S_primary.egg"
-          "optchar/scout-a_jumpDouble_W_primary.egg"
-          "optchar/scout-a_jumpDouble_center_primary.egg"
-          "optchar/scout-a_jumpDouble_E_primary.egg"
-          "optchar/scout-a_jumpDouble_NW_primary.egg"
-          "optchar/scout-a_jumpDouble_N_primary.egg"
-          "optchar/scout-a_jumpDouble_NE_primary.egg"
+          "a_jumpDouble_S_primary"
+          "a_jumpDouble_S_primary"
+          "a_jumpDouble_S_primary"
+          "a_jumpDouble_W_primary"
+          "a_jumpDouble_center_primary"
+          "a_jumpDouble_E_primary"
+          "a_jumpDouble_NW_primary"
+          "a_jumpDouble_N_primary"
+          "a_jumpDouble_NE_primary"
         ]
         width 3
         blend_x move_x
@@ -624,22 +786,55 @@
       }
       activity Double_Jump
       delta true
-      zero_x true
-      zero_y true
+    }
+
+    {
+      name a_jumpDouble_S_loser
+      anim "optchar/scout-a_jumpDouble_S_loser.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_W_loser
+      anim "optchar/scout-a_jumpDouble_W_loser.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_center_loser
+      anim "optchar/scout-a_jumpDouble_center_loser.egg"
+    }
+    {
+      name a_jumpDouble_E_loser
+      anim "optchar/scout-a_jumpDouble_E_loser.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_NW_loser
+      anim "optchar/scout-a_jumpDouble_NW_loser.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_N_loser
+      anim "optchar/scout-a_jumpDouble_N_loser.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpDouble_NE_loser
+      anim "optchar/scout-a_jumpDouble_NE_loser.egg"
+      motion [ x y ]
     }
     {
       name jump_double_loser
       blend {
         anims [
-          "optchar/scout-a_jumpDouble_S_loser.egg"
-          "optchar/scout-a_jumpDouble_S_loser.egg"
-          "optchar/scout-a_jumpDouble_S_loser.egg"
-          "optchar/scout-a_jumpDouble_W_loser.egg"
-          "optchar/scout-a_jumpDouble_center_loser.egg"
-          "optchar/scout-a_jumpDouble_E_loser.egg"
-          "optchar/scout-a_jumpDouble_NW_loser.egg"
-          "optchar/scout-a_jumpDouble_N_loser.egg"
-          "optchar/scout-a_jumpDouble_NE_loser.egg"
+          "a_jumpDouble_S_loser"
+          "a_jumpDouble_S_loser"
+          "a_jumpDouble_S_loser"
+          "a_jumpDouble_W_loser"
+          "a_jumpDouble_center_loser"
+          "a_jumpDouble_E_loser"
+          "a_jumpDouble_NW_loser"
+          "a_jumpDouble_N_loser"
+          "a_jumpDouble_NE_loser"
         ]
         width 3
         blend_x move_x
@@ -647,8 +842,6 @@
       }
       activity Double_Jump_Loser
       delta true
-      zero_x true
-      zero_y true
     }
 
     {
@@ -823,32 +1016,74 @@
       ]
     }
     {
-      name run_SECONDARY
+      name a_runSW_SECONDARY
+      anim "optchar/scout-a_runSW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_SECONDARY
+      anim "optchar/scout-a_runS_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_SECONDARY
+      anim "optchar/scout-a_runSE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_SECONDARY
+      anim "optchar/scout-a_runW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_SECONDARY
+      anim "optchar/scout-a_runCenter_SECONDARY.egg"
+    }
+    {
+      name a_runE_SECONDARY
+      anim "optchar/scout-a_runE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_SECONDARY
+      anim "optchar/scout-a_runNW_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_SECONDARY
+      anim "optchar/scout-a_runN_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_SECONDARY
+      anim "optchar/scout-a_runNE_SECONDARY.egg"
+      motion [ x y ]
+    }
+    {
+      name SECONDARY_run
       blend {
         anims [
-          "optchar/scout-a_runSW_SECONDARY.egg"
-          "optchar/scout-a_runS_SECONDARY.egg"
-          "optchar/scout-a_runSE_SECONDARY.egg"
-          "optchar/scout-a_runW_SECONDARY.egg"
-          "optchar/scout-a_runCenter_SECONDARY.egg"
-          "optchar/scout-a_runE_SECONDARY.egg"
-          "optchar/scout-a_runNW_SECONDARY.egg"
-          "optchar/scout-a_runN_SECONDARY.egg"
-          "optchar/scout-a_runNE_SECONDARY.egg"
+          "a_runSW_SECONDARY"
+          "a_runS_SECONDARY"
+          "a_runSE_SECONDARY"
+          "a_runW_SECONDARY"
+          "a_runCenter_SECONDARY"
+          "a_runE_SECONDARY"
+          "a_runNW_SECONDARY"
+          "a_runN_SECONDARY"
+          "a_runNE_SECONDARY"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
+      loop true
+      activity Secondary_Run
       layers [
         {
           sequence SECONDARY_aimmatrix_run
         }
       ]
-      loop true
-      zero_x true
-      zero_y true
-      activity Secondary_Run
     }
     {
       name AttackStand_SECONDARY
@@ -905,19 +1140,65 @@
         }
       ]
     }
+
+    {
+      name a_jumpstart_SW_secondary
+      anim "optchar/scout-a_jumpstart_SW_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_S_secondary
+      anim "optchar/scout-a_jumpstart_S_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_SE_secondary
+      anim "optchar/scout-a_jumpstart_SE_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_W_secondary
+      anim "optchar/scout-a_jumpstart_W_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_secondary
+      anim "optchar/scout-a_jumpstart_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_E_secondary
+      anim "optchar/scout-a_jumpstart_E_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_NW_secondary
+      anim "optchar/scout-a_jumpstart_NW_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_N_secondary
+      anim "optchar/scout-a_jumpstart_N_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_NE_secondary
+      anim "optchar/scout-a_jumpstart_NE_secondary.egg"
+      motion [ x y ]
+    }
     {
       name Jump_Start_secondary
       blend {
         anims [
-          "optchar/scout-a_jumpstart_SW_secondary.egg"
-          "optchar/scout-a_jumpstart_S_secondary.egg"
-          "optchar/scout-a_jumpstart_SE_secondary.egg"
-          "optchar/scout-a_jumpstart_W_secondary.egg"
-          "optchar/scout-a_jumpstart_secondary.egg"
-          "optchar/scout-a_jumpstart_E_secondary.egg"
-          "optchar/scout-a_jumpstart_NW_secondary.egg"
-          "optchar/scout-a_jumpstart_N_secondary.egg"
-          "optchar/scout-a_jumpstart_NE_secondary.egg"
+          "a_jumpstart_SW_secondary"
+          "a_jumpstart_S_secondary"
+          "a_jumpstart_SE_secondary"
+          "a_jumpstart_W_secondary"
+          "a_jumpstart_secondary"
+          "a_jumpstart_E_secondary"
+          "a_jumpstart_NW_secondary"
+          "a_jumpstart_N_secondary"
+          "a_jumpstart_NE_secondary"
         ]
         width 3
         blend_x move_x
@@ -929,8 +1210,51 @@
         }
       ]
       activity Secondary_Jump_Start
-      zero_x true
-      zero_y true
+    }
+    {
+      name a_jumpFloat_SW_secondary
+      anim "optchar/scout-a_jumpFloat_SW_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_S_secondary
+      anim "optchar/scout-a_jumpFloat_S_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_SE_secondary
+      anim "optchar/scout-a_jumpFloat_SE_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_W_secondary
+      anim "optchar/scout-a_jumpFloat_W_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_secondary
+      anim "optchar/scout-a_jumpFloat_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_E_secondary
+      anim "optchar/scout-a_jumpFloat_E_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_NW_secondary
+      anim "optchar/scout-a_jumpFloat_NW_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_N_secondary
+      anim "optchar/scout-a_jumpFloat_N_secondary.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_NE_secondary
+      anim "optchar/scout-a_jumpFloat_NE_secondary.egg"
+      motion [ x y ]
     }
     {
       name Jump_Float_secondary
@@ -959,8 +1283,6 @@
         }
       ]
       activity Secondary_Jump_Float
-      zero_x true
-      zero_y true
     }
     {
       name jumpland_secondary
@@ -1051,32 +1373,74 @@
       ]
     }
     {
-      name run_MELEE
+      name a_runSW_MELEE
+      anim "optchar/scout-a_runSW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runS_MELEE
+      anim "optchar/scout-a_runS_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runSE_MELEE
+      anim "optchar/scout-a_runSE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runW_MELEE
+      anim "optchar/scout-a_runW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runCenter_MELEE
+      anim "optchar/scout-a_runCenter_MELEE.egg"
+    }
+    {
+      name a_runE_MELEE
+      anim "optchar/scout-a_runE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNW_MELEE
+      anim "optchar/scout-a_runNW_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runN_MELEE
+      anim "optchar/scout-a_runN_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name a_runNE_MELEE
+      anim "optchar/scout-a_runNE_MELEE.egg"
+      motion [ x y ]
+    }
+    {
+      name MELEE_run
       blend {
         anims [
-          "optchar/scout-a_runSW_MELEE.egg"
-          "optchar/scout-a_runS_MELEE.egg"
-          "optchar/scout-a_runSE_MELEE.egg"
-          "optchar/scout-a_runW_MELEE.egg"
-          "optchar/scout-a_runCenter_MELEE.egg"
-          "optchar/scout-a_runE_MELEE.egg"
-          "optchar/scout-a_runNW_MELEE.egg"
-          "optchar/scout-a_runN_MELEE.egg"
-          "optchar/scout-a_runNE_MELEE.egg"
+          "a_runSW_MELEE"
+          "a_runS_MELEE"
+          "a_runSE_MELEE"
+          "a_runW_MELEE"
+          "a_runCenter_MELEE"
+          "a_runE_MELEE"
+          "a_runNW_MELEE"
+          "a_runN_MELEE"
+          "a_runNE_MELEE"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
+      loop true
+      activity Melee_Run
       layers [
         {
           sequence MELEE_aimmatrix_run
         }
       ]
-      loop true
-      zero_x true
-      zero_y true
-      activity Melee_Run
     }
     {
       name layer_AttackStandMelee_arms
@@ -1149,40 +1513,128 @@
       ]
     }
     {
+      name a_jumpstart_SW_melee
+      anim "optchar/scout-a_jumpstart_SW_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_S_melee
+      anim "optchar/scout-a_jumpstart_S_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_SE_melee
+      anim "optchar/scout-a_jumpstart_SE_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_W_melee
+      anim "optchar/scout-a_jumpstart_W_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_melee
+      anim "optchar/scout-a_jumpstart_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_E_melee
+      anim "optchar/scout-a_jumpstart_E_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_NW_melee
+      anim "optchar/scout-a_jumpstart_NW_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_N_melee
+      anim "optchar/scout-a_jumpstart_N_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpstart_NE_melee
+      anim "optchar/scout-a_jumpstart_NE_melee.egg"
+      motion [ x y ]
+    }
+    {
       name Jump_Start_melee
       blend {
         anims [
-          "optchar/scout-a_jumpstart_SW_melee.egg"
-          "optchar/scout-a_jumpstart_S_melee.egg"
-          "optchar/scout-a_jumpstart_SE_melee.egg"
-          "optchar/scout-a_jumpstart_W_melee.egg"
-          "optchar/scout-a_jumpstart_melee.egg"
-          "optchar/scout-a_jumpstart_E_melee.egg"
-          "optchar/scout-a_jumpstart_NW_melee.egg"
-          "optchar/scout-a_jumpstart_N_melee.egg"
-          "optchar/scout-a_jumpstart_NE_melee.egg"
+          "a_jumpstart_SW_melee"
+          "a_jumpstart_S_melee"
+          "a_jumpstart_SE_melee"
+          "a_jumpstart_W_melee"
+          "a_jumpstart_melee"
+          "a_jumpstart_E_melee"
+          "a_jumpstart_NW_melee"
+          "a_jumpstart_N_melee"
+          "a_jumpstart_NE_melee"
         ]
         width 3
         blend_x move_x
         blend_y move_y
       }
       activity Melee_Jump_Start
-      zero_x true
-      zero_y true
+    }
+    {
+      name a_jumpFloat_SW_melee
+      anim "optchar/scout-a_jumpFloat_SW_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_S_melee
+      anim "optchar/scout-a_jumpFloat_S_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_SE_melee
+      anim "optchar/scout-a_jumpFloat_SE_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_W_melee
+      anim "optchar/scout-a_jumpFloat_W_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_melee
+      anim "optchar/scout-a_jumpFloat_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_E_melee
+      anim "optchar/scout-a_jumpFloat_E_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_NW_melee
+      anim "optchar/scout-a_jumpFloat_NW_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_N_melee
+      anim "optchar/scout-a_jumpFloat_N_melee.egg"
+      motion [ x y ]
+    }
+    {
+      name a_jumpFloat_NE_melee
+      anim "optchar/scout-a_jumpFloat_NE_melee.egg"
+      motion [ x y ]
     }
     {
       name Jump_Float_melee
       blend {
         anims [
-          "optchar/scout-a_jumpFloat_SW_melee.egg"
-          "optchar/scout-a_jumpFloat_S_melee.egg"
-          "optchar/scout-a_jumpFloat_SE_melee.egg"
-          "optchar/scout-a_jumpFloat_W_melee.egg"
-          "optchar/scout-a_jumpFloat_melee.egg"
-          "optchar/scout-a_jumpFloat_E_melee.egg"
-          "optchar/scout-a_jumpFloat_NW_melee.egg"
-          "optchar/scout-a_jumpFloat_N_melee.egg"
-          "optchar/scout-a_jumpFloat_NE_melee.egg"
+          "a_jumpFloat_SW_melee"
+          "a_jumpFloat_S_melee"
+          "a_jumpFloat_SE_melee"
+          "a_jumpFloat_W_melee"
+          "a_jumpFloat_melee"
+          "a_jumpFloat_E_melee"
+          "a_jumpFloat_NW_melee"
+          "a_jumpFloat_N_melee"
+          "a_jumpFloat_NE_melee"
         ]
         width 3
         blend_x move_x
@@ -1197,8 +1649,6 @@
         }
       ]
       activity Melee_Jump_Float
-      zero_x true
-      zero_y true
     }
     {
       name jumpland_melee

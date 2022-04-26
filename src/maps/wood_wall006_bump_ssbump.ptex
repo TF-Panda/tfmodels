@@ -1,0 +1,8 @@
+
+{
+  "image"   "wood_wall006_bump_ssbump.tga"
+  "format"   "rgb"
+  "type"   "2d_texture"
+  "wrap_u"   "repeat"
+  "wrap_v"   "repeat"
+}

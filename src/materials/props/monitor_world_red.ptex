@@ -1,5 +1,0 @@
-{
-  image "monitor_world_red.tga"
-  format "srgb"
-  wrap "repeat"
-}

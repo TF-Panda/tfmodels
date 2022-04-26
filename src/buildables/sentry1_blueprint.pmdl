@@ -1,0 +1,29 @@
+{
+  model "optchar/sentry1_blueprint-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  material_groups [
+    {
+      name red
+      materials [ "../materials/sentry_pulse3.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../materials/sentry_pulse_blue.pmat" ]
+    }
+  ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/sentry1_blueprint-idle.egg"
+      fps 1
+    }
+    {
+      name reject
+      anim "optchar/sentry1_blueprint-reject.egg"
+      fps 1
+    }
+  ]
+}

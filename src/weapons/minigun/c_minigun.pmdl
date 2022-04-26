@@ -1,6 +1,19 @@
 {
   model "optchar/c_minigun-zero.egg"
 
+  attachments [
+    {
+      name muzzle
+      influences [
+        {
+          parent weapon_bone
+          pos [ 0 -7.76 57.76 ]
+          hpr [ 0 90 0 ]
+        }
+      ]
+    }
+  ]
+
   lods [
     {
       distance 0

@@ -1,9 +1,9 @@
 
 {
   "material"   "SourceMaterial"
-  "parameters" 
+  "parameters"
   {
-    "basetexture"     "../maps/lamp002.ptex"
+    "basetexture"     "../maps/Lamp002.ptex"
     "selfillum"     1
   }
 }

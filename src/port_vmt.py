@@ -19,9 +19,6 @@ if not vmtKv:
           file=sys.stderr)
     sys.exit(1)
 vmtData = vmtKv.getChild(0)
-if vmtData.getName().lower() != "vertexlitgeneric":
-    print("ERROR: vmt doesn't use VertexLitGeneric!", file=sys.stderr)
-    sys.exit(1)
 
 outDir = tfModels / Filename("src/materials")
 if not os.path.isdir(outDir.toOsSpecific()):
@@ -29,11 +26,28 @@ if not os.path.isdir(outDir.toOsSpecific()):
 
 pmatFilename = outDir / Filename(vmtFilename.getBasenameWoExtension() + ".pmat")
 
+VMTShaderToMaterialName = {
+    'vertexlitgeneric': 'SourceMaterial',
+    'unlitgeneric': 'SourceMaterial',
+    'lightmappedgeneric': 'SourceLightmappedMaterial',
+    'worldvertextransition': 'SourceLightmappedMaterial',
+    'unlittwotexture': 'TwoTextureMaterial',
+    'lightmappedtwotexture': 'TwoTextureMaterial'
+}
+
+vmtShaderName = vmtData.getName().lower()
+materialName = VMTShaderToMaterialName.get(vmtShaderName, None)
+if not materialName:
+    print("ERROR: unsupported VMT shader name " + vmtShaderName, file=sys.stderr)
+    sys.exit(1)
+
 pmatData = PDXElement()
-pmatData.setAttribute("material", "SourceMaterial")
+pmatData.setAttribute("material", materialName)
 
 pmatParams = PDXElement()
 pmatData.setAttribute("parameters", pmatParams)
+
+tags = {}
 
 portedTextures = []
 
@@ -140,17 +154,12 @@ def pdxListFromString(s):
         l.append(float(v))
     return l
 
-
 colorScale = VBase4(1)
 translucent = False
 baseTexImgPath = None
-for i in range(vmtData.getNumKeys()):
-    key = vmtData.getKey(i).lower()
 
-    if key.startswith("360?"):
-        continue
-
-    value = vmtData.getValue(i)
+def setParamSourceMaterial(key, value):
+    global baseTexImgPath
 
     if key == "$envmap":
         pmatParams.setAttribute("envmap", True)
@@ -233,9 +242,71 @@ for i in range(vmtData.getNumKeys()):
     elif key == "$albedo":
         pmatParams.setAttribute("albedo", portTexture(value, True)[0])
 
+def setParamSourceLightmappedMaterial(key, value):
+    global baseTexImgPath
+
+    if key == "$envmap":
+        pmatParams.setAttribute("envmap", True)
+    elif key == "$basealphaenvmapmask":
+        pmatParams.setAttribute("basealphaenvmapmask", bool(int(value)))
+    elif key == "$normalmapalphaenvmapmask":
+        pmatParams.setAttribute("normalmapalphaenvmapmask", bool(int(value)))
+    elif key == "$envmapcontrast":
+        pmatParams.setAttribute("envmapcontrast", float(value))
+    elif key == "$envmapsaturation":
+        pmatParams.setAttribute("envmapsaturation", float(value))
+    elif key == "$ssbump":
+        pmatParams.setAttribute("ssbump", bool(int(value)))
+
+    elif key == "$selfillumtint":
+        pmatParams.setAttribute("selfillumtint", pdxListFromString(value))
+
+    elif key == "$selfillum":
+        pmatParams.setAttribute("selfillum", bool(int(value)))
+
+    elif key == "$envmaptint":
+        pmatParams.setAttribute("envmaptint", pdxListFromString(value))
+
+    elif key == "$basetexture":
+        baseTexPath, baseTexImgPath = portTexture(value, True)
+        pmatParams.setAttribute("basetexture", baseTexPath)
+    elif key == "$basetexture2":
+        pmatParams.setAttribute("basetexture2", portTexture(value, True)[0])
+
+    elif key == "$envmapmask":
+        pmatParams.setAttribute("envmapmask", portTexture(value, False)[0])
+
+    elif key == "$bumpmap":
+        pmatParams.setAttribute("bumpmap", portTexture(value, False)[0])
+    elif key == "$bumpmap2":
+        pmatParams.setAttribute("bumpmap2", portTexture(value, False)[0])
+
+    elif key == "$albedo":
+        pmatParams.setAttribute("albedo", portTexture(value, True)[0])
+
+    elif key == "$surfaceprop":
+        tags["surface_prop"] = value.lower()
+
+def setParamTwoTextureMaterial(key, value):
+    global baseTexImgPath
+
+    if key == "$basetexture":
+        baseTexPath, baseTexImgPath = portTexture(value, True)
+        pmatParams.setAttribute("basetexture", baseTexPath)
+    elif key == "$texture2":
+        pmatParams.setAttribute("texture2", portTexture(value, True)[0])
+
+for i in range(vmtData.getNumKeys()):
+    key = vmtData.getKey(i).lower()
+
+    if key.startswith("360?"):
+        continue
+
+    value = vmtData.getValue(i)
+
     # Render state modifiying parameters:
 
-    elif key == "$nocull":
+    if key == "$nocull":
         if bool(int(value)):
             pmatData.setAttribute("cull", "double_sided")
 
@@ -284,6 +355,13 @@ for i in range(vmtData.getNumKeys()):
         if bool(int(value)):
             pmatData.setAttribute("fog", "off")
 
+    elif materialName == 'SourceMaterial':
+        setParamSourceMaterial(key, value)
+    elif materialName == 'SourceLightmappedMaterial':
+        setParamSourceLightmappedMaterial(key, value)
+    elif materialName == 'TwoTextureMaterial':
+        setParamTwoTextureMaterial(key, value)
+
 if colorScale != VBase4(1):
     val = PDXValue()
     val.fromVec4(colorScale)
@@ -312,6 +390,42 @@ if translucent:
             # The alpha channel is either completely opaque or completely
             # translucent.  Use alpha blending.
             pmatData.setAttribute("transparency", "alpha")
+
+if materialName == 'SourceLightmappedMaterial':
+    # Get a surface prop for audio reverb.
+    if not "surface_prop" in tags or tags["surface_prop"] == "default":
+        # Material doesn't have surface prop or its just given default.
+        # Infer from material name
+        matBnLower = vmtFilename.getFullpathWoExtension().lower()
+        if "concrete" in matBnLower:
+            tags["surface_prop"] = "concrete"
+        elif "brick" in matBnLower:
+            tags["surface_prop"] = "brick"
+        elif "wood" in matBnLower:
+            tags["surface_prop"] = "wood"
+        elif "metal" in matBnLower:
+            tags["surface_prop"] = "metal"
+        elif "rock" in matBnLower:
+            tags["surface_prop"] = "rock"
+        elif "glass" in matBnLower:
+            tags["surface_prop"] = "glass"
+        elif "plaster" in matBnLower:
+            tags["surface_prop"] = "plaster"
+        elif "tile" in matBnLower or "ceramic" in matBnLower:
+            tags["surface_prop"] = "ceramic"
+        elif "dirt" in matBnLower:
+            tags["surface_prop"] = "gravel"
+        else:
+            tags["surface_prop"] = "default"
+
+        print("Gave automatic surface prop:", tags["surface_prop"])
+    else:
+        print("Converted surface prop:", tags["surface_prop"])
+
+    pmatTags = PDXElement()
+    for key, value in tags.items():
+        pmatTags.setAttribute(key, value)
+    pmatData.setAttribute("tags", pmatTags)
 
 print("Writing " + pmatFilename.getFullpath(), file=sys.stderr)
 PDXValue(pmatData).write(pmatFilename)

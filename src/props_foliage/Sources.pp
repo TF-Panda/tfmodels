@@ -24,3 +24,6 @@
 #include $[THISDIRPREFIX]Sources.shrub_03b.pp
 #include $[THISDIRPREFIX]Sources.tree_pine01_4cluster.pp
 #include $[THISDIRPREFIX]Sources.corn_plant01.pp
+#include $[THISDIRPREFIX]Sources.tree_pine01.pp
+#include $[THISDIRPREFIX]Sources.tree_pine01_8cluster.pp
+#include $[THISDIRPREFIX]Sources.tree_pine_extrasmall.pp

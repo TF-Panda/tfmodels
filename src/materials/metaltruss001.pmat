@@ -1,0 +1,14 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/metaltruss001.ptex"
+  }
+  "alpha_test"   "greater_equal"
+  "alpha_test_ref"   0.2
+  "tags" 
+  {
+    "surface_prop"     "metalgrate"
+  }
+}

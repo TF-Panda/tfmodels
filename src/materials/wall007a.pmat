@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/wall007a.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "wood"
+  }
+}

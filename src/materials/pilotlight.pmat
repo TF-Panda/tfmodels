@@ -1,0 +1,17 @@
+
+{
+  "material"   "TwoTextureMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/pilotlight.ptex"
+    "texture2"     "../maps/pilotlight_motion.ptex"
+    "texture2scroll" [ 0 3 ]
+
+    "basetexturesinex" [ 0.005 -0.005 7.0 ]
+    "basetexturesiney" [ -0.02 0.02 0.1 ]
+  }
+  "color_blend"   "additive"
+  light off
+  fog off
+  bin transparent
+}

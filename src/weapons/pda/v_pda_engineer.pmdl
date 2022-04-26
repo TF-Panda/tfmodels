@@ -1,0 +1,53 @@
+{
+  model "optchar/v_pda_engineer-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    omni true
+  }
+
+  material_groups [
+    {
+      name red
+      materials [
+        "../../materials/engineer_red.pmat"
+        "../../materials/engineer_handr_red.pmat"
+      ]
+    }
+    {
+      name blue
+      materials [
+        "../../materials/engineer_blue.pmat"
+        "../../materials/engineer_handr_blue.pmat"
+      ]
+    }
+  ]
+
+  sequences [
+    {
+      name idle
+      anim "optchar/v_pda_engineer-idle.egg"
+      activity VM_Idle
+      snap true
+      loop true
+    }
+    {
+      name draw
+      anim "optchar/v_pda_engineer-draw.egg"
+      snap true
+      activity VM_Draw
+      events [
+        {
+          frame 1 type 2 event Client_Play_Sound
+          data "Weapon_PDA.DrawEngineer"
+        }
+        {
+          frame 13 type 2 event Client_Play_Sound
+          data "Weapon_PDA.AntennaeEngineer"
+        }
+      ]
+    }
+  ]
+
+}

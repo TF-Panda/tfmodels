@@ -1,0 +1,13 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/beach_dry.ptex"
+    "basetexture2"     "../maps/beach_wet.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "default"
+  }
+}

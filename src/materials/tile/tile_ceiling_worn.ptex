@@ -1,5 +1,0 @@
-{
-  image "tile_ceiling_worn.tga"
-  format "srgb"
-  wrap "repeat"
-}

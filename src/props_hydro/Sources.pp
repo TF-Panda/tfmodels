@@ -35,3 +35,17 @@
 #include $[THISDIRPREFIX]Sources.small_substation1.pp
 #include $[THISDIRPREFIX]Sources.barricade_open.pp
 #include $[THISDIRPREFIX]Sources.substation_truss01_skybox.pp
+#include $[THISDIRPREFIX]Sources.water_barrel.pp
+#include $[THISDIRPREFIX]Sources.water_barrel_cluster.pp
+#include $[THISDIRPREFIX]Sources.water_machinery4.pp
+#include $[THISDIRPREFIX]Sources.2pipe_turn_in.pp
+#include $[THISDIRPREFIX]Sources.water_machinery1.pp
+#include $[THISDIRPREFIX]Sources.water_machinery2.pp
+#include $[THISDIRPREFIX]Sources.water_machinery3.pp
+#include $[THISDIRPREFIX]Sources.gorge_set1.pp
+#include $[THISDIRPREFIX]Sources.gorge_handrails1.pp
+#include $[THISDIRPREFIX]Sources.gorge_set3.pp
+#include $[THISDIRPREFIX]Sources.gorge_set4.pp
+#include $[THISDIRPREFIX]Sources.gorge_set5.pp
+#include $[THISDIRPREFIX]Sources.gorge_handrails2.pp
+#include $[THISDIRPREFIX]Sources.gorge_set2.pp

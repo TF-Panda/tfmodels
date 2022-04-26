@@ -1,0 +1,14 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters"
+  {
+    "basetexture"     "../maps/toolsplayerclip.ptex"
+  }
+  "transparency"   "dual"
+  "tags"
+  {
+    "surface_prop"     "default"
+    compile_clip 1
+  }
+}

@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/red_wall4_middle.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "default"
+  }
+}

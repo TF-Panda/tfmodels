@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/floorplate01.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "metal"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  model "optchar/teleporter_light-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop metal
+
+    bbox {
+      mins [ -26.71 -26.71 -0.25 ]
+      maxs [ 39.206 26.71 15.271 ]
+    }
+
+    bodygroups [
+      {
+        name teleporter_blur
+        nodes [
+          blank
+          "teleporter_spin_blur*"
+        ]
+      }
+      {
+        name teleporter_direction
+        nodes [
+          blank
+          "teleporter_arrow*"
+        ]
+      }
+    ]
+  }
+
+  lods [
+    {
+      distance 0
+      groups [
+        teleporter_light_reference
+        teleporter_spin_blur
+        teleporter_arrow
+      ]
+    }
+    {
+      distance 15
+      groups [
+        teleporter_light_reference_lod1
+        teleporter_spin_blur_lod1
+        teleporter_arrow_lod1
+      ]
+    }
+    {
+      distance 35
+      groups [
+        teleporter_light_reference_lod2
+        teleporter_spin_blur_lod2
+        teleporter_arrow_lod2
+      ]
+    }
+  ]
+
+  material_groups [
+    {
+      name red
+      materials [
+        "../materials/teleporter.pmat"
+        "../materials/teleporterspin_red.pmat"
+        "../materials/tp_direction.pmat"
+        "../materials/toolbox_red.pmat"
+      ]
+    }
+    {
+      name blue
+      materials [
+        "../materials/teleporter_blue.pmat"
+        "../materials/teleporterspin_blue.pmat"
+        "../materials/tp_direction1.pmat"
+        "../materials/toolbox_blue.pmat"
+      ]
+    }
+  ]
+
+  weight_lists [
+    {
+      name weights_layer_direction
+      weights {
+        "root" 0
+        "mid_section" 0
+        "weapon_bone" 0
+        "hose_0_L" 0
+        "hose_1_L" 0
+        "hose_2_L" 0
+        "hose_3_L" 0
+        "hose_0_R" 0
+        "hose_1_R" 0
+        "hose_2_R" 0
+        "hose_3_R" 0
+        "direction" 1
+      }
+    }
+  ]
+
+  pose_parameters [
+    {
+      // Controls arrow direction blending.
+      name direction
+      min -180 max 180
+      loop 360
+    }
+  ]
+
+  sequences [
+
+    // This controls the direction that the arrow is pointing.
+    // Played on a layer above base spinning animation and only
+    // animates the arrow.
+    {
+      name layer_direction
+      blend {
+        anims [
+          "optchar/teleporter_light-a_arrowStart.egg"
+          "optchar/teleporter_light-a_arrowMid0.egg"
+          "optchar/teleporter_light-a_arrowMid1.egg"
+          "optchar/teleporter_light-a_arrowMid2.egg"
+          "optchar/teleporter_light-a_arrowEnd.egg"
+        ]
+        width 5
+        blend_x direction
+      }
+      delta true
+      weight_list weights_layer_direction
+    }
+
+    {
+      name running
+      anim "optchar/teleporter_light-a_running.egg"
+      activity Object_Idle
+      loop true
+      layers [
+        {
+          sequence layer_direction
+        }
+      ]
+    }
+  ]
+}

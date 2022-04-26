@@ -1,0 +1,12 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/blue_wall1_middle.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "default"
+  }
+}

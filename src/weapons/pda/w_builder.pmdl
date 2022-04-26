@@ -1,0 +1,25 @@
+{
+  model "optchar/w_builder-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  lods [
+    {
+      distance 0
+      groups [ w_builder_reference ]
+    }
+    {
+      distance 18
+      groups [ w_builder_reference_lod1 ]
+    }
+  ]
+
+  custom_data {
+    surfaceprop metal
+  }
+
+  physics_model {
+    mesh w_builder_physics
+    mass 1.0
+  }
+}

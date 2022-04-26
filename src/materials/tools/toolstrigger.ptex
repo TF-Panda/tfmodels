@@ -1,5 +1,0 @@
-{
-  image "toolstrigger.tga"
-  format "srgb_alpha"
-  wrap "repeat"
-}

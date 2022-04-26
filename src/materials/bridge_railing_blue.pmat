@@ -1,0 +1,18 @@
+
+{
+  "material"   "SourceMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/bridge_railing_blue.ptex"
+    "basemapalphaphongmask"     1
+    "phong"     1
+    "phongexponent"     12
+    "phongboost"     0.35
+    "phongfresnelranges" 
+    [
+      2
+      7
+      25
+    ]
+  }
+}

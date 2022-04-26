@@ -1,0 +1,14 @@
+
+{
+  "material"   "SourceLightmappedMaterial"
+  "parameters" 
+  {
+    "basetexture"     "../maps/dirtground010.ptex"
+    "basetexture2"     "../maps/rockwall001forest.ptex"
+    "bumpmap"     "../maps/rockwall001_normal.ptex"
+  }
+  "tags" 
+  {
+    "surface_prop"     "dirt"
+  }
+}

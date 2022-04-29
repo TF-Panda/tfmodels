@@ -189,6 +189,12 @@
   -flag teleporter_spin_blur,teleporter_spin_blur_lod1,teleporter_spin_blur_lod2
 #call tf_char_egg teleporter_light,$[teleporter_light_anims],$[teleporter_light_optchar_opts]
 
+// Teleporter gibs.
+#call tf_char_egg teleporter_gib1,,-flag teleporter_gib1_physics
+#call tf_char_egg teleporter_gib2,,-flag teleporter_gib2_physics
+#call tf_char_egg teleporter_gib3,,-flag teleporter_gib3_physics
+#call tf_char_egg teleporter_gib4,,-flag teleporter_gib4_physics
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Bam file installation.
@@ -213,6 +219,8 @@
     teleporter.pmdl \
     teleporter_light.pmdl \
     teleporter_blueprint_enter.pmdl \
-    teleporter_blueprint_exit.pmdl
+    teleporter_blueprint_exit.pmdl \
+    teleporter_gib1.pmdl teleporter_gib2.pmdl \
+    teleporter_gib3.pmdl teleporter_gib4.pmdl
 
 #end install_mdl

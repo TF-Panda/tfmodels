@@ -6,6 +6,21 @@
   custom_data {
     surfaceprop metal
 
+    gibs [
+      {
+        model "models/buildables/teleporter_gib1"
+      }
+      {
+        model "models/buildables/teleporter_gib2"
+      }
+      {
+        model "models/buildables/teleporter_gib3"
+      }
+      {
+        model "models/buildables/teleporter_gib4"
+      }
+    ]
+
     bbox {
       mins [ -26.71 -26.71 -0.25 ]
       maxs [ 39.206 26.71 15.271 ]

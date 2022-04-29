@@ -1,0 +1,25 @@
+{
+  model "optchar/teleporter_gib4-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  custom_data {
+    surfaceprop metal
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../materials/teleporter_gibs.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../materials/teleporter_gibs_blue.pmat" ]
+    }
+  ]
+
+  physics_model {
+    mesh teleporter_gib4_physics
+    mass 6.32284
+  }
+}

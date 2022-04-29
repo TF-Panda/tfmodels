@@ -1,0 +1,45 @@
+{
+  model "optchar/teleporter_gib3-zero.egg"
+
+  hpr [ 180 0 0 ]
+
+  attachments [
+    {
+      name sentry_spark1
+      influences [
+        {
+          parent polymsh10
+          pos [ 9.3 10.6 -3 ]
+        }
+      ]
+    }
+  ]
+
+  custom_data {
+    surfaceprop metal
+
+    particles [
+      {
+        name spark_electric01
+        attachment_type follow_attachment
+        attachment_point sentry_spark1
+      }
+    ]
+  }
+
+  material_groups [
+    {
+      name red
+      materials [ "../materials/teleporter_gibs.pmat" ]
+    }
+    {
+      name blue
+      materials [ "../materials/teleporter_gibs_blue.pmat" ]
+    }
+  ]
+
+  physics_model {
+    mesh teleporter_gib3_physics
+    mass 3.133632
+  }
+}

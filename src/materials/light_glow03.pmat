@@ -5,9 +5,7 @@
     basetexture "../maps/light_glow03.ptex"
   }
 
-  bin unsorted
   color_blend additive
-  depth_write off
   light off
   fog off
 }

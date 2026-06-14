@@ -5,8 +5,6 @@
     basetexture "../maps/glow_test02.ptex"
   }
 
-  bin unsorted
-  depth_write off
   color_blend additive
   light off
   fog off
